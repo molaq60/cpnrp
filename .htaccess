@@ -1,0 +1,31 @@
+# BEGIN WordPress
+# Direktivy (řádky) mezi "BEGIN WordPress" a "END WordPress" jsou
+# dynamicky generované a měly by být upravovány pouze pomocí filtrů WordPressu.
+# Veškeré změny směrnic mezi těmito značkami budou přepsány.
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /cpnrp/
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /cpnrp/index.php [L]
+</IfModule>
+
+# END WordPress
+
+# ── Bezpečnost ───────────────────────────────────────────────────
+# Blokovat xmlrpc a trackback
+<FilesMatch "^(xmlrpc\.php|wp-trackback\.php)$">
+    Order Deny,Allow
+    Deny from all
+</FilesMatch>
+
+# Skrýt citlivé soubory
+<FilesMatch "\.(htaccess|htpasswd|ini|log|sh|sql)$">
+    Order Deny,Allow
+    Deny from all
+</FilesMatch>
+
+# Zakázat procházení adresářů
+Options -Indexes

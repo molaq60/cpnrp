@@ -1,0 +1,82 @@
+# ============================================================
+# WordPress — CPNRP .gitignore
+# ============================================================
+
+# ── WordPress jádro (stáhni z wordpress.org, netrackuj) ─────
+wp-admin/
+wp-includes/
+wp-*.php
+!wp-config.php
+index.php
+xmlrpc.php
+
+# ── Konfigurace s hesly — NIKDY do gitu ─────────────────────
+wp-config.php
+.env
+*.env
+
+# ── Nahrané soubory (media knihovna) ────────────────────────
+wp-content/uploads/
+
+# ── Cache a dočasné soubory ──────────────────────────────────
+wp-content/cache/
+wp-content/upgrade/
+wp-content/backup-db/
+wp-content/backups/
+wp-content/blogs.dir/
+wp-content/advanced-cache.php
+wp-content/wp-cache-config.php
+wp-content/object-cache.php
+
+# ── Logy ─────────────────────────────────────────────────────
+*.log
+debug.log
+error_log
+
+# ── Pluginy — netrackovat (instaluj přes WP admin) ──────────
+wp-content/plugins/
+# Výjimka: vlastní/upravené pluginy odkomentuj:
+# !wp-content/plugins/muj-plugin/
+
+# ── Ostatní témata — trackuj pouze naše ─────────────────────
+wp-content/themes/*
+!wp-content/themes/cpnrp
+
+# ── Obrázky v tématu — velké soubory ────────────────────────
+# Partner loga (jsou ve WP médií knihovně na produkci)
+wp-content/themes/cpnrp/assets/images/partners/
+# Fotky týmu
+wp-content/themes/cpnrp/assets/images/team/
+# Výjimky — malé UI obrázky které CHCEME trackovat:
+!wp-content/themes/cpnrp/assets/images/logo.png
+!wp-content/themes/cpnrp/assets/images/logo_molaQ_yellowQ.png
+!wp-content/themes/cpnrp/assets/images/heart-benefice.png
+!wp-content/themes/cpnrp/assets/images/hearts-divider.png
+!wp-content/themes/cpnrp/assets/images/hearts-family-divider.png
+!wp-content/themes/cpnrp/assets/images/hearts-sun-divider.png
+!wp-content/themes/cpnrp/assets/images/logo-pattern.png
+
+# ── OS a editor soubory ──────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.Spotlight-V100
+.Trashes
+
+# ── IDE ──────────────────────────────────────────────────────
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+nbproject/
+
+# ── Node (pokud použiješ build nástroje) ─────────────────────
+node_modules/
+npm-debug.log*
+yarn-error.log
+
+# ── Composer ─────────────────────────────────────────────────
+vendor/
