@@ -28,6 +28,9 @@ wp-content/advanced-cache.php
 wp-content/wp-cache-config.php
 wp-content/object-cache.php
 
+# ── Bezpečnostní logy a konfig pluginů ───────────────────────
+wp-content/wflogs/
+
 # ── Logy ─────────────────────────────────────────────────────
 *.log
 debug.log

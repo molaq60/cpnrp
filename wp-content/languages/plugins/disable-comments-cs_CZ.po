@@ -1,0 +1,755 @@
+# Translation of Plugins - Disable Comments &#8211; Remove Comments &amp; Stop Spam [Multi-Site Support] - Stable (latest release) in Czech
+# This file is distributed under the same license as the Plugins - Disable Comments &#8211; Remove Comments &amp; Stop Spam [Multi-Site Support] - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2026-04-11 20:19:19+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n == 1) ? 0 : ((n >= 2 && n <= 4) ? 1 : 2);\n"
+"X-Generator: GlotPress/4.0.3\n"
+"Language: cs_CZ\n"
+"Project-Id-Version: Plugins - Disable Comments &#8211; Remove Comments &amp; Stop Spam [Multi-Site Support] - Stable (latest release)\n"
+
+#: disable-comments.php:1172
+msgid "You do not have sufficient permissions to access this page."
+msgstr "Nemáte dostatečná oprávnění pro přístup k této stránce."
+
+#: views/partials/_disable.php:261
+msgid "Enabling specific comment types will allow these notes/comments to be added or displayed wherever they normally appear throughout your site, even when regular comments are disabled. These comment types will also be protected from deletion and will not appear in the \"Delete Comments\" interface."
+msgstr "Povolení konkrétních typů komentářů umožní, aby tyto poznámky/komentáře byly přidávány nebo zobrazovány všude tam, kde se běžně vyskytují na vašem webu, i když jsou standardní komentáře vypnuté. Tyto typy komentářů budou také chráněny proti smazání a nebudou se zobrazovat v rozhraní „Smazat komentáře“."
+
+#: views/partials/_disable.php:254
+msgid "Currently, we support WordPress 6.9+ block notes (note type). This option will allow block notes to function even when regular comments are disabled."
+msgstr "Aktuálně podporujeme block notes (typ poznámky) ve WordPressu 6.9 a novějším. Tato volba umožní, aby block notes fungovaly i při vypnutých standardních komentářích."
+
+#: views/partials/_disable.php:226
+msgid "Enable Certain Comment Types"
+msgstr "Povolit určité typy komentářů"
+
+#: views/partials/_disable.php:205
+msgid "Allowed Comment Types Settings"
+msgstr "Nastavení povolených typů komentářů"
+
+#: disable-comments.php:765
+msgid "Comments are disabled."
+msgstr "Komentáře jsou zakázány."
+
+#: disable-comments.php:605
+msgid "Notes - WordPress 6.9+ (note)"
+msgstr "Poznámky – WordPress 6.9+ (typ poznámky)"
+
+#: views/partials/_disable.php:194
+msgid "When enabled, existing approved comments will remain visible even when new comments are disabled. This allows you to stop spam while preserving your existing comment discussions."
+msgstr "Po zapnutí zůstanou stávající schválené komentáře viditelné i při vypnutých nových komentářích. Toto umožňuje zastavit spam a zároveň zachovat stávající diskuse."
+
+#: views/partials/_disable.php:173
+msgid "Existing Comments Display Settings"
+msgstr "Nastavení zobrazení existujících komentářů"
+
+#: disable-comments.php:1952 views/partials/_disable.php:190
+msgid "Show Existing Comments"
+msgstr "Zobrazit stávající komentáře"
+
+#: disable-comments.php:1978
+msgid "Complete overview of comment disable settings and configuration."
+msgstr "Kompletní přehled nastavení a konfigurace vypnutí komentářů"
+
+#: disable-comments.php:1968
+msgid "Excluded Roles"
+msgstr "Vyloučené role"
+
+#: disable-comments.php:1964
+msgid "Role-based Exclusions"
+msgstr "Vyloučení pro konkrétní uživatelské role"
+
+#: disable-comments.php:1960
+msgid "Site-wide Settings"
+msgstr "Globální nastavení webu"
+
+#: disable-comments.php:1956
+msgid "Network Active"
+msgstr "Aktivováno napříč sítí"
+
+#: disable-comments.php:1948
+msgid "REST API Comments"
+msgstr "Komentáře přes REST API"
+
+#: disable-comments.php:1944
+msgid "XML-RPC Comments"
+msgstr "Komentáře přes XML-RPC"
+
+#: disable-comments.php:1941 disable-comments.php:1971
+msgid "None"
+msgstr "Žádné"
+
+#: disable-comments.php:1938
+msgid "Disabled Post Types"
+msgstr "Zakázané typy příspěvků"
+
+#: disable-comments.php:1934
+msgid "Disabled Post Types Count"
+msgstr "Počet zakázaných typů příspěvků"
+
+#: disable-comments.php:1930
+msgid "Global Disable Active"
+msgstr "Celkové zakázání aktivní"
+
+#: disable-comments.php:1926
+msgid "Total Comments"
+msgstr "Celkový počet komentářů"
+
+#: disable-comments.php:1923 disable-comments.php:1931
+#: disable-comments.php:1953 disable-comments.php:1957
+msgid "No"
+msgstr "Ne"
+
+#: disable-comments.php:1923 disable-comments.php:1931
+#: disable-comments.php:1953 disable-comments.php:1957
+msgid "Yes"
+msgstr "Ano"
+
+#: disable-comments.php:1922
+msgid "Plugin Configured"
+msgstr "Plugin nakonfigurován"
+
+#: disable-comments.php:1918
+msgid "Comment Status"
+msgstr "Stav komentáře"
+
+#: disable-comments.php:1912
+msgid "Not applicable"
+msgstr "Není použitelné"
+
+#: disable-comments.php:1911 disable-comments.php:1945
+#: disable-comments.php:1949 disable-comments.php:1965
+msgid "Disabled"
+msgstr "Zakázáno"
+
+#: disable-comments.php:1910 disable-comments.php:1945
+#: disable-comments.php:1949 disable-comments.php:1965
+msgid "Enabled"
+msgstr "Povoleno"
+
+#. translators: %s: disabled post types.
+#: disable-comments.php:1903
+msgid "Comments are disabled for: %s"
+msgstr "Komentáře jsou zakázány pro: %s"
+
+#: disable-comments.php:1899
+msgid "Comments are enabled everywhere"
+msgstr "Komentáře jsou povolené všude"
+
+#: disable-comments.php:1898
+msgid "Comments are disabled for multiple specific content types"
+msgstr "Komentáře jsou zakázány pro více konkrétních typů obsahu"
+
+#: disable-comments.php:1897
+msgid "Comments are disabled for both posts and pages"
+msgstr "Komentáře jsou zakázány jak u příspěvků, tak u stránek"
+
+#: disable-comments.php:1896
+msgid "Comments are disabled only for pages"
+msgstr "Komentáře jsou zakázány pouze u stránek"
+
+#: disable-comments.php:1895
+msgid "Comments are disabled only for blog posts"
+msgstr "Komentáře jsou zakázány pouze u příspěvků"
+
+#: disable-comments.php:1894
+msgid "Comments are disabled site-wide for all content types"
+msgstr "Komentáře jsou na celém webu zakázány pro všechny typy obsahu"
+
+#: views/partials/_sites.php:67
+msgid "Sites pagination"
+msgstr "Stránkování webu"
+
+#: views/partials/_sites.php:59
+msgid "Number of items to display per page"
+msgstr "Počet položek zobrazených na stránku"
+
+#: views/partials/_sites.php:43
+msgid "List of available sites"
+msgstr "Seznam dostupných webových stránek"
+
+#: views/partials/_sites.php:23
+msgid "Search sites"
+msgstr "Hledat webové stránky"
+
+#: views/partials/_sites.php:9
+msgid "Select or deselect all sites"
+msgstr "Vybrat nebo zakázat všechny webové stránky"
+
+#: views/partials/_disable.php:478
+msgid "Save all disable comments settings"
+msgstr "Uložit všechna nastavení zakázání komentářů"
+
+#: views/partials/_disable.php:466
+msgid "Toggle REST API comments. When enabled, this will prevent comments from being submitted through the REST API."
+msgstr "Přepnout komentáře pro REST API. Pokud to povolíte, zabrání to odesílání komentářů přes REST API."
+
+#: views/partials/_disable.php:463
+msgid "Toggle XML-RPC comments. When enabled, this will prevent comments from being submitted through XML-RPC."
+msgstr "Přepnout komentáře pro XML-RPC. Pokud to povolíte, zabrání to odesílání komentářů přes XML-RPC."
+
+#: views/partials/_disable.php:333
+msgid "Avatar Display Settings"
+msgstr "Nastavení zobrazení avatara"
+
+#: views/partials/_disable.php:304
+msgid "Select user roles to exclude"
+msgstr "Vyberte uživatelské role, které chcete vyloučit"
+
+#: views/partials/_disable.php:272
+msgid "Role-based Exclusion Settings"
+msgstr "Nastavení vyloučení podle uživatelských rolí"
+
+#: views/partials/_disable.php:121
+msgid "Available post types"
+msgstr "Dostupné typy příspěvků"
+
+#: views/partials/_disable.php:100
+msgid "Select Specific Post Types"
+msgstr "Vybrat konkrétní typy příspěvků"
+
+#: views/partials/_disable.php:72
+msgid "Global Comment Settings"
+msgstr "Globální nastavení komentářů"
+
+#: views/partials/_disable.php:8
+msgid "Site-wide Settings Control"
+msgstr "Ovládání nastavení na celém webu"
+
+#: views/partials/_disable.php:1
+msgid "Disable Comments Settings"
+msgstr "Nastavení zakázání komentářů"
+
+#: views/partials/_delete.php:217
+msgid "Are you sure you want to delete the selected comments? This action cannot be undone."
+msgstr "Jste si jistý, že chcete smazat vybrané komentáře? Tato akce nejde vrátit zpět."
+
+#: views/partials/_delete.php:216
+msgid "Permanently delete all selected comments"
+msgstr "Trvale odstranit všechny vybrané komentáře"
+
+#: views/partials/_delete.php:176
+msgid "Delete Spam Comments"
+msgstr "Smazat spamové komentáře"
+
+#: views/partials/_delete.php:149 views/partials/_disable.php:233
+msgid "Available comment types"
+msgstr "Dostupné typy komentářů"
+
+#: views/partials/_delete.php:130
+msgid "Delete By Comment Types"
+msgstr "Odstranit podle typů komentářů"
+
+#: views/partials/_delete.php:81
+msgid "Available post types for deletion"
+msgstr "Dostupné typy příspěvků pro odstranění"
+
+#: views/partials/_delete.php:61
+msgid "Select Post Types for Comment Deletion"
+msgstr "Vyberte typy příspěvků pro smazání komentářů"
+
+#: views/partials/_delete.php:38
+msgid "Select where to delete comments"
+msgstr "Vyberte, kde chcete smazat komentáře"
+
+#: views/partials/_delete.php:55
+msgid "This action will permanently delete all comments and comment types from your Posts, Pages, and Custom Post Types. If you have WooCommerce installed, your order notes will also be deleted."
+msgstr "Tato akce trvale smaže všechny komentáře a typy komentářů z vašich příspěvků, stránek a vlastních typů příspěvků. Pokud máte nainstalovaný WooCommerce, budou také smazány vaše poznámky k objednávkám."
+
+#: views/partials/_sites.php:63
+msgid "200"
+msgstr "200"
+
+#: views/partials/_sites.php:62
+msgid "100"
+msgstr "100"
+
+#: views/partials/_sites.php:61
+msgid "50"
+msgstr "50"
+
+#: views/partials/_sites.php:60
+msgid "20"
+msgstr "20"
+
+#: views/partials/_sites.php:52
+msgid "Show Items:"
+msgstr "Zobrazit položky:"
+
+#: views/partials/_sites.php:45
+msgid "No subsite found"
+msgstr "Nebyl nalezen žádný podsíťový web"
+
+#: views/partials/_sites.php:33
+msgid "Search by domain name..."
+msgstr "Hledat podle názvu domény…"
+
+#: views/partials/_sites.php:15
+msgid "0 selected"
+msgstr "Vybráno: 0"
+
+#: views/partials/_disable.php:290
+msgid "Exclude Disable Comments Settings Based On User Roles"
+msgstr "Vyloučit nastavení pluginu Zakázat komentáře (Disable Comments) podle uživatelských rolí"
+
+#: views/partials/_disable.php:39
+msgid "Disable comments in the following sites:"
+msgstr "Zakázat komentáře na následujících webech:"
+
+#: views/partials/_disable.php:24
+msgid "Enable Site Wise settings"
+msgstr "Povolit nastavení podle jednotlivých webů"
+
+#: views/partials/_delete.php:18
+msgid "Delete comments in the following sites:"
+msgstr "Smazat komentáře na následujících webech:"
+
+#: views/partials/_disable.php:323
+msgid "This will exclude all the above settings for the selected user roles."
+msgstr "Tímto budou všechna výše uvedená nastavení vyloučena pro vybrané uživatelské role."
+
+#: disable-comments.php:1148 disable-comments.php:1827
+msgid "Logged out users"
+msgstr "Odhlášení uživatelé"
+
+#: includes/cli.php:189
+msgid "Enabled Avatar on your entire site. "
+msgstr "Avatary byly povoleny na celém webu. "
+
+#: includes/cli.php:186
+msgid "Disabled Avatar on your entire site. "
+msgstr "Avatary byly zakázány na celém webu. "
+
+#: includes/cli.php:180
+msgid "Enabled Comments via REST API. "
+msgstr "Komentáře byly povoleny prostřednictvím REST API. "
+
+#: includes/cli.php:171
+msgid "Enabled Comments via XML-RPC. "
+msgstr "Komentáře byly povoleny prostřednictvím XML-RPC. "
+
+#: views/partials/_disable.php:413
+msgid "This will change Avatar state from your entire network. If you want to change the Avatar setting specifically on your subsites by enabling site-wise settings, select \"Don't change\" from here."
+msgstr "Tato volba změní nastavení avatarů v celé síti. Pokud chcete spravovat avatary zvlášť pro jednotlivé weby, zapněte nastavení podle webů a zde zvolte „Neměnit“."
+
+#: views/partials/_disable.php:393
+msgid "Enable Avatar"
+msgstr "Povolit avatary"
+
+#: views/partials/_disable.php:380
+msgid "Don't Change"
+msgstr "Beze změny"
+
+#: views/partials/_disable.php:367
+msgid "Avatar settings:"
+msgstr "Nastavení avatarů:"
+
+#: views/partials/_disable.php:358
+msgid "This will change Avatar state from your entire site."
+msgstr "Tímto se změní stav avatarů na celém webu."
+
+#: views/partials/_disable.php:351 views/partials/_disable.php:406
+msgid "Disable Avatar"
+msgstr "Zakázat avatary"
+
+#: views/partials/_disable.php:52
+msgid "All the underneath settings (except Avatar settings) will be applied for these selected sub sites."
+msgstr "Všechna níže uvedená nastavení (kromě nastavení avatarů) budou aplikována na vybrané podweby."
+
+#: views/partials/_delete.php:195
+msgid "This will permanently delete spam comments everywhere on your website."
+msgstr "Tímto budou trvale smazány všechny spamové komentáře na vašem webu."
+
+#: views/partials/_delete.php:190
+msgid "Permanently delete all spam comments on your WordPress website"
+msgstr "Trvale smazat všechny spamové komentáře na vašem webu WordPress."
+
+#: views/partials/_delete.php:187
+msgid "Spam:"
+msgstr "Spam:"
+
+#: disable-comments.php:1608
+msgid "All spam comments have been deleted."
+msgstr "Všechny spamové komentáře byly smazány."
+
+#: views/partials/_sites.php:13
+msgid "Select All"
+msgstr "Vybrat vše"
+
+#: views/partials/_delete.php:26
+msgid "Select your sub-sites where you want to delete comments."
+msgstr "Vyberte podweby, na kterých chcete smazat komentáře."
+
+#: views/settings.php:25
+msgctxt "Tab Name"
+msgid "Delete Comments"
+msgstr "Smazat komentáře"
+
+#: views/settings.php:15
+msgctxt "Tab Name"
+msgid "Disable Comments"
+msgstr "Zakázat komentáře"
+
+#: views/partials/_disable.php:65
+msgid "This site will be controlled by the network admin until you click the \"Save Changes\" button."
+msgstr "Tento web bude spravován správcem sítě, dokud nekliknete na tlačítko „Uložit změny“."
+
+#: views/partials/_disable.php:29
+msgid "If you enable Site Wise settings, you need to configure your \"Disable Comments\" settings individually on every website in the network."
+msgstr "Pokud povolíte nastavení podle jednotlivých webů, musíte nastavení „Zakázat komentáře“ nakonfigurovat jednotlivě pro každý web v síti."
+
+#: views/settings.php:6
+msgid "Version"
+msgstr "Verze"
+
+#: views/partials/_disable.php:469
+msgid "Turning on these settings will disable any comments made on your website via XML-RPC or REST API specifications."
+msgstr "Zapnutí těchto nastavení zablokuje všechny komentáře provedené na vašem webu prostřednictvím XML-RPC nebo REST API."
+
+#: views/partials/_disable.php:456
+msgid "Disable Comments via REST API"
+msgstr "Zakázat komentáře přes REST API"
+
+#: views/partials/_disable.php:440
+msgid "Disable Comments via XML-RPC"
+msgstr "Zakázat komentáře přes XML-RPC"
+
+#: views/partials/_disable.php:22 views/partials/_disable.php:188
+#: views/partials/_disable.php:224 views/partials/_disable.php:288
+#: views/partials/_disable.php:349 views/partials/_disable.php:438
+#: views/partials/_disable.php:454
+msgid "Off"
+msgstr "Vypnuto"
+
+#: views/partials/_disable.php:21 views/partials/_disable.php:187
+#: views/partials/_disable.php:223 views/partials/_disable.php:287
+#: views/partials/_disable.php:348 views/partials/_disable.php:437
+#: views/partials/_disable.php:453
+msgid "On"
+msgstr "Zapnuto"
+
+#: views/partials/_disable.php:423
+msgid "You can disable comments made on your website using WordPress specifications."
+msgstr "Komentáře na vašem webu můžete zakázat prostřednictvím standardních funkcí WordPressu."
+
+#: views/partials/_disable.php:420
+msgid "Disable Comments With API"
+msgstr "Zakázat komentáře přes API"
+
+#: views/partials/_disable.php:167
+msgid "Disabling comments will also disable trackbacks and pingbacks. All comment-related fields will also be hidden from the edit/quick-edit screens of the affected posts. These settings cannot be overridden for individual posts. Comments will be visible on all other post types."
+msgstr "Vypnutí komentářů zároveň deaktivuje trackbacky a pingbacky. Všechna pole související s komentáři budou také skryta v obrazovkách pro úpravu a rychlou úpravu příslušných příspěvků. Tato nastavení nelze přepsat pro jednotlivé příspěvky. Komentáře zůstanou viditelné u všech ostatních typů příspěvků."
+
+#: views/partials/_disable.php:114
+msgid "On Specific Post Types:"
+msgstr "U vybraných typů příspěvků:"
+
+#: views/partials/_disable.php:94
+msgid "This will disable comments from every page and post on your website. Use this setting if you do not want to show comments anywhere."
+msgstr "Tímto se zakážou komentáře na všech stránkách a příspěvcích vašeho webu. Použijte toto nastavení, pokud nechcete zobrazovat komentáře nikde."
+
+#: views/partials/_disable.php:89
+msgid "Disable comments globally on your entire website"
+msgstr "Zakázat komentáře globálně na celém webu"
+
+#: views/partials/_disable.php:4
+msgid "Configure the settings below to disable comments globally or on specific types of posts."
+msgstr "Níže můžete nakonfigurovat, zda komentáře zakázat globálně, nebo jen u určitých typů příspěvků."
+
+#: views/partials/_sidebar.php:129
+msgid "Disable Comments For WordPress Pages"
+msgstr "Zakázat komentáře pro stránky WordPressu"
+
+#: views/partials/_sidebar.php:118
+msgid "Disable Comment For WordPress Media Files"
+msgstr "Zakázat komentáře u mediálních souborů WordPressu"
+
+#: views/partials/_sidebar.php:95
+msgid "Disable Comments For Some Particular Post"
+msgstr "Zakázat komentáře u konkrétního příspěvku"
+
+#: views/partials/_sidebar.php:72
+msgid "How to Disable Comments on Specific Types Of Posts"
+msgstr "Jak zakázat komentáře u konkrétních typů příspěvků"
+
+#: views/partials/_sidebar.php:49
+msgid "How To Use Disable Comments Plugin With WP-CLI"
+msgstr "Jak používat plugin Zakázat komentáře (Disable Comments) přes WP-CLI"
+
+#: views/partials/_sidebar.php:26
+msgid "What Does This Disable Comments Plugin Do"
+msgstr "K čemu slouží plugin Zakázat komentáře (Disable Comments)"
+
+#: views/partials/_sidebar.php:3
+msgid "Read Our Tutorials"
+msgstr "Přečtěte si naše návody"
+
+#: views/partials/_delete.php:143
+msgid "Delete Certain Comment Types:"
+msgstr "Smazat určité typy komentářů:"
+
+#: views/partials/_delete.php:125
+msgid "This will remove existing comment entries for the selected post type(s) in the database and cannot be reverted without a database backup."
+msgstr "Tímto se odstraní stávající záznamy komentářů pro vybraný/é typ/typy příspěvků v databázi a nelze je obnovit bez zálohy databáze."
+
+#: views/partials/_delete.php:54 views/partials/_delete.php:124
+#: views/partials/_delete.php:168 views/partials/_delete.php:194
+#: views/partials/_disable.php:93
+msgid "Warning:"
+msgstr "Upozornění:"
+
+#: views/partials/_delete.php:52
+msgid "Permanently delete all comments on your WordPress website"
+msgstr "Trvale smazat všechny komentáře na vašem webu WordPress"
+
+#: views/partials/_delete.php:33
+msgid "These settings will permanently delete comments for your entire website, or for specific posts and comment types."
+msgstr "Tato nastavení trvale odstraní komentáře z celého webu nebo z konkrétních příspěvků a typů komentářů."
+
+#: views/partials/_delete.php:25 views/partials/_delete.php:32
+#: views/partials/_disable.php:28 views/partials/_disable.php:50
+#: views/partials/_disable.php:63 views/partials/_disable.php:166
+#: views/partials/_disable.php:260 views/partials/_disable.php:322
+#: views/partials/_disable.php:357 views/partials/_disable.php:412
+msgid "Note:"
+msgstr "Poznámka:"
+
+#: views/partials/_menu.php:8
+msgid "Privacy"
+msgstr "Soukromí"
+
+#: views/partials/_menu.php:7
+msgid "Terms Of Service"
+msgstr "Podmínky služby"
+
+#: views/partials/_menu.php:6
+msgid "Docs"
+msgstr "Dokumentace"
+
+#: views/partials/_menu.php:5
+msgid "Support Forum"
+msgstr "Fórum podpory"
+
+#: views/partials/_menu.php:4
+msgid "All Plugins"
+msgstr "Všechny pluginy"
+
+#: views/partials/_menu.php:3
+msgid "About Us"
+msgstr "O nás"
+
+#: includes/class-plugin-usage-tracker.php:935
+msgid "Just Deactivate"
+msgstr "Jen deaktivovat"
+
+#: includes/class-plugin-usage-tracker.php:935
+msgid "Submit and Deactivate"
+msgstr "Odeslat a deaktivovat"
+
+#: includes/class-plugin-usage-tracker.php:876
+msgid "Submitting form"
+msgstr "Odesílání formuláře"
+
+#: includes/class-plugin-usage-tracker.php:797
+msgid "Please share the reason"
+msgstr "Prosím sdělte nám důvod"
+
+#: includes/class-plugin-usage-tracker.php:796
+msgid "Other"
+msgstr "Ostatní"
+
+#: includes/class-plugin-usage-tracker.php:794
+msgid "It's a temporary deactivation"
+msgstr "Je to dočasná deaktivace"
+
+#: includes/class-plugin-usage-tracker.php:793
+msgid "I couldn't get the plugin to work"
+msgstr "Plugin se mi nepodařilo spustit"
+
+#: includes/class-plugin-usage-tracker.php:791
+msgid "Please share which plugin"
+msgstr "Prosím, sdělte, o který plugin se jedná"
+
+#: includes/class-plugin-usage-tracker.php:790
+msgid "I found a better plugin"
+msgstr "Našel jsem lepší plugin"
+
+#: includes/class-plugin-usage-tracker.php:788
+msgid "I no longer need the plugin"
+msgstr "Už tento plugin nepotřebuji"
+
+#: includes/class-plugin-usage-tracker.php:785
+msgid "Before you deactivate the plugin, would you quickly give us your reason for doing so?"
+msgstr "Než plugin deaktivujete, mohli byste nám rychle sdělit důvod?"
+
+#: includes/class-plugin-usage-tracker.php:784
+msgid "Sorry to see you go"
+msgstr "Je nám líto, že odcházíte"
+
+#: includes/class-plugin-usage-tracker.php:683
+msgid "No Thanks."
+msgstr "Ne, děkuji."
+
+#: includes/class-plugin-usage-tracker.php:682
+msgid "Sure, I'd like to help"
+msgstr "Jistě, rád pomohu"
+
+#: includes/class-plugin-usage-tracker.php:681
+msgid "What we collect."
+msgstr "Co shromažďujeme."
+
+#: includes/class-plugin-usage-tracker.php:392
+msgid "We can't detect any plugin information. This is most probably because you have not included the code in the plugin main file."
+msgstr "Nepodařilo se nám zjistit žádné informace o pluginu. Pravděpodobně to je proto, že jste neuvedli kód v hlavním souboru pluginu."
+
+#: includes/cli.php:177
+msgid "Disable Comments via REST API. "
+msgstr "Zakázat komentáře přes REST API. "
+
+#: includes/cli.php:168
+msgid "Disable Comments via XML-RPC. "
+msgstr "Zakázat komentáře přes XML-RPC. "
+
+#. translators: %s: post types to be disabled in network
+#: includes/cli.php:162
+msgid "Custom post types: %s. "
+msgstr "Vlastní typy příspěvků: %s. "
+
+#. translators: %s: post types to be enabled
+#: includes/cli.php:151
+msgid "Comments enabled for %s. "
+msgstr "Komentáře povoleny pro %s. "
+
+#. translators: %s: post types to be disabled
+#: includes/cli.php:142 includes/cli.php:146
+msgid "Comments disabled for %s. "
+msgstr "Komentáře zakázány pro %s. "
+
+#: includes/cli.php:136
+msgid "Comments is disabled everywhere. "
+msgstr "Komentáře jsou všude zakázány. "
+
+#: disable-comments.php:1372
+msgid "Saved"
+msgstr "Uloženo"
+
+#: disable-comments.php:200
+msgid "We collect non-sensitive diagnostic data and plugin usage information. Your site URL, WordPress & PHP version, plugins & themes and email address to send you the discount coupon. This data lets us make sure this plugin always stays compatible with the most popular plugins and themes. No spam, I promise."
+msgstr "We collect non-sensitive diagnostic data and plugin usage information. Your site URL, WordPress & PHP version, plugins & themes and email address to send you the discount coupon. This data lets us make sure this plugin always stays compatible with the most popular plugins and themes. No spam, I promise."
+
+#: disable-comments.php:199
+msgid "Want to help make Disable Comments even better?"
+msgstr "Chcete pomoci vylepšit plugin Zakázat komentáře (Disable Comments)?"
+
+#: views/partials/_delete.php:169
+msgid "Deleting comments by comment type will remove existing comment entries of the selected comment type(s) in the database and cannot be reverted without a database backup."
+msgstr "Mazání komentářů podle typu komentáře odstraní existující záznamy komentářů vybraného/ých typu/ů v databázi a bez zálohy databáze nelze tuto akci vrátit zpět."
+
+#: disable-comments.php:1121
+msgid "Default (no type)"
+msgstr "Výchozí (bez typu)"
+
+#. Description of the plugin
+#: disable-comments.php
+msgid "Allows administrators to globally disable comments on their site. Comments can be disabled according to post type. You could bulk delete comments using Tools."
+msgstr "Umožňuje administrátorům celoplošně zakázat komentáře na jejich webu. Komentáře lze zakázat podle typu příspěvku. Pomocí nástrojů můžete také hromadně mazat komentáře."
+
+#: disable-comments.php:1046
+msgctxt "settings menu title"
+msgid "Disable Comments"
+msgstr "Disable Comments"
+
+#: disable-comments.php:1038
+msgid "Tools"
+msgstr "Nástroje"
+
+#: disable-comments.php:1037 views/partials/_disable.php:3
+msgid "Settings"
+msgstr "Nastavení"
+
+#. translators: %s: URL to Disabled Comment settings page.
+#: disable-comments.php:899
+msgid "The <strong>Disable Comments</strong> plugin is active, but isn't configured to do anything yet. Visit the <a href=\"%s\">configuration page</a> to choose which post types to disable comments on."
+msgstr "Plugin <strong>Disable Comments</strong> je aktivni, ale zatím není nijak nastaven. Přejděte na <a href=\"%s\">nastavení pluginu</a> a vyberte si kde chcete komentáře zakázat."
+
+#. translators: %s: disabled post types.
+#: disable-comments.php:866
+msgid ", "
+msgstr ", "
+
+#. translators: %s: disabled post types.
+#: disable-comments.php:866
+msgid "Note: The <em>Disable Comments</em> plugin is currently active, and comments are completely disabled on: %s. Many of the settings below will not be applicable for those post types."
+msgstr "Poznámka: Plugin <em>Disable Comments</em> je momentálně aktivní a komentáře jsou úplně vyplé u: %s. Většina nastavení zobrazeného níže nebude použita pro tyto typyobsahu."
+
+#: disable-comments.php:711 disable-comments.php:910 disable-comments.php:918
+msgid "Comments are closed."
+msgstr "Komentáře nejsou povoleny."
+
+#. translators: %s: WordPress version no.
+#: disable-comments.php:213
+msgid "Disable Comments requires WordPress version %s or greater."
+msgstr "Disable Comments vyžaduje WordPress verze %s nebo vyšší."
+
+#: views/partials/_disable.php:479
+msgid "Save Changes"
+msgstr "Uložit změny"
+
+#: views/partials/_delete.php:74
+msgid "On Certain Post Types:"
+msgstr "Na určitých typech obsahu"
+
+#: views/partials/_delete.php:202
+msgid "Total Comments:"
+msgstr "Celkem komentářů:"
+
+#: views/partials/_delete.php:109 views/partials/_disable.php:151
+msgid "Custom post types:"
+msgstr "Vlastní typy obsahu:"
+
+#: views/partials/_delete.php:105 views/partials/_disable.php:146
+msgid "Only the built-in post types appear above. If you want to disable comments on other custom post types on the entire network, you can supply a comma-separated list of post types below (use the slug that identifies the post type)."
+msgstr "Výše se zobrazí pouze výchozí typy obsahu. Pokud chcete zakázat komentáře u vlastních typů obsahu v celé síti, napište níže čárkami oddělený seznam typů obsahu (použijte název v URL, který identifikuje typ obsahu)."
+
+#: views/partials/_delete.php:50 views/partials/_disable.php:85
+msgid "Everywhere:"
+msgstr "Všude:"
+
+#: disable-comments.php:1489 disable-comments.php:1544
+#: disable-comments.php:1571
+msgid "All comments have been deleted"
+msgstr "Veškeré komentáře byly úspěšně odstraněny."
+
+#: views/partials/_delete.php:359
+msgid "No comments are available for deletion."
+msgstr "Žádné komentáře k odstranění."
+
+#: disable-comments.php:1055 views/partials/_delete.php:9
+#: views/partials/_delete.php:218
+#: assets/js/disable-comments-settings-scripts.js:367
+msgid "Delete Comments"
+msgstr "Odstranit komentáře"
+
+#. Author URI of the plugin
+#: disable-comments.php
+msgid "https://wpdeveloper.com"
+msgstr "https://wpdeveloper.com"
+
+#. Author of the plugin
+#: disable-comments.php
+msgid "WPDeveloper"
+msgstr "WPDeveloper"
+
+#. Plugin URI of the plugin
+#: disable-comments.php
+msgid "https://wordpress.org/plugins/disable-comments/"
+msgstr "https://cs.wordpress.org/plugins/disable-comments/"
+
+#. Plugin Name of the plugin
+#: disable-comments.php disable-comments.php:403 disable-comments.php:1977
+msgid "Disable Comments"
+msgstr "Disable Comments"

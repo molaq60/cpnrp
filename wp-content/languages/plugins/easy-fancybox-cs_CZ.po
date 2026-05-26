@@ -1,0 +1,376 @@
+# Translation of Plugins - Firelight Lightbox - Stable (latest release) in Czech
+# This file is distributed under the same license as the Plugins - Firelight Lightbox - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-11-07 09:25:51+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n == 1) ? 0 : ((n >= 2 && n <= 4) ? 1 : 2);\n"
+"X-Generator: GlotPress/4.0.1\n"
+"Language: cs_CZ\n"
+"Project-Id-Version: Plugins - Firelight Lightbox - Stable (latest release)\n"
+
+#: inc/fancybox-options.php:33
+msgid "Global settings"
+msgstr "Nastavení"
+
+#: inc/fancybox-options.php:592
+msgid "Images"
+msgstr "Obrázky"
+
+#: inc/fancybox-options.php:1044
+msgid "PDF"
+msgstr "PDF"
+
+#: inc/fancybox-options.php:1178
+msgid "SWF"
+msgstr "SWF"
+
+#: inc/fancybox-options.php:1271
+msgid "SVG"
+msgstr "SVG"
+
+#: inc/fancybox-options.php:1402
+msgid "YouTube"
+msgstr "YouTube"
+
+#: inc/fancybox-options.php:1540
+msgid "Vimeo"
+msgstr "Vimeo"
+
+#: inc/fancybox-options.php:1667
+msgid "Dailymotion"
+msgstr "Dailymotion"
+
+#: inc/fancybox-options.php:1795
+msgid "iFrames"
+msgstr "iFrames"
+
+#: inc/fancybox-options.php:551
+msgid "Exclude"
+msgstr "Vynechat"
+
+#: inc/fancybox-options.php:405
+msgid "Link with ID \"fancybox-auto\""
+msgstr "Propojit s ID \"fancybox-auto\""
+
+#: inc/fancybox-options.php:754 inc/fancybox-options.php:771
+msgid "Overlay"
+msgstr "Rámeček"
+
+#: inc/fancybox-options.php:334
+msgid "Show the overlay around content opened in FancyBox."
+msgstr "Ukazovat rámeček kolem obsahu otevřeného ve FancyBox."
+
+#: inc/fancybox-options.php:344
+msgid "Close FancyBox when overlay is clicked."
+msgstr "Zavřít FancyBox při kliknutí na rámeček."
+
+#: inc/fancybox-options.php:377
+msgid "Value between 0 and 1. "
+msgstr "Hodnota mezi 0 a 1."
+
+#: inc/fancybox-options.php:294 inc/fancybox-options.php:307
+#: inc/fancybox-options.php:353 inc/fancybox-options.php:377
+#: inc/fancybox-options.php:422 inc/fancybox-options.php:456
+#: inc/fancybox-options.php:469 inc/fancybox-options.php:558
+#: inc/fancybox-options.php:867 inc/fancybox-options.php:880
+#: inc/fancybox-options.php:915
+msgid "Default:"
+msgstr "Výchozí:"
+
+#: inc/fancybox-options.php:353
+msgid "Enter an HTML color value."
+msgstr "Vložte kód barvy v HTML."
+
+#: inc/fancybox-options.php:154
+msgid "Show the (X) close button"
+msgstr "Ukázat (X) tlačítko pro zavření"
+
+#: inc/fancybox-options.php:209
+msgid "Border color"
+msgstr "Barva okraje"
+
+#: inc/fancybox-options.php:255
+msgid "Text color"
+msgstr "Barva textu"
+
+#: inc/fancybox-options.php:231
+msgid "Border radius"
+msgstr "Šíře okraje"
+
+#: inc/fancybox-options.php:144
+msgid "Scale large content down to fit in the browser viewport."
+msgstr "Zmenšit obsah okna na rozlišení monitoru."
+
+#: inc/fancybox-options.php:285
+msgid "Opening speed"
+msgstr "Rychlost otevření"
+
+#: inc/fancybox-options.php:298
+msgid "Closing speed"
+msgstr "Rychlost zavření"
+
+#: inc/fancybox-options.php:294 inc/fancybox-options.php:307
+#: inc/fancybox-options.php:867 inc/fancybox-options.php:880
+#: inc/fancybox-options.php:915
+msgid "Duration in milliseconds. Higher is slower."
+msgstr "Trvání v milisekundách. Vyšší číslo znamená pomalejší."
+
+#: inc/fancybox-options.php:595
+msgid "To make images open in an overlay, add their extension to the Autodetect field or use the class \"fancybox\" for its link. Clear field to switch off all autodetection."
+msgstr "Pro otevření obrázku v rámečku, přidejte jejich doplněk na Autodetekci nebo použijte \"fancybox\" pro jeho odkaz. Nechejte pole prázdné v případě vypnuté autodetekce."
+
+#: inc/fancybox-options.php:609 inc/fancybox-options.php:1059
+#: inc/fancybox-options.php:1185 inc/fancybox-options.php:1277
+#: inc/fancybox-options.php:1390 inc/fancybox-options.php:1412
+#: inc/fancybox-options.php:1550 inc/fancybox-options.php:1677
+msgid "Autodetect"
+msgstr "Autodetekce"
+
+#: inc/fancybox-options.php:214 inc/fancybox-options.php:365
+#: inc/fancybox-options.php:617
+msgid "Example:"
+msgstr "Příklad:"
+
+#: inc/fancybox-options.php:621
+msgid "Apply to"
+msgstr "Použít na"
+
+#: inc/fancybox-options.php:628
+msgid "All image links"
+msgstr "Všechny odkazy obrázků"
+
+#: inc/fancybox-options.php:962
+msgid "Transition In"
+msgstr "Přechod do"
+
+#: inc/fancybox-options.php:655 inc/fancybox-options.php:669
+#: inc/fancybox-options.php:697 inc/fancybox-options.php:969
+#: inc/fancybox-options.php:997
+msgid "Fade"
+msgstr "Slábnutí"
+
+#: inc/fancybox-options.php:656 inc/fancybox-options.php:670
+#: inc/fancybox-options.php:698 inc/fancybox-options.php:970
+#: inc/fancybox-options.php:998
+msgid "Elastic"
+msgstr "Elastický"
+
+#: inc/fancybox-options.php:677 inc/fancybox-options.php:977
+msgid "Easing In"
+msgstr "Uvolnění v"
+
+#: inc/fancybox-options.php:682 inc/fancybox-options.php:710
+#: inc/fancybox-options.php:982 inc/fancybox-options.php:1010
+msgid "Linear"
+msgstr "Lineární"
+
+#: inc/fancybox-options.php:683 inc/fancybox-options.php:711
+#: inc/fancybox-options.php:983 inc/fancybox-options.php:1011
+msgid "Swing"
+msgstr "Houpačka"
+
+#: inc/fancybox-options.php:990
+msgid "Transition Out"
+msgstr "Přechod ven"
+
+#: inc/fancybox-options.php:705 inc/fancybox-options.php:1005
+msgid "Easing Out"
+msgstr "Uvolnění z"
+
+#: inc/fancybox-options.php:1087
+msgid "Note:"
+msgstr "Poznámka:"
+
+#: inc/fancybox-options.php:723 inc/fancybox-options.php:1023
+msgid "Transparency fade during elastic transition. CAUTION: Use only when at least Transition In is set to Elastic!"
+msgstr "Průhlednost při elastickém přechodu. UPOZORNĚNÍ: Použijte pouze pokud máte Přechod nastaven na Elastický!"
+
+#: inc/fancybox-options.php:733 inc/fancybox-options.php:1033
+msgid "Close FancyBox when content is clicked"
+msgstr "Zavřít FancyBox po kliknutí na obsah"
+
+#: inc/fancybox-options.php:747 inc/fancybox-options.php:1129
+#: inc/fancybox-options.php:1143 inc/fancybox-options.php:1243
+#: inc/fancybox-options.php:1336 inc/fancybox-options.php:1490
+#: inc/fancybox-options.php:1504 inc/fancybox-options.php:1620
+#: inc/fancybox-options.php:1748 inc/fancybox-options.php:1853
+msgid "Title Position"
+msgstr "Pozice názvu"
+
+#: inc/fancybox-options.php:757 inc/fancybox-options.php:776
+#: inc/fancybox-options.php:1135 inc/fancybox-options.php:1151
+#: inc/fancybox-options.php:1248 inc/fancybox-options.php:1342
+#: inc/fancybox-options.php:1358 inc/fancybox-options.php:1496
+#: inc/fancybox-options.php:1512 inc/fancybox-options.php:1626
+#: inc/fancybox-options.php:1642 inc/fancybox-options.php:1754
+#: inc/fancybox-options.php:1770 inc/fancybox-options.php:1859
+#: inc/fancybox-options.php:1875
+msgid "Float"
+msgstr "Plovoucí"
+
+#: inc/fancybox-options.php:755 inc/fancybox-options.php:772
+#: inc/fancybox-options.php:1136 inc/fancybox-options.php:1152
+#: inc/fancybox-options.php:1249 inc/fancybox-options.php:1343
+#: inc/fancybox-options.php:1359 inc/fancybox-options.php:1497
+#: inc/fancybox-options.php:1513 inc/fancybox-options.php:1627
+#: inc/fancybox-options.php:1643 inc/fancybox-options.php:1755
+#: inc/fancybox-options.php:1771 inc/fancybox-options.php:1860
+#: inc/fancybox-options.php:1876
+msgid "Outside"
+msgstr "Venku"
+
+#: inc/fancybox-options.php:756 inc/fancybox-options.php:774
+#: inc/fancybox-options.php:1137 inc/fancybox-options.php:1153
+#: inc/fancybox-options.php:1250 inc/fancybox-options.php:1344
+#: inc/fancybox-options.php:1361 inc/fancybox-options.php:1498
+#: inc/fancybox-options.php:1515 inc/fancybox-options.php:1628
+#: inc/fancybox-options.php:1645 inc/fancybox-options.php:1756
+#: inc/fancybox-options.php:1773 inc/fancybox-options.php:1861
+#: inc/fancybox-options.php:1878
+msgid "Inside"
+msgstr "Vevnitř"
+
+#: inc/fancybox-options.php:527
+msgid "Advanced"
+msgstr "Pokročilé"
+
+#: inc/fancybox-options.php:799
+msgid "Hide/show title on mouse hover action"
+msgstr "Skrýt/zobrazit název po přejetí ukazatele"
+
+#: inc/fancybox-options.php:810
+msgid "WordPress galleries only"
+msgstr "Pouze Wordpress galerie"
+
+#: inc/fancybox-options.php:811
+msgid "All in one gallery"
+msgstr "Vše v jedné galerii"
+
+#: inc/fancybox-options.php:825
+msgid "Show the gallery navigation arrows"
+msgstr "Ukázat navigační šipky v galerii"
+
+#: inc/fancybox-options.php:835
+msgid "Arrow key strokes browse the gallery"
+msgstr "Stisk směrových kláves pro posun v galerii"
+
+#: inc/fancybox-options.php:846
+msgid "Make galleries cyclic, allowing you to keep pressing next/back."
+msgstr "Cyklické posouvání v galerii"
+
+#: inc/fancybox-options.php:859
+msgid "Change speed"
+msgstr "Změnit rychlost"
+
+#: inc/fancybox-options.php:871
+msgid "Fade speed"
+msgstr "Rychlost pohasnutí"
+
+#: inc/translation-strings.php:59
+msgid "Galleries per Section (below)"
+msgstr "Galerií na jednu sekci (níže)"
+
+#: inc/translation-strings.php:60
+msgid "This applies when <em>Apply to</em> is set to <em>Limited to Sections</em> and/or <em>Autogallery</em> is set to <em>Galleries per Section</em>. Adapt it to conform with your theme."
+msgstr "Toto je použito pokud <em>Použít na</em> je nastaveno <em>Omezeno na sekci</em> a/nebo <em>Autogalerie</em> je nastaveno na <em>Galerie na sekci</em>. Uzpůsobte pro Vaši šablonu."
+
+#: inc/translation-strings.php:61
+msgid "Examples: If your theme wraps post content in a div with class post, change this value to \"div.post\". If you want to group images in a WordPress gallery together, use \".gallery,.wp-block-gallery,.tiled-gallery\". If you want to include images in a sidebar with ID primary, add \", #primary\"."
+msgstr "Příklad: Pokud Vaše šablona vkládá obsah příspěvku do div, změňte tuto hodnotu na \"div.post\". Pokud chcete pouze seskupit obrázky ve Wordpress galerii dohromady, použijte \"div.gallery\". Pokud chcete přidat obrázky v bočním panelu s ID, vložte  \", #primary\"."
+
+#: inc/translation-strings.php:62
+msgid "Hide/show title on mouse hover action works best with Overlay title position."
+msgstr "Ukázat/skrýt název po přejetí ukazatele myši - pracuje nejlépe s názvem umístěným v rámečku."
+
+#: inc/translation-strings.php:65
+msgid "(6 seconds)"
+msgstr "(6 sekund)"
+
+#: inc/translation-strings.php:67
+msgid "(12 seconds)"
+msgstr "(12 sekund)"
+
+#: inc/fancybox-options.php:948
+msgid "Scrolling"
+msgstr "Posouvání"
+
+#: inc/fancybox-options.php:953
+msgid "Auto"
+msgstr "Automaticky"
+
+#: inc/fancybox-options.php:954
+msgid "Always"
+msgstr "Vždy"
+
+#: inc/fancybox-options.php:955
+msgid "Never"
+msgstr "Nikdy"
+
+#: inc/fancybox-options.php:958
+msgid "Define scrolling and scrollbar visibility."
+msgstr "Nastavte viditelnost lišty s posouváním."
+
+#: inc/fancybox-options.php:1050
+msgid "To make any PDF document file open in an overlay, switch on Autodetect or use the class \"fancybox-pdf\" for its link."
+msgstr "Pro otevření jakéhokoliv PDF dokumentu (.pdf) v rámečku prosím přepněte na Autodetekci nebo použijte příkaz \"fancybox-pdf\" pro tento odkaz."
+
+#: inc/fancybox-options.php:1408
+msgid "To make any YouTube movie open in an overlay, switch on Autodetect or use the class \"fancybox-youtube\" for its link."
+msgstr "Pro otevření jakéhokoliv videa YouTube v rámečku prosím přepněte na Autodetekci nebo použijte příkaz \"fancybox-youtube\" pro tento odkaz."
+
+#: inc/fancybox-options.php:1546
+msgid "To make any Vimeo movie open in an overlay, switch on Autodetect or use the class \"fancybox-vimeo\" for its link."
+msgstr "Pro otevření jakéhokoliv videa Vimeo v rámečku prosím přepněte na Autodetekci nebo použijte příkaz \"fancybox-vimeo\" pro tento odkaz."
+
+#: inc/fancybox-options.php:1673
+msgid "To make any Dailymotion movie open in an overlay, switch on Autodetect or use the class \"fancybox-dailymotion\" for its link."
+msgstr "Pro otevření jakéhokoliv Dailymotion videa v rámečku prosím přepněte na Autodetekci nebo použijte příkaz \"fancybox-dailymotion\" pro tento odkaz."
+
+#: inc/fancybox-options.php:1801
+msgid "To make a website or HTML document open in an overlay, use the class \"fancybox-iframe\" for its link."
+msgstr "Pro otevření jakékoliv stránky nebo HTML dokumentu v rámečku prosím použijte příkaz \"fancybox-iframe\" pro tento odkaz."
+
+#: inc/translation-strings.php:131 inc/translation-strings.php:136
+#: inc/translation-strings.php:141
+msgid "Easy FancyBox"
+msgstr "Easy FancyBox"
+
+#: inc/class-easyfancybox-admin.php:840 inc/translation-strings.php:72
+#: inc/translation-strings.php:167
+msgid "Support"
+msgstr "Podpora"
+
+#: inc/fancybox-options.php:245
+msgid "Title color"
+msgstr "Barva názvu"
+
+#: inc/fancybox-options.php:392
+msgid "Miscellaneous"
+msgstr "Různé"
+
+#: inc/translation-strings.php:64
+msgid "(3 seconds)"
+msgstr "(3 sekundy)"
+
+#: inc/translation-strings.php:66
+msgid "(9 seconds)"
+msgstr "(9 sekund)"
+
+#: inc/translation-strings.php:63
+msgid "Auto-rotation uses a fixed 3, 6, 9 or 12 second pause per image."
+msgstr "Automatická rotace je funkční pro 3,6,9 nebo 12 sekund mezi obrázky"
+
+#: inc/fancybox-options.php:479
+msgid "Include IE 8 compatibility style rules"
+msgstr "Zahrnout pravidla stylů pro podporu IE 8"
+
+#: inc/fancybox-options.php:214
+msgid "Use RGBA notation for semi-transparent borders."
+msgstr "Pro poloprůhledné okraje použít RGBA zápis."
+
+#: inc/fancybox-options.php:1239
+msgid "Show title."
+msgstr "Ukázat název"

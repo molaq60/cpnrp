@@ -1,0 +1,4155 @@
+# Translation of Plugins - Event Tickets and Registration - Stable (latest release) in Czech
+# This file is distributed under the same license as the Plugins - Event Tickets and Registration - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2026-04-16 20:41:29+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n == 1) ? 0 : ((n >= 2 && n <= 4) ? 1 : 2);\n"
+"X-Generator: GlotPress/4.0.3\n"
+"Language: cs_CZ\n"
+"Project-Id-Version: Plugins - Event Tickets and Registration - Stable (latest release)\n"
+
+#: src/views/seating/tickets-block.php:37
+msgctxt "seating tickets sold out button"
+msgid "Sold Out"
+msgstr "Vyprodáno"
+
+#: src/Tickets/Seating/Service/Error_Content.php:174
+msgctxt "link label for renewing the license"
+msgid "Renew your license"
+msgstr "Obnovit licenci"
+
+#: src/Tickets/Seating/Service/Error_Content.php:158
+msgctxt "Connect to the Seating Builder link label"
+msgid "Connect"
+msgstr "Připojit"
+
+#: src/Tickets/Seating/Service/Error_Content.php:77
+msgctxt "Connect to the Seating Builder button label"
+msgid "Connect"
+msgstr "Připojit"
+
+#: src/Tickets/Seating/Localization.php:102
+msgctxt "Error message"
+msgid "Site not found"
+msgstr "Stránka nenalezena"
+
+#: src/Tickets/Seating/Orders/Attendee.php:313
+msgid "Unknown"
+msgstr "Neznámé"
+
+#: src/Tickets/Seating/Health.php:79
+msgid "Your license is valid."
+msgstr "Vaše licence je platná"
+
+#: src/Tickets/Seating/Frontend/Timer.php:586
+msgctxt "Seat selection sold out timer title"
+msgid "Sold Out"
+msgstr "Vyprodáno"
+
+#: src/Tickets/Seating/Frontend/Timer.php:586
+#: build/Seating/frontend/session.js:1
+msgctxt "Seat selection expired timer title"
+msgid "Time limit expired"
+msgstr "Časový limit vypršel"
+
+#. Translators: %s: The post type singular name.
+#: src/Tickets/Seating/Frontend/Timer.php:545
+msgctxt "Seat selection expired timer button label"
+msgid "Find Another %s"
+msgstr "Najít jiné %s"
+
+#: src/Tickets/Seating/Frontend.php:442
+msgctxt "Seat selection modal total string"
+msgid "{count} Tickets"
+msgstr "{count} lístků"
+
+#: src/Tickets/Seating/Admin/Events/Controller.php:95
+msgid "Events per page"
+msgstr "Událostí na stránku"
+
+#. Translators: %s: The post type singular name.
+#: src/Tickets/Seating/Frontend/Timer.php:538
+msgctxt "Seat selection expired timer content"
+msgid "This %s is now sold out."
+msgstr "Tato %s je vyprodaná."
+
+#: src/Tickets/Admin/Tickets/List_Table.php:213
+#: src/Tickets/Commerce/Order_Modifiers/Table_Views/Coupon_Table.php:64
+msgid "Remaining"
+msgstr "Zbývá"
+
+#: src/Tickets/Admin/Tickets/List_Table.php:210
+msgid "Days Left"
+msgstr "Zbývající dny"
+
+#: src/Tickets/Commerce/Admin/Singular_Order_Page.php:111
+msgctxt "Order edit page breadcrumb link back to Orders page."
+msgid "Orders"
+msgstr "Objednávky"
+
+#: src/Tickets/Commerce/Order.php:370
+msgid "All Orders"
+msgstr "Všechny objednávky"
+
+#: src/Tickets/Commerce/Order.php:369
+msgid "No orders found in Trash."
+msgstr "V koši nebyly nalezeny žádné objednávky."
+
+#: src/Tickets/Commerce/Order.php:368
+msgid "No orders found."
+msgstr "Žádné objednávky nenalezeny."
+
+#: src/Tickets/Commerce/Order.php:378
+msgid "Orders list"
+msgstr "Seznam objednávek"
+
+#: src/Tickets/Commerce/Order.php:377
+msgid "Orders list navigation"
+msgstr "Navigace v seznamu objednávek"
+
+#: src/admin-views/commerce/orders/single/order-items-metabox.php:24
+msgid "Item name"
+msgstr "Jméno položky"
+
+#: src/admin-views/commerce/orders/single/order-items-metabox-item.php:125
+msgid "Seat"
+msgstr "Místo"
+
+#: src/admin-views/commerce/orders/single/order-actions-metabox.php:73
+#: src/admin-views/commerce/orders/single/order-actions-metabox.php:74
+msgid "Update"
+msgstr "Obnovit"
+
+#: src/admin-views/commerce/orders/single/order-actions-metabox.php:64
+msgid "Move to Trash"
+msgstr "Přesunout do koše"
+
+#: src/admin-views/commerce/orders/single/order-actions-metabox.php:64
+msgid "Delete permanently"
+msgstr "Trvale smazat"
+
+#: src/admin-views/commerce/orders/single/order-actions-metabox.php:43
+msgid "Save"
+msgstr "Uložit"
+
+#: common/src/Common/Event_Automator/Zapier/REST/V1/Endpoints/Orders.php:70
+msgctxt "Display name of the Zapier endpoint for ticket orders."
+msgid "Orders"
+msgstr "Objednávky"
+
+#: common/src/Common/Event_Automator/Power_Automate/REST/V1/Endpoints/Queue/Orders.php:78
+msgctxt "Display name of the Power Automate endpoint for ticket orders."
+msgid "Orders"
+msgstr "Objednávky"
+
+#: src/Tickets/Commerce/Admin_Tables/Orders_Table.php:1010
+msgid "All Customers"
+msgstr "Všichni zákazníky"
+
+#: common/src/Common/Admin/Abstract_Custom_List_Table.php:438
+#: src/Tickets/Commerce/Admin_Tables/Orders_Table.php:967
+#: src/Tickets/Commerce/Admin_Tables/Orders_Table.php:1025
+msgid "Searching..."
+msgstr "Hledání..."
+
+#: common/src/Common/Admin/Abstract_Custom_List_Table.php:426
+#: src/Tickets/Commerce/Admin_Tables/Orders_Table.php:955
+msgid "All Events"
+msgstr "Všechny události"
+
+#: src/Tickets/Commerce/Admin_Tables/Orders_Table.php:756
+msgid "Clear All"
+msgstr "Smazat vše"
+
+#: src/Tickets/Commerce/Admin_Tables/Orders_Table.php:688
+msgid "Search All"
+msgstr "Hledat vše"
+
+#. translators: %s: human-readable time difference
+#: common/src/Common/Admin/Abstract_Custom_List_Table.php:477
+#: src/Tickets/Commerce/Admin_Tables/Orders_Table.php:421
+msgctxt "%s = human-readable time difference"
+msgid "%s ago"
+msgstr "před %s"
+
+#: src/admin-views/commerce/orders/single/order-items-metabox-item.php:82
+#: src/Tickets/Admin/Tickets/List_Table.php:207
+#: src/Tickets/Commerce/Admin_Tables/Orders_Table.php:167
+msgid "Event"
+msgstr "Událost"
+
+#: src/Tickets/Commerce/Admin/Singular_Order_Page.php:232
+#: src/Tickets/Commerce/Admin_Tables/Orders_Table.php:164
+msgid "Items"
+msgstr "Položky"
+
+#. translators: Hidden accessibility text for the row toggle.
+#: src/Tickets/Commerce/Admin_Tables/Orders_Table.php:115
+msgid "Show more details"
+msgstr "Ukázat podrobnosti"
+
+#: src/Tickets/Commerce/Utils/Value.php:90
+msgctxt "No cost"
+msgid "Free"
+msgstr "Zdarma"
+
+#. Translators: %1$s: Plural `Tickets` label.
+#: src/views/v2/commerce/gateway/free/button.php:28
+msgid "Get %1$s"
+msgstr "Koupit %1$s"
+
+#: src/Tickets/Site_Health/Subsections/Plugins/Plugin_Data_Subsection.php:157
+msgid "Minimum Ticket Price"
+msgstr "Minimální cena vstupenky"
+
+#: src/Tickets/Commerce/Admin_Tables/Orders.php:652
+msgid "orders"
+msgstr "objednávky"
+
+#. Translators: %s is the plural label for tickets.
+#. Translators: %s is the plural label for RSVPs.
+#: src/views/components/attendees-list/title.php:34
+#: src/views/v2/rsvp/attendees/title.php:30
+msgid "Your %s"
+msgstr "Vaše %s"
+
+#: src/Tribe/REST/V1/Endpoints/QR.php:375
+msgid "Event has not started or it has finished."
+msgstr "Akce ještě nezačala, nebo již skončila."
+
+#. Translators: %s: 'ticket' label (singular, lowercase).
+#: src/Tribe/REST/V1/Endpoints/QR.php:394
+msgid "%s not checked in!"
+msgstr "%s nebyla použita!"
+
+#: src/Tickets/Flexible_Tickets/Series_Passes/Attendees.php:531
+#: src/Tribe/REST/V1/Endpoints/QR.php:357
+msgid "Already checked in!"
+msgstr "Již byla použita!"
+
+#: src/Tribe/REST/V1/Endpoints/QR.php:277
+msgid "Security code is not valid!"
+msgstr "Bezpečnostní kód není platný!"
+
+#: src/Tribe/REST/V1/Endpoints/QR.php:292
+msgid "An attendee is not found with this ID."
+msgstr "Návštěvník s tímto ID nebyl nalezen."
+
+#: src/Tribe/REST/V1/Endpoints/QR.php:432
+msgid "Checked In!"
+msgstr "Odbavena!"
+
+#: src/Tickets/REST/TEC/V1/Endpoints/Ticket.php:227
+#: src/Tickets/REST/TEC/V1/Endpoints/Tickets.php:179
+#: src/Tickets/REST/TEC/V1/Endpoints/Tickets.php:322
+#: src/Tribe/REST/V1/Endpoints/QR.php:125
+msgid "A required parameter is missing or an input parameter is in the wrong format"
+msgstr "Chybí požadovaný parametr nebo je vstupní parametr v nesprávném formátu"
+
+#. Translators: %s is the ticket ID.
+#: src/Tickets/QR/Observer.php:250
+msgid "The ticket with ID %s was checked in."
+msgstr "Vstupenka s ID %s byla úspěšně použita!"
+
+#. Translators: %s is the ticket ID.
+#: src/Tickets/QR/Observer.php:239
+msgid "The ticket with ID %s has already been checked in."
+msgstr "Vstupenka s ID %s již byla použita!"
+
+#: common/src/Common/QR/Notices.php:105
+msgid "Learn more."
+msgstr "Více informací."
+
+#: common/src/Common/QR/Notices.php:103
+msgid "QR codes for events/tickets not available."
+msgstr "QR kódy pro vstupenky nejsou k dispozici."
+
+#: src/admin-views/settings/tickets-commerce/square/connect/webhook-status.php:40
+#: build/Tickets/Blocks/Ticket/editor.js:1
+#: build/Tickets/Blocks/Tickets/editor.js:15
+msgid "Expired"
+msgstr "Platnost vypršela"
+
+#: src/admin-views/commerce/reports/orders/summary.php:101
+msgid "Sales Totals"
+msgstr "Celkové tržby"
+
+#: src/admin-views/commerce/reports/orders/summary.php:71
+#: src/admin-views/tpp-orders.php:107
+msgid "Sales by %s"
+msgstr "Tržby podle %s"
+
+#: src/Tribe/Editor/REST/V1/Endpoints/Single_Ticket.php:279
+msgid "Invalid price"
+msgstr "Neplatná cena"
+
+#: src/admin-views/settings/tickets-commerce/paystack-promo.php:27
+msgid "Download the plugin"
+msgstr "Stažení doplňku"
+
+#: src/admin-views/attendees/attendees-event/attendance-totals.php:18
+msgctxt "attendee summary"
+msgid "Total"
+msgstr "Celkem"
+
+#: src/admin-views/attendees/attendees-event/overview.php:20
+msgctxt "attendee screen summary"
+msgid "Ticket Overview"
+msgstr "Sumarizace vstupenky"
+
+#. Translators: %1$s is the number of tickets available.
+#: src/admin-views/attendees/attendees-event/overview.php:97
+msgid "(%s available)"
+msgstr "(%s k dispozici)"
+
+#: src/Tribe/REST/V1/Endpoints/Single_Attendee.php:414
+msgid "Attendee is already checked in."
+msgstr "Účastník se již zaregistroval."
+
+#. Translators: %1$s is the number of tickets issued.
+#: src/admin-views/attendees/attendees-event/overview.php:88
+msgid "%s issued"
+msgstr "%s vydáno"
+
+#: src/admin-views/attendees/attendees-event/attendance.php:14
+msgid "Attendance Overview"
+msgstr "Přehled účasti"
+
+#: src/admin-views/commerce/orders/single/order-items-metabox-item.php:19
+msgid "Series Pass"
+msgstr "Permanentky na série"
+
+#: src/admin-views/settings/tickets-commerce/paypal/connect/non-ssl-notice.php:39
+msgid "PayPal connection unavailable"
+msgstr "Připojení k PayPal není k dispozici"
+
+#: src/Tickets/Commerce/Order.php:365
+#: src/Tickets/Emails/JSON_LD/Order_Schema.php:77
+msgid "View Order"
+msgstr "Zobrazit objednávku"
+
+#: src/Tickets/Emails/Admin/Preview_Data.php:296
+msgid "Arts in the Park"
+msgstr "Umění v parku"
+
+#: src/Tickets/Emails/Admin/Preview_Data.php:261
+#: src/Tickets/Emails/Admin/Preview_Data.php:263
+msgid "john@doe.com"
+msgstr "jan@novak.cz"
+
+#: src/Tickets/Emails/Admin/Notice_Extension.php:78
+msgctxt "Extension notice for Tickets Emails."
+msgid "Learn More"
+msgstr "Více informací"
+
+#: common/src/Common/Telemetry/Telemetry.php:368
+msgid "I found a better plugin."
+msgstr "Našel jsem lepší rozšíření."
+
+#: common/src/Common/Telemetry/Telemetry.php:378
+msgid "The plugin doesn't work."
+msgstr "Rozšíření nefunguje."
+
+#: common/src/Common/Telemetry/Telemetry.php:359
+msgid "We're sorry to see you go."
+msgstr "Je nám líto že odcházíte."
+
+#: common/src/Common/Telemetry/Telemetry.php:364
+msgid "I couldn't understand how to make it work."
+msgstr "Nedokázal jsem je zprovoznit."
+
+#: common/src/Common/Telemetry/Telemetry.php:373
+msgid "I need a specific feature it doesn't provide."
+msgstr "Potřebuji konkrétní funkci, kterou neposkytuje."
+
+#: common/src/Common/Telemetry/Telemetry.php:383
+msgid "Other"
+msgstr "Jiný důvod"
+
+#: common/src/Common/Telemetry/Telemetry.php:360
+msgid "We'd love to know why you're leaving so we can improve our plugin."
+msgstr "Rádi bychom věděli proč odcházíte, abychom mohli naše rozšíření vylepšit."
+
+#: src/views/emails/template-parts/body/order/ticket-totals/header-row.php:35
+msgid "Qty"
+msgstr "Množství"
+
+#: src/admin-views/commerce/orders/single/order-items-metabox.php:25
+msgid "Type"
+msgstr "Typ"
+
+#: src/Tickets/Admin/Tickets/List_Table.php:206
+#: src/views/emails/template-parts/body/order/attendees-table/header-row.php:30
+msgid "Ticket ID"
+msgstr "ID vstupenky"
+
+#: src/Tickets/Emails/Admin/Preview_Data.php:97
+#: src/Tickets/Flexible_Tickets/Series_Passes/Emails/Series_Pass.php:322
+msgid "Preview Order"
+msgstr "Náhled objednávky"
+
+#: src/views/emails/purchase-receipt/intro.php:31
+msgid "Hello!"
+msgstr "Dobrý den!"
+
+#: src/Tickets/Emails/Email/RSVP.php:72
+#: src/Tickets/Emails/Email/RSVP_Not_Going.php:68
+#: src/Tickets/Emails/Email/Ticket.php:72
+#: src/Tickets/Flexible_Tickets/Series_Passes/Emails/Series_Pass.php:85
+msgid "Attendee(s)"
+msgstr "Návštěvník/návštěvníci"
+
+#: src/Tickets/Emails/Email/Completed_Order.php:70
+msgid "Admin"
+msgstr "Správce"
+
+#: src/Tickets/Emails/Admin/Preview_Data.php:82
+#: src/Tickets/Flexible_Tickets/Series_Passes/Emails/Series_Pass.php:307
+msgid "John"
+msgstr "Jan"
+
+#. Translators: %s - The order ID.
+#: src/views/emails/template-parts/body/order/purchaser-details/order-number.php:30
+msgid "Order #%s"
+msgstr "Objednávka č. %s"
+
+#. Translators: %s - Payment provider's name.
+#: src/views/emails/template-parts/body/order/payment-info.php:41
+msgid "Payment unsuccessful with %s"
+msgstr "Platba přes %s byla neúspěšná"
+
+#. Translators: %s - Payment provider's name.
+#: src/views/emails/template-parts/body/order/payment-info.php:45
+msgid "Payment completed with %s"
+msgstr "Zaplaceno přes %s"
+
+#: src/views/emails/template-parts/body/order/error-message.php:33
+msgid "The following attempted purchase has failed because:"
+msgstr "Následující pokus o nákup se nezdařil, protože:"
+
+#. Translators: %s - First name of purchaser.
+#: src/views/emails/purchase-receipt/intro.php:34
+msgid "Hi, %s!"
+msgstr "Dobrý den %s!"
+
+#. Translators: %1$s - ticket label singular, %2$s - Tickets label plural.
+#: src/views/emails/purchase-receipt/intro.php:49
+msgid "Below are the details of your recent %1$s purchase. Your %2$s will arrive in a separate email."
+msgstr "Níže jsou uvedeny podrobnosti o vašem nedávném nákupu %1$s. Vaše %2$s dorazí v samostatném e-mailu."
+
+#: src/views/emails/rsvp-not-going/body.php:34
+msgid "Thank you for confirming that you will not be attending."
+msgstr "Děkujeme za potvrzení, že se nezúčastníte."
+
+#: src/Tickets/Emails/Email/Completed_Order.php:177
+#: src/Tickets/Emails/Email/Purchase_Receipt.php:159
+#: src/Tickets/Emails/Email/RSVP.php:197
+#: src/Tickets/Emails/Email/RSVP_Not_Going.php:161
+#: src/Tickets/Emails/Email/Ticket.php:171
+#: src/Tickets/Flexible_Tickets/Series_Passes/Emails/Series_Pass.php:164
+msgid "Subject"
+msgstr "Předmět"
+
+#: src/Tickets/Emails/Email/Completed_Order.php:59
+msgid "Completed Order"
+msgstr "Dokončená objednávka"
+
+#: src/Tickets/Emails/Email/Completed_Order.php:185
+#: src/Tickets/Emails/Email/Purchase_Receipt.php:167
+#: src/Tickets/Emails/Email/RSVP.php:210
+#: src/Tickets/Emails/Email/RSVP_Not_Going.php:169
+#: src/Tickets/Emails/Email/Ticket.php:179
+#: src/Tickets/Flexible_Tickets/Series_Passes/Emails/Series_Pass.php:172
+msgid "Heading"
+msgstr "Záhlaví"
+
+#. Translators: %s Is the number of attendees.
+#: src/Tickets/Admin/Glance_Items.php:54
+msgid "%s Attendee"
+msgid_plural "%s Attendees"
+msgstr[0] "%s účastník"
+msgstr[1] "%s účastníci"
+msgstr[2] "%s účastníků"
+
+#: src/Tickets/Emails/Email/Completed_Order.php:169
+msgid "Recipient(s)"
+msgstr "Příjemce(i)"
+
+#: src/Tickets/Emails/Email/Purchase_Receipt.php:59
+msgid "Purchase Receipt"
+msgstr "Potvrzení o nákupu"
+
+#: src/Tickets/Emails/Email/Completed_Order.php:195
+msgid "Additional content will be displayed below the order details."
+msgstr "Další obsah se zobrazí pod podrobnostmi objednávky."
+
+#. Translators: %s - Label of the form input field.
+#: common/src/Tribe/Validate.php:534
+msgid "%s must be a list of valid email addresses separated by commas or semicolons."
+msgstr "%s musí být seznam platných e-mailových adres oddělených čárkami nebo středníky."
+
+#: src/Tickets/Emails/Email/Completed_Order.php:92
+msgid "Completed order: #{order_number}"
+msgstr "Dokončená objednávka č.: {order_number}"
+
+#: src/Tickets/Emails/Email/Completed_Order.php:103
+msgid "[{site_title}]: Completed order #{order_number}"
+msgstr "[{site_title}] Dokončená objednávka č. {order_number}"
+
+#. Translators: %1$s: Tickets label, in singular. %2$s: Current ticket number
+#. over total. %3$s: Number of total Tickets.
+#: src/views/emails/template-parts/body/ticket/number-from-total.php:38
+msgid "%1$s %2$s of %3$s"
+msgstr "%1$s %2$s z %3$s"
+
+#. Translators: %1$s is the `Tickets` in plural.
+#: src/Tribe/Admin/Settings.php:141
+msgid "%1$s Settings"
+msgstr "Nastavení %1$s"
+
+#: src/Tickets/Emails/Email/Ticket.php:190
+#: src/Tickets/Flexible_Tickets/Series_Passes/Emails/Series_Pass.php:183
+msgid "Additional content will be displayed below the tickets in your email."
+msgstr "Další obsah se zobrazí pod vstupenkami ve vašem e-mailu."
+
+#. Translators: %1$s: Number of total Tickets. %2$s: Tickets label, in plural.
+#: src/views/emails/template-parts/body/tickets-total.php:37
+msgid "%1$s %2$s Total"
+msgstr "Celkem %1$s %2$s"
+
+#: src/Tickets/Emails/Email/Completed_Order.php:193
+#: src/Tickets/Emails/Email/Purchase_Receipt.php:175
+#: src/Tickets/Emails/Email/RSVP.php:223
+#: src/Tickets/Emails/Email/RSVP_Not_Going.php:177
+#: src/Tickets/Emails/Email/Ticket.php:187
+#: src/Tickets/Flexible_Tickets/Series_Passes/Emails/Series_Pass.php:180
+msgid "Additional content"
+msgstr "Dodatečný obsah"
+
+#. Translators: %s: The email "to".
+#: src/admin-views/settings/emails/message-templates/list-recipient.php:23
+msgid "To: %s"
+msgstr "Příjemce: %s"
+
+#. Translators: %s Lowercase plural of ticket.
+#: src/Tickets/Emails/Email/RSVP.php:85 src/Tickets/Emails/Email/Ticket.php:85
+#: src/Tickets/Flexible_Tickets/Series_Passes/Emails/Series_Pass.php:269
+msgid "Here's your %s, {attendee_name}!"
+msgstr "Zde jsou tvé %s, {attendee_name}!"
+
+#: src/Tickets/Emails/Email/Ticket.php:61
+#: src/Tickets/Emails/Email_Template.php:144
+msgid "Ticket Email"
+msgstr "Email se vstupenkami"
+
+#: src/Tickets/Emails/Admin/Settings.php:391
+msgid "Enable Tickets Emails"
+msgstr "Povolit emaily se vstupenkami"
+
+#: src/Tickets/Emails/Admin/Emails_Tab.php:297
+msgid "Invalid email id selected."
+msgstr "Vybráno neplatné ID emailu."
+
+#: src/Tickets/Emails/Admin/Emails_Tab.php:283
+msgid "Back to Email Settings"
+msgstr "Zpět na možnosti Emailu."
+
+#: src/views/emails/template-parts/header/top-link.php:38
+msgid "Click here"
+msgstr "Klikněte zde"
+
+#: src/views/emails/template-parts/header/top-link.php:37
+msgid "Having trouble viewing this email?"
+msgstr "Máte potíže se zobrazením tohoto e-mailu?"
+
+#. Translators: %1$s - singular ticket term.
+#. Translators: %1$s - singular ticket term
+#: src/Tribe/Metabox.php:455 src/Tribe/Metabox.php:545
+msgid "Invalid %1$s"
+msgstr "Neplatná %1$s"
+
+#: src/Tickets/Emails/Admin/Preview_Data.php:67
+#: src/Tickets/Emails/Admin/Preview_Data.php:252
+#: src/Tickets/Emails/Admin/Preview_Data.php:257
+#: src/Tickets/Emails/Admin/Preview_Data.php:258
+msgid "General Admission"
+msgstr "Všeobecné vstupné"
+
+#: src/Tickets/Emails/Admin/Preview_Modal.php:138
+msgctxt "Preview email button on the settings"
+msgid "Preview Email"
+msgstr "Náhled e-mailu"
+
+#: src/Tickets/Emails/Admin/Preview_Modal.php:134
+#: src/Tickets/Emails/Admin/Preview_Modal.php:143
+msgid "Preview Email"
+msgstr "Náhled e-mailu"
+
+#: src/Tickets/Emails/Admin/Preview_Modal.php:87
+msgid "Email Preview"
+msgstr "Náhled e-mailu"
+
+#: src/Tickets/Emails/Admin/Settings.php:322
+msgid "Footer Content"
+msgstr "Obsah zápatí"
+
+#: src/Tickets/Emails/Admin/Settings.php:314
+msgid "Ticket Color"
+msgstr "Barva vstupenky"
+
+#: common/src/Tribe/Field.php:1039 common/src/Tribe/Field.php:1085
+msgid "Use this image"
+msgstr "Použít tento obrázek"
+
+#: common/src/Tribe/Field.php:1038 common/src/Tribe/Field.php:1084
+msgid "Select an image"
+msgstr "Zvolit obrázek"
+
+#: common/src/Tribe/Field.php:1034 common/src/Tribe/Field.php:1080
+msgid "Remove Image"
+msgstr "Odstranit obrázek"
+
+#: common/src/Tribe/Field.php:1033 common/src/Tribe/Field.php:1079
+msgid "Select Image"
+msgstr "Zvolit obrázek"
+
+#: src/Tickets/Commerce/Settings.php:398
+msgid "Pages Configuration"
+msgstr "Nastavení stránek"
+
+#: src/Tickets/Commerce/Settings.php:379
+msgid "Currency Position"
+msgstr "Pozice měny"
+
+#: src/Tickets/Commerce/Settings.php:444
+#: src/Tickets/Emails/Admin/Emails_Tab.php:93
+msgid "Emails"
+msgstr "E-maily"
+
+#: src/Tickets/Commerce/Settings.php:385
+msgid "After"
+msgstr "Za"
+
+#: src/Tickets/Commerce/Settings.php:384
+msgid "Before"
+msgstr "Před"
+
+#. translators: %s: lowercase post type label
+#: src/admin-views/editor/total-capacity.php:26
+msgid "The total number of possible attendees for this %s"
+msgstr "Celkový počet možných účastníků této akce"
+
+#: src/admin-views/editor/total-capacity.php:39
+msgid "No tickets created yet"
+msgstr "Zatím nebyly vytvořeny žádné vstupenky"
+
+#: src/Tickets/Commerce/Gateways/PayPal/REST/Order_Endpoint.php:618
+msgid "Your payment was declined."
+msgstr "Vaše platba byla zamítnuta."
+
+#: src/Tribe/Admin/Settings.php:245
+msgid "Home"
+msgstr "Domů"
+
+#: common/src/admin-views/troubleshooting/ea-status/current-status.php:23
+msgid "Edit Import Settings"
+msgstr "Nastavení importu"
+
+#: common/src/admin-views/troubleshooting/ea-status/current-status.php:18
+msgid "Imports disabled in Settings"
+msgstr "Importy jsou v nastavení zakázány"
+
+#: common/src/admin-views/troubleshooting/ea-status/current-status.php:13
+msgid "Imports Enabled in Settings"
+msgstr "Importy jsou v nastavení povoleny"
+
+#. Translators: %1$s: Currency Name. %2$s: Link to gateway provider's currency
+#. documentation.
+#: src/Tickets/Commerce/Gateways/Stripe/Gateway.php:215
+msgid "Unfortunately, Stripe doesn't support payments in %1$s. Please try using a different gateway or adjusting your Tickets Commerce currency setting. You can see a list of supported currencies %2$s."
+msgstr "Stripe bohužel nepodporuje platby v %1$s. Zkuste prosím použít jinou bránu nebo upravit nastavení měny Tickets Commerce. Můžete se podívat na seznam podporovaných měn %2$s."
+
+#: src/Tickets/Commerce/Gateways/PayPal/Gateway.php:220
+msgid "PayPal doesn't support your selected currency"
+msgstr "PayPal nepodporuje vybranou měnu"
+
+#: src/Tickets/Commerce/Gateways/PayPal/Gateway.php:218
+#: src/Tickets/Commerce/Gateways/Square/Gateway.php:261
+#: src/Tickets/Commerce/Gateways/Stripe/Gateway.php:210
+msgid "here"
+msgstr "zde"
+
+#. Translators: %1$s: Currency Name. %2$s: Link to gateway provider's currency
+#. documentation.
+#: src/Tickets/Commerce/Gateways/PayPal/Gateway.php:223
+msgid "Unfortunately PayPal doesn't support payments in %1$s. Please try using a different gateway or adjusting your Tickets Commerce currency setting. You can see a list of supported currencies %2$s."
+msgstr "PayPal bohužel nepodporuje platby v %1$s. Zkuste prosím použít jinou bránu nebo upravit nastavení měny Tickets Commerce. Můžete se podívat na seznam podporovaných měn %2$s."
+
+#: src/Tickets/Commerce/Gateways/Stripe/Gateway.php:212
+msgid "Stripe doesn't support your selected currency"
+msgstr "Stripe nepodporuje vybranou měnu"
+
+#: src/views/v2/commerce/gateway/stripe/card-element.php:42
+msgid "Zip Code"
+msgstr "PSČ"
+
+#: src/Tickets/Commerce/Shortcodes/Checkout_Shortcode.php:103
+msgid "Person purchasing tickets:"
+msgstr "Osoba kupující vstupenky:"
+
+#: src/Tickets/Commerce/Shortcodes/Checkout_Shortcode.php:108
+msgid "Email address"
+msgstr "Emailová adresa:"
+
+#: src/Tickets/Commerce/Shortcodes/Checkout_Shortcode.php:221
+msgid "Purchaser info"
+msgstr "Jméno zákazníka"
+
+#: src/admin-views/commerce/orders/single/order-details-metabox.php:58
+msgid "Payment"
+msgstr "Platba"
+
+#: src/Tickets/Commerce/Settings.php:513
+msgid "Payment Gateways"
+msgstr "Platební brány"
+
+#. Translators: %s - Title of email.
+#: src/Tickets/Emails/Email/Completed_Order.php:161
+#: src/Tickets/Emails/Email/Purchase_Receipt.php:151
+#: src/Tickets/Emails/Email/RSVP.php:176
+#: src/Tickets/Emails/Email/RSVP_Not_Going.php:153
+#: src/Tickets/Emails/Email/Ticket.php:163
+#: src/Tickets/Flexible_Tickets/Series_Passes/Emails/Series_Pass.php:156
+msgid "Enable %s"
+msgstr "Povolit %s"
+
+#: src/Tickets/Commerce/Gateways/Stripe/Webhooks/Events.php:223
+msgid "Successful payments"
+msgstr "Úspěšné platby"
+
+#: src/Tickets/Commerce/Gateways/Stripe/Webhooks/Events.php:222
+msgid "Action required payments"
+msgstr "Platby vyžadující pozornost"
+
+#: src/Tickets/Commerce/Gateways/Stripe/Webhooks/Events.php:221
+msgid "Pending payments"
+msgstr "Čekající platby"
+
+#: src/Tickets/Commerce/Gateways/Stripe/Webhooks/Events.php:220
+msgid "Failed payments"
+msgstr "Nezdařené platby"
+
+#: src/Tickets/Commerce/Gateways/Stripe/Webhooks/Events.php:219
+msgid "Created payments"
+msgstr "Vytvořené platby"
+
+#: src/Tickets/Commerce/Gateways/Stripe/Webhooks/Events.php:218
+msgid "Canceled payments"
+msgstr "Zrušené platby"
+
+#: src/Tickets/Commerce/Gateways/Stripe/Settings.php:383
+msgid "Credit Cards"
+msgstr "Kreditní karty"
+
+#: src/Tickets/Commerce/Gateways/Stripe/Settings.php:342
+msgid "Payment methods accepted"
+msgstr "Akceptované metody platby"
+
+#: src/Tickets/Commerce/Gateways/Stripe/Settings.php:306
+msgid "Checkout Type"
+msgstr "Typ nákupu"
+
+#: src/Tickets/Commerce/Gateways/Stripe/Settings.php:311
+msgid "Accept only credit card payments."
+msgstr "Přijímejte pouze platby kreditní kartou."
+
+#: src/Tickets/Commerce/Gateways/Stripe/Settings.php:317
+msgid "Credit Card field format"
+msgstr "Formát pole Platební karta"
+
+#: src/Tickets/Commerce/Gateways/Stripe/Settings.php:312
+msgid "Accept credit card payments and additional payment methods configured in Stripe."
+msgstr "Přijímejte platby kreditní kartou a další platební metody nakonfigurované ve službě Stripe."
+
+#: src/Tickets/Commerce/Gateways/Stripe/Settings.php:288
+msgid "If this option is selected, ticket buyers will get Stripe receipts, as well as Event Tickets confirmation emails."
+msgstr "Pokud je vybrána tato možnost, kupující vstupenek obdrží účtenky od Stripe a také e-maily s potvrzením vstupenek na akce."
+
+#: src/Tickets/Commerce/Gateways/Stripe/Payment_Intent.php:321
+msgid "Payment methods accepted cannot be empty"
+msgstr "Přijímané platební metody nemohou být prázdné"
+
+#: src/Tickets/Commerce/Assets.php:96
+msgid "Additional payment options"
+msgstr "Další možnosti platby"
+
+#: src/Tickets/Commerce/Gateways/Contracts/Abstract_Gateway.php:309
+msgid "Enabled for Checkout"
+msgstr "Povoleno pro platby"
+
+#: src/Tickets/Commerce/Gateways/PayPal/Gateway.php:147
+msgid "Enable payments through PayPal, Venmo, and credit card."
+msgstr "Povolte platby prostřednictvím PayPal, Venmo a kreditních karet."
+
+#: src/Tickets/Commerce/Assets.php:95
+msgid "Default checkout"
+msgstr "Výchozí platební metoda"
+
+#: src/admin-views/settings/tickets-commerce/stripe/modal/signup-complete/content.php:16
+#: src/Tickets/Admin/Onboarding/Tickets_Landing_Page.php:525
+#: src/Tickets/Commerce/Settings.php:346 build/wizard/wizard.js:1
+msgid "Currency"
+msgstr "Měna"
+
+#: src/admin-views/settings/tickets-commerce/stripe/modal/signup-complete/content.php:23
+msgid "Payment methods"
+msgstr "Platební metody"
+
+#: common/src/admin-views/troubleshooting/ea-status/current-status.php:29
+#: src/admin-views/settings/tickets-commerce/stripe/connect/active/stripe-status.php:40
+msgid "Enabled"
+msgstr "Povoleno"
+
+#: common/src/Tribe/Customizer.php:1054
+msgid "Customizer"
+msgstr "Přízpůsobení"
+
+#: src/Tickets/Commerce/Payments_Tab.php:576
+msgid "Order Completed"
+msgstr "Objednávka dokončena"
+
+#: src/Tickets/Commerce/Payments_Tab.php:547
+msgid "Tickets Checkout"
+msgstr "Nákup vstupenek"
+
+#: src/admin-views/settings/tickets-commerce/paypal/modal/signup-complete/content.php:56
+#: src/admin-views/settings/tickets-commerce/stripe/modal/signup-complete/content.php:79
+msgid "Got it, thanks!"
+msgstr "Mám to, díky!"
+
+#: common/src/Tribe/Customizer.php:1058
+msgid "Adjust colors, fonts, and more with the WordPress Customizer."
+msgstr "Upravte barvy, písma a další pomocí WordPress Customizer."
+
+#: src/views/v2/commerce/order/header/title.php:28
+msgid "Order Received!"
+msgstr "Objednávka byla přijata!"
+
+#: src/views/v2/commerce/order/footer/links/back-home.php:29
+msgid "back home"
+msgstr "zpět na úvodní stránku"
+
+#: src/views/v2/commerce/order/details/total.php:33
+msgid "Total:"
+msgstr "Celkem:"
+
+#: src/views/v2/commerce/order/details/payment-method.php:37
+msgid "Payment method:"
+msgstr "Způsob platby:"
+
+#: src/views/v2/commerce/order/details/order-number.php:31
+msgid "Order number:"
+msgstr "Číslo objednávky:"
+
+#: src/views/v2/commerce/order/details/date.php:27
+msgid "Date:"
+msgstr "Datum:"
+
+#: src/views/v2/commerce/gateway/paypal/order/details/capture-id.php:40
+msgid "PayPal Capture ID:"
+msgstr "PayPal Capture ID:"
+
+#: src/views/v2/commerce/gateway/paypal/advanced-payments/separator.php:25
+msgid "or pay with card"
+msgstr "nebo zaplaťte kartou"
+
+#: src/views/v2/commerce/gateway/paypal/advanced-payments/fields/expiration-date.php:35
+msgid "Expiration Date"
+msgstr "Datum vypršení platnosti"
+
+#: src/views/v2/commerce/order/description/order-empty.php:28
+msgid "No order information is available because no purchase was made."
+msgstr "Nejsou k dispozici žádné informace o objednávce, protože nebyl proveden žádný nákup."
+
+#. Translators: %1$s: Plural `tickets` in lowercase.
+#: src/views/v2/commerce/order/description/order.php:31
+msgid "Thank you. Your order has been received. A receipt for purchase and any digital %1$s ordered will be emailed to you shortly."
+msgstr "Děkuju. Vaše objednávka byla přijata. Účtenka za nákup a všechny objednané digitální %1$s vám budou brzy zaslány e-mailem."
+
+#. Translators: %1$s: Plural `events` in lowercase.
+#: src/views/v2/commerce/order/footer/links/browse-events.php:36
+msgid "browse more %1$s"
+msgstr "prohlížet více %1$s"
+
+#: src/views/v2/commerce/gateway/paypal/advanced-payments/fields/card-number.php:35
+msgid "Card Number"
+msgstr "Číslo karty"
+
+#: src/views/v2/commerce/gateway/paypal/advanced-payments/fields/cvv.php:35
+msgid "CVV"
+msgstr "CVV"
+
+#: src/views/v2/commerce/gateway/paypal/advanced-payments/fields/card-name.php:35
+#: src/views/v2/commerce/gateway/paypal/advanced-payments/fields/card-name.php:43
+msgid "Name on Card"
+msgstr "Jméno na kartě"
+
+#. Translators: %1$s: Plural `Tickets` label.
+#: src/views/v2/commerce/checkout/header/title.php:30
+#: src/views/v2/commerce/gateway/stripe/card-element.php:60
+#: src/views/v2/commerce/gateway/stripe/payment-element.php:37
+msgid "Purchase %1$s"
+msgstr "Koupit (%1$s)"
+
+#: src/views/v2/commerce/checkout/header/links/back.php:38
+msgid "back"
+msgstr "zpět"
+
+#. Translators: %1$s: Singular `event` in lowercase.
+#: src/views/v2/commerce/checkout/header/links/back.php:35
+msgid "back to %1$s"
+msgstr "zpět na %1$s"
+
+#. Translators: %1$s: Plural `tickets` in lowercase.
+#: src/views/v2/commerce/checkout/cart/empty/title.php:39
+msgid "Oops, no %1$s!"
+msgstr "Oops, žádné %1$s!"
+
+#: src/views/v2/commerce/checkout.php:57
+msgid "Checkout Error!"
+msgstr "Chyba platby!"
+
+#: src/Tribe/Admin/Settings/Service_Provider.php:191
+msgid "Get Started"
+msgstr "Začínáme"
+
+#. Translators:  %1$s: Plural `tickets` in lowercase.
+#: src/views/v2/commerce/checkout/cart/empty/description.php:45
+msgid "Please add %1$s to check out."
+msgstr "Pro objednání přidejte %1$s."
+
+#: src/views/v2/commerce/checkout.php:31
+#: src/views/v2/commerce/checkout/footer/gateway-error.php:41
+msgid "Checkout Unavailable!"
+msgstr "Platba není k dispozici"
+
+#: src/admin-views/admin-welcome-message.php:166
+#: src/Tribe/Admin/Settings/Service_Provider.php:143
+msgid "Get started"
+msgstr "Začínáme"
+
+#: src/Tickets/Commerce/Gateways/PayPal/REST/Order_Endpoint.php:615
+msgid "Your PayPal order was cancelled."
+msgstr "Vaše PayPal objednávka byla zrušena"
+
+#: src/views/v2/commerce/checkout/must-login/registration.php:36
+msgctxt "or <- create a new account"
+msgid "or "
+msgstr "nebo"
+
+#: src/views/v2/commerce/checkout/must-login/registration.php:38
+msgid "create a new account"
+msgstr "vytvořit nový účet"
+
+#: common/src/Tribe/Admin/Help_Page.php:1181
+msgid "Add Event & Attendee Info to WooCommerce Order Details"
+msgstr "Přidat událost a informace o účastníkovi do detailů objednávky WooCommerce"
+
+#. Translators: 1: opening span. 2: the number of remaining tickets to buy. 3:
+#. Closing span.
+#: src/views/v2/tickets/item/extra/available/quantity.php:59
+msgctxt "Tickets available"
+msgid "%1$s %2$s %3$s available"
+msgstr "%1$s %2$s %3$s k dispozici"
+
+#: src/views/blocks/rsvp/status/going.php:43
+#: src/views/v2/rsvp/actions/rsvp/going.php:28
+msgctxt "Label for the RSVP going button"
+msgid "Going"
+msgstr "Zúčastní se"
+
+#: src/views/blocks/rsvp/status/not-going.php:40
+msgctxt "Label for the RSVP not going button"
+msgid "Not going"
+msgstr "Nezúčastnit se"
+
+#: src/admin-views/admin-welcome-message.php:228
+msgid "Your email"
+msgstr "Váš e-mail"
+
+#: src/views/v2/rsvp/details/attendance.php:29
+msgctxt "Label below the attendance number"
+msgid "Going"
+msgstr "Zúčastním se"
+
+#: src/views/v2/rsvp/ari/form/fields/name.php:43
+#: src/views/v2/rsvp/form/fields/name.php:44
+msgid "Your Name"
+msgstr "Vaše jméno"
+
+#: src/views/v2/rsvp/actions/success/title.php:17
+msgid "Can't go"
+msgstr "Nemůžu jít"
+
+#: src/views/v2/rsvp/actions/success/title.php:17
+msgid "You are going"
+msgstr "Zúčastníte se"
+
+#: src/views/v2/rsvp/actions/full.php:22
+msgid "RSVP Closed"
+msgstr "Rezervace uzavřena."
+
+#. Translators: %s Guest label for RSVP attendee registration sidebar title.
+#: src/views/v2/rsvp/ari/sidebar/quantity.php:22
+msgid "Total %s"
+msgstr "Celkem %s"
+
+#: src/views/v2/rsvp/ari/sidebar/quantity/plus.php:23
+msgid "Plus"
+msgstr "Plus"
+
+#: src/views/v2/rsvp/ari/sidebar/quantity/minus.php:23
+msgid "Minus"
+msgstr "Mínus"
+
+#. Translators: %s Guest label for RSVP attendee registration form title.
+#. Translators: %s Guest label for RSVP attendee registration sidebar.
+#: src/views/v2/rsvp/ari/form/title.php:21
+#: src/views/v2/rsvp/ari/sidebar/guest-list/guest.php:34
+msgid "Main %s"
+msgstr "Hlavní %s"
+
+#: src/views/v2/rsvp/actions/rsvp.php:22
+msgid "RSVP Here"
+msgstr "Rezervace zde"
+
+#. Translators: %1$s: RSVP label.
+#: src/views/v2/rsvp/messages/success/going.php:43
+msgctxt "blocks rsvp messages success"
+msgid "Check your email for %1$s confirmation."
+msgstr "Zkontrolujte svůj e-mail pro potvrzení %1$s."
+
+#: src/views/v2/rsvp/messages/must-login.php:46
+msgid "Log in here"
+msgstr "Přihlaste se zde"
+
+#: src/views/emails/template-parts/body/order/attendees-table/header-row.php:27
+#: src/views/v2/rsvp/ari/form/fields/name.php:33
+#: src/views/v2/rsvp/form/fields/name.php:34 build/wizard/wizard.js:1
+msgid "Name"
+msgstr "Jméno"
+
+#: src/views/shortcodes/my-attendance-list.php:40
+msgid "View Tickets"
+msgstr "Ukázat vstupenky"
+
+#: src/template-tags/tickets.php:1749
+msgctxt "lowercase plural label for Guest"
+msgid "guests"
+msgstr "hosté"
+
+#: src/template-tags/tickets.php:1725
+msgctxt "plural label for Guest"
+msgid "Guests"
+msgstr "Hosté"
+
+#: src/template-tags/tickets.php:1701
+msgctxt "lowercase singular label for Guest"
+msgid "guest"
+msgstr "host"
+
+#: src/template-tags/tickets.php:1677
+msgctxt "singular label for Guest"
+msgid "Guest"
+msgstr "Host"
+
+#: src/views/v2/rsvp/form/going/title.php:20
+msgid "Please submit your RSVP information, including the total number of guests."
+msgstr "Vyplňte své rezervační údaje, včetně počtu hostů. "
+
+#: src/views/v2/rsvp/form/fields/quantity.php:18
+msgid "Number of Guests"
+msgstr "Počet hostů"
+
+#: src/views/v2/rsvp/ari/form/buttons.php:38
+#: src/views/v2/rsvp/form/fields/submit.php:23
+msgid "Finish"
+msgstr "Dokončit"
+
+#: src/views/v2/rsvp/ari/form/fields/email.php:33
+#: src/views/v2/rsvp/ari/form/fields/name.php:33
+#: src/views/v2/rsvp/form/fields/email.php:34
+#: src/views/v2/rsvp/form/fields/name.php:34
+#: src/views/v2/rsvp/form/fields/quantity.php:25
+msgid "required"
+msgstr "povinné"
+
+#. Translators: 1: opening span. 2: the number of remaining tickets to RSVP. 3:
+#. Closing span.
+#: src/views/v2/rsvp/details/availability/remaining.php:30
+msgctxt "Remaining RSVP quantity"
+msgid "%1$s %2$s %3$s remaining"
+msgstr "%1$s %2$s %3$s zbývá"
+
+#. Translators: 1: opening span. 2: the number of remaining days to RSVP. 3:
+#. Closing span. 4: The RSVP label.
+#: src/views/v2/rsvp/details/availability/days-to-rsvp.php:23
+msgctxt "Days to RSVP"
+msgid "%1$s %2$s %3$s day left to %4$s"
+msgid_plural "%1$s %2$s %3$s days left to %4$s"
+msgstr[0] "%1$s %2$s %3$s den zbývá do %4$s"
+msgstr[1] "%1$s %2$s %3$s dny zbývají do %4$s"
+msgstr[2] "%1$s %2$s %3$s dnů zbývá do %4$s"
+
+#. Translators: %1$s: RSVP label.
+#: src/views/v2/rsvp/messages/success/going.php:32
+msgctxt "blocks rsvp messages success"
+msgid "Your %1$s has been received! "
+msgstr "Vaše %1$s úspěšně přijata! "
+
+#: common/src/admin-views/app-shop.php:207
+msgid "Browse Extensions"
+msgstr "Prozkoumat všechna rozšíření"
+
+#: common/src/admin-views/app-shop.php:203
+msgid "Download"
+msgstr "Stáhnout"
+
+#: common/src/admin-views/app-shop.php:55
+msgid "Extensions"
+msgstr "Rozšíření"
+
+#: common/src/admin-views/app-shop.php:83
+#: common/src/admin-views/help-calendar.php:45
+#: common/src/admin-views/help-community.php:43
+#: common/src/admin-views/help-ticketing.php:50
+#: src/admin-views/settings/tickets-commerce/square/connect/webhook-status.php:37
+msgid "Active"
+msgstr "Aktivní"
+
+#: common/src/admin-views/app-shop.php:73
+msgid "Already Installed"
+msgstr "Instalace už proběhla"
+
+#: common/src/Tribe/Admin/Help_Page.php:358
+msgid "Virtual Events"
+msgstr "Virtuální akce"
+
+#: common/src/Tribe/Plugins_API.php:218
+msgid "Random Images"
+msgstr "Náhodné obrázky"
+
+#: common/src/Tribe/Plugins_API.php:136
+msgid "Streamline your email process"
+msgstr "Zefektivněte svůj e-mailový proces"
+
+#. translators: %s: Tickets label
+#: src/views/blocks/tickets/submit-button-modal.php:27
+msgctxt "Get Tickets button."
+msgid "Get %s"
+msgstr "Koupit %s"
+
+#. translators: %1$s: Number of stock
+#: src/Tribe/Events/Views/V2/Models/Tickets.php:554
+msgid "%1$s spot left"
+msgid_plural "%1$s spots left"
+msgstr[0] "%1$s místo zbývá"
+msgstr[1] "%1$s místa zbývají"
+msgstr[2] "%1$s míst zbývá"
+
+#. Translators: %s RSVP singular or plural.
+#: src/template-tags/tickets.php:287
+msgctxt "list view rsvp now ticket button"
+msgid "%s Now!"
+msgstr "Aktuální %s"
+
+#: src/admin-views/editor/elements/new-rsvp.php:4
+msgctxt "RSVP form toggle button label"
+msgid "Add a new %s"
+msgstr "Nová %s"
+
+#. Translators: %s: dynamic 'RSVP' text.
+#: src/Tickets/Admin/Panels_Data/Ticket_Panel_Data.php:143
+msgctxt "RSVP form save value"
+msgid "Save %s"
+msgstr "Uložit %s"
+
+#: src/Tribe/Commerce/PayPal/Errors.php:31
+msgid "You can't add more %1$s than the total remaining %1$s."
+msgstr "Nemůžete přidat víc %1$s než zbývajících %1$s."
+
+#. Translators: %1$s: The plural ticket label, %2$s: The site name.
+#: src/Tribe/RSVP.php:1375
+msgid "Your %1$s from %2$s"
+msgstr "Vaše %1$s z %2$s"
+
+#: src/template-tags/tickets.php:1366
+msgctxt "singular label for RSVP"
+msgid "RSVP"
+msgstr "Rezervace"
+
+#: src/functions/soft-disable.php:96 src/template-tags/tickets.php:1414
+msgctxt "plural label for RSVPs"
+msgid "RSVPs"
+msgstr "Rezervace"
+
+#: src/views/tickets/rsvp.php:301
+msgctxt "tickets process button text"
+msgid "Confirm %s"
+msgstr "Potvrdit %s"
+
+#: src/template-tags/tickets.php:1438
+msgctxt "lowercase plural label for RSVPs"
+msgid "rsvps"
+msgstr "rezervace"
+
+#: src/template-tags/tickets.php:1390
+msgctxt "lowercase singular label for RSVP"
+msgid "rsvp"
+msgstr "rezervaci"
+
+#: src/views/blocks/tickets/footer-quantity.php:20
+#: src/views/v2/tickets/footer/quantity.php:41
+msgctxt "Total selected tickets count."
+msgid "Quantity:"
+msgstr "Množství:"
+
+#: src/views/blocks/tickets/footer-total.php:34
+#: src/views/v2/tickets/footer/total.php:40
+msgctxt "Total selected tickets price."
+msgid "Total:"
+msgstr "Celkem:"
+
+#: src/Tickets/Admin/Attendees/Modal.php:85
+#: src/Tickets/Admin/Attendees/Modal.php:142
+#: src/Tickets/Admin/Attendees/Modal.php:151
+#: src/views/modal/registration-js.php:43 src/views/modal/registration.php:24
+msgid "Attendee Details"
+msgstr "Detaily účastníka"
+
+#: src/views/blocks/tickets/quantity-unavailable.php:23
+#: src/views/v2/tickets/item/quantity/unavailable.php:50
+msgctxt "Tickets are sold out."
+msgid "Sold Out"
+msgstr "Vyprodáno"
+
+#: src/template-tags/tickets.php:525
+msgctxt "RSVPs going"
+msgid "%s'd going"
+msgstr "%s'd Se zúčastní"
+
+#: src/template-tags/tickets.php:1510
+msgctxt "plural label for Tickets"
+msgid "Tickets"
+msgstr "Vstupenky"
+
+#. translators: %1$s: formatted quantity remaining
+#: src/template-tags/tickets.php:535
+msgctxt "unlimited remaining stock message"
+msgid "%1$s available"
+msgstr "%1$s k dispozici"
+
+#: src/views/blocks/rsvp/messages/success.php:25
+msgctxt "blocks rsvp messages success"
+msgid "Your %1$s has been received! Check your email for your %1$s confirmation."
+msgstr "Vaše %1$s úspěšně přijata! Zkontrolujte svůj email pro potvrzení %1$s."
+
+#: common/src/views/promoter/auth.php:80
+msgid "and"
+msgstr "a"
+
+#: common/src/views/promoter/auth.php:79
+msgid "Privacy"
+msgstr "Soukromí"
+
+#: common/src/admin-views/tribe-options-licenses.php:47
+msgid "Expired license keys and subscriptions"
+msgstr "Platnost licenčních klíčů a předplatného vypršela"
+
+#: common/src/admin-views/tribe-options-licenses.php:44
+msgid "Moving your license keys"
+msgstr "Přesun licenčních klíčů"
+
+#: common/src/admin-views/tribe-options-licenses.php:41
+msgid "View and manage your license keys"
+msgstr "Zobrazení a správa licenčních klíčů"
+
+#: common/src/admin-views/tribe-options-licenses.php:53
+msgid "Licenses for Multisites"
+msgstr "Licence pro síť webů"
+
+#: common/src/admin-views/tribe-options-licenses.php:38
+msgid "Why am I being told my license key is out of installs?"
+msgstr "Proč mi bylo řečeno že můj licenční klíč není nainstalovaný?"
+
+#: common/src/admin-views/tribe-options-licenses.php:33
+msgid "Helpful Links:"
+msgstr "Užitečné odkazy:"
+
+#: common/src/views/promoter/auth.php:81
+msgid "Terms"
+msgstr "Položky"
+
+#: src/views/registration/attendees/success.php:15
+msgid "Attendee information has been saved."
+msgstr "Údaje účastníka uloženy."
+
+#: src/admin-views/commerce/orders/single/order-items-metabox-item.php:62
+#: src/views/emails/template-parts/body/order/attendees-table/header-row.php:24
+#: src/views/registration-js/attendees/fields.php:19
+#: src/views/registration/attendees/fields.php:15
+#: src/views/tickets/email.php:456
+msgid "Attendee"
+msgstr "Účastník"
+
+#: src/views/blocks/rsvp/details/availability.php:59
+msgid "remaining"
+msgstr "Kapacita"
+
+#: src/Tribe/RSVP/Status/Not_Going.php:25 build/app/main.js:1
+#: src/modules/blocks/rsvp/counters/template.js:29
+#: src/modules/blocks/rsvp/not-going/template.js:35
+msgid "Not going"
+msgstr "Zrušena"
+
+#: src/Tribe/Status/Abstract_Commerce.php:217
+#: src/views/blocks/tickets/extra-available-quantity.php:31
+#: src/views/seating/tickets-block.php:27
+#: build/Tickets/Blocks/Ticket/editor.js:2
+#: build/Tickets/Blocks/Tickets/editor.js:15
+msgid "available"
+msgstr "k dispozici"
+
+#: src/views/tickets/rsvp.php:166 src/views/tickets/tpp.php:144
+msgid "%1$s available"
+msgstr "%1$s k dispozici"
+
+#: src/admin-views/commerce/orders/single/order-items-metabox.php:27
+#: src/admin-views/editor/column-head-price.php:11
+#: src/Tickets/Admin/Tickets/List_Table.php:211
+#: src/views/emails/template-parts/body/order/ticket-totals/header-row.php:38
+#: src/views/registration/summary/tickets-header.php:19
+msgid "Price"
+msgstr "Cena"
+
+#: src/admin-views/attendees/attendees-event/overview.php:81
+#: src/admin-views/attendees/attendees-event/totals-list.php:26
+#: src/admin-views/commerce/orders/single/order-items-metabox.php:111
+#: src/Tickets/Commerce/Admin_Tables/Orders.php:123
+#: src/Tickets/Commerce/Admin_Tables/Orders_Table.php:165
+#: src/Tribe/Commerce/PayPal/Orders/Table.php:106
+msgid "Total"
+msgstr "Celkem"
+
+#: src/admin-views/commerce/orders/single/order-actions-metabox.php:25
+#: src/Tickets/Commerce/Admin_Tables/Attendees.php:178
+#: src/Tickets/Commerce/Admin_Tables/Orders.php:122
+#: src/Tickets/Commerce/Admin_Tables/Orders_Table.php:163
+#: src/Tickets/Commerce/Order_Modifiers/Table_Views/Coupon_Table.php:65
+#: src/Tribe/Commerce/PayPal/Orders/Table.php:103
+msgid "Status"
+msgstr "Stav"
+
+#: src/admin-views/attendees/modal/attendee/order-info/date.php:29
+#: src/Tickets/Commerce/Admin_Tables/Orders.php:119
+#: src/Tickets/Commerce/Admin_Tables/Orders_Table.php:166
+#: src/Tribe/Commerce/PayPal/Orders/Table.php:102 src/Tribe/Privacy.php:197
+#: src/Tribe/Privacy.php:482 src/Tribe/Privacy.php:579
+msgid "Date"
+msgstr "Datum"
+
+#: src/Tickets/Commerce/Admin_Tables/Orders.php:115
+#: src/Tickets/Commerce/Admin_Tables/Orders_Table.php:162
+#: src/Tickets/Commerce/Gateways/Stripe/Payment_Intent_Handler.php:336
+#: src/Tickets/Commerce/Order.php:360
+#: src/Tribe/Commerce/PayPal/Orders/Table.php:98
+msgid "Order"
+msgstr "Objednávka"
+
+#: src/Tribe/Commerce/PayPal/Orders/Table.php:42
+msgid "Number of orders per page:"
+msgstr "Počet objednávek na stránku:"
+
+#: src/Tickets/Admin/Tickets/List_Table.php:549
+#: src/Tickets/Commerce/Admin/Orders_Page.php:108
+#: src/Tickets/Commerce/Order.php:334 src/Tickets/Commerce/Order.php:359
+#: src/Tickets/Commerce/Reports/Orders.php:242
+#: src/Tickets/Commerce/Reports/Orders_Tab.php:33
+#: src/Tribe/Commerce/PayPal/Main.php:500
+#: build/Tickets/Blocks/Tickets/editor.js:2
+msgid "Orders"
+msgstr "Objednávky"
+
+#. translators: %1$s: formatted quantity remaining
+#: src/template-tags/tickets.php:545
+msgctxt "ticket shared capacity message (remaining stock)"
+msgid "%1$s available of shared capacity"
+msgstr "K dispozici %1$s sdílené kapacity"
+
+#: src/admin-views/editor/list-table.php:59
+msgid "Available"
+msgstr "K dispozici"
+
+#: src/admin-views/editor/list-row.php:115
+msgid "Available:"
+msgstr "K dispozici:"
+
+#. Translators: %s number of RSVP spots left.
+#: src/template-tags/tickets.php:271
+msgid "%s spot left"
+msgid_plural "%s spots left"
+msgstr[0] "%s volné místo"
+msgstr[1] "%s volná místa"
+msgstr[2] "%s volných míst"
+
+#. Translators: %s number of tickets left.
+#: src/template-tags/tickets.php:274
+msgid "%s ticket left"
+msgid_plural "%s tickets left"
+msgstr[0] "%s zbývá lístek"
+msgstr[1] "%s zbývá lístky"
+msgstr[2] "%s zbývá lístků"
+
+#. Translators: RSVP singular label.
+#: src/Tribe/Events/Views/V2/Models/Tickets.php:302
+msgctxt "list view rsvp now ticket button"
+msgid "%s Now"
+msgstr "%s nyní"
+
+#: src/template-tags/tickets.php:290
+msgctxt "list view buy now ticket button"
+msgid "Buy Now!"
+msgstr "Koupit nyní!"
+
+#: common/src/Tribe/Ajax/Dropdown.php:281
+msgid "Missing data source for this dropdown"
+msgstr "Pro tuto rozbalovací nabídku chybí zdroj dat"
+
+#: common/src/Tribe/Ajax/Dropdown.php:303
+msgid "Empty data set for this dropdown"
+msgstr "Pro tuto rozbalovací nabídku nebyla nalezena žádná data"
+
+#: src/views/tickets/tpp.php:169
+msgid "Buy now"
+msgstr "Koupit nyní"
+
+#. Translators: %s is the plugin version number.
+#: common/src/Tribe/PUE/Checker.php:1491
+msgid "Update now to version %s."
+msgstr "Aktualizovat na verzi %s."
+
+#: common/src/Tribe/Documentation/Swagger/Cost_Details_Definition_Provider.php:24
+msgid "The cost currency symbol"
+msgstr "Symbol měny"
+
+#: common/src/Tribe/Documentation/Swagger/Cost_Details_Definition_Provider.php:28
+msgid "The position of the currency symbol in the cost string"
+msgstr "Pozice symbolu měny v řetězci ceny"
+
+#: common/src/Tribe/Documentation/Swagger/Cost_Details_Definition_Provider.php:34
+msgid "A sorted array of all the numeric values for the cost"
+msgstr "Tříděné pole všech číselných hodnot cen"
+
+#: common/src/Tribe/Documentation/Swagger/Date_Details_Definition_Provider.php:24
+msgid "The date year"
+msgstr "Datum - rok"
+
+#: common/src/Tribe/Documentation/Swagger/Date_Details_Definition_Provider.php:28
+msgid "The date month"
+msgstr "Datum - měsíc"
+
+#: common/src/Tribe/Documentation/Swagger/Date_Details_Definition_Provider.php:32
+msgid "The date day"
+msgstr "Datum - den"
+
+#: common/src/Tribe/Documentation/Swagger/Date_Details_Definition_Provider.php:36
+msgid "The date hour"
+msgstr "Datum - hodina"
+
+#. translators: %1$s: formatted quantity remaining
+#: src/template-tags/tickets.php:556
+msgctxt "ticket stock message (remaining stock)"
+msgid "%1$s available"
+msgstr "%1$s k dispozici"
+
+#: common/src/Tribe/Admin/Notice/Php_Version.php:68
+#: common/src/Tribe/Admin/Notice/Plugin_Download.php:160
+msgctxt "separator used in a list of items"
+msgid ", "
+msgstr ", "
+
+#: common/src/Tribe/Admin/Notice/Php_Version.php:69
+#: common/src/Tribe/Admin/Notice/Plugin_Download.php:161
+msgctxt "the final separator in a list of two or more items"
+msgid " and "
+msgstr " a "
+
+#: src/admin-views/ticket-type-history.php:21
+msgid "Click to hide history"
+msgstr "Klikněte pro skrytí historie"
+
+#: src/admin-views/ticket-type-history.php:20
+msgid "Click to view the history"
+msgstr "Klikněte pro zobrazení historie"
+
+#: src/Tickets/Admin/Plugin_Action_Links.php:45
+msgid "Getting started"
+msgstr "Začínáme"
+
+#: src/Tribe/Admin/Move_Tickets.php:124
+msgid "Loading, please wait&hellip;"
+msgstr "Načítá se, prosím vyčkejte&hellip;"
+
+#: src/Tribe/Admin/Ticket_History.php:65
+msgid "No history available"
+msgstr "Historie není dostupná"
+
+#: src/Tribe/Attendees.php:110
+msgid "Post type"
+msgstr "Typ obsahu"
+
+#: common/src/admin-views/help-calendar.php:163
+#: common/src/admin-views/help-community.php:148
+#: common/src/admin-views/help-ticketing.php:181
+msgid "Release notes"
+msgstr "Poznámky k verzi"
+
+#: src/admin-views/admin-welcome-message.php:230
+msgid "Sign Up"
+msgstr "Zaregistrovat se"
+
+#: src/Tribe/Admin/Move_Tickets.php:838
+msgid "This ticket was moved to %1$s from %2$s"
+msgstr "Tato vstupenka byla přesunuta z %2$s do %1$s."
+
+#: src/Tribe/Attendees.php:142
+msgctxt "attendee event actions"
+msgid "Edit"
+msgstr "Upravit"
+
+#: src/Tribe/Attendees.php:143
+msgctxt "attendee event actions"
+msgid "View"
+msgstr "Zobrazit"
+
+#: src/Tribe/Admin/Move_Tickets.php:248
+msgctxt "attendee screen bulk actions"
+msgid "Move"
+msgstr "Přesunout"
+
+#: src/Tribe/Attendance_Totals.php:29
+msgctxt "attendee summary"
+msgid "Deleted Attendees:"
+msgstr "Odstranění účastníci:"
+
+#: src/Tribe/Attendees_Table.php:129
+msgctxt "attendee table"
+msgid "Status"
+msgstr "Stav"
+
+#: src/Tribe/Admin/Ticket_History.php:34
+msgctxt "attendee table"
+msgid "View history"
+msgstr "Zobrazit historii"
+
+#: src/admin-views/move-tickets.php:95
+msgctxt "move tickets dialog"
+msgid "&laquo; Back"
+msgstr "&laquo; Zpět"
+
+#: src/Tribe/Admin/Move_Tickets.php:501
+msgctxt "moved tickets success message fragment"
+msgid "assigned to %s"
+msgstr "přiřazeno k %s"
+
+#: src/Tickets/Commerce/Admin_Tables/Attendees.php:513
+#: src/Tribe/Attendees_Table.php:519
+msgctxt "row action"
+msgid "Check In"
+msgstr "Zaregistrovat"
+
+#: src/Tickets/Commerce/Admin_Tables/Attendees.php:539
+#: src/Tribe/Attendees_Table.php:549
+msgctxt "row action"
+msgid "Delete"
+msgstr "Smazat"
+
+#: src/Tickets/Commerce/Admin_Tables/Attendees.php:523
+#: src/Tribe/Attendees_Table.php:533
+msgctxt "row action"
+msgid "Move"
+msgstr "Přesunout"
+
+#: src/admin-views/move-tickets.php:97
+msgctxt "move tickets dialog"
+msgid "Next &raquo;"
+msgstr "Další &raquo;"
+
+#: src/admin-views/move-tickets.php:96 build/app/main.js:1
+#: build/Tickets/Blocks/Ticket/editor.js:22
+#: src/modules/elements/move-modal/template.js:94
+msgid "Finish!"
+msgstr "Hotovo!"
+
+#: src/Tribe/Admin/Ticket_History.php:35
+msgctxt "attendee table"
+msgid "Hide history"
+msgstr "Skrýt historii"
+
+#: src/Tickets/Commerce/Reports/Attendees.php:502 src/Tribe/Attendees.php:603
+msgctxt "attendee export"
+msgid "Order Status"
+msgstr "Ostatní statusy"
+
+#: src/Tickets/Commerce/Reports/Attendees.php:501 src/Tribe/Attendees.php:598
+msgctxt "attendee export"
+msgid "Order ID"
+msgstr "Ostatní ID"
+
+#: src/Tribe/RSVP.php:732
+msgid "RSVP Ticket"
+msgstr "Rezervace lístku"
+
+#: src/Tribe/RSVP.php:731
+msgid "RSVP Tickets"
+msgstr "Rezervace lístků"
+
+#: src/views/tickets/orders-rsvp.php:78
+msgctxt "order status label"
+msgid "RSVP: "
+msgstr "Rezervace: "
+
+#: src/Tickets/Commerce/Reports/Attendees.php:507 src/Tribe/Attendees.php:634
+msgctxt "attendee export"
+msgid "Purchaser Email Address"
+msgstr "E-mailová adresa zákazníka"
+
+#: src/Tickets/Commerce/Reports/Attendees.php:506 src/Tribe/Attendees.php:629
+msgctxt "attendee export"
+msgid "Purchaser Name"
+msgstr "Jméno zákazníka"
+
+#: src/Tribe/RSVP/Attendance_Totals.php:51
+msgctxt "attendee summary"
+msgid "Going:"
+msgstr "Zúčastnit se"
+
+#: src/Tribe/RSVP/Attendance_Totals.php:52
+msgctxt "attendee summary"
+msgid "Not Going:"
+msgstr "Nezúčastnit se"
+
+#: src/Tribe/Admin/Move_Tickets.php:275
+#: src/Tribe/Admin/Move_Ticket_Types.php:72
+msgid "All supported types"
+msgstr "Všechny podporované typy"
+
+#: common/src/Tribe/PUE/Checker.php:1356 common/src/Tribe/PUE/Notices.php:498
+msgid " (opens in a new window)"
+msgstr "(otevře se v novém okně)"
+
+#: common/src/Tribe/Main.php:481
+msgid "(filtered from _MAX_ total entries)"
+msgstr "(filtrováno z celkem _MAX_  vstupů)"
+
+#: common/src/Tribe/Main.php:495
+msgid ": Selected %d rows"
+msgstr ": Vybráno %d řádků"
+
+#: common/src/Tribe/Main.php:496
+msgid ": Selected 1 row"
+msgstr ": Vybrán 1 řádek"
+
+#: common/src/Tribe/Error.php:38
+msgid "An Unknown error occurred"
+msgstr "Nastala neočekávaná chyba"
+
+#: common/src/Tribe/Languages/Locations.php:134
+msgid "C&ocirc;te d'Ivoire"
+msgstr "Pobřeží slonoviny"
+
+#: common/src/admin-views/tribe-options-help.php:94
+#: common/src/admin-views/troubleshooting/system-information.php:38
+#: common/src/functions/utils.php:1411
+msgid "Copy to clipboard"
+msgstr "Kopírovat do schránky"
+
+#: common/src/Tribe/Support.php:356 common/src/Tribe/Support.php:361
+msgid "Invalid Key"
+msgstr "Neplatný klíč"
+
+#: common/src/Tribe/Main.php:482
+msgid "No matching records found"
+msgstr "Nebyly nalezeny žádné odpovídající záznamy."
+
+#: common/src/Tribe/Support.php:394 common/src/Tribe/Support.php:420
+#: src/Tickets/QR/Connector.php:266
+msgid "Permission Error"
+msgstr "Chyba oprávnění"
+
+#: common/src/Tribe/Main.php:490
+msgid "Previous"
+msgstr "Předchozí"
+
+#: common/src/Tribe/Main.php:483
+msgid "Search:"
+msgstr "Hledat:"
+
+#: common/src/Tribe/Main.php:480
+msgid "Showing 0 to 0 of 0 entries"
+msgstr "Zobrazuje se 0 - 0 z 0 vstupů"
+
+#: common/src/Tribe/Main.php:479
+msgid "Showing _START_ to _END_ of _TOTAL_ entries"
+msgstr "Zobrazuje se _START_ - _END_ z _TOTAL_ vstupů"
+
+#: common/src/Tribe/Support.php:337
+msgid "Your system information will only be used by The Events Calendar's support team. All information is stored securely. We do not share this information with any third parties."
+msgstr "Vaše systémové informace budou použity pouze podpůrným týme Modern Tribe. Všechny informace jsou bezpečně uloženy. Tyto informace nesdílíme s třetími stranami."
+
+#: common/src/Tribe/PUE/Notices.php:620 common/src/Tribe/PUE/Notices.php:663
+msgctxt "formatted plugin list"
+msgid "%1$s and %2$s"
+msgstr "%1$s a %2$s"
+
+#: common/src/Tribe/Main.php:489 common/src/Tribe/Main.php:506
+msgid "Next"
+msgstr "Další"
+
+#: common/src/Tribe/Main.php:488
+msgid "All"
+msgstr "Vše"
+
+#: common/src/admin-views/tribe-options-help.php:99
+msgid "Event Log"
+msgstr "Protokol akcí"
+
+#: common/src/Tribe/Admin/Activation_Page.php:122
+msgid "Go to WordPress Updates page"
+msgstr "Přejít na stránku aktualizací WordPressu"
+
+#: common/src/Tribe/Admin/Activation_Page.php:114
+msgid "Return to Plugins page"
+msgstr "Zpět na stránku pluginů"
+
+#: common/src/Tribe/Admin/Activation_Page.php:114
+msgid "Go to plugins page"
+msgstr "Přejděte na stránku s přehledem pluginů"
+
+#: common/src/admin-views/help-calendar.php:110
+#: common/src/Tribe/Admin/Help_Page.php:340 common/src/Tribe/Plugins_API.php:45
+msgid "Event Aggregator"
+msgstr "Event Aggregator"
+
+#: common/src/Tribe/Admin/Activation_Page.php:122
+msgid "Return to WordPress Updates"
+msgstr "Zpět na přehled aktualizací WordPressu"
+
+#: src/Tribe/Assets.php:280 src/Tribe/Metabox.php:980
+msgid "Please enter in without thousand separators and currency symbols."
+msgstr "Hodnotu prosím zadejte bez oddělovače tisíců a symbolu měny."
+
+#: common/src/Tribe/Support.php:194
+msgid "English"
+msgstr "Angličtina "
+
+#: common/src/admin-views/help-calendar.php:115
+#: common/src/Tribe/Admin/Help_Page.php:350
+#: common/src/Tribe/Plugins_API.php:146
+msgid "Filter Bar"
+msgstr "Filter Bar"
+
+#: common/src/Tribe/Credits.php:48
+msgid "Rate %1$sThe Events Calendar%2$s %3$s"
+msgstr "Dejte pluginu %1$sThe Events Calendar%2$s hodnocení %3$s"
+
+#: src/views/tickets/orders-pp-tickets.php:93
+#: src/views/tickets/orders-rsvp.php:97
+msgid "Type: "
+msgstr "Typ: "
+
+#. Translators: %s: Event name.
+#: src/Tribe/RSVP.php:1505
+msgid "You confirmed you will not be attending %s"
+msgstr "Potvrdili jste neúčast na akci %s"
+
+#: src/views/tickets/email-non-attendance.php:266
+msgid "Thank you for confirming that you will not be attending the above event."
+msgstr "Děkujeme za potvrzení, že se nechcete zúčastnit výše uvedené akce."
+
+#: common/src/Tribe/Validate.php:160
+msgid "%s must contain numbers, letters, dashes and undescores only"
+msgstr "%s se musí skládat pouze z číslic, písmen, pomlček a podtržítek"
+
+#: common/src/Tribe/Log/File_Logger.php:128
+msgid "Default (uses temporary files)"
+msgstr "Výchozí (používá dočasné soubory)"
+
+#: common/src/Tribe/Log.php:388
+msgid "Only errors"
+msgstr "Pouze chyby"
+
+#: common/src/Tribe/Log.php:389
+msgid "Warnings and errors"
+msgstr "Varování a chyby"
+
+#: common/src/Tribe/Log.php:387
+#: src/admin-views/settings/tickets-commerce/stripe/connect/active/stripe-status.php:40
+msgid "Disabled"
+msgstr "Vypnuto"
+
+#: common/src/Tribe/Log.php:390
+msgid "Full debug (all events)"
+msgstr "Plný debug (všechny události)"
+
+#: common/src/admin-views/event-log.php:22
+msgid "Logging level"
+msgstr "Úroveň protokolování"
+
+#: common/src/admin-views/event-log.php:44
+msgid "Method"
+msgstr "Metoda"
+
+#: common/src/Tribe/Log.php:288
+msgid "Cannot set %s as the current logging engine"
+msgstr "Nelze nastavit %s jako aktuální nástroj protokolování"
+
+#: common/src/Tribe/Log/Admin.php:146
+msgctxt "log selector"
+msgid "None currently available"
+msgstr "Momentálně není žádný k dispozici"
+
+#: common/src/Tribe/Log/Admin.php:161
+msgctxt "log engines"
+msgid "None currently available"
+msgstr "Momentálně není žádný k dispozici"
+
+#: common/src/admin-views/event-log.php:118
+msgid "Download log"
+msgstr "Stáhnout protokol"
+
+#: common/src/admin-views/event-log.php:101
+msgid "The selected log file is empty or has not been generated yet."
+msgstr "Zvolený soubor protokolu je prázdný nebo ještě nebyl vytvořen."
+
+#: common/src/Tribe/Log/Null_Logger.php:26
+msgid "Null logger (will log nothing)"
+msgstr "Nulový logger (bez protokolování)"
+
+#: src/Tribe/CSV_Importer/Column_Names.php:34
+msgid "Event Name or ID or Slug"
+msgstr "Název, ID nebo Název v URL akce"
+
+#: common/src/Tribe/Cost_Utils.php:114
+#: src/admin-views/editor/column-body-price.php:43
+#: src/Tickets/Commerce/Admin/Singular_Order_Page.php:336
+#: src/Tickets/Commerce/Admin_Tables/Orders_Table.php:625
+#: src/Tribe/JSON_LD/Order.php:132 src/Tribe/RSVP.php:1748
+msgid "Free"
+msgstr "Zdarma"
+
+#. Translators: %d is the attendee number.
+#: src/views/tickets/my-tickets/tickets-list.php:47
+#: src/views/tickets/orders-pp-tickets.php:81
+#: src/views/tickets/orders-rsvp.php:71
+msgid "Attendee %d"
+msgstr "Účastník %d"
+
+#: src/Tribe/Main.php:1197
+msgid "Buy"
+msgstr "Koupit"
+
+#: src/Tickets/Commerce/Admin_Tables/Attendees.php:174
+#: src/Tickets/Commerce/Admin_Tables/Orders_Table.php:462
+#: src/views/emails/template-parts/body/order/ticket-totals/header-row.php:32
+#: src/views/tickets/my-tickets/user-details.php:31
+msgid "Ticket"
+msgid_plural "Tickets"
+msgstr[0] "Vstupenka"
+msgstr[1] ""
+msgstr[2] ""
+
+#. Translators: %s - the singular label for a ticket.
+#: src/views/tickets/orders.php:181 build/Tickets/Blocks/Ticket/editor.js:21
+msgid "Update %s"
+msgstr "Aktualizovat %s"
+
+#. Translators: 1: singular or plural label for ticket type on My Tickets page
+#. link label.
+#. Translators: %s: post type label.
+#: src/Tribe/Tickets_View.php:1454 src/views/tickets/orders.php:115
+msgid "View %s"
+msgstr "%s"
+
+#: src/views/tickets/orders-pp-tickets.php:49
+msgid " on %s"
+msgstr ", dne %s"
+
+#: src/admin-views/tribe-options-tickets.php:300
+msgid "Login Requirements"
+msgstr "Nutnost přihlášení"
+
+#: src/views/shortcodes/my-attendance-list-logged-out.php:12
+msgid "To see a list of events you're attending, you will need to log in."
+msgstr "Pro zobrazení seznamu akcí, kterých se chcete zúčastnit, se musíte nejdříve přihlásit."
+
+#: src/views/shortcodes/my-attendance-list.php:52
+msgid "You have not indicated your attendance for any upcoming events."
+msgstr "Nepotvrdili jste účast na žádnou z nadcházejících akcí."
+
+#: src/views/tickets/rsvp.php:288
+msgid "Login to RSVP"
+msgstr "Pro rezervování se musíte přihlásit"
+
+#: src/admin-views/attendees/modal/attendee/attendee-info/rsvp-going.php:25
+#: src/Tribe/RSVP/Status/Going.php:31 build/app/main.js:1
+#: src/modules/blocks/rsvp/counters/template.js:23
+msgid "Going"
+msgstr "Potvrzena"
+
+#: src/Tribe/CSV_Importer/RSVP_Importer.php:270
+msgid "Recurring event tickets are not supported, event %s."
+msgstr "Vstupenky na opakující se akce nejsou podporovány. (akce: %s)"
+
+#: common/src/Tribe/Support/Template_Checker_Report.php:78
+msgid "No notable changes detected"
+msgstr "Nebyly zjištěny žádné významné změny"
+
+#: common/src/Tribe/Support/Template_Checker_Report.php:82
+msgid "Templates introduced or updated with this release (%s):"
+msgstr "Nové nebo aktualizované šablony v této verzi (%s):"
+
+#: common/src/Tribe/Support/Template_Checker_Report.php:92
+msgid "Existing theme overrides that may need revision:"
+msgstr "Stávající upravené šablony, které by měly být zrevidovány:"
+
+#: common/src/Tribe/Support/Template_Checker_Report.php:96
+msgid "version data missing from override"
+msgstr "chybí údaje o verzi"
+
+#: common/src/Tribe/Support/Template_Checker_Report.php:97
+msgid "based on %s version"
+msgstr "založeno na verzi %s"
+
+#: common/src/Tribe/Support/Template_Checker_Report.php:113
+msgid "No notable template changes detected."
+msgstr "Nebyly zjištěny žádné významné změny v šablonách."
+
+#: common/src/Tribe/Support/Template_Checker_Report.php:115
+msgid "Information about recent template changes and potentially impacted template overrides is provided below."
+msgstr "Zde najdete přehled posledních změn v šablonách a také přehled vámi upravených šablon, které mohou být těmito změnami ovlivněny."
+
+#: common/src/admin-views/tribe-options-help.php:96
+msgid "Recent Template Changes"
+msgstr "Poslední změny v šablonách"
+
+#: src/admin-views/meta-box.php:105
+msgid "(%s sold)"
+msgid_plural "(%s sold)"
+msgstr[0] "(%s prodaná)"
+msgstr[1] "(%s prodané)"
+msgstr[2] "(%s prodaných)"
+
+#: src/admin-views/meta-box.php:96
+msgid "Global stock level"
+msgstr "Stav celkových zásob"
+
+#: src/admin-views/meta-box.php:86
+msgid "Enable global stock"
+msgstr "Povolit celkové zásoby"
+
+#: src/views/tickets/rsvp.php:200
+msgid "Send RSVP confirmation to:"
+msgstr "Odeslat potvrzení rezervace na:"
+
+#: src/views/tickets/rsvp.php:93
+msgid "Please fill in the RSVP quantity, confirmation name, and email fields."
+msgstr "Zadejte jméno a e-mailovou adresu pro potvrzení rezervace."
+
+#: src/views/v2/commerce/order/details/email.php:31
+msgid "Email:"
+msgstr "Email:"
+
+#: src/Tribe/Privacy.php:187 src/Tribe/Privacy.php:472
+#: src/views/blocks/rsvp/form/name.php:31 src/views/tickets/rsvp.php:230
+msgid "Full Name"
+msgstr "Celé jméno"
+
+#: src/admin-views/editor/icons/rsvp.php:12 build/app/main.js:1
+#: src/modules/blocks/rsvp/index.js:23
+msgid "RSVP"
+msgstr "Rezervace"
+
+#: src/views/blocks/rsvp/details/availability.php:52
+#: src/views/tickets/rsvp.php:173 src/views/tickets/tpp.php:151
+msgid "Out of stock!"
+msgstr "Není k dispozici!"
+
+#: src/views/tickets/attendees-email.php:26 build/app/main.js:1
+#: src/modules/blocks/attendees/index.js:22
+msgid "Attendee List"
+msgstr "Seznam účastníků"
+
+#: src/views/tickets/email-non-attendance.php:42
+#: src/views/tickets/email-ticket-type-moved.php:29
+#: src/views/tickets/email-tickets-moved.php:30 src/views/tickets/email.php:63
+msgid "Your tickets"
+msgstr "Vaše vstupenky"
+
+#: src/admin-views/commerce/orders/single/order-details-metabox.php:37
+#: src/Tickets/Commerce/Admin_Tables/Orders.php:116
+#: src/Tickets/Emails/Email/Purchase_Receipt.php:70
+#: src/Tribe/Commerce/PayPal/Orders/Table.php:99
+msgid "Purchaser"
+msgstr "Kupující"
+
+#: common/src/Tribe/Dialog/View.php:240 common/src/Tribe/Dialog/View.php:312
+#: src/admin-views/editor/panel/settings.php:44
+#: src/admin-views/editor/panel/ticket.php:290 src/admin-views/meta-box.php:304
+#: src/admin-views/seating/components/layouts/add-new.php:45
+#: src/admin-views/settings/tickets-commerce/square/connect/disconnect.php:42
+#: src/views/seating/iframe-view.php:79
+#: src/views/v2/rsvp/ari/form/buttons.php:22
+#: src/views/v2/rsvp/form/fields/cancel.php:23 build/app/main.js:1
+#: build/OrderModifiers/blockEditor.js:1 build/Seating/blockEditor.js:1
+#: build/Tickets/Blocks/Ticket/editor.js:22
+#: src/modules/blocks/rsvp/action-dashboard/template.js:22
+msgid "Cancel"
+msgstr "Storno"
+
+#: src/admin-views/meta-box.php:279
+msgid "When will ticket sales occur?"
+msgstr "Kdy nastane prodej vstupenek?"
+
+#: src/admin-views/meta-box.php:283
+msgid "If you don't set a start/end date for sales, tickets will be available from now until the event ends."
+msgstr "Pokud nenastavíte začátek a konec prodeje, budou vstupenky k dispozici od této chvíle až do ukončení akce."
+
+#: src/admin-views/meta-box.php:162
+msgid "Edit ticket"
+msgstr "Upravit vstupenku"
+
+#: src/admin-views/meta-box.php:167
+msgid "Sell using:"
+msgstr "Prodej pomocí:"
+
+#: src/admin-views/editor/panel/fields/dates.php:38
+#: src/admin-views/meta-box.php:225
+msgid "Start sale:"
+msgstr "Začátek prodeje:"
+
+#: src/admin-views/editor/panel/fields/dates.php:71
+#: src/admin-views/meta-box.php:256
+msgid "End sale:"
+msgstr "Konec prodeje:"
+
+#: src/admin-views/meta-box.php:161
+msgid "Add new ticket"
+msgstr "Přidat novou vstupenku"
+
+#: src/admin-views/list.php:50
+msgid "Edit in %s"
+msgstr "Upravit v %s"
+
+#: src/admin-views/editor/panel/header-image.php:54
+#: src/admin-views/meta-box.php:63
+msgid "Select an Image"
+msgstr "Zvolit obrázek"
+
+#: src/admin-views/editor/panel/header-image.php:70
+#: src/admin-views/meta-box.php:71
+msgid "Remove"
+msgstr "Odebrat"
+
+#: src/admin-views/meta-box.php:60
+msgid "The maximum image size in the email will be 580px wide by any height, and then scaled for mobile. If you would like \"retina\" support use an image sized to 1160px wide."
+msgstr "Maximální velikost obrázku v e-mailu bude 580 pixelů na šířku s volnou výškou a pro mobilní zařízení bude obrázek následně zmenšen. Pokud chcete mít podporu pro \"Retina\" displej, použijte obrázek široký 1160 pixelů."
+
+#: common/src/admin-views/event-log.php:66 src/admin-views/list.php:45
+msgid "View"
+msgstr "Zobrazit:"
+
+#: src/admin-views/legacy-ticket-fields.php:19
+#: src/admin-views/price-fields.php:7
+msgid "(0 or empty for free tickets)"
+msgstr "(pro vstupné zdarma ponechte prázdné nebo zadejte 0)"
+
+#: src/admin-views/legacy-ticket-fields.php:28
+#: src/admin-views/price-fields.php:16
+msgid "(Current sale price - this can be managed via the product editor)"
+msgstr "(aktuální prodejní cena - může být dále upravena v editoru produktů)"
+
+#: src/admin-views/commerce/orders/single/order-details-metabox.php:40
+#: src/admin-views/commerce/orders/single/order-items-metabox-item.php:72
+#: src/admin-views/list.php:31
+#: src/admin-views/seating/components/layouts/card.php:59
+#: src/admin-views/seating/components/maps/card.php:38
+#: src/Tickets/Commerce/Order_Modifiers/Table_Views/Order_Modifier_Table.php:261
+#: src/views/v2/commerce/checkout/purchaser-info.php:60 build/app/main.js:1
+#: build/Tickets/Blocks/Ticket/editor.js:10
+#: src/modules/blocks/rsvp/attendee-registration/template.js:19
+msgid "Edit"
+msgstr "Upravit"
+
+#: src/admin-views/commerce/metabox/sale-price.php:52
+#: src/admin-views/editor/fieldset/price.php:120
+#: src/admin-views/legacy-ticket-fields.php:24
+#: src/admin-views/price-fields.php:12
+msgid "Sale Price:"
+msgstr "Prodejní cena:"
+
+#: src/admin-views/editor/column-body-price.php:22
+#: src/admin-views/editor/fieldset/price.php:83
+#: src/admin-views/legacy-ticket-fields.php:15
+#: src/admin-views/price-fields.php:3
+msgid "Price:"
+msgstr "Cena:"
+
+#: src/admin-views/attendees/attendees-event/attendance-totals.php:21
+msgid "Checked in"
+msgstr "Kontrolováno"
+
+#: src/admin-views/attendees/attendees-email.php:61
+msgid "Send Email"
+msgstr "Poslat e-mail"
+
+#: src/admin-views/attendees/attendees-email.php:39
+msgid "Email Address:"
+msgstr "E-mailová adresa:"
+
+#: src/Tribe/Attendees.php:975
+msgid "Attendee List for: %s"
+msgstr "Seznam účastníků na: %s"
+
+#: src/admin-views/attendees/attendees-email.php:34
+msgid "Select a User:"
+msgstr "Vybrat uživatele:"
+
+#: src/admin-views/attendees/attendees-email.php:6
+msgid "Select..."
+msgstr "Vyberte..."
+
+#: src/admin-views/attendees/attendees-email.php:37
+#: src/views/modal/registration-js.php:129 build/Seating/blockEditor.js:1
+msgid "or"
+msgstr "nebo"
+
+#: src/Tribe/Attendees.php:983
+msgid "Email sent successfully!"
+msgstr "E-mail byl úspěšně odeslán!"
+
+#: src/Tribe/Attendees.php:976
+msgid "Error when sending the email"
+msgstr "Došlo k chybě při odesílání e-mailu"
+
+#: src/admin-views/attendees/attendees-email.php:28
+msgid "Send the attendee list by email"
+msgstr "Poslat seznam účastníků e-mailem"
+
+#: src/Tickets/Commerce/Reports/Attendees.php:416
+msgid "attendees"
+msgstr "ucastnici"
+
+#: src/Tribe/Attendees.php:902 src/Tribe/Attendees.php:955
+msgid "Invalid User ID"
+msgstr "Neplatné ID uživatele."
+
+#: src/Tribe/Attendees.php:864
+msgid "Invalid Event ID"
+msgstr "Neplatné ID akce"
+
+#: src/Tribe/Attendees.php:884
+msgid "Cheatin Huh?"
+msgstr "Co zkúšáš, jak zkúšáš?"
+
+#: src/Tribe/Attendees.php:896
+msgid "Invalid Email"
+msgstr "Neplatná e-mailová adresa"
+
+#: src/admin-views/attendees/modal/attendee/attendee-info/rsvp-going.php:21
+#: src/admin-views/tribe-commerce-settings.php:101
+#: src/admin-views/tribe-commerce-settings.php:113
+#: src/Tickets/Commerce/Reports/Attendees.php:540 src/Tribe/Attendees.php:674
+msgid "Yes"
+msgstr "Ano"
+
+#: src/Tickets/Commerce/Admin_Tables/Attendees.php:151
+#: src/Tribe/Attendees.php:420
+msgid "You can use Screen Options to select which columns you want to see. The selection works in the table below, in the email, for print and for the CSV export."
+msgstr "Pomocí záložky &#8222;Nastavení zobrazených informací&#8220; si můžete vybrat, které sloupce chcete zobrazit. Tento výběr se projeví při výpisu, při odesílání e-mailem, při tisku a při exportu do CSV souboru."
+
+#: src/admin-views/list.php:93 src/Tribe/Attendees.php:293
+msgid "See who purchased tickets to this event"
+msgstr "Kdo si koupil vstupenky na tuto akci"
+
+#: src/admin-views/attendees/attendees.php:18 src/admin-views/list.php:95
+#: src/Tickets/Admin/Attendees/Page.php:101
+#: src/Tickets/Admin/Tickets/List_Table.php:563
+#: src/Tickets/Commerce/Attendee.php:200
+#: src/Tickets/Commerce/Reports/Attendees_Tab.php:35
+#: src/Tribe/Admin/Columns/Tickets.php:58
+#: src/Tribe/Admin/Manager/Service_Provider.php:173 src/Tribe/Attendees.php:295
+#: src/Tribe/Commerce/PayPal/Main.php:488
+#: src/Tribe/Tabbed_View/Attendee_Report_Tab.php:22
+#: build/Tickets/Blocks/Tickets/editor.js:2
+msgid "Attendees"
+msgstr "Účastníci"
+
+#: src/Tribe/Assets.php:401
+msgid "Sending..."
+msgstr "Odesílání..."
+
+#: src/Tickets/Commerce/Admin_Tables/Attendees.php:151
+#: src/Tribe/Attendees.php:420
+msgid "Columns"
+msgstr "Sloupce"
+
+#: src/Tickets/Commerce/Gateways/PayPal/Tickets_Form.php:93
+#: src/Tribe/Commerce/PayPal/Main.php:1990 src/Tribe/RSVP.php:2533
+msgid "Post draft updated."
+msgstr "Koncept příspěvku byl uložen."
+
+#: src/Tribe/Assets.php:400
+msgid "You need to select a user or type a valid email address"
+msgstr "Je třeba vybrat uživatele nebo zadat platnou e-mailovou adresu"
+
+#: src/Tribe/Main.php:833
+msgid "New User Primer"
+msgstr "Příručka nového uživatele"
+
+#: src/Tribe/Main.php:852
+msgid "open-source forum on WordPress.org"
+msgstr "open-source fórum na WordPress.org"
+
+#: src/Tribe/RSVP.php:692
+msgctxt "Attendee number"
+msgid "Attendee %1$s"
+msgstr "Účastník %1$s"
+
+#: src/Tickets/Commerce/Models/Attendee_Model.php:70
+#: src/Tribe/Commerce/PayPal/Main.php:3027 src/Tribe/RSVP.php:2170
+msgid "(deleted)"
+msgstr "(smazáno)"
+
+#. Translators: %1$s: The HTML <a> tag, %2$s: The closing HTML </a> tag.
+#: src/Tickets/Commerce/Gateways/PayPal/Tickets_Form.php:77
+#: src/Tribe/Commerce/PayPal/Main.php:1974 src/Tribe/RSVP.php:2515
+msgid "Return to the %1$sAttendees Report%2$s."
+msgstr "Zpět na %1$spřehled účastníků%2$s."
+
+#. Translators: %1$s: The return link.
+#: src/Tickets/Commerce/Gateways/PayPal/Tickets_Form.php:84
+#: src/Tribe/Commerce/PayPal/Main.php:1981 src/Tribe/RSVP.php:2523
+msgid "Post updated. %1$s"
+msgstr "Příspěvek byl aktualizován. %1$s"
+
+#. Translators: %1$s: The return link.
+#: src/Tickets/Commerce/Gateways/PayPal/Tickets_Form.php:88
+#: src/Tribe/Commerce/PayPal/Main.php:1985 src/Tribe/RSVP.php:2528
+msgid "Post published. %1$s"
+msgstr "Příspěvek byl publikován. %1$s"
+
+#: src/Tickets/Commerce/Gateways/PayPal/Tickets_Form.php:91
+#: src/Tribe/Commerce/PayPal/Main.php:1988 src/Tribe/RSVP.php:2531
+msgid "Post submitted."
+msgstr "Příspěvek byl odeslán ke schválení."
+
+#: src/Tickets/Commerce/Gateways/PayPal/Tickets_Form.php:92
+#: src/Tribe/Commerce/PayPal/Main.php:1989 src/Tribe/RSVP.php:2532
+msgid "Post scheduled."
+msgstr "Příspěvek bude automaticky publikován."
+
+#: src/Tribe/Main.php:815
+msgid "Troubleshooting common problems"
+msgstr "Řešení obvyklých problémů"
+
+#: src/Tribe/Main.php:813
+msgid "Settings overview"
+msgstr "Přehled nastavení"
+
+#: src/Tribe/Main.php:814
+msgid "Features overview"
+msgstr "Přehled funkcí"
+
+#: src/Tribe/Main.php:811
+msgid "Support for Event Tickets"
+msgstr "Podpora pro Event Tickets"
+
+#: src/Tribe/Main.php:816
+msgid "Customizing Event Tickets"
+msgstr "Přizpůsobení pluginu Event Tickets"
+
+#. Translators: %1$s is the min required version of The Events Calendar. %2$s
+#. Is the update link opening `<a>`. %3$s Is the update link closing `</a>`.
+#: src/Tribe/Main.php:627
+msgid "When The Events Calendar and Event Tickets are both activated, The Events Calendar must be running version %1$s or greater. Please %2$supdate now.%3$s"
+msgstr "Když jsou pluginy The Events Calendar a Event Tickets aktivovány oba současně, plugin The Events Calendar musí být ve verzi %1$s nebo vyšší. Proveďte prosím jeho %2$s aktualizaci.%3$s"
+
+#: src/Tribe/Main.php:855
+msgid "premium support on our website"
+msgstr "prémiovou podporu na našem webu"
+
+#: src/Tribe/Main.php:857
+msgid "Looking for more immediate support? We offer %1$s with the purchase of any of our premium plugins (like %2$s). Pick up a license and you can post there directly and expect a response within 24-48 hours during weekdays."
+msgstr "Potřebujete okamžitou pomoc? Nabízíme %1$s při zakoupení některého z našich prémiových pluginů (jako např. %2$s). Získejte licenci a můžete očekávat odpověď na své dotazy během 24-48 hodin v pracovní dny."
+
+#: src/Tribe/Main.php:859 src/Tribe/Main.php:864
+msgid "post a thread"
+msgstr "založit vlákno"
+
+#: src/Tribe/Main.php:865
+msgid "If you have a valid license for one of our paid plugins, you can %s in our premium support forums. Our support team monitors the forums and will respond to your thread within 24-48 hours (during the week)."
+msgstr "Pokud máte platnou licenci pro některý z našich placených pluginů, můžete %s v našem prémiovém fóru podpory. Náš tým podpory sleduje toto fórum a odpoví na vaše dotazy během 24-48 hodin (v pracovní dny)."
+
+#: src/Tribe/Main.php:853
+msgid "If you have tried the above steps and are still having trouble, you can post a new thread to our %s. Our support staff monitors these forums once a week and would be happy to assist you there."
+msgstr "Pokud jste vyzkoušeli výše uvedené kroky a stále máte potíže, můžete navštívit naše %s a založit nové vlákno. Pracovníci naší podpory jednou týdně kontrolují tato fóra a rádi vám pomohou."
+
+#: common/src/admin-views/help-ticketing.php:159
+msgid "(Event Tickets Plus)"
+msgstr "(Event Tickets Plus)"
+
+#: src/Tribe/RSVP.php:1868
+msgid "Your %1$s has been received! Check your email for your %1$s confirmation."
+msgstr "Vaše %1$s úspěšně přijata! Zkontrolujte svůj email pro potvrzení %1$s."
+
+#: common/src/Common/Abstracts/Custom_List_Table.php:180
+#: src/admin-views/commerce/orders/single/order-items-metabox-item.php:43
+#: src/admin-views/list.php:41
+#: src/admin-views/seating/components/layouts/card.php:73
+#: src/admin-views/seating/components/maps/card.php:46
+#: src/Tickets/Commerce/Order_Modifiers/Table_Views/Order_Modifier_Table.php:265
+#: src/Tribe/Attendees_Table.php:782
+msgid "Delete"
+msgstr "Smazat"
+
+#: src/admin-views/commerce/reports/attendees.php:27
+#: src/Tickets/Commerce/Admin_Tables/Orders.php:562
+#: src/Tribe/Attendees.php:1204 src/Tribe/Attendees_Table.php:745
+msgid "Export"
+msgstr "Exportovat"
+
+#: src/admin-views/attendees/modal/attendee/attendee-info/email.php:19
+#: src/Tickets/Commerce/Admin_Tables/Orders.php:117
+#: src/Tribe/Attendees_Table.php:754
+#: src/Tribe/Commerce/PayPal/Orders/Table.php:100 src/Tribe/Privacy.php:192
+#: src/Tribe/Privacy.php:477 src/Tribe/Privacy.php:574
+#: src/views/blocks/rsvp/form/email.php:32 src/views/tickets/rsvp.php:238
+#: src/views/v2/rsvp/ari/form/fields/email.php:33
+#: src/views/v2/rsvp/form/fields/email.php:34 build/wizard/wizard.js:1
+msgid "Email"
+msgstr "E-mail"
+
+#: src/Tickets/Commerce/Admin_Tables/Orders.php:554
+#: src/Tribe/Attendees_Table.php:744
+msgid "Print"
+msgstr "Tisk"
+
+#: src/Tribe/Attendees_Table.php:783
+msgid "Check in"
+msgstr "Zaregistrovat"
+
+#: src/Tribe/Attendees_Table.php:784
+msgid "Undo Check in"
+msgstr "Zrušit registraci"
+
+#: src/Tickets/Commerce/Admin_Tables/Attendees.php:177
+#: src/views/tickets/email.php:460
+msgid "Security Code"
+msgstr "Kontrolní kód"
+
+#: src/views/tickets/email.php:441
+msgid "Ticket #"
+msgstr "Vstupenka"
+
+#: src/views/tickets/tpp-success.php:74
+msgid "Purchaser Email"
+msgstr "E-mail kupce"
+
+#: src/admin-views/tec-tickets-options-network.php:19
+msgid "This is where all of the global network settings for Event Tickets can be modified."
+msgstr "Zde si můžete změnit veškerá globální nastavení pluginu The Events Calendar pro celou síť webů."
+
+#: src/admin-views/tec-tickets-options-network.php:27
+msgid "Hide the following settings tabs on every site:"
+msgstr "Skrýt následující panely s nastavením na každém webu:"
+
+#: src/views/tickets/tpp-success.php:71
+msgid "Purchaser Name"
+msgstr "Jméno kupce"
+
+#: src/Tickets/Commerce/Ticket.php:253 src/Tribe/Commerce/PayPal/Main.php:472
+#: src/views/seating/iframe-view.php:41
+msgid "Tickets"
+msgstr "Vstupenky"
+
+#: src/admin-views/tec-tickets-options-network.php:15
+msgid "Network Settings"
+msgstr "Nastavení v síti webů"
+
+#: src/admin-views/tribe-options-tickets.php:243
+msgid "Miscellaneous Settings"
+msgstr "Další nastavení"
+
+#. Translators: %s Debug bar plugin link.
+#: src/admin-views/tribe-options-tickets.php:252
+msgid "Enable this option to log debug information. By default this will log to your server PHP error log. If you'd like to see the log messages in your browser, then we recommend that you install the %s and look for the \"Tribe\" tab in the debug output."
+msgstr "Zaškrtnutím této volby se budou zapisovat debug informace. Standardně se budou zapisovat do chybového logu PHP na vašem serveru. Pokud si přejete, aby se zprávy protokolu zobrazovaly ve vašem prohlížeči, pak doporučujeme nainstalovat %s a podívat se do záložky \"Tribe\" v debug výstupu."
+
+#: src/admin-views/tribe-options-tickets.php:256
+msgid "Debug Bar Plugin"
+msgstr "Debug Bar Plugin"
+
+#: common/src/admin-views/tribe-options-help.php:85
+#: common/src/admin-views/troubleshooting/system-information.php:15
+msgid "System Information"
+msgstr "Systémové informace"
+
+#: common/src/admin-views/tribe-options-help.php:118
+msgid "News and Tutorials"
+msgstr "Aktuality a návody"
+
+#: common/src/admin-views/tribe-options-help.php:124
+msgid "More..."
+msgstr "Více..."
+
+#: common/src/admin-views/tribe-options-help.php:30
+msgid "list of available functions"
+msgstr "seznam dostupných funkcí"
+
+#: common/src/admin-views/tribe-options-help.php:19
+msgid "Getting Support"
+msgstr "Získání podpory"
+
+#. translators: %s: Knowledgebase
+#: common/src/admin-views/help-hub/resources/resources.php:39
+#: common/src/admin-views/tribe-options-help.php:21
+#: src/admin-views/admin-welcome-message.php:154
+#: src/Tickets/Emails/Admin/Emails_Tab.php:189
+msgid "Knowledgebase"
+msgstr "Znalostní báze"
+
+#. translators: %s: Plugin name
+#: common/src/admin-views/tribe-options-help.php:16
+msgid "Thank you for using %s! All of us at The Events Calendar sincerely appreciate your support and we’re excited to see you using our plugins."
+msgstr "Děkujeme, že používáte %s! Všichni v Modern Tribe si upřímně ceníme vaší podpory a budeme rádi, když budete používat naše pluginy."
+
+#: common/src/admin-views/tribe-options-help.php:37
+msgid "Getting More Help"
+msgstr "Získání další pomoci"
+
+#: common/src/admin-views/tribe-options-help.php:82
+msgid "Read more about our support policy"
+msgstr "Přečtěte si více o našich pravidlech podpory"
+
+#. translators: %s: Knowledgebase
+#: common/src/admin-views/tribe-options-help.php:21
+msgid "Our website’s %s is a great place to find tips and tricks for using and customizing our plugins."
+msgstr "%s na našich stránkách je skvělé místo, kde najdete tipy a triky pro používání a přizpůsobení našich pluginů."
+
+#: common/src/admin-views/tribe-options-help.php:38
+msgid "While the resources above help solve a majority of the issues we see, there are times you might be looking for extra support. If you need assistance using our plugins and would like us to take a look, please follow these steps:"
+msgstr "Přestože výše uvedené zdroje pomáhají vyřešit většinu známých problémů, mohou nastat situace, kdy budete chtít extra podporu. Pokud potřebujete asistenci při používání našich pluginů a chcete, abychom se na to podívali my, následujte prosím tyto kroky:"
+
+#: common/src/admin-views/tribe-options-help.php:49
+msgid "Check our Knowledgebase"
+msgstr "Podívejte se do naší znalostní databáze"
+
+#: common/src/admin-views/tribe-options-help.php:60
+msgid "Test for a theme or plugin conflict"
+msgstr "Otestujte konflikt šablony či pluginu"
+
+#. translators: %s: Link to Knowledgebase
+#: common/src/admin-views/tribe-options-help.php:45
+msgid "%s. All of the common (and not-so-common) answers to questions we see are here. It’s often the fastest path to finding an answer!"
+msgstr "%s. Odpovědi na všechny obvyklé (i méně obvyklé) dotazy najdete právě zde. Je to často nejrychlejší způsob k nalezení odpovědi!"
+
+#. translators: %s: Link to Test for a theme or plugin conflict
+#: common/src/admin-views/tribe-options-help.php:56
+msgid "%s. Testing for an existing conflict is the best start for in-depth troubleshooting. We will often ask you to follow these steps when opening a new thread, so doing this ahead of time will be super helpful."
+msgstr "%s. Otestování na přítomnost konfliktu je nejlepším začátkem pro důkladné odstranění chyb. Při otevírání nového vlákna ve fóru často požadujeme, abyste postupovali právě tímto způsobem, takže provedení tohoto kroku dopředu je velmi užitečné."
+
+#: src/admin-views/tribe-options-tickets.php:249
+msgid "Debug mode"
+msgstr "Režim ladění"
+
+#. translators: %s: Link to Search our support help desk
+#: common/src/admin-views/tribe-options-help.php:67
+msgid "%s. There are very few issues we haven’t seen and it’s likely another user has already asked your question and gotten an answer from our support staff. While posting to the help desk is open only to paid customers, they are open for anyone to search and review."
+msgstr "%s. Existuje velmi málo problémů, na které jsme ještě nenarazili a je pravděpodobné, že jiný uživatel se na vaši otázku již zeptal a dostal odpověď od pracovníků podpory. Přestože je psaní na fóra umožněno pouze platícím zákazníkům, kdokoli může fórum prohledávat a prohlížet."
+
+#: common/src/admin-views/tribe-options-help.php:81
+msgid "Please note that all hands-on support is provided via the help desk. You can email or tweet at us… ​but we will probably point you back to the help desk 😄"
+msgstr "Berte prosím na vědomí, že veškerá podpora je poskytována skrze fóra. Můžete nám napsat e-mail nebo tweet, ale pravděpodobně vás odkážeme zpět na fóra 😄"
+
+#: common/src/Tribe/Languages/Locations.php:396
+msgid "West Virginia"
+msgstr "Západní Virginie"
+
+#: common/src/Tribe/Languages/Locations.php:397
+msgid "Wisconsin"
+msgstr "Wisconsin"
+
+#: common/src/Tribe/Languages/Locations.php:398
+msgid "Wyoming"
+msgstr "Wyoming"
+
+#: common/src/Tribe/Languages/Locations.php:390
+msgid "Tennessee"
+msgstr "Tennessee"
+
+#: common/src/Tribe/Languages/Locations.php:391
+msgid "Texas"
+msgstr "Texas"
+
+#: common/src/Tribe/Languages/Locations.php:392
+msgid "Utah"
+msgstr "Utah"
+
+#: common/src/Tribe/Languages/Locations.php:393
+msgid "Vermont"
+msgstr "Vermont"
+
+#: common/src/Tribe/Languages/Locations.php:394
+msgid "Virginia"
+msgstr "Virginie"
+
+#: common/src/Tribe/Languages/Locations.php:395
+msgid "Washington"
+msgstr "Washington"
+
+#: common/src/Tribe/Languages/Locations.php:388
+msgid "South Carolina"
+msgstr "Jižní Karolína"
+
+#: common/src/Tribe/Languages/Locations.php:389
+msgid "South Dakota"
+msgstr "Jižní Dakota"
+
+#: common/src/Tribe/Languages/Locations.php:386
+msgid "Pennsylvania"
+msgstr "Pensylvánie"
+
+#: common/src/Tribe/Languages/Locations.php:387
+msgid "Rhode Island"
+msgstr "Rhode Island"
+
+#: common/src/Tribe/Languages/Locations.php:383
+msgid "Ohio"
+msgstr "Ohio"
+
+#: common/src/Tribe/Languages/Locations.php:384
+msgid "Oklahoma"
+msgstr "Oklahoma"
+
+#: common/src/Tribe/Languages/Locations.php:385
+msgid "Oregon"
+msgstr "Oregon"
+
+#: common/src/Tribe/Languages/Locations.php:380
+msgid "New York"
+msgstr "New York"
+
+#: common/src/Tribe/Languages/Locations.php:381
+msgid "North Carolina"
+msgstr "Severní Karolína"
+
+#: common/src/Tribe/Languages/Locations.php:382
+msgid "North Dakota"
+msgstr "Jižní Dakota"
+
+#: common/src/Tribe/Languages/Locations.php:375
+msgid "Nebraska"
+msgstr "Nebraska"
+
+#: common/src/Tribe/Languages/Locations.php:376
+msgid "Nevada"
+msgstr "Nevada"
+
+#: common/src/Tribe/Languages/Locations.php:377
+msgid "New Hampshire"
+msgstr "New Hampshire"
+
+#: common/src/Tribe/Languages/Locations.php:378
+msgid "New Jersey"
+msgstr "New Jersey"
+
+#: common/src/Tribe/Languages/Locations.php:379
+msgid "New Mexico"
+msgstr "Nové Mexiko"
+
+#: common/src/Tribe/Languages/Locations.php:369
+msgid "Massachusetts"
+msgstr "Massachusetts"
+
+#: common/src/Tribe/Languages/Locations.php:370
+msgid "Michigan"
+msgstr "Michigan"
+
+#: common/src/Tribe/Languages/Locations.php:371
+msgid "Minnesota"
+msgstr "Minnesota"
+
+#: common/src/Tribe/Languages/Locations.php:372
+msgid "Mississippi"
+msgstr "Mississippi"
+
+#: common/src/Tribe/Languages/Locations.php:373
+msgid "Missouri"
+msgstr "Missouri"
+
+#: common/src/Tribe/Languages/Locations.php:374
+#: src/Tickets/Commerce/Gateways/PayPal/Location/State.php:804
+msgid "Montana"
+msgstr "Montana"
+
+#: common/src/Tribe/Languages/Locations.php:365
+msgid "Kentucky"
+msgstr "Kentucky"
+
+#: common/src/Tribe/Languages/Locations.php:366
+msgid "Louisiana"
+msgstr "Louisiana"
+
+#: common/src/Tribe/Languages/Locations.php:367
+msgid "Maine"
+msgstr "Maine"
+
+#: common/src/Tribe/Languages/Locations.php:368
+msgid "Maryland"
+msgstr "Maryland"
+
+#: common/src/Tribe/Languages/Locations.php:361
+msgid "Illinois"
+msgstr "Illinois"
+
+#: common/src/Tribe/Languages/Locations.php:362
+msgid "Indiana"
+msgstr "Indiana"
+
+#: common/src/Tribe/Languages/Locations.php:363
+msgid "Iowa"
+msgstr "Iowa"
+
+#: common/src/Tribe/Languages/Locations.php:364
+msgid "Kansas"
+msgstr "Kansas"
+
+#: common/src/Tribe/Languages/Locations.php:354
+msgid "Connecticut"
+msgstr "Connecticut"
+
+#: common/src/Tribe/Languages/Locations.php:355
+msgid "Delaware"
+msgstr "Delaware"
+
+#: common/src/Tribe/Languages/Locations.php:356
+msgid "District of Columbia"
+msgstr "District of Columbia"
+
+#: common/src/Tribe/Languages/Locations.php:357
+msgid "Florida"
+msgstr "Florida"
+
+#: common/src/Tribe/Languages/Locations.php:359
+msgid "Hawaii"
+msgstr "Havaj"
+
+#: common/src/Tribe/Languages/Locations.php:360
+msgid "Idaho"
+msgstr "Idaho"
+
+#: common/src/Tribe/Languages/Locations.php:348
+msgid "Alabama"
+msgstr "Alabama"
+
+#: common/src/Tribe/Languages/Locations.php:349
+msgid "Alaska"
+msgstr "Aljaška"
+
+#: common/src/Tribe/Languages/Locations.php:350
+msgid "Arizona"
+msgstr "Arizona"
+
+#: common/src/Tribe/Languages/Locations.php:351
+msgid "Arkansas"
+msgstr "Arkansas"
+
+#: common/src/Tribe/Languages/Locations.php:352
+msgid "California"
+msgstr "Kalifornie"
+
+#: common/src/Tribe/Languages/Locations.php:353
+msgid "Colorado"
+msgstr "Colorado"
+
+#: common/src/Tribe/Languages/Locations.php:315
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:330
+msgid "Virgin Islands (British)"
+msgstr "Panenské ostrovy (britské)"
+
+#: common/src/Tribe/Languages/Locations.php:316
+msgid "Virgin Islands (U.S.)"
+msgstr "Americké Panenské ostrovy"
+
+#: common/src/Tribe/Languages/Locations.php:318
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:333
+msgid "Western Sahara"
+msgstr "Západní Sahara"
+
+#: common/src/Tribe/Languages/Locations.php:319
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:335
+msgid "Yemen"
+msgstr "Jemen"
+
+#: common/src/Tribe/Languages/Locations.php:320
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:337
+msgid "Zambia"
+msgstr "Zambie"
+
+#: common/src/Tribe/Languages/Locations.php:321
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:338
+msgid "Zimbabwe"
+msgstr "Zimbabwe"
+
+#: common/src/Tribe/Languages/Locations.php:311
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:326
+msgid "Uzbekistan"
+msgstr "Uzbekistán"
+
+#: common/src/Tribe/Languages/Locations.php:312
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:327
+msgid "Vanuatu"
+msgstr "Vanuatu"
+
+#: common/src/Tribe/Languages/Locations.php:313
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:328
+msgid "Venezuela"
+msgstr "Venezuela"
+
+#: common/src/Tribe/Languages/Locations.php:314
+msgid "Viet Nam"
+msgstr "Vietnam"
+
+#: common/src/Tribe/Languages/Locations.php:307
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:323
+msgid "United Arab Emirates"
+msgstr "Spojené Arabské Emiráty"
+
+#: common/src/Tribe/Languages/Locations.php:308
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:97
+msgid "United Kingdom"
+msgstr "Velká Británie"
+
+#: common/src/Tribe/Languages/Locations.php:309
+msgid "United States Minor Outlying Islands"
+msgstr "Menší odlehlé ostrovy Spojených států amerických"
+
+#: common/src/Tribe/Languages/Locations.php:310
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:324
+msgid "Uruguay"
+msgstr "Uruguay"
+
+#: common/src/Tribe/Languages/Locations.php:304
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:320
+msgid "Tuvalu"
+msgstr "Tuvalu"
+
+#: common/src/Tribe/Languages/Locations.php:305
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:321
+msgid "Uganda"
+msgstr "Uganda"
+
+#: common/src/Tribe/Languages/Locations.php:306
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:322
+msgid "Ukraine"
+msgstr "Ukrajina"
+
+#: common/src/Tribe/Languages/Locations.php:300
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:316
+msgid "Tunisia"
+msgstr "Tunisko"
+
+#: common/src/Tribe/Languages/Locations.php:301
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:317
+msgid "Turkey"
+msgstr "Turecko"
+
+#: common/src/Tribe/Languages/Locations.php:302
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:318
+msgid "Turkmenistan"
+msgstr "Turkmenistán"
+
+#: common/src/Tribe/Languages/Locations.php:295
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:314
+msgid "Thailand"
+msgstr "Thajsko"
+
+#: common/src/Tribe/Languages/Locations.php:296
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:311
+msgid "Togo"
+msgstr "Togo"
+
+#: common/src/Tribe/Languages/Locations.php:297
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:312
+msgid "Tokelau"
+msgstr "Tokelau"
+
+#: common/src/Tribe/Languages/Locations.php:298
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:313
+msgid "Tonga"
+msgstr "Tonga"
+
+#: common/src/Tribe/Languages/Locations.php:290
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:306
+msgid "Switzerland"
+msgstr "Švýcarsko"
+
+#: common/src/Tribe/Languages/Locations.php:291
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:307
+msgid "Syrian Arab Republic"
+msgstr "Sýrie"
+
+#: common/src/Tribe/Languages/Locations.php:292
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:308
+msgid "Taiwan"
+msgstr "Tchaj-wan"
+
+#: common/src/Tribe/Languages/Locations.php:293
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:309
+msgid "Tajikistan"
+msgstr "Tadžikistán"
+
+#: common/src/Tribe/Languages/Locations.php:285
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:301
+msgid "Sudan"
+msgstr "Súdán"
+
+#: common/src/Tribe/Languages/Locations.php:286
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:302
+msgid "Suriname"
+msgstr "Surinam"
+
+#: common/src/Tribe/Languages/Locations.php:288
+msgid "Swaziland"
+msgstr "Svazijsko"
+
+#: common/src/Tribe/Languages/Locations.php:289
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:305
+msgid "Sweden"
+msgstr "Švédsko"
+
+#: common/src/Tribe/Languages/Locations.php:281
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:296
+msgid "South Africa"
+msgstr "Jihoafrická republika"
+
+#: common/src/Tribe/Languages/Locations.php:282
+msgid "South Georgia, South Sandwich Islands"
+msgstr "Jižní Georgie a Jižní Sandwichovy ostrovy"
+
+#: common/src/Tribe/Languages/Locations.php:283
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:299
+msgid "Spain"
+msgstr "Španělsko"
+
+#: common/src/Tribe/Languages/Locations.php:284
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:300
+msgid "Sri Lanka"
+msgstr "Srí Lanka"
+
+#: common/src/Tribe/Languages/Locations.php:277
+msgid "Slovakia (Slovak Republic)"
+msgstr "Slovensko"
+
+#: common/src/Tribe/Languages/Locations.php:278
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:293
+msgid "Slovenia"
+msgstr "Slovinsko"
+
+#: common/src/Tribe/Languages/Locations.php:279
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:294
+msgid "Solomon Islands"
+msgstr "Šalamounské ostrovy"
+
+#: common/src/Tribe/Languages/Locations.php:280
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:295
+msgid "Somalia"
+msgstr "Somálsko"
+
+#: common/src/Tribe/Languages/Locations.php:273
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:289
+msgid "Seychelles"
+msgstr "Seychely"
+
+#: common/src/Tribe/Languages/Locations.php:274
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:290
+msgid "Sierra Leone"
+msgstr "Sierra Leone"
+
+#: common/src/Tribe/Languages/Locations.php:275
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:291
+msgid "Singapore"
+msgstr "Singapur"
+
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:285
+msgid "Sao Tome and Principe"
+msgstr "Svatý Tomáš a Princův ostrov"
+
+#: common/src/Tribe/Languages/Locations.php:270
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:286
+msgid "Saudi Arabia"
+msgstr "Saúdská Arábie"
+
+#: common/src/Tribe/Languages/Locations.php:271
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:287
+msgid "Senegal"
+msgstr "Senegal"
+
+#: common/src/Tribe/Languages/Locations.php:272
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:288
+msgid "Serbia"
+msgstr "Srbsko"
+
+#: common/src/Tribe/Languages/Locations.php:264
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:281
+msgid "Saint Lucia"
+msgstr "Svatá Lucie"
+
+#: common/src/Tribe/Languages/Locations.php:267
+msgid "Samoa"
+msgstr "Samoa"
+
+#: common/src/Tribe/Languages/Locations.php:268
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:284
+msgid "San Marino"
+msgstr "San Marino"
+
+#: common/src/Tribe/Languages/Locations.php:257
+msgid "Reunion"
+msgstr "Reunion"
+
+#: common/src/Tribe/Languages/Locations.php:258
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:276
+msgid "Romania"
+msgstr "Rumunsko"
+
+#: common/src/Tribe/Languages/Locations.php:259
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:277
+msgid "Russian Federation"
+msgstr "Rusko"
+
+#: common/src/Tribe/Languages/Locations.php:260
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:278
+msgid "Rwanda"
+msgstr "Rwanda"
+
+#: common/src/Tribe/Languages/Locations.php:256
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:274
+msgid "Qatar"
+msgstr "Katar"
+
+#: common/src/Tribe/Languages/Locations.php:253
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:271
+msgid "Poland"
+msgstr "Polsko"
+
+#: common/src/Tribe/Languages/Locations.php:255
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:273
+msgid "Puerto Rico"
+msgstr "Porto Rico"
+
+#: common/src/Tribe/Languages/Locations.php:254
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:272
+msgid "Portugal"
+msgstr "Portugalština"
+
+#: common/src/Tribe/Languages/Locations.php:251
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:269
+msgid "Philippines"
+msgstr "Filipíny"
+
+#: common/src/Tribe/Languages/Locations.php:252
+msgid "Pitcairn"
+msgstr "Pitcairnovy ostrovy"
+
+#: common/src/Tribe/Languages/Locations.php:248
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:266
+msgid "Papua New Guinea"
+msgstr "Papua-Nová Guinea"
+
+#: common/src/Tribe/Languages/Locations.php:249
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:267
+msgid "Paraguay"
+msgstr "Paraguay"
+
+#: common/src/Tribe/Languages/Locations.php:250
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:268
+msgid "Peru"
+msgstr "Peru"
+
+#: common/src/Tribe/Languages/Locations.php:247
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:265
+msgid "Panama"
+msgstr "Panama"
+
+#: common/src/Tribe/Languages/Locations.php:243
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:260
+msgid "Norway"
+msgstr "Norsko"
+
+#: common/src/Tribe/Languages/Locations.php:244
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:261
+msgid "Oman"
+msgstr "Omán"
+
+#: common/src/Tribe/Languages/Locations.php:245
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:262
+msgid "Pakistan"
+msgstr "Pákistán"
+
+#: common/src/Tribe/Languages/Locations.php:246
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:263
+msgid "Palau"
+msgstr "Palau"
+
+#: common/src/Tribe/Languages/Locations.php:239
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:256
+msgid "Niue"
+msgstr "Niue"
+
+#: common/src/Tribe/Languages/Locations.php:240
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:257
+msgid "Norfolk Island"
+msgstr "Norfolk"
+
+#: common/src/Tribe/Languages/Locations.php:242
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:259
+msgid "Northern Mariana Islands"
+msgstr "Severní Mariany"
+
+#: common/src/Tribe/Languages/Locations.php:236
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:253
+msgid "Nicaragua"
+msgstr "Nikaragua"
+
+#: common/src/Tribe/Languages/Locations.php:237
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:254
+#: src/Tickets/Commerce/Gateways/PayPal/Location/State.php:391
+msgid "Niger"
+msgstr "Niger"
+
+#: common/src/Tribe/Languages/Locations.php:238
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:255
+msgid "Nigeria"
+msgstr "Nigérie"
+
+#: common/src/Tribe/Languages/Locations.php:232
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:248
+msgid "Nepal"
+msgstr "Nepál"
+
+#: common/src/Tribe/Languages/Locations.php:233
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:249
+msgid "Netherlands"
+msgstr "Nizozemsko"
+
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:250
+msgid "Netherlands Antilles"
+msgstr "Nizozemské antily"
+
+#: common/src/Tribe/Languages/Locations.php:234
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:251
+msgid "New Caledonia"
+msgstr "Nová Kaledonie"
+
+#: common/src/Tribe/Languages/Locations.php:235
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:252
+msgid "New Zealand"
+msgstr "Nový Zéland"
+
+#: common/src/Tribe/Languages/Locations.php:230
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:246
+msgid "Namibia"
+msgstr "Namibie"
+
+#: common/src/Tribe/Languages/Locations.php:231
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:247
+msgid "Nauru"
+msgstr "Nauru"
+
+#: common/src/Tribe/Languages/Locations.php:227
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:243
+msgid "Morocco"
+msgstr "Maroko"
+
+#: common/src/Tribe/Languages/Locations.php:228
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:244
+msgid "Mozambique"
+msgstr "Mosambik"
+
+#: common/src/Tribe/Languages/Locations.php:229
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:245
+msgid "Myanmar"
+msgstr "Myanmaru"
+
+#: common/src/Tribe/Languages/Locations.php:224
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:240
+msgid "Mongolia"
+msgstr "Mongolsko"
+
+#: common/src/Tribe/Languages/Locations.php:225
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:241
+msgid "Montenegro"
+msgstr "Černá Hora"
+
+#: common/src/Tribe/Languages/Locations.php:226
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:242
+msgid "Montserrat"
+msgstr "Montserrat"
+
+#: common/src/Tribe/Languages/Locations.php:220
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:236
+msgid "Mexico"
+msgstr "Mexiko"
+
+#: common/src/Tribe/Languages/Locations.php:223
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:239
+msgid "Monaco"
+msgstr "Monaco"
+
+#: common/src/Tribe/Languages/Locations.php:217
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:233
+msgid "Mauritania"
+msgstr "Mauritánie"
+
+#: common/src/Tribe/Languages/Locations.php:218
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:234
+msgid "Mauritius"
+msgstr "Mauritius"
+
+#: common/src/Tribe/Languages/Locations.php:219
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:235
+msgid "Mayotte"
+msgstr "Mayotte"
+
+#: common/src/Tribe/Languages/Locations.php:215
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:231
+msgid "Marshall Islands"
+msgstr "Marshallovy ostrovy"
+
+#: common/src/Tribe/Languages/Locations.php:216
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:232
+msgid "Martinique"
+msgstr "Martinique"
+
+#: common/src/Tribe/Languages/Locations.php:213
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:229
+msgid "Mali"
+msgstr "Mali"
+
+#: common/src/Tribe/Languages/Locations.php:214
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:230
+msgid "Malta"
+msgstr "Malta"
+
+#: common/src/Tribe/Languages/Locations.php:209
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:225
+msgid "Madagascar"
+msgstr "Madagaskar"
+
+#: common/src/Tribe/Languages/Locations.php:210
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:226
+msgid "Malawi"
+msgstr "Malawi"
+
+#: common/src/Tribe/Languages/Locations.php:211
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:227
+msgid "Malaysia"
+msgstr "Malajsie"
+
+#: common/src/Tribe/Languages/Locations.php:212
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:228
+msgid "Maldives"
+msgstr "Maladivy"
+
+#: common/src/Tribe/Languages/Locations.php:208
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:223
+msgid "Macau"
+msgstr "Zvláštní administrativní oblast Číny Macao"
+
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:224
+msgid "Macedonia"
+msgstr "Makedonie"
+
+#: common/src/Tribe/Languages/Locations.php:204
+msgid "Libya"
+msgstr "Libye"
+
+#: common/src/Tribe/Languages/Locations.php:205
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:220
+msgid "Liechtenstein"
+msgstr "Lichtenštejnsko"
+
+#: common/src/Tribe/Languages/Locations.php:206
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:221
+msgid "Lithuania"
+msgstr "Litva"
+
+#: common/src/Tribe/Languages/Locations.php:207
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:222
+msgid "Luxembourg"
+msgstr "Lucembursko"
+
+#: common/src/Tribe/Languages/Locations.php:199
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:214
+msgid "Lao People's Democratic Republic"
+msgstr "Laos"
+
+#: common/src/Tribe/Languages/Locations.php:200
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:215
+msgid "Latvia"
+msgstr "Lotyšsko"
+
+#: common/src/Tribe/Languages/Locations.php:201
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:216
+msgid "Lebanon"
+msgstr "Libanon"
+
+#: common/src/Tribe/Languages/Locations.php:202
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:217
+msgid "Lesotho"
+msgstr "Lesotho"
+
+#: common/src/Tribe/Languages/Locations.php:203
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:218
+msgid "Liberia"
+msgstr "Liberie"
+
+#: common/src/Tribe/Languages/Locations.php:197
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:212
+msgid "Kuwait"
+msgstr "Kuwajt"
+
+#: common/src/Tribe/Languages/Locations.php:198
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:213
+msgid "Kyrgyzstan"
+msgstr "Kyrgyzstán"
+
+#: common/src/Tribe/Languages/Locations.php:192
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:209
+msgid "Kazakhstan"
+msgstr "Kazachstán"
+
+#: common/src/Tribe/Languages/Locations.php:193
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:210
+msgid "Kenya"
+msgstr "Keňa"
+
+#: common/src/Tribe/Languages/Locations.php:194
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:211
+msgid "Kiribati"
+msgstr "Kiribati"
+
+#: common/src/Tribe/Languages/Locations.php:188
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:204
+msgid "Italy"
+msgstr "Itálie"
+
+#: common/src/Tribe/Languages/Locations.php:189
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:205
+msgid "Jamaica"
+msgstr "Jamaica"
+
+#: common/src/Tribe/Languages/Locations.php:190
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:206
+msgid "Japan"
+msgstr "Japonsko"
+
+#: common/src/Tribe/Languages/Locations.php:191
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:208
+msgid "Jordan"
+msgstr "Jordán"
+
+#: common/src/Tribe/Languages/Locations.php:183
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:198
+msgid "Indonesia"
+msgstr "Indonesie"
+
+#: common/src/Tribe/Languages/Locations.php:185
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:200
+msgid "Iraq"
+msgstr "Irák"
+
+#: common/src/Tribe/Languages/Locations.php:186
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:201
+msgid "Ireland"
+msgstr "Irsko"
+
+#: common/src/Tribe/Languages/Locations.php:187
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:203
+msgid "Israel"
+msgstr "Izrael"
+
+#: common/src/Tribe/Languages/Locations.php:180
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:195
+msgid "Hungary"
+msgstr "Maďarsko"
+
+#: common/src/Tribe/Languages/Locations.php:181
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:196
+msgid "Iceland"
+msgstr "Island"
+
+#: common/src/Tribe/Languages/Locations.php:182
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:197
+msgid "India"
+msgstr "Indie"
+
+#: common/src/Tribe/Languages/Locations.php:177
+msgid "Holy See (Vatican City State)"
+msgstr "Svatý stolec (Vatikán)"
+
+#: common/src/Tribe/Languages/Locations.php:178
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:193
+msgid "Honduras"
+msgstr "Honduras"
+
+#: common/src/Tribe/Languages/Locations.php:179
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:194
+msgid "Hong Kong"
+msgstr "Hongkong, zvláštní administrativní oblast Číny"
+
+#: common/src/Tribe/Languages/Locations.php:173
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:188
+msgid "Guinea-Bissau"
+msgstr "Guinea-Bissau"
+
+#: common/src/Tribe/Languages/Locations.php:174
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:189
+msgid "Guyana"
+msgstr "Guyana"
+
+#: common/src/Tribe/Languages/Locations.php:175
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:190
+msgid "Haiti"
+msgstr "Haiti"
+
+#: common/src/Tribe/Languages/Locations.php:171
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:185
+msgid "Guatemala"
+msgstr "Guatemala"
+
+#: common/src/Tribe/Languages/Locations.php:172
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:187
+msgid "Guinea"
+msgstr "Guinea"
+
+#: common/src/Tribe/Languages/Locations.php:169
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:183
+msgid "Guadeloupe"
+msgstr "Guadeloupe"
+
+#: common/src/Tribe/Languages/Locations.php:170
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:184
+msgid "Guam"
+msgstr "Guam"
+
+#: common/src/Tribe/Languages/Locations.php:166
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:178
+msgid "Greece"
+msgstr "Řecko"
+
+#: common/src/Tribe/Languages/Locations.php:167
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:181
+msgid "Greenland"
+msgstr "Grónsko"
+
+#: common/src/Tribe/Languages/Locations.php:168
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:182
+msgid "Grenada"
+msgstr "Grenada"
+
+#: common/src/Tribe/Languages/Locations.php:163
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:177
+msgid "Germany"
+msgstr "Německo"
+
+#: common/src/Tribe/Languages/Locations.php:164
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:179
+msgid "Ghana"
+msgstr "Ghana"
+
+#: common/src/Tribe/Languages/Locations.php:165
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:180
+msgid "Gibraltar"
+msgstr "Gibraltar"
+
+#: common/src/Tribe/Languages/Locations.php:158
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:172
+msgid "French Polynesia"
+msgstr "Francouzská Polynesie"
+
+#: common/src/Tribe/Languages/Locations.php:159
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:173
+msgid "French Southern Territories"
+msgstr "Francouzský jižní území"
+
+#: common/src/Tribe/Languages/Locations.php:160
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:174
+msgid "Gabon"
+msgstr "Gabun"
+
+#: common/src/Tribe/Languages/Locations.php:161
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:175
+msgid "Gambia"
+msgstr "Gambie"
+
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:176
+msgid "Georgia"
+msgstr "Gruzie"
+
+#: common/src/Tribe/Languages/Locations.php:155
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:169
+msgid "Finland"
+msgstr "Finsko"
+
+#: common/src/Tribe/Languages/Locations.php:156
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:170
+msgid "France"
+msgstr "Francie"
+
+#: common/src/Tribe/Languages/Locations.php:157
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:171
+msgid "French Guiana"
+msgstr "Francouzská Guyana"
+
+#: common/src/Tribe/Languages/Locations.php:153
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:167
+msgid "Faroe Islands"
+msgstr "Faerské ostrovy"
+
+#: common/src/Tribe/Languages/Locations.php:154
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:168
+msgid "Fiji"
+msgstr "Fidži"
+
+#: common/src/Tribe/Languages/Locations.php:149
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:163
+msgid "Eritrea"
+msgstr "Eritrea"
+
+#: common/src/Tribe/Languages/Locations.php:150
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:164
+msgid "Estonia"
+msgstr "Estonsko"
+
+#: common/src/Tribe/Languages/Locations.php:151
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:165
+msgid "Ethiopia"
+msgstr "Etiopie"
+
+#: common/src/Tribe/Languages/Locations.php:152
+msgid "Falkland Islands (Malvinas)"
+msgstr "Falklandy (Malvíny)"
+
+#: common/src/Tribe/Languages/Locations.php:147
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:162
+msgid "El Salvador"
+msgstr "El Salvador"
+
+#: common/src/Tribe/Languages/Locations.php:148
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:161
+msgid "Equatorial Guinea"
+msgstr "Rovníková Guinea"
+
+#: common/src/Tribe/Languages/Locations.php:144
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:158
+msgid "East Timor"
+msgstr "Východní Timor"
+
+#: common/src/Tribe/Languages/Locations.php:145
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:159
+msgid "Ecuador"
+msgstr "Ekvádor"
+
+#: common/src/Tribe/Languages/Locations.php:146
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:160
+msgid "Egypt"
+msgstr "Egypt"
+
+#: common/src/Tribe/Languages/Locations.php:142
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:156
+msgid "Dominica"
+msgstr "Dominica"
+
+#: common/src/Tribe/Languages/Locations.php:143
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:157
+msgid "Dominican Republic"
+msgstr "Dominikánská Republika"
+
+#: common/src/Tribe/Languages/Locations.php:140
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:154
+msgid "Denmark"
+msgstr "Dánsko"
+
+#: common/src/Tribe/Languages/Locations.php:141
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:155
+msgid "Djibouti"
+msgstr "Džibutsko"
+
+#: common/src/Tribe/Languages/Locations.php:138
+msgid "Cyprus"
+msgstr "Kypr"
+
+#: common/src/Tribe/Languages/Locations.php:139
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:153
+msgid "Czech Republic"
+msgstr "Česká republika"
+
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:149
+msgid "Cote d'Ivoire"
+msgstr "Pobřeží slonoviny"
+
+#: common/src/Tribe/Languages/Locations.php:135
+msgid "Croatia (Local Name: Hrvatska)"
+msgstr "Chorvatsko"
+
+#: common/src/Tribe/Languages/Locations.php:136
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:151
+msgid "Cuba"
+msgstr "Cuba"
+
+#: common/src/Tribe/Languages/Locations.php:128
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:143
+msgid "Colombia"
+msgstr "Kolumbie"
+
+#: common/src/Tribe/Languages/Locations.php:129
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:144
+msgid "Comoros"
+msgstr "Komory"
+
+#: common/src/Tribe/Languages/Locations.php:130
+msgid "Congo"
+msgstr "Republika Kongo"
+
+#: common/src/Tribe/Languages/Locations.php:132
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:147
+msgid "Cook Islands"
+msgstr "Cookovy ostrovy"
+
+#: common/src/Tribe/Languages/Locations.php:133
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:148
+msgid "Costa Rica"
+msgstr "Costa Rica"
+
+#: common/src/Tribe/Languages/Locations.php:124
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:140
+msgid "China"
+msgstr "Čína"
+
+#: common/src/Tribe/Languages/Locations.php:125
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:141
+msgid "Christmas Island"
+msgstr "Vánoční ostrov"
+
+#: common/src/Tribe/Languages/Locations.php:126
+msgid "Cocos (Keeling) Islands"
+msgstr "Kokosové palmy (Keeling) ostrovy"
+
+#: common/src/Tribe/Languages/Locations.php:120
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:136
+msgid "Cayman Islands"
+msgstr "Kajmanské ostrovy"
+
+#: common/src/Tribe/Languages/Locations.php:121
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:137
+msgid "Central African Republic"
+msgstr "Středoafrická republika"
+
+#: common/src/Tribe/Languages/Locations.php:122
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:138
+msgid "Chad"
+msgstr "Čad"
+
+#: common/src/Tribe/Languages/Locations.php:123
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:139
+msgid "Chile"
+msgstr "Chile"
+
+#: common/src/Tribe/Languages/Locations.php:117
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:134
+msgid "Cameroon"
+msgstr "Kamerun"
+
+#: common/src/Tribe/Languages/Locations.php:118
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:96
+msgid "Canada"
+msgstr "Kanada"
+
+#: common/src/Tribe/Languages/Locations.php:119
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:135
+msgid "Cape Verde"
+msgstr "Cape Verde"
+
+#: common/src/Tribe/Languages/Locations.php:115
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:132
+msgid "Burundi"
+msgstr "Burundi"
+
+#: common/src/Tribe/Languages/Locations.php:116
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:133
+msgid "Cambodia"
+msgstr "Kambodža"
+
+#: common/src/Tribe/Languages/Locations.php:111
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:128
+msgid "British Indian Ocean Territory"
+msgstr "Britské indickooceánské území"
+
+#: common/src/Tribe/Languages/Locations.php:112
+msgid "Brunei Darussalam"
+msgstr "Brunei Darussalam"
+
+#: common/src/Tribe/Languages/Locations.php:113
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:130
+msgid "Bulgaria"
+msgstr "Bulharsko"
+
+#: common/src/Tribe/Languages/Locations.php:114
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:131
+msgid "Burkina Faso"
+msgstr "Burkina Faso"
+
+#: common/src/Tribe/Languages/Locations.php:110
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:127
+msgid "Brazil"
+msgstr "Brazílie"
+
+#: common/src/Tribe/Languages/Locations.php:105
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:122
+msgid "Bhutan"
+msgstr "Bhútán"
+
+#: common/src/Tribe/Languages/Locations.php:106
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:123
+msgid "Bolivia"
+msgstr "Bolívie"
+
+#: common/src/Tribe/Languages/Locations.php:108
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:125
+msgid "Botswana"
+msgstr "Botswana"
+
+#: common/src/Tribe/Languages/Locations.php:109
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:126
+msgid "Bouvet Island"
+msgstr "Bouvetův ostrov"
+
+#: common/src/Tribe/Languages/Locations.php:103
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:120
+msgid "Benin"
+msgstr "Benin"
+
+#: common/src/Tribe/Languages/Locations.php:104
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:121
+msgid "Bermuda"
+msgstr "Bermudy"
+
+#: common/src/Tribe/Languages/Locations.php:100
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:117
+msgid "Belarus"
+msgstr "Bělorusko"
+
+#: common/src/Tribe/Languages/Locations.php:101
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:118
+msgid "Belgium"
+msgstr "Belgie"
+
+#: common/src/Tribe/Languages/Locations.php:102
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:119
+msgid "Belize"
+msgstr "Belize"
+
+#: common/src/Tribe/Languages/Locations.php:97
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:114
+msgid "Bahrain"
+msgstr "Bahrain"
+
+#: common/src/Tribe/Languages/Locations.php:98
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:115
+msgid "Bangladesh"
+msgstr "Bangladéš"
+
+#: common/src/Tribe/Languages/Locations.php:99
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:116
+msgid "Barbados"
+msgstr "Barbados"
+
+#: common/src/Tribe/Languages/Locations.php:94
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:111
+msgid "Austria"
+msgstr "Rakousko"
+
+#: common/src/Tribe/Languages/Locations.php:95
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:112
+msgid "Azerbaijan"
+msgstr "Ázerbajdžán"
+
+#: common/src/Tribe/Languages/Locations.php:96
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:113
+msgid "Bahamas"
+msgstr "Bahamy"
+
+#: common/src/Tribe/Languages/Locations.php:92
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:109
+msgid "Aruba"
+msgstr "Aruba"
+
+#: common/src/Tribe/Languages/Locations.php:93
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:110
+msgid "Australia"
+msgstr "Austrálie"
+
+#: common/src/Tribe/Languages/Locations.php:90
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:107
+msgid "Argentina"
+msgstr "Argentina"
+
+#: common/src/Tribe/Languages/Locations.php:91
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:108
+msgid "Armenia"
+msgstr "Arménie"
+
+#: common/src/Tribe/Languages/Locations.php:88
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:105
+msgid "Antarctica"
+msgstr "Antarktida"
+
+#: common/src/Tribe/Languages/Locations.php:87
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:104
+msgid "Anguilla"
+msgstr "Anguilla"
+
+#: common/src/Tribe/Languages/Locations.php:85
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:102
+msgid "Andorra"
+msgstr "Andorra"
+
+#: common/src/Tribe/Languages/Locations.php:86
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:103
+msgid "Angola"
+msgstr "Angola"
+
+#: common/src/Tribe/Languages/Locations.php:82
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:99
+msgid "Albania"
+msgstr "Albánie"
+
+#: common/src/Tribe/Languages/Locations.php:83
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:100
+msgid "Algeria"
+msgstr "Alžírsko"
+
+#: common/src/Tribe/Languages/Locations.php:84
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:101
+msgid "American Samoa"
+msgstr "Americká Samoa"
+
+#: common/src/Tribe/Validate.php:467
+msgid "Country List must be formatted as one country per line in the following format: <br>US, United States <br> UK, United Kingdom."
+msgstr "Seznam zemí musí být formátován jako jedna země na řádek v následujícím formátu: <br>US, United States <br> UK, United Kingdom."
+
+#: common/src/Tribe/View_Helpers.php:59
+msgid "Select a Country:"
+msgstr "Vyberte zemi:"
+
+#: common/src/Tribe/Languages/Locations.php:79
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:95
+msgid "United States"
+msgstr "USA"
+
+#: common/src/Tribe/Languages/Locations.php:80
+#: src/Tickets/Commerce/Gateways/PayPal/Location/Country.php:98
+msgid "Afghanistan"
+msgstr "Afghánistán"
+
+#: common/src/Tribe/Validate.php:343
+msgid "%s cannot be a duplicate"
+msgstr "%s nemůže být duplicitní"
+
+#: common/src/Tribe/Validate.php:357
+msgid "%s must be a number or percentage."
+msgstr "%s musí být číslo nebo procento."
+
+#: common/src/Tribe/Validate.php:401
+msgid "%s must be a number between 0 and 21."
+msgstr "%s musí být číslo v rozmezí 0 až 21."
+
+#: common/src/Tribe/Validate.php:415
+msgid "%s must consist of letters, numbers, dashes, apostrophes, and spaces only."
+msgstr "%s se musí skládat pouze z písmen, číslic, pomlček, apostrofů a mezer."
+
+#: common/src/Tribe/Validate.php:429
+msgid "%s must consist of letters, spaces, apostrophes, and dashes."
+msgstr "%s se musí skládat pouze z písmen, mezer, apostrofů a pomlček."
+
+#: common/src/Tribe/Validate.php:441
+msgid "%s must consist of 5 numbers."
+msgstr "%s se musí skládat z 5 čísel."
+
+#: common/src/Tribe/Validate.php:453
+msgid "%s must be a phone number."
+msgstr "%s musí být telefonní číslo."
+
+#: common/src/Tribe/Validate.php:277 common/src/Tribe/Validate.php:289
+#: common/src/Tribe/Validate.php:302 common/src/Tribe/Validate.php:322
+msgid "%s must have a value that's part of its options."
+msgstr "%s musí mít hodnotu, která je jednou z možných voleb."
+
+#: common/src/Tribe/Validate.php:334
+msgid "Comparison validation failed because no comparison value was provided, for field %s"
+msgstr "Kontrola porovnávání se nezdařila, protože nebyla zadána porovnávací hodnota pro pole %s"
+
+#: common/src/Tribe/Validate.php:341
+msgid "%s cannot be the same as %s."
+msgstr "%s nemůže být stejné jako %s."
+
+#: common/src/Tribe/Support.php:213 common/src/Tribe/Support.php:214
+msgid "Unknown or not set"
+msgstr "Neznámé nebo nenastavené"
+
+#: common/src/Tribe/Support.php:224
+msgid "Rewrite rules were purged on load of this help page. Chances are there is a rewrite rule flush occurring in a plugin or theme!"
+msgstr "Během načítání této stránky nápovědy došlo k vyprázdnění pravidel pro přesměrování trvalých odkazů. Pravděpodobně je v některém pluginu nebo šabloně nastaveno toto vyprazdňování pravidel (rewrite rule flush)!"
+
+#: common/src/Tribe/Validate.php:72 common/src/Tribe/Validate.php:84
+msgid "Invalid or incomplete field passed"
+msgstr "Zadáno neplatné nebo neúplné pole"
+
+#: common/src/Tribe/Validate.php:73 common/src/Tribe/Validate.php:85
+#: common/src/Tribe/Validate.php:105
+msgid "Field ID:"
+msgstr "ID pole:"
+
+#: common/src/Tribe/Validate.php:104
+msgid "Non-existant field validation function passed"
+msgstr "Zadána neexistující validační funkce pole"
+
+#: common/src/Tribe/Validate.php:105
+msgctxt "non-existant function name passed for field validation"
+msgid "with function name:"
+msgstr "se jménem funkce:"
+
+#: common/src/Tribe/Validate.php:118 common/src/Tribe/Validate.php:132
+msgid "%s must contain numbers and letters only"
+msgstr "%s se musí skládat pouze z číslic a písmen"
+
+#: common/src/Tribe/Validate.php:146
+msgid "%s must contain numbers, letters and dots only"
+msgstr "%s se musí skládat pouze z číslic, písmen a teček."
+
+#: common/src/Tribe/Validate.php:188 common/src/Tribe/Validate.php:212
+msgid "%s must be a positive number."
+msgstr "%s musí být kladné číslo."
+
+#: common/src/Tribe/Validate.php:250
+msgid "%s must be a valid slug (numbers, letters, dashes, and underscores)."
+msgstr "%s musí být platným názvem v URL (číslice, písmena, pomlčky, a podtržítka)."
+
+#: common/src/Tribe/Validate.php:200
+msgid "%s must be a positive number or percent."
+msgstr "%s musí být kladné číslo nebo procento."
+
+#: common/src/Tribe/Settings_Tab.php:354
+msgid "There are no fields set up for this tab yet."
+msgstr "Pro tento panel nejsou zatím nastavena žádná pole."
+
+#: common/src/admin-views/tribe-options-licenses.php:67
+#: common/src/admin-views/tribe-options-licenses.php:118
+msgid "Licenses"
+msgstr "Licence"
+
+#: src/Tribe/Admin/Settings.php:444
+msgid "Network"
+msgstr "Síť webů"
+
+#: common/src/admin-views/help.php:38 common/src/Tribe/Settings.php:828
+#: src/Tribe/Admin/Settings.php:278
+msgid "Help"
+msgstr "Nápověda"
+
+#: src/admin-views/tribe-options-display.php:14
+msgid "Display"
+msgstr "Zobrazování"
+
+#: src/Tickets/Commerce/Gateways/Square/Settings.php:140
+#: src/Tickets/Commerce/Gateways/Stripe/Settings.php:273
+#: src/Tickets/Commerce/Settings.php:297 src/Tribe/Admin/Settings.php:375
+msgid "General"
+msgstr "Obecné"
+
+#: common/src/Tribe/Settings.php:1194
+msgid "You don't have permission to do that."
+msgstr "Nemáte dostatečné oprávnění pro tuto činnost."
+
+#: common/src/Tribe/Settings.php:1200
+msgid "The request was sent insecurely."
+msgstr "Požadavek byl odeslán nezabezpečený."
+
+#: common/src/Tribe/Settings.php:1206
+msgid "The request wasn't sent from this tab."
+msgstr "Požadavek nebyl odeslán z tohoto panelu."
+
+#: common/src/Tribe/Settings.php:1416
+msgid "Your form had the following errors:"
+msgstr "Ve formuláři se vyskytly následující chyby:"
+
+#: common/src/Tribe/Settings.php:1426
+msgid "None of your settings were saved. Please try again."
+msgstr "Žádné z vašich nastavení nebylo uloženo. Zkuste to prosím znovu."
+
+#: common/src/Tribe/Settings.php:1427
+msgid "The above setting was not saved. Other settings were successfully saved."
+msgid_plural "The above settings were not saved. Other settings were successfully saved."
+msgstr[0] "Výše uvedené nastavení nebylo uloženo. Ostatní nastavení byla úspěšně uložena."
+msgstr[1] "Výše uvedená nastavení nebyla uložena. Ostatní nastavení byla úspěšně uložena."
+msgstr[2] "Výše uvedená nastavení nebyla uložena. Ostatní nastavení byla úspěšně uložena."
+
+#: common/src/Tribe/Settings.php:1448
+msgid "Settings saved."
+msgstr "Nastavení bylo uloženo."
+
+#. Translators: %s is the name of the menu item.
+#. Translators: %s - Ticket plural label.
+#: common/src/Tribe/Settings.php:616 build/Tickets/Blocks/Tickets/editor.js:16
+msgid "%s Settings"
+msgstr "%s Nastavení"
+
+#: common/src/Tribe/Settings.php:752
+msgid "You've requested a non-existent tab."
+msgstr "Požadovaný panel neexistuje."
+
+#: common/src/Tribe/Settings.php:815
+#: src/Tribe/Editor/Attendee_Registration.php:162
+msgid "Save Changes"
+msgstr "Uložit změny"
+
+#. Translators: %s is the expiration date.
+#: common/src/Tribe/PUE/Checker.php:1305
+msgid "Valid Key! Expires on %s"
+msgstr "Platný klíč! Platnost tohoto klíče skončí %s"
+
+#: src/admin-views/editor/panel/settings-button.php:11
+#: src/Tickets/Admin/Plugin_Action_Links.php:44
+#: src/Tickets/Emails/Email/Completed_Order.php:151
+#: src/Tickets/Emails/Email/Purchase_Receipt.php:141
+#: src/Tickets/Emails/Email/RSVP.php:166
+#: src/Tickets/Emails/Email/RSVP_Not_Going.php:143
+#: src/Tickets/Emails/Email/Ticket.php:153
+#: src/Tickets/Flexible_Tickets/Series_Passes/Emails/Series_Pass.php:146
+#: src/Tribe/Admin/Settings.php:253 build/app/main.js:1
+#: build/Tickets/Blocks/Tickets/editor.js:2
+#: src/modules/blocks/rsvp/action-buttons/settings-action-button/template.js:27
+msgid "Settings"
+msgstr "Nastavení"
+
+#: common/src/Tribe/Settings.php:277
+#: src/Tickets/Seating/Admin/Events/Controller.php:131 build/wizard/wizard.js:1
+msgid "Events"
+msgstr "Akce"
+
+#. Translators: %s is the expiration date.
+#: common/src/Tribe/PUE/Checker.php:1316
+msgid "Thanks for setting up a valid key. It will expire on %s"
+msgstr "Děkujeme za vložení platného klíče. Jeho platnost skončí %s"
+
+#: common/src/Tribe/Credits.php:31
+msgid "This calendar is powered by The Events Calendar."
+msgstr "Tento kalendář používá plugin The Events Calendar."
+
+#: common/src/Tribe/Field.php:510
+msgid "Invalid field type specified"
+msgstr "Uvedený typ pole je neplatný"
+
+#: common/src/Tribe/Field.php:833
+msgid "No radio options specified"
+msgstr "Nebyly specifikovány položky přepínače"
+
+#: common/src/Tribe/Field.php:869
+msgid "No checkbox options specified"
+msgstr "Nebyly specifikovány položky zaškrtávacího políčka"
+
+#: common/src/Tribe/Field.php:931
+msgid "No select options specified"
+msgstr "Nebyly specifikovány položky rozbalovacího seznamu"
+
+#: common/src/Tribe/PUE/Checker.php:806
+msgid "A valid license key is required for support and updates"
+msgstr "Platný licenční klíč je vyžadován pro podporu a aktualizace"
+
+#: common/src/Tribe/PUE/Checker.php:986
+msgid "License key(s) updated."
+msgstr "Licenční klíč(e) byl aktualizován."
+
+#: common/src/Tribe/PUE/Checker.php:1270
+msgid "unknown date"
+msgstr "neznámé datum"
+
+#: common/src/Tribe/PUE/Checker.php:1276
+msgid "Sorry, key validation server is not available."
+msgstr "Omlouváme se, ale server k ověření klíče není dostupný."
+
+#: common/src/admin-views/troubleshooting/ea-status/license-key.php:43
+#: common/src/Tribe/PUE/Checker.php:830 common/src/Tribe/PUE/Checker.php:841
+msgid "License Key"
+msgstr "Licenční klíč"
+
+#: common/src/Tribe/Admin/Help_Page.php:975
+msgid "Rating:"
+msgstr "Hodnocení:"
+
+#: common/src/Tribe/Admin/Help_Page.php:1000
+msgid "Premium Add-Ons"
+msgstr "Premium doplňky"
+
+#: common/src/Tribe/App_Shop.php:50 common/src/Tribe/App_Shop.php:51
+#: common/src/Tribe/App_Shop.php:82
+msgid "Event Add-Ons"
+msgstr "Doplňky pro akce"
+
+#: common/src/Tribe/Admin/Help_Page.php:972
+msgid "Active Users:"
+msgstr "Aktivních uživatelů:"
+
+#: common/src/Tribe/Admin/Help_Page.php:1007
+msgid "Plugin Active"
+msgstr "Aktivovaný plugin"
+
+#: common/src/Tribe/Admin/Help_Page.php:1014
+msgid "Visit the Add-on Page"
+msgstr "Navštívit webovou stránku doplňku"
+
+#: common/src/Tribe/Admin/Help_Page.php:1009
+msgid "Plugin Inactive"
+msgstr "Neaktivní plugin"
+
+#: common/src/Tribe/Admin/Help_Page.php:966
+msgid "Latest Version:"
+msgstr "Nejnovější verze:"
+
+#: common/src/Tribe/Admin/Help_Page.php:969
+msgid "Requires:"
+msgstr "Vyžaduje:"
+
+#: common/src/Tribe/Admin/Help_Page.php:970
+msgid "WordPress "
+msgstr "WordPress"
+
+#. translators: %s: Plugin Name
+#: common/src/Tribe/Admin/Help_Page.php:949
+msgid "Install Plugin"
+msgstr "Instalovat plugin"
+
+#. translators: %s: Plugin Name
+#: common/src/Tribe/Admin/Help_Page.php:949
+msgid "Install %s"
+msgstr "Instalovat %s"
+
+#: common/src/Tribe/Admin/Help_Page.php:932
+msgid "Upgrade Plugin"
+msgstr "Aktualizovat plugin"
+
+#. translators: %s: Plugin Name
+#: common/src/Tribe/Admin/Help_Page.php:924
+msgid "Activate Plugin"
+msgstr "Aktivovat plugin"
+
+#: common/src/Tribe/Admin/Help_Page.php:549
+msgctxt "not available"
+msgid "n/a"
+msgstr "není k dispozici"
+
+#: common/src/Tribe/Admin/Help_Page.php:557
+msgid "You need to upgrade!"
+msgstr "Je třeba provést aktualizaci!"
+
+#: common/src/Tribe/Admin/Help_Page.php:557
+#: common/src/Tribe/Admin/Help_Page.php:934
+msgid "You are up to date!"
+msgstr "Používáte nejnovější verzi!"
+
+#. translators: %s: Plugin Name
+#: common/src/Tribe/Admin/Help_Page.php:924
+msgid "Activate %s"
+msgstr "Aktivovat %s"
+
+#: common/src/Tribe/Admin/Help_Page.php:366
+#: common/src/Tribe/Plugins_API.php:106
+#: src/admin-views/admin-welcome-message.php:72
+#: src/admin-views/tribe-commerce-settings.php:12
+#: src/Tickets/Commerce/Payments_Tab.php:343 src/Tribe/Admin/Notices.php:209
+#: src/Tribe/Main.php:856
+msgid "Event Tickets Plus"
+msgstr "Event Tickets Plus"
+
+#: common/src/admin-views/help-community.php:90
+#: common/src/Tribe/Admin/Help_Page.php:375
+msgid "Community Tickets"
+msgstr "Community Tickets"
+
+#: common/src/Tribe/Admin/Help_Page.php:324
+#: common/src/Tribe/Plugins_API.php:187
+msgid "Eventbrite Tickets"
+msgstr "Eventbrite Tickets"
+
+#: common/src/Tribe/Admin/Help_Page.php:315
+msgid "Events Calendar PRO"
+msgstr "Events Calendar PRO"
+
+#. Author of the plugin
+#: event-tickets.php common/src/admin-views/help-calendar.php:105
+#: common/src/Common/REST/TEC/V1/Documentation.php:121
+#: common/src/Common/TrustedLogin/Trusted_Login_Config.php:319
+#: common/src/Tribe/Admin/Help_Page.php:171 common/src/Tribe/Customizer.php:666
+#: common/src/Tribe/Plugins_API.php:25
+#: src/Tickets/Admin/Onboarding/Tickets_Landing_Page.php:621
+#: build/wizard/wizard.js:1
+msgid "The Events Calendar"
+msgstr "The Events Calendar"
+
+#: common/src/Tribe/Admin/Help_Page.php:291
+msgid " and "
+msgstr " a "
+
+#: common/src/Tribe/Admin/Help_Page.php:209
+msgid "Advanced Post Manager"
+msgstr "Advanced Post Manager"
+
+#. Plugin Name of the plugin
+#: event-tickets.php common/src/admin-views/help-ticketing.php:114
+#: common/src/Tribe/Admin/Help_Page.php:190 common/src/Tribe/Plugins_API.php:86
+#: event-tickets.php:68 src/admin-views/admin-welcome-message.php:74
+#: src/Tickets/Admin/Onboarding/Tickets_Landing_Page.php:344
+#: src/Tickets/Admin/Tickets/Page.php:403
+#: src/Tickets/Site_Health/Info_Section.php:73 src/Tribe/Admin/Notices.php:87
+#: src/Tribe/Main.php:881 src/Tribe/Privacy.php:59
+#: src/views/emails/template-parts/body/footer/credit.php:41
+msgid "Event Tickets"
+msgstr "Event Tickets"
+
+#: common/src/Tribe/Admin/Help_Page.php:175
+msgid "The Events Calendar is a carefully crafted, extensible plugin that lets you easily share your events."
+msgstr "The Events Calendar je kvalitně zpracovaný a rozšiřitelný plugin, který vám umožní jednoduše sdílet vaše akce."
+
+#: common/src/Tribe/Admin/Help_Page.php:194
+msgid "Events Tickets is a carefully crafted, extensible plugin that lets you easily sell tickets for your events."
+msgstr "Events Tickets je kvalitně zpracovaný a rozšiřitelný plugin, který vám umožní jednoduše prodávat vstupenky na vaše akce."
+
+#: common/src/Tribe/Admin/Help_Page.php:213
+msgid "Turbo charge your posts admin for any custom post type with sortable filters and columns, and auto-registration of metaboxes."
+msgstr "Zařaďte turbo při administraci svých příspěvků jakéhokoli vlastního typu obsahu pomocí seřaditelných filtrů a sloupců a automatické registrace metaboxů."

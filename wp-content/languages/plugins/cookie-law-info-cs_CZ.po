@@ -1,0 +1,1853 @@
+# Translation of Plugins - CookieYes – Cookie Banner for Cookie Consent (Easy to setup GDPR/CCPA Compliant Cookie Notice) - Stable (latest release) in Czech
+# This file is distributed under the same license as the Plugins - CookieYes – Cookie Banner for Cookie Consent (Easy to setup GDPR/CCPA Compliant Cookie Notice) - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-09-05 16:27:10+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n == 1) ? 0 : ((n >= 2 && n <= 4) ? 1 : 2);\n"
+"X-Generator: GlotPress/4.0.3\n"
+"Language: cs_CZ\n"
+"Project-Id-Version: Plugins - CookieYes – Cookie Banner for Cookie Consent (Easy to setup GDPR/CCPA Compliant Cookie Notice) - Stable (latest release)\n"
+
+#: lite/admin/modules/dashboard-widget/class-dashboard-widget.php:163
+msgid "Track your consent rates and unlock advanced features that keep your site in check."
+msgstr "Sledujte míru souhlasu a odemkněte si pokročilé funkce, které udrží váš web pod kontrolou."
+
+#: lite/admin/modules/dashboard-widget/class-dashboard-widget.php:162
+msgid "Get cookie consent insights in your Dashboard!"
+msgstr "Získejte přehledy o souhlasu s používáním souborů cookie na své nástěnce!"
+
+#: lite/admin/modules/connect-banner/class-connect-banner.php:83
+#: lite/admin/modules/dashboard-widget/class-dashboard-widget.php:165
+msgid "Connect to CookieYes Web App"
+msgstr "Připojení k webové aplikaci CookieYes"
+
+#: lite/admin/modules/connect-banner/class-connect-banner.php:81
+msgid "Automate your cookie scan, record consent logs, and access analytics to streamline consent management and enhance compliance by connecting to the web app."
+msgstr "Automatizujte skenování souborů cookie, zaznamenávejte protokoly souhlasů a získejte přístup k analytickým datům pro zefektivnění správy souhlasů a zvýšení dodržování předpisů propojením s webovou aplikací."
+
+#: lite/admin/modules/connect-banner/class-connect-banner.php:78
+msgid "Unlock advanced features for seamless compliance"
+msgstr "Získejte přístup k pokročilým funkcím pro bezproblémové dodržování předpisů"
+
+#: legacy/admin/views/admin-settings-help.php:72
+msgid "You need to enter the cookies your website uses via the GDPR Cookie Consent > Cookie List menu in your WordPress dashboard."
+msgstr "Soubory cookie, které váš web používá, musíte zadat v nabídce Souhlas s používáním souborů cookie GDPR > Seznam souborů cookie na hlavním panelu WordPressu."
+
+#: lite/admin/modules/banners/api/class-api.php:466
+msgid "Banner contents."
+msgstr "Obsah banneru."
+
+#: lite/admin/modules/banners/api/class-api.php:451
+msgid "Banner name for reference"
+msgstr "Název banneru pro referenci"
+
+#: lite/admin/modules/banners/api/class-api.php:461
+msgid "Banner settings."
+msgstr "Nastavení banneru."
+
+#: lite/admin/modules/banners/api/class-api.php:456
+msgid "Banner unique name"
+msgstr "Jedinečný název banneru"
+
+#: lite/admin/modules/banners/api/class-api.php:211
+msgid "Cannot create existing banner."
+msgstr "Nelze vytvořit existující banner."
+
+#: lite/admin/modules/settings/api/class-api.php:250
+msgid "CCPA (California Consumer Privacy Act)"
+msgstr "CCPA (kalifornský zákon na ochranu soukromí spotřebitelů)"
+
+#: lite/admin/modules/settings/api/class-api.php:242
+msgid ""
+"Choose GDPR if most of your targeted audience are from the EU or UK.\n"
+"\t\t\t\t\tIt creates a customizable banner that allows your visitors to accept/reject cookies or adjust their consent preferences."
+msgstr ""
+"Zvolte GDPR, pokud většina vaší cílové skupiny pochází z EU nebo Spojeného království.\n"
+"Vytváří přizpůsobitelný banner, který umožňuje vašim návštěvníkům přijmout/odmítnout soubory cookie nebo upravit jejich preference pro souhlas."
+
+#: lite/admin/modules/settings/api/class-api.php:262
+msgid ""
+"Choose Info if you do not want to block any cookies on your website.\n"
+"\t\t\t\t\t\tIt creates a dismissible banner that provides some general info to your site visitors."
+msgstr ""
+"Pokud nechcete na svém webu blokovat žádné soubory cookie, vyberte možnost Informace.\n"
+"Vytvoří odmítatelný banner, který návštěvníkům vašeho webu poskytne nějaké obecné informace."
+
+#: lite/admin/modules/settings/api/class-api.php:261
+msgid "Choose INFO if you do not want to block any cookies on your website. This will create a dismissible banner that provides some general information to your site visitors."
+msgstr "Zvolte INFO, pokud nechcete na svém webu blokovat žádné cookies. Tím se vytvoří zavíratelný banner, který návštěvníkům vašeho webu poskytne některé obecné informace."
+
+#: lite/admin/modules/settings/api/class-api.php:241
+msgid "Continue with the GDPR template if most of your targeted audience are from the EU or UK. It creates a customizable banner that allows your visitors to accept/reject cookies or adjust their consent preferences."
+msgstr "Pokud většina vaší cílové skupiny pochází z EU nebo Spojeného království, pokračujte šablonou GDPR. Vytváří přizpůsobitelný banner, který umožňuje vašim návštěvníkům přijmout/odmítnout soubory cookie nebo upravit jejich preference pro souhlas."
+
+#: lite/admin/modules/banners/class-banners.php:66
+#: lite/admin/dist/js/app.js:857
+msgid "Cookie Banner"
+msgstr "Lišta cookie"
+
+#: lite/admin/modules/cookies/api/class-api-controller.php:265
+msgid "Cookie category"
+msgstr "Kategorie cookie"
+
+#: lite/admin/modules/cookies/api/class-categories-api.php:252
+msgid "Cookie category language"
+msgstr "Jazyk kategorie cookie"
+
+#: lite/admin/modules/cookies/api/class-categories-api.php:242
+#: lite/admin/modules/cookies/api/class-cookies-api.php:172
+#: lite/admin/modules/scanner/api/class-api.php:307
+msgid "Cookie category name."
+msgstr "Název kategorie souborů cookie."
+
+#: lite/admin/modules/cookies/api/class-categories-api.php:247
+#: lite/admin/modules/scanner/api/class-api.php:312
+msgid "Cookie category unique name"
+msgstr "Jedinečný název kategorie cookie"
+
+#: lite/admin/modules/cookies/api/class-cookies-api.php:192
+msgid "Cookie language."
+msgstr "Jazyk cookie."
+
+#: lite/admin/modules/cookies/class-cookies.php:64
+#: lite/admin/dist/js/app.js:857
+msgid "Cookie Manager"
+msgstr "Správce Cookies"
+
+#: lite/admin/modules/cookies/api/class-categories-api.php:262
+#: lite/admin/modules/cookies/api/class-categories-api.php:267
+#: lite/admin/modules/cookies/api/class-cookies-api.php:197
+#: lite/admin/modules/scanner/api/class-api.php:322
+msgid "Cookie type."
+msgstr "Typ cookie."
+
+#: lite/admin/modules/scanner/api/class-api.php:236
+#: lite/admin/modules/scanner/api/class-api.php:262
+msgid "Could not initiate the scan, please try again"
+msgstr "Skenování se nepodařilo zahájit, zkuste to prosím znovu"
+
+#: uninstall.php:72
+msgid "Failed to delete CookieYes plugin data!"
+msgstr "Nepodařilo se smazat data pluginu CookieYes!"
+
+#: lite/admin/modules/settings/includes/class-controller.php:264
+msgid "Free Plan"
+msgstr "Volný plán"
+
+#: lite/admin/modules/settings/api/class-api.php:240
+msgid "GDPR (General Data Protection Regulation)"
+msgstr "GDPR (obecné nařízení o ochraně osobních údajů)"
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+#: cookie-law-info.php
+msgid "https://www.cookieyes.com/"
+msgstr "https://www.cookieyes.com/"
+
+#: lite/admin/modules/uninstall-feedback/class-uninstall-feedback.php:163
+msgid "I have issues while connecting to the CookieYes web app"
+msgstr "Mám problémy s připojením k webové aplikaci CookieYes"
+
+#: lite/admin/modules/uninstall-feedback/class-uninstall-feedback.php:173
+msgid "I would like to use the CookieYes web app instead of the plugin"
+msgstr "Chtěl bych místo pluginu používat webovou aplikaci CookieYes"
+
+#: lite/admin/modules/cookies/api/class-cookies-api.php:207
+msgid "If cookies added from the scanner or not."
+msgstr "Pokud byly soubory cookie přidány ze skeneru nebo ne."
+
+#: lite/admin/modules/uninstall-feedback/class-uninstall-feedback.php:213
+msgid "If you have a moment, please let us know why you are deactivating the CookieYes plugin."
+msgstr "Pokud máte chvilku, dejte nám prosím vědět, proč deaktivujete plugin CookieYes."
+
+#: lite/admin/modules/banners/api/class-api.php:471
+msgid "Indicates whether the banner is default or not"
+msgstr "Označuje, zda je banner výchozí nebo ne"
+
+#: lite/admin/modules/settings/api/class-api.php:260
+msgid "INFO (Information Display Banner)"
+msgstr "INFO (Informační banner)"
+
+#: lite/admin/modules/banners/api/class-api.php:231
+#: lite/admin/modules/banners/api/class-api.php:255
+msgid "Invalid banner id"
+msgstr "Neplatné ID banneru"
+
+#: lite/admin/modules/languages/api/class-api.php:175
+msgid "Language code"
+msgstr "Kód jazyka"
+
+#: lite/admin/modules/banners/api/class-api.php:424
+msgid "Language of the banner"
+msgstr "Jazyk banneru"
+
+#: lite/admin/modules/cookies/api/class-api-controller.php:259
+msgid "Language of the cookie"
+msgstr "Jazyk souboru cookie"
+
+#: lite/admin/modules/settings/api/class-api.php:537
+#: lite/admin/modules/settings/api/class-api.php:542
+#: lite/admin/modules/settings/api/class-api.php:547
+#: lite/admin/modules/settings/api/class-api.php:552
+#: lite/admin/modules/settings/api/class-api.php:557
+msgid "Language."
+msgstr "Jazyk."
+
+#: lite/admin/modules/languages/class-languages.php:53
+#: lite/admin/modules/languages/class-languages.php:60
+#: lite/admin/dist/js/5.js:130 lite/admin/dist/js/app.js:857
+msgid "Languages"
+msgstr "Jazyky"
+
+#: lite/admin/modules/languages/api/class-api.php:165
+msgid "Name of the language."
+msgstr "Název jazyka."
+
+#: lite/admin/modules/languages/api/class-api.php:170
+msgid "Native name of the language."
+msgstr "Rodný název jazyka."
+
+#: lite/admin/modules/banners/api/class-api.php:279
+msgid "No data specified to create/edit banners"
+msgstr "Nejsou zadána žádná data pro vytvoření/úpravu bannerů"
+
+#: lite/admin/modules/cookies/api/class-categories-api.php:173
+msgid "No data specified to create/edit categories"
+msgstr "Nejsou zadána žádná data pro vytvoření/úpravu kategorií"
+
+#: lite/admin/modules/policies/class-policies.php:40
+#: lite/admin/dist/js/app.js:857
+msgid "Policy Generators"
+msgstr "Generování zásad"
+
+#: legacy/admin/modules/uninstall-feedback/uninstall-feedback.php:89
+#: lite/admin/modules/uninstall-feedback/class-uninstall-feedback.php:126
+msgid "Setup is too difficult/ Lack of documentation"
+msgstr "Nastavení je příliš obtížné/Nedostatek dokumentace"
+
+#: lite/admin/modules/cookies/api/class-categories-api.php:272
+#: lite/admin/modules/cookies/api/class-categories-api.php:277
+msgid "Show cookies on audit table or not"
+msgstr "Zobrazit soubory cookie v tabulce auditu nebo ne"
+
+#: lite/includes/class-rest-controller.php:93
+msgid "Sorry, you are not allowed to edit this resource."
+msgstr "Litujeme, nemáte oprávnění upravovat tento zdroj."
+
+#: lite/admin/modules/banners/api/class-api.php:476
+msgid "The date the banner was created, as GMT."
+msgstr "Datum vytvoření banneru, jako GMT."
+
+#: lite/admin/modules/banners/api/class-api.php:482
+msgid "The date the banner was last modified, as GMT."
+msgstr "Datum poslední úpravy banneru, jako GMT."
+
+#: lite/admin/modules/cookies/api/class-categories-api.php:230
+#: lite/admin/modules/cookies/api/class-cookies-api.php:156
+#: lite/admin/modules/scanner/api/class-api.php:295
+msgid "The date the cookie was created, as GMT."
+msgstr "Datum vytvoření souboru cookie, jako GMT."
+
+#: lite/admin/modules/cookies/api/class-categories-api.php:236
+#: lite/admin/modules/cookies/api/class-cookies-api.php:162
+#: lite/admin/modules/scanner/api/class-api.php:301
+msgid "The date the cookie was last modified, as GMT."
+msgstr "Datum poslední úpravy souboru cookie, jako GMT."
+
+#: lite/admin/modules/cookies/api/class-cookies-api.php:212
+msgid "URL patterns for blocking purposes"
+msgstr "Vzory adres URL pro účely blokování"
+
+#: lite/admin/modules/cookies/api/class-categories-api.php:257
+#: lite/admin/modules/cookies/api/class-categories-api.php:282
+#: lite/admin/modules/scanner/api/class-api.php:317
+msgid "Cookie category description."
+msgstr "Popis kategorie cookie."
+
+#. translators: %s: action text
+#: legacy/public/modules/script-blocker/views/settings.php:11
+msgid "<a id=\"wt-cli-script-blocker-action\">%s</a>"
+msgstr "<a id=\"wt-cli-script-blocker-action\">%s</a>"
+
+#: lite/admin/modules/settings/includes/class-controller.php:263
+msgid "Free"
+msgstr "Zdarma"
+
+#: legacy/admin/views/admin-settings-messagebar.php:31
+msgid "Supports shortcodes.(link shortcodes to help link) e.g. [cookie_accept_all] for accept all button, [cookie_button] for accept button, [cookie_reject] for reject button, [cookie_link] for Read more, [cookie_settings] for cookie settings."
+msgstr "Podporuje krátké kódy. (link shortcodes to help link) např. [cookie_accept_all] pro tlačítko přijmout vše, [cookie_button] pro tlačítko přijetí, [cookie_reject] pro tlačítko odmítnutí, [cookie_link] pro Číst více, [cookie_settings] pro nastavení souborů cookie."
+
+#: legacy/admin/views/admin-settings-buttons.php:340
+msgid "Customise the appearance of CCPA notice. Enabling ‘Show CCPA notice’ displays the notice on the consent bar and records prior consent from the user. Alternatively, insert CCPA shortcode [wt_cli_ccpa_optout] to render CCPA notice in a specific page of your site, preferably, cookie policy page."
+msgstr "Přizpůsobte si vzhled oznámení CCPA. Zapnutím možnosti „Zobrazit oznámení CCPA“ se oznámení zobrazí na liště souhlasu a zaznamená se předchozí souhlas uživatele. Případně vložte krátký kód CCPA [wt_cli_ccpa_optout], aby se upozornění CCPA zobrazilo na konkrétní stránce vašeho webu, nejlépe na stránce se zásadami souborů cookie."
+
+#: legacy/admin/views/admin-settings-buttons.php:323
+msgid "Hide cookie bar in this page/URL"
+msgstr "Skrýt lištu cookie na této stránce/URL"
+
+#: legacy/admin/views/admin-settings-buttons.php:227
+msgid "Insert the shortcode <strong>[cookie_link]</strong> in <strong>Customise Cookie Bar > Cookie bar > Message</strong> to include ‘Read more’ within the cookie consent bar."
+msgstr "Vložte krátký kód <strong>[cookie_link]</strong> do <strong>Přizpůsobit lištu souborů cookie > Lištu souborů cookie > Zpráva</strong>, aby se na liště souhlasu se soubory cookie objevilo „Přečíst více“."
+
+#: legacy/admin/views/admin-settings-buttons.php:224
+msgid "‘Read more’ redirects users to the ‘Privacy & Cookie Policy’ page. Create a ‘Privacy & Cookie Policy’ page for your site from here."
+msgstr "„Přečíst více“ přesměruje uživatele na stránku „Zásady ochrany osobních údajů a souborů cookie“. Zde vytvořte pro svůj web stránku „Zásady ochrany osobních údajů a souborů cookie“."
+
+#: legacy/admin/views/admin-settings-buttons.php:14
+#: legacy/admin/views/admin-settings-buttons.php:222
+msgid "Read more"
+msgstr "Čtěte více"
+
+#: legacy/admin/modules/ccpa/ccpa.php:154
+msgid "CCPA compliance is essential for your website if it has a target audience from California."
+msgstr "Soulad se zákonem CCPA je pro váš web nezbytný, pokud má cílovou skupinu z Kalifornie."
+
+#: legacy/admin/class-cookie-law-info-admin.php:373
+msgid "Close consent bar"
+msgstr "Zavřít panel souhlasu"
+
+#: legacy/admin/modules/ccpa/ccpa.php:158
+msgid "Comply with both the laws on the same website if your target audience are from European union and California."
+msgstr "Pokud vaše cílové publikum pochází z Evropské unie a Kalifornie, dodržujte oba zákony na stejném webu."
+
+#: legacy/admin/views/admin-settings-buttons.php:22
+msgid "Customize the Accept button to match the theme of your site. Insert the shortcode [cookie_button] in Customise Cookie Bar > Cookie bar > Message to include accept button in cookie consent bar."
+msgstr "Přizpůsobte tlačítko Přijmout tak, aby odpovídalo tématu vašeho webu. Vložte krátký kód [cookie_button] do Přizpůsobit panel souborů cookie > Panel souborů cookie > Zpráva pro zahrnutí tlačítka pro přijetí do panelu souhlasu se soubory cookie."
+
+#: legacy/admin/views/admin-settings-buttons.php:99
+msgid "Customize the Reject button to match the theme of your site. Insert the shortcode <strong>[cookie_reject]</strong> in <strong>Customise Cookie Bar > Cookie bar > Message</strong> to include reject button in cookie consent bar."
+msgstr "Přizpůsobte tlačítko Odmítnout tak, aby odpovídalo tématu vašeho webu. Vložte krátký kód <strong>[cookie_reject]</strong> do <strong>Přizpůsobit panel souborů cookie > Panel souborů cookie > Zpráva</strong>, aby se do panelu souhlasu se soubory cookie zahrnulo tlačítko pro odmítnutí."
+
+#: legacy/admin/views/admin-settings-buttons.php:180
+msgid "Customize the cookie settings to match the theme of your site. Insert the shortcode <strong>[cookie_settings]</strong> in <strong>Customise Cookie Bar > Cookie bar > Message</strong> to include cookie settings within the cookie consent bar. Clicking ‘Cookie settings’ opens up a pop up window with provisions to enable/disable cookie categories."
+msgstr "Upravte nastavení souborů cookie tak, aby odpovídalo tématu vašeho webu. Vložte krátký kód <strong>[cookie_settings]</strong> do <strong>Přizpůsobit panel souborů cookie > Panel souborů cookie > Zpráva</strong>, aby se nastavení souborů cookie zahrnulo do panelu souhlasu se soubory cookie. Kliknutím na „Nastavení souborů cookie“ se otevře vyskakovací okno s ustanoveními pro povolení/zakázaní kategorií souborů cookie."
+
+#: legacy/admin/modules/ccpa/views/ccpa_settings.php:17
+msgid "Displays CCPA notice on the consent bar of your site and records prior consent from the user."
+msgstr "Zobrazí oznámení CCPA na liště souhlasu vašeho webu a zaznamená předchozí souhlas uživatele."
+
+#: legacy/admin/views/admin-settings-messagebar.php:161
+msgid "Enable to display a sticky/fixed widget at the footer of your website (remains fixed on page scroll)."
+msgstr "Povolte zobrazení nalepeného/pevného widgetu v zápatí vašeho webu (při posouvání stránky zůstane fixní)."
+
+#: legacy/admin/views/admin-settings-messagebar.php:109
+msgid "Fix bar on header"
+msgstr "Napevno lišta v záhlaví"
+
+#: legacy/admin/modules/ccpa/ccpa.php:150
+msgid "GDPR compliance is essential for your website if it has a target audience from the European union."
+msgstr "Soulad s GDPR je pro váš web nezbytný, pokud má cílovou skupinu z Evropské unie."
+
+#: legacy/admin/views/admin-settings-messagebar.php:218
+msgid "Input a text to appear on the revisit consent widget."
+msgstr "Zadejte text, který se zobrazí na widgetu pro opětovné zobrazení souhlasu."
+
+#: legacy/admin/views/admin-settings-messagebar.php:20
+msgid "Input text to have a heading for the cookie consent bar. Leave it blank if you do not need one."
+msgstr "Zadejte text, abyste měli záhlaví pro lištu souhlasu se soubory cookie. Pokud jej nepotřebujete, ponechte jej prázdné."
+
+#: legacy/admin/views/admin-settings-messagebar.php:31
+msgid "Modify/edit the content of the cookie consent bar."
+msgstr "Upravte/upravte obsah lišty souhlasu se soubory cookie."
+
+#: legacy/admin/views/admin-settings-buttons.php:72
+#: legacy/admin/views/admin-settings-buttons.php:159
+msgid "Open URL in new window"
+msgstr "Otevřít adresu URL v novém okně"
+
+#: legacy/admin/partials/cookie-law-info-privacy_overview.php:39
+msgid "Privacy overview is displayed when the user clicks on ‘cookie settings’ from the cookie consent bar. Edit/ modify the title and content of ‘privacy overview’ from here."
+msgstr "Přehled ochrany osobních údajů se zobrazí, když uživatel klikne na „nastavení souborů cookie“ na liště souhlasu se soubory cookie. Zde můžete upravit/upravit název a obsah „přehledu soukromí“."
+
+#: legacy/admin/views/admin-settings-advanced.php:13
+msgid "Reset settings"
+msgstr "Resetovat nastavení"
+
+#: legacy/admin/views/admin-settings-messagebar.php:150
+msgid "Revisit consent will allow the visitors to view/edit/revoke their prior preferences. Enable to display a sticky/fixed widget widget at the footer of your website. You can also manually insert a widget by adding the shortcode <strong>[wt_cli_manage_consent]</strong> to your website."
+msgstr "Souhlas s opětovnou návštěvou umožní návštěvníkům zobrazit/upravit/zrušit jejich předchozí preference. Povolte zobrazení rychlého/pevného widgetu v zápatí vašeho webu. Widget můžete také vložit ručně přidáním krátkého kódu <strong>[wt_cli_manage_consent]</strong> na svůj web."
+
+#: legacy/admin/modules/ccpa/views/ccpa_settings.php:17
+msgid "Show CCPA notice"
+msgstr "Zobrazit oznámení CCPA"
+
+#: legacy/admin/views/admin-settings-buttons.php:67
+msgid "Specify the URL to redirect users on accept button click. e.g. Entering the cookie policy page URL will redirect users to the cookie policy page after giving consent."
+msgstr "Zadejte adresu URL pro přesměrování uživatelů po kliknutí na tlačítko Přijmout. např. Zadáním adresy URL stránky se zásadami souborů cookie budou uživatelé po udělení souhlasu přesměrováni na stránku zásad souborů cookie."
+
+#: legacy/admin/views/admin-settings-buttons.php:154
+msgid "Specify the URL to redirect users on reject button click. e.g. Entering the cookie policy page URL will redirect users to the cookie policy page after rejecting cookies."
+msgstr "Zadejte adresu URL pro přesměrování uživatelů po kliknutí na tlačítko odmítnutí. např. Zadáním adresy URL stránky zásad souborů cookie budou uživatelé po odmítnutí souborů cookie přesměrováni na stránku zásad souborů cookie."
+
+#: legacy/admin/views/admin-settings-messagebar.php:206
+msgid "Specify the widget distance from margin in ‘px’ or  ‘%’ . e.g. 100px or 30%"
+msgstr "Zadejte vzdálenost widgetu od okraje v „px“ nebo „%“ . např. 100 pixelů nebo 30 %"
+
+#: legacy/admin/views/admin-settings-messagebar.php:215
+msgid "Text on the widget"
+msgstr "Text na widgetu"
+
+#: legacy/admin/views/admin-settings-help.php:17
+msgid "You can insert the shortcodes in the Settings > Customise Cookie Bar > Cookie bar > Message to get it rendered on the cookie consent bar of your site."
+msgstr "Krátké kódy můžete vložit do Nastavení > Přizpůsobit lištu souborů cookie > Lišta souborů cookie > Zpráva, aby se vykreslila na liště souhlasu se soubory cookie na vašem webu."
+
+#: legacy/admin/modules/cookie-scaner/cookie-scaner.php:672
+msgid "To scan cookies following tables should be present on your database, please check if tables do exist on your database. If not exist please try to deactivate and activate the plugin again."
+msgstr "Pro skenování souborů cookie by v databázi měly být přítomny následující tabulky, zkontrolujte prosím, zda ve vaší databázi existují. Pokud neexistují, zkuste plugin deaktivovat a znovu aktivovat."
+
+#: legacy/admin/modules/uninstall-feedback/uninstall-feedback.php:114
+#: lite/admin/modules/uninstall-feedback/class-uninstall-feedback.php:177
+msgid "It’s a temporary deactivation"
+msgstr "Jedná se o dočasnou deaktivaci"
+
+#: legacy/admin/views/admin-settings-buttons.php:10
+#: legacy/admin/views/admin-settings-buttons.php:370
+msgid "Accept All Button"
+msgstr "Tlačítko přijmout vše"
+
+#: legacy/includes/class-cookie-law-info-cookieyes.php:317
+msgid "License is not activated, please activate your license and try again"
+msgstr "Licence není aktivována. Prosím, aktivujte licenci a zkuste to znovu."
+
+#: legacy/includes/class-cookie-law-info-cookieyes.php:205
+msgid "Successfully deleted!"
+msgstr "Úspěšně smazáno!"
+
+#: legacy/public/views/cookie-law-info_bar.php:50
+msgid "SAVE & ACCEPT"
+msgstr "ULOŽIT A PŘIJMOUT"
+
+#: legacy/admin/modules/cookie-scaner/views/settings.php:195
+msgid "Cookie scanner"
+msgstr "Skenovat Cookies"
+
+#: legacy/admin/modules/cookie-scaner/views/scan-results.php:15
+msgid "Cookie scan result for your website"
+msgstr "Výsledky skenu pro vaše webové stránky"
+
+#: legacy/admin/modules/cookie-scaner/cookie-scaner.php:612
+msgid "Your website is currently being scanned for cookies. This might take from a few minutes to a few hours, depending on your website speed and the number of pages to be scanned."
+msgstr "Vaše webové stránky jsou právě kontrolovány na přítomnost souborů cookie. To může trvat několik minut až několik hodin v závislosti na rychlosti vašich webových stránek a počtu stránek, které je třeba prohledat."
+
+#: legacy/admin/modules/cookie-scaner/classes/class-cookie-law-info-cookie-scanner-ajax.php:209
+msgid "It might take a few minutes to a few hours to complete the scanning of your website. This depends on the number of pages to scan and the website speed. Once the scanning is complete, we will notify you by email."
+msgstr "Dokončení skenování vašich webových stránek může trvat několik minut až několik hodin. To závisí na počtu skenovaných stránek a rychlosti webu. Po dokončení skenování vás budeme informovat e-mailem."
+
+#: legacy/admin/modules/cookie-scaner/classes/class-cookie-law-info-cookie-scanner-ajax.php:194
+msgid "Scanner API is temporarily down please try again later."
+msgstr "API rozhraní skeneru je dočasně nefunkční, zkuste to prosím později."
+
+#: legacy/admin/modules/cookie-scaner/cookie-scaner.php:1170
+msgid "Determine whether you need to comply with the data protection laws governing cookies. Eg:- EU’s GDPR, ePrivacy Directive (EU Cookie Law), California’s CCPA, etc."
+msgstr "Zjistěte, zda musíte dodržovat zákony o ochraně osobních údajů, které se týkají souborů cookies. Např.: GDPR Evropské unie, Směrnice o soukromí a elektronických komunikacích (Zákon EU o souborech cookie), kalifornský zákon CCPA atd."
+
+#: legacy/admin/modules/cookie-scaner/cookie-scaner.php:1169
+msgid "Identify what personal data they collect and what are the other purposes they serve."
+msgstr "Zjistěte, jaké osobní údaje shromažďují a k jakým dalším účelům slouží."
+
+#: legacy/admin/modules/cookie-scaner/cookie-scaner.php:301
+msgid "Scanning completed."
+msgstr "Skenování dokončeno"
+
+#: legacy/admin/modules/cookie-scaner/cookie-scaner.php:300
+msgid "Scanned"
+msgstr "Skenováno"
+
+#: legacy/admin/modules/cookie-scaner/cookie-scaner.php:244
+#: legacy/admin/modules/cookie-scaner/cookie-scaner.php:245
+msgid "Cookie Scanner"
+msgstr "Skener cookies"
+
+#: legacy/admin/modules/cookie-scaner/cookie-scaner.php:302
+msgid "Added to cookie list."
+msgstr "Přidat do seznamu cookies."
+
+#: legacy/admin/modules/cookie-scaner/cookie-scaner.php:304
+msgid "Scanning pages..."
+msgstr "Skenuji stránky..."
+
+#: legacy/admin/modules/cookie-scaner/cookie-scaner.php:303
+msgid "Finding pages..."
+msgstr "Hledám stránky..."
+
+#: legacy/admin/modules/cookie-scaner/cookie-scaner.php:307
+#: legacy/admin/modules/cookie-scaner/cookie-scaner.php:1210
+msgid "Scan again"
+msgstr "Skenovat znovu"
+
+#: legacy/admin/modules/cookie-scaner/cookie-scaner.php:308
+msgid "Download cookies as CSV"
+msgstr "Stáhnout cookies ve formátu CSV"
+
+#: legacy/admin/modules/cookie-scaner/cookie-scaner.php:309
+#: legacy/admin/modules/cookie-scaner/views/scan-results.php:57
+msgid "Add to cookie list"
+msgstr "Přidat do seznamu cookies"
+
+#: legacy/admin/modules/cookie-scaner/cookie-scaner.php:310
+msgid "View scan result"
+msgstr "Zobrazit výsledek skenování"
+
+#: legacy/admin/modules/cookie-scaner/cookie-scaner.php:306
+msgid "Stop"
+msgstr "Zastavit"
+
+#: legacy/admin/modules/cookies/cookies.php:318
+msgid "Cookie Category"
+msgstr "Kategorie Cookies"
+
+#: legacy/admin/modules/cookies/cookies.php:253
+msgid "ID"
+msgstr "ID"
+
+#: legacy/admin/modules/cookies/cookies.php:252
+msgid "Sensitivity"
+msgstr "Citlivost"
+
+#: legacy/admin/modules/cookie-scaner/views/scan-results.php:71
+#: legacy/admin/modules/cookies/cookies.php:248
+msgid "Cookie Name"
+msgstr "Název cookie"
+
+#: legacy/admin/modules/cookies/cookies.php:213
+msgid "Cookie Duration:"
+msgstr "Doba trvání souboru cookie"
+
+#: legacy/admin/modules/cookies/cookies.php:61
+msgid "Term meta cannot be added to terms that are shared between taxonomies."
+msgstr "Meta položka nemůže být přidána k položkám, které jsou sdíleny mezi taxonomiemi."
+
+#: legacy/includes/class-cookie-law-info-cookieyes.php:1081
+msgid "Login"
+msgstr "Přihlášení"
+
+#: legacy/includes/class-cookie-law-info-cookieyes.php:1078
+msgid "Reset password"
+msgstr "Obnovit heslo"
+
+#: legacy/includes/class-cookie-law-info-cookieyes.php:1075
+msgid "If you did not get the email, click “Reset password” to create a new password."
+msgstr "Pokud jste e-mail neobdrželi, klikněte na \"Obnovit heslo\" a vytvořte si nové heslo."
+
+#: legacy/includes/class-cookie-law-info-cookieyes.php:1074
+msgid "Please check if you have received an email with your password from CookieYes."
+msgstr "Zkontrolujte, zda jste obdrželi od společnosti CookieYes e-mail s heslem."
+
+#: legacy/includes/class-cookie-law-info-cookieyes.php:1072
+msgid "Password"
+msgstr "Heslo"
+
+#: legacy/admin/modules/cookie-scaner/classes/class-cookie-law-info-cookie-scanner-ajax.php:518
+msgid "No cookies found"
+msgstr "Nebyly nalezeny žádné cookies"
+
+#: legacy/admin/modules/cookie-scaner/classes/class-cookie-law-info-cookie-scanner-ajax.php:509
+msgid "cookies skipped."
+msgstr "přeskočené cookies."
+
+#: legacy/admin/modules/cookie-scaner/classes/class-cookie-law-info-cookie-scanner-ajax.php:507
+msgid "cookies added."
+msgstr "přidané cookies"
+
+#: legacy/admin/modules/cookie-scaner/classes/class-cookie-law-info-cookie-scanner-ajax.php:512
+msgid "cookies deleted."
+msgstr "vymazáné cookies."
+
+#: legacy/admin/modules/cookie-scaner/classes/class-cookie-law-info-cookie-scanner-ajax.php:414
+msgid "You do not have sufficient permissions to access this page."
+msgstr "Pro přístup tuto stránku nemáte dostatečná oprávnění."
+
+#: legacy/admin/modules/cookie-scaner/classes/class-cookie-law-info-cookie-scanner-ajax.php:411
+msgid "Unable to handle your request"
+msgstr "Vaši žádost nelze zpracovat."
+
+#: legacy/admin/modules/cookie-scaner/classes/class-cookie-law-info-cookie-scanner-ajax.php:394
+msgid "Abort failed"
+msgstr "Přerušení se nezdařilo"
+
+#: legacy/admin/modules/cookie-scaner/classes/class-cookie-law-info-cookie-scanner-ajax.php:208
+msgid "Scanning initiated successfully"
+msgstr "Skenování bylo úspěšně zahájeno"
+
+#: legacy/includes/class-cookie-law-info-cookieyes.php:335
+msgid "A email verification link has been sent to your email address. Click the link in the email to verify your account"
+msgstr "Na vaši e-mailovou adresu byl odeslán odkaz pro ověření e-mailu. Kliknutím na odkaz v e-mailu ověřte svůj účet."
+
+#: legacy/includes/class-cookie-law-info-cookieyes.php:332
+msgid "A password reset message has been sent to your email address. Click the link in the email to reset your password"
+msgstr "Na vaši e-mailovou adresu byla odeslána zpráva o obnovení hesla. Kliknutím na odkaz v e-mailu obnovíte své heslo"
+
+#: legacy/includes/class-cookie-law-info-cookieyes.php:326
+msgid "A scanning is already in progress please try again after some time"
+msgstr "Skenování již probíhá, zkuste to znovu po nějaké době"
+
+#: legacy/admin/modules/cookie-scaner/cookie-scaner.php:577
+msgid "Abort scan"
+msgstr "Přerušit skenování"
+
+#: legacy/admin/modules/cookie-scaner/cookie-scaner.php:332
+msgid "Aborting the scan..."
+msgstr "Rušení skenování..."
+
+#: legacy/admin/modules/cookies/cookies.php:319
+msgid "Add cookie category"
+msgstr "Přidat kategorii cookie"
+
+#: legacy/admin/modules/cookie-scaner/cookie-scaner.php:315
+msgid "Append"
+msgstr "Připojit"
+
+#: legacy/admin/modules/cookie-scaner/cookie-scaner.php:324
+msgid "Are you sure?"
+msgstr "Jsi si jisti?"
+
+#: legacy/admin/modules/cookie-scaner/views/scan-results.php:73
+#: legacy/admin/modules/cookies/cookies.php:250
+#: legacy/public/modules/script-blocker/views/settings.php:166
+#: lite/admin/dist/js/4.js:191
+msgid "Category"
+msgstr "Kategorie"
+
+#: legacy/admin/modules/cookies/cookies.php:600
+#: legacy/admin/modules/cookies/cookies.php:625
+msgid "Category default state"
+msgstr "Výchozí stav kategorie"
+
+#: legacy/admin/modules/cookie-scaner/cookie-scaner.php:327
+msgid "Checking API"
+msgstr "Kontrola API"
+
+#. translators: %s: Cookie List URL
+#: legacy/admin/modules/cookie-scaner/views/scan-results.php:45
+msgid "Clicking “Add to cookie list” will import the discovered cookies to the <a href=\"%s\" target=\"_blank\">Cookie List</a> and thus display them in the cookie declaration section of your consent banner."
+msgstr "Kliknutím na „Přidat do seznamu cookie“ se nalezené soubory cookie importují do <a href=\"%s\" target=\"_blank\">Seznamu souborů cookie</a> a zobrazí se v sekci prohlášení o souborech cookie na vašem banneru se souhlasem."
+
+#. translators: %1$s: CookieYes website URL, %2$s: Privacy Policy URL, %3$s:
+#. Terms of Service URL
+#: legacy/admin/modules/cookie-scaner/cookie-scaner.php:428
+msgid "Clicking “Connect & scan” will let you connect with a free <a href=\"%1$s\" target=\"_blank\">CookieYes</a> account and initiate scanning of your website for cookies. These cookies along with their description will be listed under the cookie declaration popup. By continuing, you agree to CookieYes's <a href=\"%2$s\" target=\"_blank\">Privacy Policy</a> & <a href=\"%3$s\" target=\"_blank\">Terms of service</a>."
+msgstr "Kliknutím na „Připojit a skenovat\" se budete moci připojit k bezplatnému účtu <a href=\"%1$s\" target=\"_blank\">Ano Cookie</a> a zahájit skenování vašeho webu na přítomnost souborů cookie. Tyto soubory cookie spolu s jejich popisem budou uvedeny ve vyskakovacím okně prohlášení o souborech cookie. Pokračováním vyjadřujete souhlas se <a href=\"%2$s\" target=\"_blank\">zásadami ochrany soukromí</a> a <a href=\"%3$s\" target=\"_blank\">smluvními podmínkami</a>."
+
+#: legacy/admin/modules/cookies/cookies.php:810
+msgid "Clicking “Migrate cookie categories” will auto migrate your existing cookie categories (Necessary and Non-necessary) to our new Cookie Category taxonomy. This action is required to enable the cookie scanner."
+msgstr "Kliknutím na „Migrovat kategorie souborů cookie“ dojde k automatické migraci vašich stávajících kategorií souborů cookie (nezbytných a nepotřebných) do naší nové taxonomie kategorií souborů cookie. Tato akce je nutná pro aktivaci skeneru souborů cookie."
+
+#: legacy/admin/modules/cookie-scaner/cookie-scaner.php:443
+#: legacy/admin/modules/cookie-scaner/cookie-scaner.php:1215
+msgid "Connect & scan"
+msgstr "Připojte se a skenovat"
+
+#: legacy/admin/modules/cookie-scaner/cookie-scaner.php:333
+msgid "Could not abort the scan, please try again"
+msgstr "Skenování se nepodařilo přerušit, zkuste to prosím znovu"
+
+#: legacy/includes/class-cookie-law-info-cookieyes.php:308
+msgid "Could not establish connection with scanner! please try again later"
+msgstr "Nelze navázat spojení se skenerem! prosím zkuste to znovu později"
+
+#: legacy/includes/class-cookie-law-info-cookieyes.php:320
+msgid "Disconnected with cookieyes, please connect and scan again"
+msgstr "Odpojeno pomocí cookieyes, připojte se a znovu naskenujte"
+
+#: legacy/admin/modules/cookies/cookies.php:815
+msgid "During the migration phase your existing cookie category translations will be lost. Hence we request you to add it manually soon after the migration. You can access the existing translations by navigating to the string translation settings of your translator plugin."
+msgstr "Během fáze migrace budou vaše stávající překlady kategorií souborů cookie ztraceny. Proto vás žádáme, abyste jej brzy po migraci přidali ručně. Ke stávajícím překladům se dostanete tak, že přejdete do nastavení překladu řetězců vašeho pluginu pro překladatele."
+
+#: legacy/admin/modules/cookies/cookies.php:320
+msgid "Edit cookie category"
+msgstr "Upravit kategorii cookie"
+
+#: legacy/includes/class-cookie-law-info-cookieyes.php:285
+msgid "Enter your email to create an account with CookieYes. By clicking “Connect”, your CookieYes account will be created automatically and you can start scanning your website for cookies right away!"
+msgstr "Zadejte svůj e-mail a vytvořte si účet u CookieYes. Kliknutím na „Připojit“ se automaticky vytvoří váš účet CookieYes a můžete ihned začít skenovat soubory cookie na svém webu!"
+
+#: legacy/admin/modules/cookie-scaner/cookie-scaner.php:321
+msgid "Error !!! Please reload the page to see cookie list."
+msgstr "Chyba!!! Chcete-li zobrazit seznam souborů cookie, znovu načtěte stránku."
+
+#: legacy/includes/class-cookie-law-info-cookieyes.php:1012
+msgid "If you didn't receive the email, click <a id='wt-cli-ckyes-email-resend-link' role='button'>here</a> to resend the verification email."
+msgstr "Pokud jste e-mail neobdrželi, klikněte <a id='wt-cli-ckyes-email-resend-link' role='button'>sem</a> a odešlete ověřovací e-mail znovu."
+
+#: legacy/admin/modules/cookies/cookies.php:814
+msgid "If you have made any changes to the existing \"Non-necessary\" category we will migrate it to the newly created “Cookie Category” section. If not, we will delete the \"Non-necessary\" category automatically."
+msgstr "Pokud jste provedli nějaké změny ve stávající kategorii „Nepotřebné“, přesuneme ji do nově vytvořené sekce „Kategorie souborů cookie“. Pokud ne, kategorii „Nepotřebné“ automaticky smažeme."
+
+#: legacy/admin/modules/cookie-scaner/cookie-scaner.php:1029
+msgid "Invalid scan token"
+msgstr "Neplatný token skenování"
+
+#: legacy/admin/modules/cookie-scaner/cookie-scaner.php:528
+#: legacy/admin/modules/cookie-scaner/cookie-scaner.php:546
+msgid "Last scan:"
+msgstr "Poslední skenování:"
+
+#. translators: %1$s: last scan date
+#: legacy/admin/modules/cookie-scaner/cookie-scaner.php:506
+msgid "Last scan: %1$s"
+msgstr "Poslední skenování: %1$s"
+
+#. translators: %s: user email address
+#: legacy/includes/class-cookie-law-info-cookieyes.php:1068
+msgid "Looks like you already have an account with CookieYes for email id %s, please login to continue."
+msgstr "Zdá se, že již máte účet s CookieYes pro e-mailové ID %s. Pro pokračování se prosím přihlaste."
+
+#: legacy/admin/modules/cookies/cookies.php:819
+msgid "Migrate cookie categories"
+msgstr "Migrujte kategorie souborů cookie"
+
+#: legacy/admin/modules/cookie-scaner/cookie-scaner.php:614
+msgid "Once the scanning is complete, we will notify you by email."
+msgstr "Jakmile bude skenování dokončeno, budeme vás informovat e-mailem."
+
+#: legacy/admin/modules/cookie-scaner/cookie-scaner.php:1166
+msgid "Our cookie scanning solution lets you:"
+msgstr "Naše řešení pro skenování souborů cookie vám umožňuje:"
+
+#: legacy/includes/class-cookie-law-info-cookieyes.php:269
+msgid "Reset Password"
+msgstr "Obnovit heslo"
+
+#: legacy/admin/modules/cookie-scaner/cookie-scaner.php:545
+msgid "Scan aborted"
+msgstr "Skenování přerušeno"
+
+#: legacy/admin/modules/cookie-scaner/cookie-scaner.php:507
+msgid "Scan complete"
+msgstr "Skenování dokončeno"
+
+#: legacy/admin/modules/cookie-scaner/cookie-scaner.php:527
+msgid "Scan failed"
+msgstr "Skenování se nezdařilo"
+
+#: legacy/admin/modules/cookie-scaner/cookie-scaner.php:574
+msgid "Scan initiated..."
+msgstr "Skenování zahájeno..."
+
+#: legacy/admin/modules/cookie-scaner/cookie-scaner.php:588
+msgid "Scan started at"
+msgstr "Skenování začalo v"
+
+#: legacy/admin/modules/cookie-scaner/cookie-scaner.php:1201
+msgid "Scan website for cookies"
+msgstr "Vyhledejte na webu soubory cookie"
+
+#: legacy/admin/modules/cookie-scaner/cookie-scaner.php:424
+msgid "Scan your website with CookieYes, our scanning solution for high-speed, accurate cookie scanning"
+msgstr "Naskenujte svůj web pomocí CookieYes, našeho skenovacího řešení pro vysokorychlostní a přesné skenování souborů cookie"
+
+#: legacy/admin/modules/cookie-scaner/cookie-scaner.php:323
+msgid "Scanning stopped."
+msgstr "Skenování zastaveno"
+
+#: legacy/includes/class-cookie-law-info-cookieyes.php:275
+msgid "Send password reset email"
+msgstr "Odeslat e-mail pro obnovení hesla"
+
+#: legacy/includes/class-cookie-law-info-cookieyes.php:329
+msgid "Successfully connected with CookieYes"
+msgstr "Úspěšně spojeno s Cookieyes"
+
+#: legacy/includes/class-cookie-law-info-cookieyes.php:797
+msgid "Successfully connected with Cookieyes"
+msgstr "Úspěšně spojeno s Cookieyes"
+
+#: legacy/includes/class-cookie-law-info-cookieyes.php:789
+msgid "Successfully disconnected with Cookieyes"
+msgstr "Úspěšně odpojeno od Cookieyes"
+
+#: legacy/includes/class-cookie-law-info-cookieyes.php:907
+msgid "This action will clear all your website data from CookieYes. If you have multiple websites added to your CookieYes account, then only the data associated with this website get deleted. Otherwise, your entire account will be deleted."
+msgstr "Tato akce vymaže všechna data vašeho webu z CookieYes. Pokud máte na svůj účet CookieYes přidáno více webových stránek, smažou se pouze data spojená s tímto webem. V opačném případě bude celý váš účet smazán."
+
+#: legacy/admin/modules/cookie-scaner/views/scan-results.php:33
+#: lite/admin/dist/js/3.js:119
+msgid "Total cookies"
+msgstr "Celkem cookies"
+
+#: legacy/admin/modules/cookie-scaner/cookie-scaner.php:330
+msgid "Total Cookies found"
+msgstr "Celkový počet nalezených cookie"
+
+#: legacy/admin/modules/cookie-scaner/cookie-scaner.php:329
+msgid "Total URLs scanned"
+msgstr "Celkový počet naskenovaných URL"
+
+#: legacy/admin/modules/cookie-scaner/cookie-scaner.php:633
+msgid "Unable to load cookie scanner. Scanning will not work on local servers"
+msgstr "Nelze načíst skener souborů cookie. Skenování nebude fungovat na místních serverech"
+
+#: legacy/includes/class-cookie-law-info-cookieyes.php:1023
+msgid "Verification link sent"
+msgstr "Ověřovací odkaz odeslán"
+
+#. translators: %s: user email.
+#: legacy/includes/class-cookie-law-info-cookieyes.php:1007
+msgid "We've sent an account verification link to the email address %s. Please click on the link given in email to verify your account with CookieYes."
+msgstr "Na e-mailovou adresu %s jsme odeslali odkaz pro ověření účtu. Kliknutím na odkaz uvedený v e-mailu ověřte svůj účet pomocí CookieYes."
+
+#: legacy/includes/class-cookie-law-info-cookieyes.php:283
+msgid "Welcome to CookieYes"
+msgstr "Vítejte v CookieYes"
+
+#: legacy/admin/modules/cookie-scaner/cookie-scaner.php:1164
+msgid "Why scan your website for cookies?"
+msgstr "Proč na svém webu vyhledávat soubory cookie?"
+
+#: legacy/admin/modules/cookies/cookies.php:720
+msgid "WordPress 4.4 or higher is the required version. Please consider upgrading the WordPress before migrating the cookie categories."
+msgstr "Požadovaná verze je WordPress 4.4 nebo vyšší. Před migrací kategorií souborů cookie zvažte upgrade WordPressu."
+
+#: legacy/includes/class-cookie-law-info-cookieyes.php:314
+msgid "You already have an account with CookieYes."
+msgstr "Již máte účet u CookieYes."
+
+#: legacy/admin/modules/cookie-scaner/views/scan-results.php:91
+msgid "Your cookie list is empty"
+msgstr "Váš seznam souborů cookie je prázdný"
+
+#: legacy/admin/modules/cookies/cookies.php:813
+msgid "You no longer need to manage static cookie categories. After the migration, new cookie categories (Necessary, Functional, Analytics, Performance, Advertisement, and Others) will be created automatically. Also, you can easily add custom cookie categories and edit/delete the existing categories including the custom categories."
+msgstr "Již nemusíte spravovat statické kategorie souborů cookie. Po migraci se automaticky vytvoří nové kategorie souborů cookie (Nezbytné, Funkční, Analytika, Výkon, Reklama a Další). Můžete také snadno přidávat vlastní kategorie souborů cookie a upravovat/mazat stávající kategorie včetně vlastních kategorií."
+
+#: legacy/admin/modules/cookie-scaner/cookie-scaner.php:1165
+msgid "Your website needs to obtain prior consent from your users before setting any cookies other than those required for the proper functioning of your website. Therefore, you need to identify and keep track of all the cookies used on your website."
+msgstr "Před nastavením jakýchkoli jiných souborů cookie, než které jsou nutné pro správné fungování vašeho webu, musí vaše webové stránky získat předchozí souhlas vašich uživatelů. Proto musíte identifikovat a sledovat všechny soubory cookie používané na vašem webu."
+
+#: legacy/admin/modules/cookie-scaner/classes/class-cookie-law-info-cookie-scanner-ajax.php:390
+msgid "Abort successful"
+msgstr "Úspěšné přerušení"
+
+#: legacy/admin/views/admin-settings-messagebar.php:203
+msgid "From Right Margin"
+msgstr "Od Right Margina"
+
+#: legacy/admin/views/admin-settings-messagebar.php:161
+msgid "Enable revisit consent widget"
+msgstr "Povolit znovu widget pro souhlas"
+
+#: legacy/admin/modules/uninstall-feedback/uninstall-feedback.php:167
+#: lite/admin/modules/uninstall-feedback/class-uninstall-feedback.php:254
+msgid "Privacy Policy"
+msgstr "Zásady ochrany osobních údajů"
+
+#: legacy/admin/views/admin-settings-messagebar.php:10
+msgid "Revisit consent"
+msgstr "Znovu prostudujte souhlas"
+
+#: legacy/admin/modules/cookies/views/necessary-settings.php:35
+#: legacy/admin/modules/cookies/views/non-necessary-settings.php:49
+#: legacy/admin/partials/cookie-law-info-privacy_overview.php:33
+#: lite/admin/dist/js/app.js:1745 lite/admin/dist/js/app.js:1757
+#: lite/admin/dist/js/app.js:1769
+msgid "Title"
+msgstr "Název"
+
+#: legacy/public/modules/script-blocker/script-blocker.php:258
+msgid "Advanced script rendering"
+msgstr "Pokročilé vykreslování skriptů"
+
+#. translators: %s: advanced settings URL
+#: legacy/public/modules/script-blocker/views/settings.php:16
+msgid "Advanced script rendering is currently disabled. It should be enabled for the automatic script blocker to function. <a href=\"%s\">Enable.</a>"
+msgstr "Pokročilé vykreslování skriptů je momentálně zakázáno. Mělo by být povoleno, aby fungovalo automatické blokování skriptů. <a href=\"%s\">Povolit.</a>"
+
+#: legacy/public/modules/script-blocker/script-blocker.php:262
+msgid "Advanced script rendering will render the blocked scripts using javascript thus eliminating the need for a page refresh. It is also optimized for caching since there is no server-side processing after obtaining the consent."
+msgstr "Pokročilé vykreslování skriptů vykreslí blokované skripty pomocí javascriptu, čímž eliminuje potřebu obnovování stránky. Je také optimalizován pro ukládání do mezipaměti, protože po získání souhlasu nedochází k žádnému zpracování na straně serveru."
+
+#. translators: %s: plugin help URL
+#: legacy/public/modules/script-blocker/views/settings.php:147
+msgid "Below is the list of plugins currently supported for auto blocking. Plugins marked inactive are either not installed or activated on your website. Enabled plugins will be blocked by default on the front-end of your website prior to obtaining user consent and rendered respectively based on consent. <a href=\"%s\" target=\"_blank\">Read more.</a>"
+msgstr "Níže je uveden seznam pluginů aktuálně podporovaných pro automatické blokování. Pluginy označené jako neaktivní nejsou na vašem webu nainstalovány nebo aktivovány. Povolené pluginy budou ve výchozím nastavení zablokovány na front-endu vašeho webu před získáním souhlasu uživatele a vykresleny na základě souhlasu. <a href=\"%s\" target=\"_blank\">Přečtěte si více.</a>"
+
+#: legacy/admin/partials/cookie-law-info-admin_settings.php:40
+msgid "Cookie bar is currently active"
+msgstr "Soubor cookie je aktuálně aktivní"
+
+#: legacy/admin/partials/cookie-law-info-admin_settings.php:48
+msgid "Cookie bar is currently inactive"
+msgstr "Soubor cookie je momentálně neaktivní"
+
+#: legacy/public/modules/script-blocker/script-blocker.php:261
+#: legacy/public/modules/script-blocker/views/settings.php:7
+msgid "Disable"
+msgstr "Zakázat"
+
+#: legacy/public/modules/script-blocker/views/settings.php:164
+msgid "Disabled: Plugins will be rendered prior to obtaining consent."
+msgstr "Deaktivováno: Pluginy budou vykresleny před získáním souhlasu."
+
+#: legacy/public/modules/script-blocker/script-blocker.php:260
+#: legacy/public/modules/script-blocker/views/settings.php:7
+msgid "Enable"
+msgstr "Povolit"
+
+#: legacy/public/modules/script-blocker/views/settings.php:164
+msgid "Enabled: Plugins will be blocked by default prior to obtaining user consent."
+msgstr "Povoleno: Pluginy budou před získáním souhlasu uživatele ve výchozím nastavení blokovány."
+
+#: legacy/public/modules/script-blocker/views/settings.php:122
+msgid "Manage Script Blocking"
+msgstr "Správa blokování skriptů"
+
+#: legacy/public/modules/script-blocker/script-blocker.php:203
+#: legacy/public/modules/script-blocker/script-blocker.php:204
+msgid "Script Blocker"
+msgstr "Blokování skriptů"
+
+#: legacy/public/modules/script-blocker/views/settings.php:9
+msgid "Script blocker is currently disabled. Enable the blocker if you want any of the below listed plugins to be auto blocked."
+msgstr "Blokování skriptů je momentálně zakázáno. Povolte blokování, pokud chcete, aby některý z níže uvedených pluginů byl automaticky blokován."
+
+#: legacy/public/modules/script-blocker/views/settings.php:9
+msgid "Script blocker is enabled."
+msgstr "Blokování skriptů je povoleno."
+
+#: legacy/admin/modules/uninstall-feedback/uninstall-feedback.php:100
+#: lite/admin/modules/uninstall-feedback/class-uninstall-feedback.php:143
+msgid "Could you tell us more about that feature?"
+msgstr "Můžete nám o této funkci říci více?"
+
+#: legacy/admin/modules/uninstall-feedback/uninstall-feedback.php:98
+#: lite/admin/modules/uninstall-feedback/class-uninstall-feedback.php:139
+msgid "The plugin is great, but I need specific feature that you don't support"
+msgstr "Plugin je skvělý, ale potřebuji konkrétní funkci, kterou nepodporujete"
+
+#: legacy/admin/modules/ccpa/views/ccpa_settings.php:6
+msgid "The right to opt out in the California Consumer Privacy Act gives consumers the ability to direct a business not to sell their personal information to a third party. If the user considers to not sell their personal information, all the scripts related to the categories which are configured to sell personal information will be blocked. The DO NOT SELL option is facilitated via a shortcode [wt_cli_ccpa_optout]."
+msgstr "Právo na odhlášení podle Kalifornského zákona o ochraně soukromí spotřebitelů dává spotřebitelům možnost nařídit podniku, aby neprodával jejich osobní údaje třetí straně. Pokud se uživatel rozhodne neprodávat své osobní údaje, budou zablokovány všechny skripty, které souvisejí s kategoriemi, které jsou nastaveny na prodej osobních údajů. Možnost NEPRODÁVAT je zprostředkována prostřednictvím zkráceného kódu [wt_cli_ccpa_optout]."
+
+#: legacy/admin/modules/ccpa/ccpa.php:104
+msgid "Confirm"
+msgstr "Potvrdit"
+
+#: legacy/admin/modules/ccpa/ccpa.php:105
+#: legacy/admin/modules/cookie-scaner/cookie-scaner.php:317
+#: legacy/admin/modules/uninstall-feedback/uninstall-feedback.php:176
+#: lite/admin/dist/js/4.js:83 lite/admin/dist/js/4.js:191
+#: lite/admin/dist/js/5.js:70 lite/admin/dist/js/6.js:71
+#: lite/admin/dist/js/6.js:83 lite/admin/dist/js/7.js:47
+msgid "Cancel"
+msgstr "Zrušit"
+
+#: legacy/public/modules/shortcode/shortcode.php:514
+msgid "Close the cookie bar"
+msgstr "Zavřít cookie lištu"
+
+#: legacy/public/modules/shortcode/shortcode.php:514
+msgid "Close and Accept"
+msgstr "Přijmout a zavřít"
+
+#: legacy/admin/views/admin-settings-messagebar.php:9
+msgid "Cookie bar"
+msgstr "Lišta cookie"
+
+#: legacy/admin/modules/ccpa/ccpa.php:153
+msgid "CCPA"
+msgstr "CCPA"
+
+#: legacy/admin/modules/ccpa/ccpa.php:157
+msgid "CCPA & GDPR"
+msgstr "CCPA & GDPR"
+
+#: legacy/admin/modules/ccpa/views/ccpa_settings.php:6
+msgid "CCPA Settings"
+msgstr "Nastavení CCPA"
+
+#: legacy/admin/views/admin-settings-buttons.php:344
+msgid "CCPA Text"
+msgstr "Text CCPA"
+
+#: legacy/admin/views/admin-settings-buttons.php:353
+#: lite/admin/dist/js/app.js:1757
+msgid "Checkbox"
+msgstr "Zaškrtávací políčko"
+
+#: legacy/admin/modules/ccpa/views/ccpa_settings.php:9
+msgid "Enable CCPA ?"
+msgstr "Povolit CCPA?"
+
+#: legacy/admin/views/admin-settings-general.php:17
+msgid "Enable cookie bar"
+msgstr "Povolit lištu cookie"
+
+#: legacy/admin/modules/ccpa/ccpa.php:145
+msgid "Select the type of law"
+msgstr "Vyberte typ zákona"
+
+#: legacy/admin/views/admin-settings-messagebar.php:62
+msgid "Show cookie bar as"
+msgstr "Zobrazit lištu cookie jako"
+
+#: legacy/admin/views/admin-settings-buttons.php:355
+msgid "The shortcode will be represented as a checkbox with select option to record consent."
+msgstr "Krátký kód bude reprezentován jako zaškrtávací políčko s možností výběru pro záznam souhlasu."
+
+#: legacy/admin/views/admin-settings-buttons.php:354
+msgid "The shortcode will be represented as a link wherever used."
+msgstr "Krátký kód bude všude, kde bude použit, reprezentován jako odkaz."
+
+#: legacy/public/views/cookie-law-info_bar.php:34
+msgid "Close"
+msgstr "Zavřít"
+
+#: legacy/admin/modules/cookies/views/non-necessary-settings.php:39
+msgid "Default state"
+msgstr "Výchozí stav"
+
+#: legacy/admin/modules/cookies/cookies.php:603
+#: legacy/admin/modules/cookies/cookies.php:629
+#: legacy/admin/modules/cookies/views/non-necessary-settings.php:43
+msgid "If you enable this option, the category toggle button will be in the active state for cookie consent."
+msgstr "Pokud tuto možnost povolíte, přepínací tlačítko kategorie bude v aktivním stavu pro souhlas s cookie."
+
+#: legacy/public/views/cookie-law-info_popup_content.php:8
+msgid "Show less"
+msgstr "Zobrazit méně"
+
+#: legacy/public/views/cookie-law-info_popup_content.php:8
+msgid "Show more"
+msgstr "Zobrazit více"
+
+#: legacy/admin/modules/cookies/cookies.php:601
+#: legacy/admin/modules/cookies/cookies.php:627
+#: legacy/admin/modules/cookies/views/non-necessary-settings.php:40
+#: legacy/public/modules/script-blocker/views/settings.php:164
+#: legacy/public/views/cookie-law-info_popup_content.php:6
+msgid "Enabled"
+msgstr "Povolit"
+
+#: legacy/public/views/cookie-law-info_popup_content.php:5
+msgid "Always Enabled"
+msgstr "Vždy povoleno"
+
+#: legacy/admin/views/admin-settings-buttons.php:13
+#: legacy/admin/views/admin-settings-buttons.php:176
+msgid "Settings Button"
+msgstr "Nastavení tlačítka"
+
+#: legacy/admin/class-cookie-law-info-admin.php:196
+#: legacy/admin/class-cookie-law-info-admin.php:197
+#: legacy/admin/partials/cookie-law-info-privacy_overview.php:25
+msgid "Privacy Overview"
+msgstr "Přehled ochrany osobních údajů"
+
+#: legacy/admin/modules/cookies/cookies.php:180
+msgid "Cookie Type"
+msgstr "Typ souboru cookie"
+
+#: legacy/admin/class-cookie-law-info-admin.php:391
+msgid "Extra Large"
+msgstr "Hodně velké"
+
+#: legacy/admin/class-cookie-law-info-admin.php:395
+msgid "Large"
+msgstr "Velký"
+
+#: legacy/admin/class-cookie-law-info-admin.php:399
+msgid "Medium"
+msgstr "Střední"
+
+#: legacy/admin/class-cookie-law-info-admin.php:403
+msgid "Small"
+msgstr "Malé"
+
+#: legacy/admin/class-cookie-law-info-admin.php:417
+msgid "Default theme font"
+msgstr "Výchozí písmo motivu"
+
+#: legacy/admin/class-cookie-law-info-admin.php:421
+msgid "Sans Serif"
+msgstr "Sans Serif"
+
+#: legacy/admin/class-cookie-law-info-admin.php:425
+msgid "Serif"
+msgstr "Serif"
+
+#: legacy/admin/class-cookie-law-info-admin.php:429
+msgid "Arial"
+msgstr "Arial"
+
+#: legacy/admin/class-cookie-law-info-admin.php:433
+msgid "Arial Black"
+msgstr "Arial Black"
+
+#: legacy/admin/class-cookie-law-info-admin.php:437
+msgid "Georgia, serif"
+msgstr "Georgia, serif"
+
+#: legacy/admin/class-cookie-law-info-admin.php:441
+msgid "Helvetica"
+msgstr "Helvetica"
+
+#: legacy/admin/class-cookie-law-info-admin.php:445
+msgid "Lucida"
+msgstr "Lucida"
+
+#: legacy/admin/class-cookie-law-info-admin.php:449
+msgid "Tahoma"
+msgstr "Tahoma"
+
+#: legacy/admin/class-cookie-law-info-admin.php:453
+msgid "Times New Roman"
+msgstr "Times New Roman"
+
+#: legacy/admin/class-cookie-law-info-admin.php:457
+msgid "Trebuchet"
+msgstr "Trebuchet"
+
+#: legacy/admin/class-cookie-law-info-admin.php:461
+msgid "Verdana"
+msgstr "Verdana"
+
+#: legacy/admin/partials/cookie-law-info-privacy_overview.php:66
+msgid "Save Settings"
+msgstr "Uložit nastavení"
+
+#: legacy/admin/modules/cookies/views/necessary-settings.php:26
+msgid "Necessary Cookie Settings"
+msgstr "Nezbytné nastavení souborů cookie"
+
+#: legacy/admin/views/admin-settings-help.php:30
+msgid "This is the cookie settings button rendering shortcode."
+msgstr "Toto je tlačítko nastavení cookies, které vykresluje shortkód."
+
+#: legacy/admin/modules/cookies/cookies.php:412
+#: legacy/admin/modules/cookies/cookies.php:413 lite/admin/dist/js/6.js:71
+#: lite/admin/dist/js/6.js:95
+msgid "Necessary"
+msgstr "Nezbytné"
+
+#: legacy/admin/modules/cookies/cookies.php:404
+#: legacy/admin/modules/cookies/cookies.php:405
+#: legacy/public/modules/script-blocker/views/settings.php:199
+msgid "Non-necessary"
+msgstr "Není nutné"
+
+#: legacy/admin/modules/cookies/cookies.php:602
+#: legacy/admin/modules/cookies/cookies.php:628
+#: legacy/admin/modules/cookies/views/non-necessary-settings.php:41
+#: legacy/public/views/cookie-law-info_popup_content.php:7
+msgid "Disabled"
+msgstr "Vypnuto"
+
+#: legacy/admin/modules/cli-policy-generator/classes/class-policy-generator-ajax.php:23
+#: legacy/admin/modules/cookie-scaner/classes/class-cookie-law-info-cookie-scanner-ajax.php:29
+msgid "Unable to handle your request."
+msgstr "Vaši žádost nelze zpracovat."
+
+#: legacy/admin/modules/cli-policy-generator/classes/class-policy-generator-ajax.php:95
+#: legacy/admin/modules/cli-policy-generator/classes/class-policy-generator-ajax.php:132
+#: legacy/admin/modules/cli-policy-generator/cli-policy-generator.php:122
+#: legacy/admin/modules/cookie-scaner/cookie-scaner.php:305
+msgid "Error"
+msgstr "Chyba"
+
+#: legacy/admin/modules/cli-policy-generator/classes/class-preview-page.php:27
+msgid "Cookie Policy"
+msgstr "Zásady používání souborů cookie"
+
+#: legacy/admin/modules/cli-policy-generator/classes/class-preview-page.php:81
+msgid "Auto reload preview"
+msgstr "Automatické opětovné načtení náhledu"
+
+#: legacy/admin/modules/cli-policy-generator/cli-policy-generator.php:97
+#: legacy/admin/modules/cli-policy-generator/cli-policy-generator.php:98
+#: legacy/admin/modules/cli-policy-generator/views/policy-generator.php:21
+msgid "Policy generator"
+msgstr "Generátor zásad"
+
+#: legacy/admin/modules/cli-policy-generator/cli-policy-generator.php:123
+#: legacy/admin/modules/cookie-scaner/cookie-scaner.php:325
+msgid "Success"
+msgstr "Hotovo"
+
+#: legacy/admin/modules/cli-policy-generator/views/policy-generator.php:25
+msgid "Sample heading"
+msgstr "Ukázkový nadpis"
+
+#: legacy/admin/modules/cli-policy-generator/views/policy-generator.php:26
+msgid "Sample content"
+msgstr "Ukázkový obsah"
+
+#: legacy/admin/modules/cli-policy-generator/views/policy-generator.php:27
+#: lite/admin/dist/js/5.js:130 lite/admin/dist/js/6.js:95
+msgid "Delete"
+msgstr "Smazat"
+
+#: legacy/admin/modules/cli-policy-generator/views/policy-generator.php:47
+msgid "Add new"
+msgstr "Přidat nové"
+
+#: legacy/admin/modules/cli-policy-generator/views/policy-generator.php:51
+msgid "Heading"
+msgstr "Nadpis"
+
+#: legacy/admin/modules/cli-policy-generator/views/policy-generator.php:86
+msgid "Update existing Cookie Policy page"
+msgstr "Aktualizujte stránku Zásady souborů cookie."
+
+#: legacy/admin/modules/cli-policy-generator/views/policy-generator.php:92
+msgid "Create Cookie Policy page"
+msgstr "Vytvořit stránku zásad pro soubory cookie"
+
+#: legacy/admin/modules/cli-policy-generator/views/policy-generator.php:96
+msgid "Live preview"
+msgstr "Živý náhled"
+
+#: legacy/admin/views/admin-settings-buttons.php:238
+msgid "Click"
+msgstr "Klik"
+
+#: legacy/admin/views/admin-settings-buttons.php:238
+msgid "here"
+msgstr "zde"
+
+#: legacy/admin/views/admin-settings-buttons.php:238
+msgid " to generate content for Cookie Policy page."
+msgstr " generovat obsah pro stránku Zásady souborů cookie."
+
+#: legacy/admin/views/admin-settings-help.php:36
+msgid "Setup margin for above buttons"
+msgstr "Nastavení okraje pro výše uvedená tlačítka"
+
+#: legacy/admin/views/admin-settings-help.php:83
+msgid "Columns available"
+msgstr "Dostupné sloupce"
+
+#: legacy/admin/views/admin-settings-help.php:83
+msgid "Will print all columns by default."
+msgstr "Ve výchozím nastavení budou vytištěny všechny sloupce."
+
+#: legacy/public/modules/shortcode/shortcode.php:89
+msgid "Your current state:"
+msgstr "Váš aktuální stav:"
+
+#: legacy/public/modules/shortcode/shortcode.php:92
+msgid "Consent accepted."
+msgstr "Souhlas byl přijat."
+
+#: legacy/public/modules/shortcode/shortcode.php:94
+msgid "Consent rejected."
+msgstr "Souhlas byl zamítnut."
+
+#: legacy/public/modules/shortcode/shortcode.php:98
+msgid "No consent given."
+msgstr "Žádný souhlas nebyl udělen."
+
+#: legacy/public/modules/shortcode/shortcode.php:100
+msgid "Manage your consent."
+msgstr "Spravujte svůj souhlas."
+
+#: legacy/admin/modules/cli-policy-generator/views/policy-generator.php:71
+msgid "Enabling this option will help us spread the word by placing a credit to CookieYes at the very end of the Cookie Policy page."
+msgstr "Povolením této možnosti nám pomůžete šířit informace tím, že na samém konci stránky Zásady používání souborů cookie uvedeme zdroj CookieYes."
+
+#: legacy/admin/views/admin-settings-help.php:81
+msgid "Styles included"
+msgstr "Styly zahrnují"
+
+#: legacy/admin/views/admin-settings-messagebar.php:67
+#: lite/admin/dist/js/app.js:4381
+msgid "Banner"
+msgstr "Baner"
+
+#: legacy/admin/views/admin-settings-messagebar.php:68
+#: lite/admin/dist/js/app.js:4381
+msgid "Popup"
+msgstr "Popup"
+
+#: legacy/admin/views/admin-settings-messagebar.php:69
+msgid "Widget"
+msgstr "Widget"
+
+#: legacy/admin/views/admin-settings-messagebar.php:73
+#: lite/admin/dist/js/app.js:1781
+msgid "Position"
+msgstr "Pozice"
+
+#: legacy/admin/views/admin-settings-messagebar.php:187
+msgid "Bottom Right"
+msgstr "Vpravo dole"
+
+#: legacy/admin/views/admin-settings-messagebar.php:190
+msgid "Bottom Left"
+msgstr "Dole vlevo"
+
+#: legacy/admin/views/admin-settings-messagebar.php:193
+msgid "Top Right"
+msgstr "Vpravo nahoře"
+
+#: legacy/admin/views/admin-settings-messagebar.php:196
+msgid "Top Left"
+msgstr "Vlevo nahoře"
+
+#: legacy/admin/views/admin-settings-buttons.php:277
+msgid "URL or Page?"
+msgstr "URL nebo stránka?"
+
+#: legacy/admin/views/admin-settings-buttons.php:281
+#: legacy/admin/views/admin-settings-buttons.php:292
+msgid "Page"
+msgstr "Stránka"
+
+#: legacy/admin/views/admin-settings-buttons.php:295
+msgid "Select One"
+msgstr "Vybrat jedno"
+
+#: legacy/admin/views/admin-settings-buttons.php:315
+msgid "The currently selected page does not exist. Please select a new page."
+msgstr "Aktuálně vybraná stránka neexistuje. Vyberte novou stránku."
+
+#: legacy/admin/views/admin-settings-help.php:95
+msgid "Add content after accepting the cookie notice."
+msgstr "Po přijetí oznámení o cookie přidejte obsah."
+
+#: legacy/admin/views/admin-settings-buttons.php:330
+msgid "Open in a new window"
+msgstr "Otevřít v novém okně"
+
+#: legacy/admin/class-cookie-law-info-admin.php:265
+#: lite/admin/class-admin.php:683 lite/admin/dist/js/app.js:1661
+msgid "Support"
+msgstr "Podpora"
+
+#: legacy/admin/modules/cookies/views/necessary-settings.php:20
+#: legacy/admin/modules/cookies/views/non-necessary-settings.php:17
+#: legacy/admin/partials/cookie-law-info-admin_settings.php:25
+msgid "Settings updated."
+msgstr "Nastavení aktualizováno."
+
+#: legacy/admin/modules/cookies/views/necessary-settings.php:21
+#: legacy/admin/modules/cookies/views/non-necessary-settings.php:18
+#: legacy/admin/partials/cookie-law-info-admin_settings.php:26
+msgid "Unable to update Settings."
+msgstr "Nastavení nelze aktualizovat."
+
+#: legacy/admin/partials/cookie-law-info-admin_settings.php:27
+msgid "Settings reset to defaults."
+msgstr "Obnovení výchozího nastavení."
+
+#: legacy/admin/partials/cookie-law-info-admin_settings.php:28
+msgid "Unable to reset settings."
+msgstr "Nastavení nelze obnovit."
+
+#: legacy/admin/partials/cookie-law-info-admin_settings.php:71
+#: legacy/admin/views/admin-settings-general.php:9
+msgid "General"
+msgstr "Obecné"
+
+#: legacy/admin/partials/cookie-law-info-admin_settings.php:72
+msgid "Customise Cookie Bar"
+msgstr "Přizpůsobte cookies bar"
+
+#: legacy/admin/partials/cookie-law-info-admin_settings.php:75
+msgid "Help Guide"
+msgstr "Průvodce nápovědou"
+
+#: legacy/admin/views/admin-settings-advanced.php:15
+msgid "Delete settings and reset"
+msgstr "Odstraňte nastavení a resetujte"
+
+#: legacy/admin/views/admin-settings-buttons.php:25
+#: legacy/admin/views/admin-settings-buttons.php:109
+#: legacy/admin/views/admin-settings-buttons.php:190
+#: legacy/admin/views/admin-settings-buttons.php:246
+#: legacy/admin/views/admin-settings-buttons.php:374
+#: lite/admin/dist/js/app.js:1709 lite/admin/dist/js/app.js:1721
+msgid "Text"
+msgstr "Text"
+
+#: legacy/admin/views/admin-settings-buttons.php:31
+#: legacy/admin/views/admin-settings-buttons.php:115
+#: legacy/admin/views/admin-settings-buttons.php:196
+#: legacy/admin/views/admin-settings-buttons.php:252
+#: legacy/admin/views/admin-settings-buttons.php:360
+#: legacy/admin/views/admin-settings-buttons.php:380
+msgid "Text colour"
+msgstr "Barva textu"
+
+#: legacy/admin/views/admin-settings-buttons.php:39
+#: legacy/admin/views/admin-settings-buttons.php:123
+#: legacy/admin/views/admin-settings-buttons.php:204
+#: legacy/admin/views/admin-settings-buttons.php:260
+#: legacy/admin/views/admin-settings-buttons.php:350
+#: legacy/admin/views/admin-settings-buttons.php:388
+msgid "Show as"
+msgstr "Zobrazit jako"
+
+#: legacy/admin/views/admin-settings-buttons.php:41
+#: legacy/admin/views/admin-settings-buttons.php:125
+#: legacy/admin/views/admin-settings-buttons.php:206
+#: legacy/admin/views/admin-settings-buttons.php:262
+#: legacy/admin/views/admin-settings-buttons.php:390
+msgid "Button"
+msgstr "Tlačítko"
+
+#: legacy/admin/views/admin-settings-buttons.php:43
+#: legacy/admin/views/admin-settings-buttons.php:127
+#: legacy/admin/views/admin-settings-buttons.php:208
+#: legacy/admin/views/admin-settings-buttons.php:264
+#: legacy/admin/views/admin-settings-buttons.php:352
+#: legacy/admin/views/admin-settings-buttons.php:392
+msgid "Link"
+msgstr "Odkaz"
+
+#: legacy/admin/views/admin-settings-buttons.php:47
+#: legacy/admin/views/admin-settings-buttons.php:131
+#: legacy/admin/views/admin-settings-buttons.php:212
+#: legacy/admin/views/admin-settings-buttons.php:268
+#: legacy/admin/views/admin-settings-buttons.php:396
+msgid "Background colour"
+msgstr "Barva pozadí"
+
+#: legacy/admin/views/admin-settings-buttons.php:64
+#: legacy/admin/views/admin-settings-buttons.php:151
+#: legacy/admin/views/admin-settings-buttons.php:279
+#: legacy/admin/views/admin-settings-buttons.php:286
+#: legacy/admin/views/admin-settings-buttons.php:412
+#: lite/admin/dist/js/app.js:1745
+msgid "URL"
+msgstr "URL"
+
+#: legacy/admin/views/admin-settings-buttons.php:415
+msgid "Button will only link to URL if Action = Open URL"
+msgstr "Tlačítko bude odkazovat na URL, pouze pokud Akce = Otevřít URL"
+
+#: legacy/admin/modules/cookies/views/non-necessary-settings.php:34
+#: legacy/admin/views/admin-settings-buttons.php:76
+#: legacy/admin/views/admin-settings-buttons.php:162
+#: legacy/admin/views/admin-settings-buttons.php:326
+#: legacy/admin/views/admin-settings-buttons.php:333
+#: legacy/admin/views/admin-settings-buttons.php:424
+#: legacy/admin/views/admin-settings-general.php:39
+#: legacy/admin/views/admin-settings-general.php:55
+#: legacy/admin/views/admin-settings-general.php:72
+#: legacy/admin/views/admin-settings-general.php:80
+#: legacy/admin/views/admin-settings-general.php:87
+#: legacy/admin/views/admin-settings-messagebar.php:86
+#: legacy/public/modules/script-blocker/views/settings.php:162
+msgid "No"
+msgstr "Ne"
+
+#: legacy/admin/views/admin-settings-buttons.php:428
+msgid "Size"
+msgstr "Velikost"
+
+#: legacy/admin/views/admin-settings-general.php:19
+msgid "On"
+msgstr "Zapnuto"
+
+#: legacy/admin/views/admin-settings-general.php:20
+msgid "Off"
+msgstr "Vypnuto"
+
+#: legacy/admin/views/admin-settings-messagebar.php:83
+msgid "Add overlay?"
+msgstr "Přidat překrytí?"
+
+#: legacy/admin/views/admin-settings-messagebar.php:87
+msgid "When the popup is active, an overlay will block the user from browsing the site."
+msgstr "Když je vyskakovací okno aktivní, překryvný blok zabrání uživateli v procházení webu."
+
+#: legacy/admin/views/admin-settings-messagebar.php:88
+msgid "`Accept on scroll` will not work along with this option."
+msgstr "`Accept on scroll 'nebude fungovat spolu s touto volbou."
+
+#: legacy/admin/views/admin-settings-general.php:36
+msgid "Auto-hide(Accept) cookie bar after delay?"
+msgstr "Automaticky skrýt (přijmout) soubor cookie po nějakém čase?"
+
+#: legacy/admin/views/admin-settings-general.php:46
+msgid "seconds"
+msgstr "vteřin"
+
+#: legacy/admin/views/admin-settings-general.php:56
+msgid "As per latest GDPR policies it is required to take an explicit consent for the cookies. Use this option with discretion especially if you serve EU"
+msgstr "Podle nejnovějších zásad GDPR se vyžaduje výslovný souhlas s cookies. Tuto možnost používejte s uvážením, zejména pokud fungujete v EU"
+
+#: legacy/admin/views/admin-settings-general.php:57
+msgid "This option will not work along with `Popup overlay`."
+msgstr "Tato možnost nebude fungovat spolu s překryvným oknem."
+
+#: legacy/admin/views/admin-settings-general.php:84
+msgid "Reload after Reject button click"
+msgstr "Obnovit po kliknutí na tlačítko Odmítnout"
+
+#: legacy/admin/views/admin-settings-help.php:9
+msgid "Shortcodes"
+msgstr "Shortkódy"
+
+#: legacy/admin/views/admin-settings-help.php:10
+#: legacy/admin/views/admin-settings-help.php:104
+msgid "Help Links"
+msgstr "Odkazy na nápovědu"
+
+#: legacy/admin/views/admin-settings-help.php:22
+msgid "This is the \"main button\" you customise above."
+msgstr "Toto je „hlavní tlačítko“, které si přizpůsobíte výše."
+
+#: legacy/admin/views/admin-settings-help.php:26
+msgid "This is the cookie reject button shortcode."
+msgstr "Toto je zkratka tlačítka pro odmítnutí souboru cookie."
+
+#: legacy/admin/views/admin-settings-help.php:33
+msgid "This is the \"read more\" link you customise above."
+msgstr "Toto je odkaz „Číst více“, který si přizpůsobíte výše."
+
+#: legacy/admin/views/admin-settings-help.php:108
+#: legacy/admin/views/admin-settings-help.php:111
+msgid "Documentation"
+msgstr "Dokumentace"
+
+#: legacy/admin/views/admin-settings-help.php:109
+msgid "Refer to our documentation to set and get started"
+msgstr "Nastavte a začněte v naší dokumentaci"
+
+#: legacy/admin/views/admin-settings-help.php:117
+msgid "We would love to help you on any queries or issues."
+msgstr "Rádi bychom vám pomohli při jakýchkoli dotazech nebo problémech."
+
+#: legacy/admin/views/admin-settings-help.php:119
+msgid "Contact Us"
+msgstr "Kontaktujte nás"
+
+#: legacy/admin/views/admin-settings-messagebar.php:17
+msgid "Message Heading"
+msgstr "Nadpis zprávy"
+
+#: legacy/admin/modules/cookies/views/necessary-settings.php:53
+#: legacy/admin/modules/cookies/views/non-necessary-settings.php:92
+#: legacy/admin/views/admin-settings-save-button.php:11
+msgid "Update Settings"
+msgstr "Aktualizovat nastavení"
+
+#: legacy/admin/modules/cookies/cookies.php:122
+msgid "Add New"
+msgstr "Přidat nové"
+
+#: legacy/public/modules/shortcode/shortcode.php:135
+msgid "Delete Cookies"
+msgstr "Smazat cookies"
+
+#: legacy/admin/modules/cookies/views/non-necessary-settings.php:33
+#: legacy/admin/views/admin-settings-buttons.php:74
+#: legacy/admin/views/admin-settings-buttons.php:161
+#: legacy/admin/views/admin-settings-buttons.php:325
+#: legacy/admin/views/admin-settings-buttons.php:332
+#: legacy/admin/views/admin-settings-buttons.php:422
+#: legacy/admin/views/admin-settings-general.php:38
+#: legacy/admin/views/admin-settings-general.php:54
+#: legacy/admin/views/admin-settings-general.php:71
+#: legacy/admin/views/admin-settings-general.php:79
+#: legacy/admin/views/admin-settings-general.php:86
+#: legacy/admin/views/admin-settings-messagebar.php:85
+msgid "Yes"
+msgstr "Ano"
+
+#: legacy/admin/modules/uninstall-feedback/uninstall-feedback.php:118
+#: legacy/admin/views/admin-settings-general.php:10
+#: legacy/admin/views/admin-settings-general.php:66
+#: lite/admin/modules/uninstall-feedback/class-uninstall-feedback.php:181
+msgid "Other"
+msgstr "Ostatní"
+
+#: legacy/admin/views/admin-settings-general.php:52
+msgid "Auto-hide cookie bar if the user scrolls ( Accept on Scroll )?"
+msgstr "Automaticky skrýt lištu cookie, pokud se uživatel posouvá (Přijmout při posouvání)?"
+
+#: legacy/admin/views/admin-settings-general.php:77
+msgid "Reload after Accept button click"
+msgstr "Znovu načíst po kliknutí na tlačítko Přijmout"
+
+#: legacy/admin/class-cookie-law-info-admin.php:239
+#: legacy/admin/class-cookie-law-info-admin.php:275
+#: legacy/admin/modules/cli-policy-generator/classes/class-policy-generator-ajax.php:19
+#: legacy/admin/modules/cookie-scaner/classes/class-cookie-law-info-cookie-scanner-ajax.php:24
+#: legacy/admin/modules/cookie-scaner/cookie-scaner.php:282
+#: legacy/admin/modules/cookies/cookies.php:738
+#: legacy/admin/modules/cookies/cookies.php:751
+#: legacy/includes/class-cookie-law-info-cookieyes.php:126
+#: legacy/includes/class-cookie-law-info-cookieyes.php:922
+#: legacy/public/modules/script-blocker/script-blocker.php:180
+#: legacy/public/modules/script-blocker/script-blocker.php:221
+#: legacy/public/modules/script-blocker/script-blocker.php:355
+#: legacy/public/modules/script-blocker/script-blocker.php:670
+msgid "You do not have sufficient permission to perform this operation"
+msgstr "K provedení této operace nemáte dostatečné oprávnění"
+
+#: legacy/admin/class-cookie-law-info-admin.php:258
+#: legacy/admin/class-cookie-law-info-admin.php:297
+#: legacy/admin/modules/cookies/cookies.php:787
+msgid "Settings Updated."
+msgstr "Nastavení aktualizováno."
+
+#: legacy/admin/class-cookie-law-info-admin.php:188
+#: legacy/admin/class-cookie-law-info-admin.php:189
+#: legacy/admin/class-cookie-law-info-admin.php:264
+#: legacy/admin/partials/cookie-law-info-admin_settings.php:31
+#: lite/admin/class-admin.php:684
+msgid "Settings"
+msgstr "Nastavení"
+
+#: legacy/admin/views/admin-settings-messagebar.php:98
+msgid "Footer"
+msgstr "Patička"
+
+#: legacy/admin/views/admin-settings-messagebar.php:122
+msgid "On load"
+msgstr "Načíst"
+
+#: legacy/admin/views/admin-settings-messagebar.php:127
+#: legacy/admin/views/admin-settings-messagebar.php:137
+msgid "Animate"
+msgstr "Animovat"
+
+#: legacy/admin/views/admin-settings-messagebar.php:132
+msgid "On hide"
+msgstr "Skrýt"
+
+#: legacy/admin/views/admin-settings-general.php:43
+msgid "Milliseconds until hidden"
+msgstr "Milisekundy, než se skryje"
+
+#: legacy/admin/views/admin-settings-general.php:46
+msgid "Specify milliseconds (not seconds)"
+msgstr "Určete milisekundy (nikoli sekundy)"
+
+#: legacy/admin/views/admin-settings-general.php:69
+msgid "Reload after \"scroll accept\" event?"
+msgstr "Znovu načíst po události „scroll scroll“?"
+
+#: legacy/admin/views/admin-settings-messagebar.php:180
+msgid "Tab Position"
+msgstr "Pozice záložky"
+
+#: legacy/admin/views/admin-settings-messagebar.php:78
+#: legacy/admin/views/admin-settings-messagebar.php:174
+#: lite/admin/dist/js/app.js:1781
+msgid "Right"
+msgstr "Vpravo"
+
+#: legacy/admin/views/admin-settings-messagebar.php:77
+#: legacy/admin/views/admin-settings-messagebar.php:175
+#: lite/admin/dist/js/app.js:1781
+msgid "Left"
+msgstr "Vlevo"
+
+#: legacy/admin/views/admin-settings-messagebar.php:203
+msgid "From Left Margin"
+msgstr "Z levého okraje"
+
+#: legacy/admin/views/admin-settings-messagebar.php:25
+#: lite/admin/dist/js/app.js:1745
+msgid "Message"
+msgstr "Zpráva"
+
+#: legacy/admin/views/admin-settings-messagebar.php:45
+msgid "Text Colour"
+msgstr "Barva textu"
+
+#: legacy/admin/views/admin-settings-messagebar.php:54
+msgid "Font"
+msgstr "Písmo"
+
+#: legacy/admin/partials/cookie-law-info-admin_settings.php:73
+msgid "Customise Buttons"
+msgstr "Přizpůsobit tlačítka"
+
+#: legacy/admin/views/admin-settings-buttons.php:11
+#: legacy/admin/views/admin-settings-buttons.php:21
+msgid "Accept Button"
+msgstr "Tlačítko Přijmout"
+
+#: legacy/admin/views/admin-settings-buttons.php:371
+msgid "This button/link can be customised to either simply close the cookie bar, or follow a link. You can also customise the colours and styles, and show it as a link or a button."
+msgstr "Toto tlačítko / odkaz lze upravit tak, aby jednoduše zavíralo lištu cookie nebo sledovalo odkaz. Můžete také přizpůsobit barvy a styly a zobrazit je jako odkaz nebo tlačítko."
+
+#: legacy/admin/views/admin-settings-buttons.php:56
+#: legacy/admin/views/admin-settings-buttons.php:139
+#: legacy/admin/views/admin-settings-buttons.php:404
+msgid "Action"
+msgstr "Akce"
+
+#: legacy/admin/views/admin-settings-buttons.php:420
+msgid "Open URL in new window?"
+msgstr "Otevřít URL v novém okně?"
+
+#: legacy/admin/views/admin-settings-buttons.php:12
+#: legacy/admin/views/admin-settings-buttons.php:94
+msgid "Reject Button"
+msgstr "Tlačítko Odmítnutí"
+
+#: legacy/admin/views/admin-settings-help.php:16
+msgid "Cookie bar shortcodes"
+msgstr "Shortkódy Cookie baru"
+
+#: legacy/admin/views/admin-settings-help.php:65
+msgid "Other shortcodes"
+msgstr "Ostatní shortkódy"
+
+#: legacy/admin/views/admin-settings-help.php:66
+msgid "These shortcodes can be used in pages and posts on your website. It is not recommended to use these inside the cookie bar itself."
+msgstr "Tyto krátké kódy lze použít na stránkách a příspěvcích na vašem webu. Nedoporučujeme je používat uvnitř samotné lišty cookie."
+
+#: legacy/admin/views/admin-settings-help.php:72
+msgid "This prints out a nice table of cookies, in line with the guidance given by the ICO."
+msgstr "Tím se vytiskne pěkná tabulka cookies, v souladu s pokyny ICO."
+
+#: legacy/admin/views/admin-settings-help.php:87
+msgid "This shortcode will display a normal HTML link which when clicked, will delete the cookie set by Cookie Law Info (this cookie is used to remember that the cookie bar is closed)."
+msgstr "Tento krátký kód zobrazí normální odkaz HTML, který po kliknutí smaže soubor cookie nastavený informacemi Cookie Law Info (tento soubor cookie se používá k zapamatování, že panel cookie je zavřený)."
+
+#: legacy/admin/views/admin-settings-help.php:91
+msgid "Add any text you like- useful if you want e.g. another language to English."
+msgstr "Přidejte jakýkoli text, který se vám líbí - užitečné, pokud chcete např. jiný jazyk do angličtiny."
+
+#: legacy/admin/partials/cookie-law-info-admin_settings.php:74
+#: legacy/admin/views/admin-settings-advanced.php:8
+msgid "Advanced"
+msgstr "Pokročilé"
+
+#: legacy/admin/views/admin-settings-advanced.php:9
+msgid "Sometimes themes apply settings that clash with plugins. If that happens, try adjusting these settings."
+msgstr "Témata někdy používají nastavení, která jsou v rozporu s doplňky. Pokud k tomu dojde, zkuste tato nastavení upravit."
+
+#: legacy/admin/views/admin-settings-help.php:116
+msgid "Help and Support"
+msgstr "Pomoc a podpora"
+
+#: legacy/admin/modules/cookies/views/non-necessary-settings.php:23
+msgid "Non-necessary Cookie Settings"
+msgstr "Nepotřebná nastavení souborů cookie"
+
+#: legacy/admin/modules/cookies/views/non-necessary-settings.php:32
+msgid "Enable Non-necessary Cookie"
+msgstr "Povolit nepotřebný soubor cookie"
+
+#: legacy/admin/modules/cookies/views/non-necessary-settings.php:61
+msgid "This script will be added to the page HEAD section if the above settings is enabled and user has give consent."
+msgstr "Tento skript bude přidán do sekce HEAD, pokud je výše uvedené nastavení povoleno a uživatel dává souhlas."
+
+#: legacy/admin/modules/cookies/views/non-necessary-settings.php:68
+msgid "Print scripts in the head tag on the front end if above cookie settings is enabled and user has given consent."
+msgstr "Pokud je povoleno výše nastavení souborů cookie a uživatel dal souhlas, tiskněte skripty v sekci HEAD na rozhraní frontend."
+
+#: legacy/admin/modules/cookies/views/non-necessary-settings.php:75
+msgid "This script will be added right after the BODY section if the above settings is enabled and user has given consent."
+msgstr "Tento skript bude přidán ihned po sekci BODY, pokud jsou výše uvedená nastavení povolena a uživatel dal souhlas."
+
+#: legacy/admin/modules/cookies/views/non-necessary-settings.php:82
+msgid "Print scripts before the closing body tag on the front end if above cookie settings is enabled and user has given consent."
+msgstr "Vytiskněte skripty před koncovou značku těla na front-endu, pokud je výše uvedené nastavení cookies povoleno a uživatel dal souhlas."
+
+#: legacy/admin/modules/cookies/cookies.php:120 lite/admin/dist/js/4.js:107
+#: lite/admin/dist/js/4.js:191 lite/admin/dist/js/4.js:215
+#: lite/admin/dist/js/app.js:1733
+msgid "Cookie List"
+msgstr "Seznam souborů cookie"
+
+#: legacy/admin/modules/cookies/cookies.php:123
+msgid "Add New Cookie Type"
+msgstr "Přidat nový typ souboru cookie"
+
+#: legacy/admin/modules/cookies/cookies.php:124
+msgid "Edit Cookie Type"
+msgstr "Upravit typ souboru cookie"
+
+#: legacy/admin/modules/cookies/cookies.php:125
+msgid "New Cookie Type"
+msgstr "Nový typ souboru cookie"
+
+#: legacy/admin/modules/cookies/cookies.php:126
+msgid "View Cookie Type"
+msgstr "Zobrazit typ souboru cookie"
+
+#: legacy/admin/modules/cookies/cookies.php:127
+msgid "Search Cookies"
+msgstr "Hledat cookies"
+
+#: legacy/admin/modules/cookies/cookies.php:128
+msgid "Nothing found"
+msgstr "Nic nenalezeno"
+
+#: legacy/admin/modules/cookies/cookies.php:129
+msgid "Nothing found in Trash"
+msgstr "Nic jsme v koši nenašli"
+
+#: legacy/admin/modules/cookies/cookies.php:181
+msgid "Cookie Duration"
+msgstr "Doba trvání souboru cookie"
+
+#: legacy/admin/modules/cookies/cookies.php:179
+#: legacy/admin/modules/cookies/cookies.php:190 lite/admin/dist/js/4.js:191
+msgid "Cookie ID"
+msgstr "ID souboru cookie"
+
+#: legacy/admin/modules/cookies/cookies.php:121
+#: legacy/public/modules/shortcode/shortcode.php:230
+#: lite/admin/dist/js/4.js:179
+msgid "Cookie"
+msgstr "Cookie"
+
+#: legacy/admin/modules/cookies/cookies.php:249
+#: legacy/public/modules/shortcode/shortcode.php:233
+msgid "Type"
+msgstr "Typ"
+
+#: legacy/admin/modules/cookie-scaner/views/scan-results.php:72
+#: legacy/admin/modules/cookies/cookies.php:251
+#: legacy/public/modules/shortcode/shortcode.php:236
+#: lite/admin/dist/js/4.js:179 lite/admin/dist/js/4.js:191
+msgid "Duration"
+msgstr "Délka"
+
+#: legacy/admin/modules/cli-policy-generator/views/policy-generator.php:55
+#: legacy/admin/modules/cookie-scaner/views/scan-results.php:74
+#: legacy/admin/modules/cookies/cookies.php:254
+#: legacy/admin/modules/cookies/views/necessary-settings.php:41
+#: legacy/admin/modules/cookies/views/non-necessary-settings.php:55
+#: legacy/public/modules/script-blocker/views/settings.php:168
+#: legacy/public/modules/shortcode/shortcode.php:239
+#: lite/admin/dist/js/4.js:179 lite/admin/dist/js/4.js:191
+msgid "Description"
+msgstr "Popis"
+
+#: legacy/admin/modules/cookies/cookies.php:119
+msgid "GDPR Cookie Consent"
+msgstr "GDPR Cookie Consent"
+
+#: legacy/admin/views/admin-settings-buttons.php:83
+#: legacy/admin/views/admin-settings-buttons.php:166
+msgid "Button Size"
+msgstr "Velikost tlačítka"
+
+#: legacy/admin/views/admin-settings-messagebar.php:97
+msgid "Header"
+msgstr "Záhlaví"
+
+#: legacy/admin/views/admin-settings-messagebar.php:128
+#: legacy/admin/views/admin-settings-messagebar.php:138
+msgid "Sticky"
+msgstr "Zvýrazněný"
+
+#. Description of the plugin
+#: cookie-law-info.php
+msgid "A simple way to show your website complies with the EU Cookie Law / GDPR."
+msgstr "Jednoduchý způsob, jak ukázat svůj web v souladu se zákonem EU o cookies / GDPR."
+
+#: legacy/admin/views/admin-settings-messagebar.php:35
+msgid "Cookie Bar Colour"
+msgstr "Barva lišty cookie"
+
+#: legacy/admin/modules/cookies/cookies.php:224
+msgid "Cookie Sensitivity: ( necessary , non-necessary )"
+msgstr "Citlivost souborů cookie: (nezbytné, nezbytně nutné)"
+
+#: legacy/admin/modules/cookies/cookies.php:201
+msgid "Cookie Type: (persistent, session, third party )"
+msgstr "Typ souboru cookie: (trvalý, relace, třetí strana)"
