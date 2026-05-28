@@ -84,9 +84,9 @@ get_header();
 	<?php get_template_part( 'template-parts/home/stats' ); ?>
 	<?php get_template_part( 'template-parts/home/entry-cards' ); ?>
 	<?php get_template_part( 'template-parts/home/news' ); ?>
-	<?php get_template_part( 'template-parts/home/partners' ); ?>
 	<?php get_template_part( 'template-parts/home/services' ); ?>
 	<?php get_template_part( 'template-parts/home/donate' ); ?>
+	<?php get_template_part( 'template-parts/home/partners' ); ?>
 
 <?php endwhile; ?>
 </main>

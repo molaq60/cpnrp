@@ -22,6 +22,7 @@ $cpnrp_includes = [
 	'inc/pro-odborniky-meta.php',  // Pro odborníky — meta boxes
 	'inc/vyrocni-zpravy-meta.php', // Výroční zprávy — meta box s PDF uploadem
 	'inc/dokumenty-meta.php',      // Dokumenty ke stažení — meta box s PDF uploadem
+	'inc/avp-meta.php',            // Adopce vs. pěstounství — tabulka + kvíz meta boxy
 	'inc/legal-content.php',       // Ochrana osobních údajů + Cookies — obsah stránek
 ];
 

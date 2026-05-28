@@ -59,14 +59,30 @@ function cpnrp_o_nas_meta_cb( $post ) {
 	}
 	wp_nonce_field( 'cpnrp_o_nas_save', 'cpnrp_o_nas_nonce' );
 	$fields = [
-		'_o_nas_hero_desc'       => [ 'Popis v hero',         'textarea' ],
-		'_o_nas_mission'         => [ 'Text poslání (mission)','textarea' ],
-		'_o_nas_blockquote'      => [ 'Citát / výzva (dole)', 'textarea' ],
-		'_o_nas_blockquote_link' => [ 'Text odkazu citátu',   'input' ],
+		'_o_nas_hero_desc'       => [ 'Popis v hero',              'textarea' ],
+		'_o_nas_s1_eyebrow'      => [ 'Sekce 1 — eyebrow',         'input' ],
+		'_o_nas_s1_heading'      => [ 'Sekce 1 — nadpis',          'input' ],
+		'_o_nas_mission'         => [ 'Text poslání (mission)',     'textarea' ],
+		'_o_nas_value1'          => [ 'Hodnota 1 (bullet)',         'input' ],
+		'_o_nas_value2'          => [ 'Hodnota 2 (bullet)',         'input' ],
+		'_o_nas_value3'          => [ 'Hodnota 3 (bullet)',         'input' ],
+		'_o_nas_value4'          => [ 'Hodnota 4 (bullet)',         'input' ],
+		'_o_nas_s2_eyebrow'      => [ 'Sekce 2 — eyebrow',         'input' ],
+		'_o_nas_s2_heading'      => [ 'Sekce 2 — nadpis',          'input' ],
+		'_o_nas_blockquote'      => [ 'Citát / výzva (dole)',       'textarea' ],
+		'_o_nas_blockquote_link' => [ 'Text odkazu citátu',         'input' ],
 	];
 	_cpnrp_render_fields( $post, $fields, [
 		'_o_nas_hero_desc'       => 'Jsme tým odborníků, který od roku 2002 pomáhá dětem najít domov a rodinám ho udržet.',
+		'_o_nas_s1_eyebrow'      => 'Naše poslání',
+		'_o_nas_s1_heading'      => 'Pomáháme dětem najít domov',
 		'_o_nas_mission'         => 'Věříme, že každé dítě má právo vyrůstat v láskyplné rodině. Naším posláním je toto právo naplňovat — doprovázením pěstounů, podporou žadatelů o adopci a vzděláváním všech, kdo se o náhradní péči zajímají.',
+		'_o_nas_value1'          => 'Odborné doprovázení pěstounských rodin',
+		'_o_nas_value2'          => 'Podpora žadatelů o adopci na každém kroku',
+		'_o_nas_value3'          => 'Vzdělávání a osvěta v oblasti NRP',
+		'_o_nas_value4'          => 'Komunitní aktivity a propojování rodin',
+		'_o_nas_s2_eyebrow'      => 'Poznejte nás blíže',
+		'_o_nas_s2_heading'      => 'Více o CPNRP',
 		'_o_nas_blockquote'      => '„Chcete se dozvědět více o naší práci nebo s námi spolupracovat? Budeme rádi."',
 		'_o_nas_blockquote_link' => 'Napište nám',
 	] );
@@ -288,8 +304,23 @@ function cpnrp_o_nas_meta_save( $post_id ) {
 
 	// O nás
 	if ( isset( $_POST['cpnrp_o_nas_nonce'] ) && wp_verify_nonce( $_POST['cpnrp_o_nas_nonce'], 'cpnrp_o_nas_save' ) ) {
-		foreach ( [ 'o_nas_hero_desc' => '_o_nas_hero_desc', 'o_nas_mission' => '_o_nas_mission', 'o_nas_blockquote' => '_o_nas_blockquote', 'o_nas_blockquote_link' => '_o_nas_blockquote_link' ] as $f => $k ) {
+		$textarea_fields = [ 'o_nas_hero_desc' => '_o_nas_hero_desc', 'o_nas_mission' => '_o_nas_mission', 'o_nas_blockquote' => '_o_nas_blockquote' ];
+		foreach ( $textarea_fields as $f => $k ) {
 			update_post_meta( $post_id, $k, sanitize_textarea_field( $_POST[ $f ] ?? '' ) );
+		}
+		$text_fields = [
+			'o_nas_s1_eyebrow'      => '_o_nas_s1_eyebrow',
+			'o_nas_s1_heading'      => '_o_nas_s1_heading',
+			'o_nas_value1'          => '_o_nas_value1',
+			'o_nas_value2'          => '_o_nas_value2',
+			'o_nas_value3'          => '_o_nas_value3',
+			'o_nas_value4'          => '_o_nas_value4',
+			'o_nas_s2_eyebrow'      => '_o_nas_s2_eyebrow',
+			'o_nas_s2_heading'      => '_o_nas_s2_heading',
+			'o_nas_blockquote_link' => '_o_nas_blockquote_link',
+		];
+		foreach ( $text_fields as $f => $k ) {
+			update_post_meta( $post_id, $k, sanitize_text_field( $_POST[ $f ] ?? '' ) );
 		}
 		for ( $i = 1; $i <= 4; $i++ ) {
 			update_post_meta( $post_id, "_o_nas_stat{$i}_num",   sanitize_text_field( $_POST[ "o_nas_stat{$i}_num" ]   ?? '' ) );

@@ -14,7 +14,7 @@ $ancestors = array_reverse( get_post_ancestors( $page_id ) );
 $hero_desc = get_post_meta( $page_id, '_avp_hero_desc', true )
 	?: 'Obě formy mají společný cíl — poskytnout dítěti milující rodinu. Liší se právním rámcem, trvalostí a povinnostmi.';
 
-$rows = [
+$rows = get_post_meta( $page_id, '_avp_rows', true ) ?: [
 	[ 'Právní vztah',       'Trvalý — jako mezi biologickým rodičem a dítětem', 'Pěstoun pečuje, ale není zákonný zástupce' ],
 	[ 'Délka péče',         'Trvalá (po 3 letech nezrušitelné)',                  'Do zletilosti, případně do 26 let při studiu' ],
 	[ 'Příjmení dítěte',    'Mění se na osvojitelovo',                            'Zůstává původní' ],
@@ -25,7 +25,7 @@ $rows = [
 	[ 'Možnost ukončení',   'Po 3 letech nelze zrušit',                           'Lze ukončit, je-li to v zájmu dítěte' ],
 ];
 
-$questions = [
+$questions = get_post_meta( $page_id, '_avp_questions', true ) ?: [
 	[
 		'title' => 'Co od náhradní péče očekáváte především?',
 		'a'     => 'Stát se „opravdovým" rodičem dítěte — natrvalo, bez návratu.',

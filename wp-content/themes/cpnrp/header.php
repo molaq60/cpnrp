@@ -72,7 +72,7 @@
 					$cta_text = get_theme_mod( 'cpnrp_cta_text', __( 'Podpořte nás', 'cpnrp' ) );
 					$cta_url  = get_theme_mod( 'cpnrp_cta_url',  home_url( '/podporte-nas' ) );
 					?>
-					<a href="<?php echo esc_url( $cta_url ); ?>" class="btn btn--red">
+					<a href="<?php echo esc_url( $cta_url ); ?>" class="btn btn--red" target="_blank" rel="noopener noreferrer">
 						<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/heart-benefice.png' ); ?>"
 							alt="" aria-hidden="true">
 						<?php echo esc_html( $cta_text ); ?>
@@ -146,7 +146,7 @@
 		$cta_text = get_theme_mod( 'cpnrp_cta_text', __( 'Podpořte nás', 'cpnrp' ) );
 		$cta_url  = get_theme_mod( 'cpnrp_cta_url',  home_url( '/podporte-nas' ) );
 		?>
-		<a href="<?php echo esc_url( $cta_url ); ?>" class="btn btn--red" style="width:100%;justify-content:center;">
+		<a href="<?php echo esc_url( $cta_url ); ?>" class="btn btn--red" style="width:100%;justify-content:center;" target="_blank" rel="noopener noreferrer">
 			<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/heart-benefice.png' ); ?>"
 				alt="" aria-hidden="true">
 			<?php echo esc_html( $cta_text ); ?>

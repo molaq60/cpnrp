@@ -100,7 +100,7 @@ $kontakt_hours   = get_theme_mod( 'cpnrp_kontakt_hours',   'Po — Pá: 9:00 —
 
 				<div class="kontakt-hero-image-wrap">
 					<img
-						src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/contact/contact1.jpg' ); ?>"
+						src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/contact/kolaz.jpg' ); ?>"
 						alt="<?php esc_attr_e( 'Tým CPNRP', 'cpnrp' ); ?>"
 						loading="eager"
 						class="kontakt-hero-image"
