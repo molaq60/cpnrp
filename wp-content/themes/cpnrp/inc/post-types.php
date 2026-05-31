@@ -231,6 +231,7 @@ function cpnrp_contact_fields_render( $post ) {
 	wp_nonce_field( 'cpnrp_contact_fields_save', 'cpnrp_contact_fields_nonce' );
 	$role  = get_post_meta( $post->ID, '_contact_role', true );
 	$phone = get_post_meta( $post->ID, '_contact_phone', true );
+	$email = get_post_meta( $post->ID, '_contact_email', true );
 	?>
 	<table class="form-table" style="margin-top:0">
 		<tr>
@@ -240,6 +241,10 @@ function cpnrp_contact_fields_render( $post ) {
 		<tr>
 			<th scope="row"><label for="cpnrp_contact_phone"><?php esc_html_e( 'Telefon', 'cpnrp' ); ?></label></th>
 			<td><input type="text" id="cpnrp_contact_phone" name="cpnrp_contact_phone" value="<?php echo esc_attr( $phone ); ?>" placeholder="+420 000 000 000" style="width:100%" /></td>
+		</tr>
+		<tr>
+			<th scope="row"><label for="cpnrp_contact_email"><?php esc_html_e( 'E-mail', 'cpnrp' ); ?></label></th>
+			<td><input type="email" id="cpnrp_contact_email" name="cpnrp_contact_email" value="<?php echo esc_attr( $email ); ?>" placeholder="jmeno@cpnrp.cz" style="width:100%" /></td>
 		</tr>
 	</table>
 	<?php
@@ -256,6 +261,7 @@ function cpnrp_contact_fields_save( $post_id ) {
 	}
 	update_post_meta( $post_id, '_contact_role',  sanitize_text_field( $_POST['cpnrp_contact_role']  ?? '' ) );
 	update_post_meta( $post_id, '_contact_phone', sanitize_text_field( $_POST['cpnrp_contact_phone'] ?? '' ) );
+	update_post_meta( $post_id, '_contact_email', sanitize_email( $_POST['cpnrp_contact_email'] ?? '' ) );
 }
 add_action( 'save_post_contact_person', 'cpnrp_contact_fields_save' );
 
@@ -575,4 +581,185 @@ add_action( 'save_post_gallery', function ( int $post_id ): void {
 	if ( isset( $_POST['gallery_date'] ) ) {
 		update_post_meta( $post_id, '_gallery_date', sanitize_text_field( $_POST['gallery_date'] ) );
 	}
+} );
+
+// ══════════════════════════════════════════════════════════════
+// CONTACT PERSON — Bio + druhá fotografie
+// ══════════════════════════════════════════════════════════════
+
+// Enqueue editor + media on contact_person edit screen
+add_action( 'admin_enqueue_scripts', function ( string $hook ): void {
+	if ( ! in_array( $hook, [ 'post.php', 'post-new.php' ], true ) ) return;
+	$post = get_post();
+	if ( ! $post || $post->post_type !== 'contact_person' ) return;
+	wp_enqueue_media();
+	wp_enqueue_editor();
+} );
+
+add_action( 'add_meta_boxes', function (): void {
+	add_meta_box(
+		'cpnrp_contact_bio',
+		__( 'Bio / Více o mně (popup)', 'cpnrp' ),
+		'cpnrp_contact_bio_metabox',
+		'contact_person',
+		'normal',
+		'default'
+	);
+} );
+
+function cpnrp_contact_bio_metabox( WP_Post $post ): void {
+	wp_nonce_field( 'cpnrp_contact_bio_save', 'cpnrp_contact_bio_nonce' );
+
+	$bio    = get_post_meta( $post->ID, '_contact_bio',    true );
+	$photo2 = (int) get_post_meta( $post->ID, '_contact_photo2', true );
+	$p2_url = $photo2 ? wp_get_attachment_image_url( $photo2, 'large' ) : '';
+	?>
+	<style>
+	.cpnrp-bio-box { display:flex; flex-direction:column; gap:16px; padding:4px 0; }
+	.cpnrp-photo-zone {
+		position:relative; width:100%; height:120px;
+		border-radius:8px; overflow:hidden; cursor:pointer;
+		border:2px dashed #c3c4c7; background:#f6f7f7;
+		display:flex; flex-direction:row; align-items:center; justify-content:center;
+		gap:12px; transition:border-color 200ms,background 200ms;
+	}
+	.cpnrp-photo-zone:hover { border-color:#2271b1; background:#f0f6fc; }
+	.cpnrp-photo-zone.has-photo {
+		border-style:solid; border-color:#dcdcde;
+		height:auto; min-height:0; background:#000; cursor:default;
+	}
+	.cpnrp-photo-zone img {
+		display:block; max-width:100%; max-height:320px;
+		width:auto; height:auto; object-fit:contain; margin:0 auto;
+	}
+	.cpnrp-photo-zone-label { position:relative;z-index:1;display:flex;flex-direction:row;align-items:center;gap:10px;color:#646970;pointer-events:none; }
+	.cpnrp-photo-zone-label-text { display:flex;flex-direction:column;gap:2px; }
+	.cpnrp-photo-zone.has-photo .cpnrp-photo-zone-label { display:none; }
+	.cpnrp-photo-actions { display:flex; gap:8px; }
+	.cpnrp-section-label { font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.04em;color:#646970;margin:0; }
+	</style>
+
+	<div class="cpnrp-bio-box">
+
+		<!-- ── Druhá fotografie ─────────────────────────────────── -->
+		<div>
+			<p class="cpnrp-section-label" style="margin-bottom:8px">Druhá fotografie</p>
+			<input type="hidden" id="cpnrp_contact_photo2" name="cpnrp_contact_photo2"
+			       value="<?php echo esc_attr( $photo2 ?: '' ); ?>">
+			<div id="cpnrp-photo-zone" class="cpnrp-photo-zone<?php echo $p2_url ? ' has-photo' : ''; ?>">
+				<?php if ( $p2_url ) : ?>
+					<img id="cpnrp-p2-img" src="<?php echo esc_url( $p2_url ); ?>"
+					     alt="">
+				<?php else : ?>
+					<img id="cpnrp-p2-img" src="" alt="" style="display:none">
+				<?php endif; ?>
+				<div class="cpnrp-photo-zone-label">
+					<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" style="flex-shrink:0">
+						<path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/>
+						<circle cx="12" cy="13" r="4"/>
+					</svg>
+					<div class="cpnrp-photo-zone-label-text">
+						<span style="font-size:13px;font-weight:500">Kliknout pro výběr fotografie</span>
+						<span style="font-size:11px;color:#9ca3af">Zobrazí se v popupu</span>
+					</div>
+				</div>
+			</div>
+			<div class="cpnrp-photo-actions" style="margin-top:8px">
+				<button type="button" id="cpnrp-p2-select" class="button button-secondary">
+					<?php echo $p2_url ? 'Změnit fotografii' : 'Vybrat fotografii'; ?>
+				</button>
+				<button type="button" id="cpnrp-p2-remove" class="button"
+				        style="color:#cc0000<?php echo $photo2 ? '' : ';display:none'; ?>">
+					Odebrat
+				</button>
+			</div>
+		</div>
+
+		<!-- ── Bio editor ──────────────────────────────────────── -->
+		<div>
+			<p class="cpnrp-section-label" style="margin-bottom:8px">Bio</p>
+			<textarea id="cpnrp_bio_field" name="cpnrp_contact_bio"
+			          style="width:100%;visibility:hidden;height:0;padding:0;border:0"><?php echo esc_textarea( $bio ?: '' ); ?></textarea>
+		</div>
+
+	</div>
+
+	<script>
+	(function () {
+		// ── Editor ────────────────────────────────────────────────
+		jQuery(function () {
+			if (typeof wp !== 'undefined' && wp.editor) {
+				wp.editor.initialize('cpnrp_bio_field', {
+					tinymce: {
+						wpautop: true,
+						toolbar1: 'formatselect bold italic | bullist numlist | blockquote | alignleft aligncenter alignright | link unlink | removeformat',
+						toolbar2: '',
+						height: 300,
+					},
+					quicktags: { buttons: 'strong,em,link,ul,ol,li,close' },
+					mediaButtons: false,
+				});
+			} else {
+				var ta = document.getElementById('cpnrp_bio_field');
+				if (ta) { ta.style.visibility = ''; ta.style.height = '220px'; }
+			}
+		});
+
+		// ── Photo picker ──────────────────────────────────────────
+		var zone      = document.getElementById('cpnrp-photo-zone');
+		var img       = document.getElementById('cpnrp-p2-img');
+		var input     = document.getElementById('cpnrp_contact_photo2');
+		var selectBtn = document.getElementById('cpnrp-p2-select');
+		var removeBtn = document.getElementById('cpnrp-p2-remove');
+
+		function setPhoto(id, url) {
+			input.value = id;
+			img.src     = url;
+			img.style.display = '';
+			zone.classList.add('has-photo');
+			selectBtn.textContent = 'Změnit fotografii';
+			removeBtn.style.display = '';
+		}
+		function removePhoto() {
+			input.value = '';
+			img.src = '';
+			img.style.display = 'none';
+			zone.classList.remove('has-photo');
+			selectBtn.textContent = 'Vybrat fotografii';
+			removeBtn.style.display = 'none';
+		}
+
+		function openPicker() {
+			var frame = wp.media({ title: 'Vybrat fotografii', button: { text: 'Použít' }, multiple: false });
+			frame.on('select', function () {
+				var att = frame.state().get('selection').first().toJSON();
+				var url = att.sizes && att.sizes.large ? att.sizes.large.url
+				        : att.sizes && att.sizes.medium ? att.sizes.medium.url
+				        : att.url;
+				setPhoto(att.id, url);
+			});
+			frame.open();
+		}
+
+		if (zone)      zone.addEventListener('click', function(e){ if (!e.target.closest('button')) openPicker(); });
+		if (selectBtn) selectBtn.addEventListener('click', openPicker);
+		if (removeBtn) removeBtn.addEventListener('click', removePhoto);
+	})();
+	</script>
+	<?php
+}
+
+add_action( 'save_post_contact_person', function ( int $post_id ): void {
+	if (
+		! isset( $_POST['cpnrp_contact_bio_nonce'] ) ||
+		! wp_verify_nonce( $_POST['cpnrp_contact_bio_nonce'], 'cpnrp_contact_bio_save' ) ||
+		( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) ||
+		! current_user_can( 'edit_post', $post_id )
+	) return;
+
+	$bio    = isset( $_POST['cpnrp_contact_bio'] ) ? wp_kses_post( wp_unslash( $_POST['cpnrp_contact_bio'] ) ) : '';
+	$photo2 = isset( $_POST['cpnrp_contact_photo2'] ) ? (int) $_POST['cpnrp_contact_photo2'] : 0;
+
+	update_post_meta( $post_id, '_contact_bio',    $bio );
+	update_post_meta( $post_id, '_contact_photo2', $photo2 > 0 ? $photo2 : '' );
 } );

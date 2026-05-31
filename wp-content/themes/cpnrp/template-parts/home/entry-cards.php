@@ -33,7 +33,7 @@ $cards = [
 	<div class="container">
 		<div class="entry-cards-grid">
 			<?php foreach ( $cards as $card ) : ?>
-			<a href="<?php echo esc_url( $card['url'] ); ?>" class="entry-card animate-fade-up">
+			<a href="<?php echo esc_url( cpnrp_url( $card['url'] ) ); ?>" class="entry-card animate-fade-up">
 				<div class="entry-card-stripe <?php echo esc_attr( $card['stripe'] ); ?>"></div>
 				<div class="entry-card-body">
 					<h3 class="entry-card-title"><?php echo esc_html( $card['title'] ); ?></h3>

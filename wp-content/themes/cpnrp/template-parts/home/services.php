@@ -36,12 +36,12 @@ $delays = [ '', ' delay-2', ' delay-3', '', ' delay-2', ' delay-3' ];
 		<div class="section-heading animate-fade-up">
 			<h2 class="section-title">Naše služby</h2>
 			<div class="section-title-bar" aria-hidden="true"></div>
-			<p class="section-subtitle">Komplexní péče o náhradní rodiny od přípravy až po každodenní podporu</p>
+			<p class="section-subtitle">Dětem, které vyrůstají v náhradních rodinách, poskytujeme tyto služby</p>
 		</div>
 
 		<div class="services-grid">
 			<?php foreach ( $services as $i => $service ) : ?>
-			<a href="<?php echo esc_url( $service['url'] ); ?>"
+			<a href="<?php echo esc_url( cpnrp_url( $service['url'] ) ); ?>"
 			   class="service-card animate-fade-up<?php echo $delays[ $i ]; ?>">
 				<div class="service-stripe service-stripe--<?php echo esc_attr( $service['color'] ); ?>"></div>
 				<div class="service-body">

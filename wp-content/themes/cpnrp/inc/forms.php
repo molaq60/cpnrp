@@ -35,7 +35,7 @@ function cpnrp_gf_gdpr_label_link( $content, $field, $value, $entry_id, $form_id
 
 	$content = str_replace(
 		'zpracováním osobních údajů',
-		'<a href="/ochrana-udaju/" target="_blank" rel="noopener">zpracováním osobních údajů</a>',
+		'<a href="' . esc_url( home_url( '/ochrana-udaju/' ) ) . '" target="_blank" rel="noopener">zpracováním osobních údajů</a>',
 		$content
 	);
 

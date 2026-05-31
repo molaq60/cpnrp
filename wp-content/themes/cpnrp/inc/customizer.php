@@ -448,7 +448,7 @@ function cpnrp_customize_register( $wp_customize ) {
 	}
 
 	$wp_customize->add_setting( 'cpnrp_megamenu_pro-rodiny_info', [
-		'default'           => 'Teprve se rozhodujete? <a href="/kontakt">Napište nám</a> — rádi odpovíme na všechny otázky bez závazku.',
+		'default'           => 'Teprve se rozhodujete? <a href="' . esc_url( home_url( '/kontakt' ) ) . '">Napište nám</a> — rádi odpovíme na všechny otázky bez závazku.',
 		'sanitize_callback' => 'wp_kses_post',
 		'transport'         => 'refresh',
 	] );

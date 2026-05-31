@@ -140,7 +140,7 @@ function cpnrp_o_nas_setup_v2() {
 		. '<h2>Vedení organizace</h2>'
 		. '<p>Organizaci vede <strong>Mgr. Jana Rychnovská</strong> (ředitelka, <a href="mailto:rychnovska@cpnrp.cz">rychnovska@cpnrp.cz</a>). Odborné oddělení doprovázení řídí <strong>Mgr. Radka Strýalová</strong> (+420 771 770 490), program pro osvoji tele vede <strong>Charlotta Kočí</strong> (+420 771 770 380).</p>'
 		. '<h2>Kontakty na celý tým</h2>'
-		. '<p>Kompletní seznam pracovníků včetně kontaktů najdete na stránce <a href="/kontakt">Kontakt</a>.</p>'
+		. '<p>Kompletní seznam pracovníků včetně kontaktů najdete na stránce <a href="' . esc_url( home_url( '/kontakt' ) ) . '">Kontakt</a>.</p>'
 		. '<h2>Terénní tým</h2>'
 		. '<p>Jádro naší práce tvoří terénní sociální pracovníci, kteří pravidelně navštěvují pěstounské rodiny v celém Ústeckém kraji, poskytují poradenství a pomáhají řešit každodenní situace. Dále spolupracujeme s externími odborníky — lektory, psychology a terapeuty — a desítkami doučovatelů a pečovatelů z řad studentů.</p>';
 

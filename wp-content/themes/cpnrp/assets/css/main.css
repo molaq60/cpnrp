@@ -5,26 +5,27 @@
    Edit here → changes propagate everywhere automatically.
    ============================================================ */
 :root {
-  /* Brand colours */
-  --color-teal-dark:        #1A6080;
-  --color-teal:             #2B8BAD;
-  --color-teal-light:       #3AA0C8;
+  /* Brand colours — dle logomanuálu */
+  --color-teal-dark:        #275CAA;   /* Pantone 2728 C — hlavní tmavá modrá */
+  --color-teal:             #009DDC;   /* Pantone 299 C  — světlá modrá */
+  --color-teal-light:       #40C4F4;   /* Pantone 299 C světlejší varianta */
 
-  --color-accent-red:       #C0392B;
-  --color-accent-red-hover: #A93226;
+  --color-accent-red:       #EE3124;   /* Pantone 1788 C — červená */
+  --color-accent-red-hover: #CC2A1E;
   --color-accent-gold:      #F4BC2D;
   --color-accent-gold-hover:#E2A920;
   --color-brand-green:      #24692F;
   --color-brand-green-hover:#1A5023;
 
+  --color-heading:          #275CAA;   /* Pantone 2728 C */
   --color-text:             #1A2B33;
   --color-text-muted:       #475569;
 
-  --color-bg-soft:          #DFEEFD;   /* donor bar, megamenu info box */
-  --color-bg-light:         #F0F7FA;   /* cards, sidebar */
+  --color-bg-soft:          #E4EEFB;   /* světlý tint Pantone 2728 C */
+  --color-bg-light:         #F0F7FA;
   --color-border:           #E2E8F0;
   --color-white:            #FFFFFF;
-  --color-footer-dark:      #0F3D52;
+  --color-footer-dark:      #1A3268;   /* tmavá varianta Pantone 2728 C */
 
   /* Typography — Figtree: warm geometric sans-serif (Google Fonts)
      Change the font name here to switch the entire site. */
@@ -44,9 +45,9 @@
   --radius-xl:  24px;
 
   /* Shadows */
-  --shadow-soft: 0 2px 8px  rgba(26, 96, 128, 0.06);
-  --shadow-card: 0 4px 20px rgba(26, 96, 128, 0.08);
-  --shadow-mega: 0 20px 60px rgba(15, 61, 82, 0.15);
+  --shadow-soft: 0 2px 8px  rgba(39, 92, 170, 0.06);
+  --shadow-card: 0 4px 20px rgba(39, 92, 170, 0.08);
+  --shadow-mega: 0 20px 60px rgba(26, 50, 104, 0.15);
 
   /* Layout */
   --container-width: 1280px;
@@ -83,6 +84,7 @@ h4,
 h5,
 h6 {
   font-family: var(--font-display);
+  color: var(--color-heading);
   line-height: 1.15;
   letter-spacing: -0.01em;
   margin-top: 32px;
@@ -106,22 +108,22 @@ p:last-child {
 }
 
 a {
-  color: #2B8BAD;
+  color: var(--color-teal);
   text-decoration: none;
   transition: color 300ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 a:hover {
-  color: #1A6080;
+  color: var(--color-teal-dark);
 }
 
 ::selection {
-  background: rgba(58, 160, 200, 0.15);
-  color: #1A6080;
+  background: rgba(0, 157, 220, 0.15);
+  color: var(--color-teal-dark);
 }
 
 :focus-visible {
-  outline: 2px solid #3AA0C8;
+  outline: 2px solid var(--color-teal-light);
   outline-offset: 3px;
   border-radius: 8px;
 }
@@ -261,12 +263,12 @@ input[type="submit"]:focus-visible {
 }
 
 .section--dark {
-  background-color: #0F3D52;
+  background-color: var(--color-footer-dark);
   color: #FFFFFF;
 }
 
 .section--dark a {
-  color: #3AA0C8;
+  color: var(--color-teal-light);
 }
 
 .section--dark a:hover {
@@ -285,7 +287,7 @@ input[type="submit"]:focus-visible {
 .text-right { text-align: right; }
 .text-left { text-align: left; }
 .text-muted { color: #5A6F7A; }
-.text-light { color: #3AA0C8; }
+.text-light { color: var(--color-teal-light); }
 
 /* WordPress-specific */
 .wp-caption {

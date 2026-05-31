@@ -131,26 +131,6 @@ $kontakt_hours   = get_theme_mod( 'cpnrp_kontakt_hours',   'Po — Pá: 9:00 —
 		</div>
 	</section>
 
-	<!-- ── Contact form (Gravity Forms) ─────────────────────────── -->
-	<section id="kontakt-form" class="kontakt-form-section">
-		<div class="container">
-			<div class="kontakt-form-wrap">
-				<p class="kontakt-eyebrow"><?php esc_html_e( 'Napište nám', 'cpnrp' ); ?></p>
-				<h2 class="kontakt-form-title"><?php esc_html_e( 'Pošlete nám zprávu', 'cpnrp' ); ?></h2>
-				<p class="kontakt-form-lead"><?php esc_html_e( 'Odpovíme zpravidla do 2 pracovních dnů.', 'cpnrp' ); ?></p>
-
-				<div class="kontakt-form kontakt-gf-wrap">
-					<?php
-					$form_id = get_option( 'cpnrp_kontakt_form_id' );
-					if ( $form_id && class_exists( 'GFAPI' ) ) {
-						echo do_shortcode( '[gravityforms id="' . absint( $form_id ) . '" ajax="true"]' );
-					}
-					?>
-				</div>
-			</div>
-		</div>
-	</section>
-
 	<!-- ── Team directory ────────────────────────────────────────── -->
 	<section id="kontakt-tym" class="kontakt-team">
 		<div class="container">
@@ -211,10 +191,16 @@ $kontakt_hours   = get_theme_mod( 'cpnrp_kontakt_hours',   'Po — Pá: 9:00 —
 							] );
 							while ( $persons->have_posts() ) :
 								$persons->the_post();
-								$role  = get_post_meta( get_the_ID(), '_contact_role', true );
-								$phone = get_post_meta( get_the_ID(), '_contact_phone', true );
+								$pid   = get_the_ID();
+								$role  = get_post_meta( $pid, '_contact_role',  true );
+								$phone = get_post_meta( $pid, '_contact_phone', true );
+								$email = get_post_meta( $pid, '_contact_email', true );
+								$bio   = get_post_meta( $pid, '_contact_bio',   true );
+								$p2id  = (int) get_post_meta( $pid, '_contact_photo2', true );
+								$has_popup = $bio || $p2id;
 							?>
-							<div class="kontakt-person-card" data-name="<?php echo esc_attr( mb_strtolower( get_the_title() ) ); ?>">
+							<div class="kontakt-person-card<?php echo $has_popup ? ' has-popup' : ''; ?>"
+							     data-name="<?php echo esc_attr( mb_strtolower( get_the_title() ) ); ?>">
 								<?php if ( has_post_thumbnail() ) : ?>
 									<?php the_post_thumbnail( 'thumbnail', [ 'class' => 'kontakt-person-photo', 'alt' => esc_attr( get_the_title() ) ] ); ?>
 								<?php else : ?>
@@ -238,6 +224,24 @@ $kontakt_hours   = get_theme_mod( 'cpnrp_kontakt_hours',   'Po — Pá: 9:00 —
 								<?php else : ?>
 									<p class="kontakt-person-no-phone"><?php esc_html_e( 'Kontakt přes vedoucí služeb', 'cpnrp' ); ?></p>
 								<?php endif; ?>
+								<?php if ( $email ) : ?>
+									<a href="mailto:<?php echo esc_attr( $email ); ?>" class="kontakt-person-email">
+										<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
+											<rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 7L2 7"/>
+										</svg>
+										<?php echo esc_html( $email ); ?>
+									</a>
+								<?php endif; ?>
+								<?php if ( $has_popup ) : ?>
+									<button type="button" class="kontakt-person-bio-btn"
+									        data-person="<?php echo esc_attr( $pid ); ?>"
+									        aria-haspopup="dialog">
+										<?php esc_html_e( 'Více o mně', 'cpnrp' ); ?>
+										<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true" width="13" height="13">
+											<circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+										</svg>
+									</button>
+								<?php endif; ?>
 							</div>
 							<?php endwhile; wp_reset_postdata(); ?>
 						</div>
@@ -248,6 +252,77 @@ $kontakt_hours   = get_theme_mod( 'cpnrp_kontakt_hours',   'Po — Pá: 9:00 —
 
 		</div>
 	</section>
+
+	<!-- ── Person bio modals ────────────────────────────────────────── -->
+	<?php
+	$bio_persons = get_posts( [
+		'post_type'      => 'contact_person',
+		'posts_per_page' => -1,
+		'post_status'    => 'publish',
+		'meta_query'     => [ [
+			'relation' => 'OR',
+			[ 'key' => '_contact_bio',    'value' => '', 'compare' => '!=' ],
+			[ 'key' => '_contact_photo2', 'value' => '', 'compare' => '!=' ],
+		] ],
+	] );
+	foreach ( $bio_persons as $bp ) :
+		$bp_bio   = get_post_meta( $bp->ID, '_contact_bio',    true );
+		$bp_p2    = (int) get_post_meta( $bp->ID, '_contact_photo2', true );
+		$bp_role  = get_post_meta( $bp->ID, '_contact_role',  true );
+		$bp_phone = get_post_meta( $bp->ID, '_contact_phone', true );
+		$bp_email = get_post_meta( $bp->ID, '_contact_email', true );
+		$bp_p1_url = get_the_post_thumbnail_url( $bp->ID, 'medium' );
+		$bp_p2_url = $bp_p2 ? wp_get_attachment_image_url( $bp_p2, 'large' ) : '';
+	?>
+	<div class="person-modal-overlay" id="person-modal-<?php echo esc_attr( $bp->ID ); ?>"
+	     role="dialog" aria-modal="true"
+	     aria-labelledby="person-modal-title-<?php echo esc_attr( $bp->ID ); ?>">
+		<div class="person-modal">
+
+			<button type="button" class="person-modal-close"
+			        aria-label="<?php esc_attr_e( 'Zavřít', 'cpnrp' ); ?>">
+				<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
+					<line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+				</svg>
+			</button>
+
+			<!-- Portrait photo column -->
+			<?php $portrait = $bp_p2_url ?: $bp_p1_url; ?>
+			<div class="person-modal-photo-col<?php echo $portrait ? '' : ' person-modal-photo-col--placeholder'; ?>">
+				<?php if ( $portrait ) : ?>
+					<div class="person-modal-photo-bg"
+					     style="background-image:url('<?php echo esc_url( $portrait ); ?>')"></div>
+					<img src="<?php echo esc_url( $portrait ); ?>"
+					     alt="<?php echo esc_attr( $bp->post_title ); ?>">
+				<?php else : ?>
+					<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" aria-hidden="true">
+						<path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/>
+					</svg>
+				<?php endif; ?>
+			</div>
+
+			<!-- Right: name + role + bio -->
+			<div class="person-modal-content">
+				<div class="person-modal-identity">
+					<h2 class="person-modal-name"
+					    id="person-modal-title-<?php echo esc_attr( $bp->ID ); ?>">
+						<?php echo esc_html( $bp->post_title ); ?>
+					</h2>
+					<?php if ( $bp_role ) : ?>
+						<p class="person-modal-role"><?php echo esc_html( $bp_role ); ?></p>
+					<?php endif; ?>
+				</div>
+
+				<?php if ( $bp_bio ) : ?>
+				<div class="person-modal-body">
+					<?php echo wp_kses_post( $bp_bio ); ?>
+				</div>
+				<?php endif; ?>
+			</div>
+
+		</div>
+	</div>
+	<?php endforeach; ?>
 
 	<!-- ── Offices ───────────────────────────────────────────────── -->
 	<section id="kontakt-pobocky" class="kontakt-offices">
@@ -267,13 +342,7 @@ $kontakt_hours   = get_theme_mod( 'cpnrp_kontakt_hours',   'Po — Pá: 9:00 —
 
 					<div class="kontakt-office-header">
 						<h3 class="kontakt-office-name"><?php echo esc_html( $office['name'] ); ?></h3>
-						<?php if ( $is_open !== null ) : ?>
-							<span class="kontakt-office-badge kontakt-office-badge--<?php echo $is_open ? 'open' : 'closed'; ?>">
-								<span class="kontakt-office-badge-dot"></span>
-								<?php echo $is_open ? esc_html__( 'Otevřeno', 'cpnrp' ) : esc_html__( 'Zavřeno', 'cpnrp' ); ?>
-							</span>
-						<?php endif; ?>
-					</div>
+						</div>
 
 					<div class="kontakt-office-details">
 						<?php if ( $office['addr'] ) : ?>
@@ -323,7 +392,176 @@ $kontakt_hours   = get_theme_mod( 'cpnrp_kontakt_hours',   'Po — Pá: 9:00 —
 		</div>
 	</section>
 
+	<!-- ── Contact form (Gravity Forms) ─────────────────────────── -->
+	<section id="kontakt-form" class="kontakt-form-section">
+		<div class="container">
+			<div class="kontakt-form-wrap">
+				<p class="kontakt-eyebrow"><?php esc_html_e( 'Napište nám', 'cpnrp' ); ?></p>
+				<h2 class="kontakt-form-title"><?php esc_html_e( 'Pošlete nám zprávu', 'cpnrp' ); ?></h2>
+				<p class="kontakt-form-lead"><?php esc_html_e( 'Odpovíme zpravidla do 2 pracovních dnů.', 'cpnrp' ); ?></p>
+
+				<div class="kontakt-form kontakt-gf-wrap">
+					<?php
+					$form_id = get_option( 'cpnrp_kontakt_form_id' );
+					if ( $form_id && class_exists( 'GFAPI' ) ) {
+						echo do_shortcode( '[gravityforms id="' . absint( $form_id ) . '" ajax="true"]' );
+					}
+					?>
+				</div>
+			</div>
+		</div>
+	</section>
+
 </main>
+
+<style>
+/* ── Více o mně button ──────────────────────────────────────────── */
+.kontakt-person-bio-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 14px;
+  padding: 7px 14px;
+  background: none;
+  border: 1.5px solid var(--color-teal-dark);
+  color: var(--color-teal-dark);
+  border-radius: var(--radius-btn);
+  font-size: .8rem;
+  font-weight: 600;
+  font-family: var(--font-sans);
+  cursor: pointer;
+  transition: background 160ms ease, color 160ms ease;
+  width: 100%;
+  justify-content: center;
+}
+.kontakt-person-bio-btn:hover {
+  background: var(--color-teal-dark);
+  color: #fff;
+}
+.kontakt-person-card.has-popup { padding-bottom: 16px; }
+
+/* ── Modal overlay ──────────────────────────────────────────────── */
+.person-modal-overlay {
+  position: fixed; inset: 0; z-index: 9999;
+  background: rgba(10,25,40,.28);
+  backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);
+  display: flex; align-items: center; justify-content: center; padding: 16px;
+  opacity: 0; pointer-events: none;
+  transition: opacity 220ms ease;
+}
+.person-modal-overlay.is-open { opacity: 1; pointer-events: auto; }
+
+/* ── Modal card ─────────────────────────────────────────────────── */
+.person-modal {
+  position: relative;
+  background: var(--color-white);
+  border-radius: 20px;
+  max-width: 780px;
+  width: 100%;
+  max-height: 92svh;
+  overflow: hidden;
+  box-shadow: 0 24px 80px rgba(10,25,40,.22), 0 0 0 1px rgba(10,25,40,.06);
+  transform: scale(.93) translateY(24px);
+  transition: transform 300ms cubic-bezier(.22,1,.36,1);
+  display: flex;
+}
+.person-modal-overlay.is-open .person-modal { transform: scale(1) translateY(0); }
+
+/* ── Close button ───────────────────────────────────────────────── */
+.person-modal-close {
+  position: absolute; top: 14px; right: 14px; z-index: 10;
+  width: 32px; height: 32px; border: none; border-radius: 50%;
+  background: rgba(255,255,255,.88); color: var(--color-text-muted);
+  cursor: pointer; display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 2px 8px rgba(10,25,40,.15);
+  transition: background 150ms ease, color 150ms ease; font-size: 0;
+}
+.person-modal-close:hover { background: #fff; color: var(--color-teal-dark); }
+
+/* ── Portrait photo column ──────────────────────────────────────── */
+.person-modal-photo-col {
+  width: 320px;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+  background: #111;
+  border-radius: 20px 0 0 20px;
+}
+/* Blurred background — fills the column regardless of photo ratio */
+.person-modal-photo-bg {
+  position: absolute;
+  inset: -12%;
+  background-size: cover;
+  background-position: center;
+  filter: blur(20px) brightness(.6) saturate(.7);
+}
+/* Sharp photo on top, fully visible */
+.person-modal-photo-col img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+.person-modal-photo-col--placeholder {
+  display: flex; align-items: center; justify-content: center;
+  background: var(--color-bg-light); color: var(--color-border);
+}
+
+/* ── Right content column ───────────────────────────────────────── */
+.person-modal-content {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+.person-modal-identity {
+  padding: 36px 24px 18px;
+  padding-right: 52px; /* space for close btn */
+  border-bottom: 1px solid var(--color-border);
+  flex-shrink: 0;
+}
+.person-modal-name {
+  font-size: 1.2rem; font-weight: 800;
+  color: var(--color-teal-dark);
+  margin: 0 0 5px; line-height: 1.2;
+}
+.person-modal-role {
+  font-size: .85rem; color: var(--color-text-muted);
+  margin: 0; line-height: 1.4;
+}
+
+/* ── Bio body ───────────────────────────────────────────────────── */
+.person-modal-body {
+  padding: 20px 24px 28px;
+  flex: 1;
+  font-size: .9375rem; line-height: 1.72; color: var(--color-text);
+}
+.person-modal-body h2, .person-modal-body h3 { color: var(--color-teal-dark); margin: 16px 0 6px; }
+.person-modal-body p  { margin: 0 0 12px; }
+.person-modal-body ul,
+.person-modal-body ol { padding-left: 20px; margin-bottom: 12px; }
+.person-modal-body a  { color: var(--color-teal); }
+.person-modal-body a:hover { color: var(--color-teal-dark); }
+
+/* ── Tablet — zúžit foto sloupec ────────────────────────────────── */
+@media (max-width: 700px) and (min-width: 521px) {
+  .person-modal-photo-col { width: 220px; }
+  .person-modal { max-width: calc(100vw - 32px); }
+}
+
+/* ── Mobile — vertikální stack ──────────────────────────────────── */
+@media (max-width: 520px) {
+  .person-modal { flex-direction: column; max-height: 95svh; max-width: calc(100vw - 32px); }
+  .person-modal-photo-col { width: 100%; height: 200px; border-radius: 20px 20px 0 0; }
+  .person-modal-photo-bg { inset: -8%; }
+  .person-modal-content { overflow-y: auto; }
+  .person-modal-identity { padding-top: 20px; padding-right: 52px; }
+}
+</style>
 
 <script>
 (function () {
@@ -355,6 +593,46 @@ $kontakt_hours   = get_theme_mod( 'cpnrp_kontakt_hours',   'Po — Pá: 9:00 —
 		clear.addEventListener('click', function() { input.value = ''; input.focus(); filterTeam(''); });
 	}
 
+	// ── Person bio popup ─────────────────────────────────────────
+	var activeModal = null;
+
+	function openPersonModal(id) {
+		var overlay = document.getElementById('person-modal-' + id);
+		if (!overlay) return;
+		if (activeModal) closePersonModal(activeModal, false);
+		activeModal = overlay;
+		overlay.classList.add('is-open');
+		document.body.style.overflow = 'hidden';
+		var closeBtn = overlay.querySelector('.person-modal-close');
+		if (closeBtn) setTimeout(function(){ closeBtn.focus(); }, 60);
+	}
+
+	function closePersonModal(overlay, restoreFocus) {
+		if (!overlay) return;
+		overlay.classList.remove('is-open');
+		document.body.style.overflow = '';
+		activeModal = null;
+	}
+
+	// Open on card button click
+	document.querySelectorAll('.kontakt-person-bio-btn').forEach(function(btn) {
+		btn.addEventListener('click', function() { openPersonModal(btn.dataset.person); });
+	});
+
+	// Close on overlay backdrop click
+	document.querySelectorAll('.person-modal-overlay').forEach(function(overlay) {
+		overlay.addEventListener('click', function(e) {
+			if (e.target === overlay) closePersonModal(overlay, true);
+		});
+		overlay.querySelector('.person-modal-close').addEventListener('click', function() {
+			closePersonModal(overlay, true);
+		});
+	});
+
+	// Close on Escape
+	document.addEventListener('keydown', function(e) {
+		if (e.key === 'Escape' && activeModal) closePersonModal(activeModal, true);
+	});
 
 })();
 </script>

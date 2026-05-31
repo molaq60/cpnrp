@@ -780,7 +780,7 @@ a.megamenu-title:hover { color: var(--color-teal); }
 .home-news {
   position: relative;
   padding: 80px 0;
-  background-color: #DFEEFD;
+  background-color: var(--color-bg-soft);
   background-image:
     url('../images/logo-pattern.png'), url('../images/logo-pattern.png'),
     url('../images/logo-pattern.png'), url('../images/logo-pattern.png'),
@@ -2875,6 +2875,8 @@ body.offcanvas-open .offcanvas {
 .events-cal-day {
   background: var(--color-white);
   min-height: 96px;
+  min-width: 0;
+  overflow: hidden;
   padding: 8px;
   display: flex;
   flex-direction: column;
@@ -3289,7 +3291,7 @@ body.offcanvas-open .offcanvas {
 .kontakt-form-section {
   position: relative;
   padding: 80px 0;
-  background-color: #DFEEFD;
+  background-color: var(--color-bg-soft);
   background-image:
     url('../images/logo-pattern.png'), url('../images/logo-pattern.png'),
     url('../images/logo-pattern.png'), url('../images/logo-pattern.png'),
@@ -3605,6 +3607,26 @@ body.offcanvas-open .offcanvas {
 
 .kontakt-person-phone:hover { color: var(--color-teal); }
 
+.kontakt-person-email {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--color-teal-dark);
+  text-decoration: none;
+  margin-top: 4px;
+  transition: color 200ms ease;
+}
+
+.kontakt-person-email svg {
+  width: 12px;
+  height: 12px;
+  flex-shrink: 0;
+}
+
+.kontakt-person-email:hover { color: var(--color-teal); }
+
 .kontakt-person-no-phone {
   font-size: 0.75rem;
   color: rgba(71,85,105,0.55);
@@ -3845,6 +3867,11 @@ body.offcanvas-open .offcanvas {
 /* ──────────────────────────────────────────────────────────────
    Gravity Forms — kontakt stránka
    ────────────────────────────────────────────────────────────── */
+
+/* "(Required)" → "*" */
+.gfield_required_text { font-size: 0; }
+.gfield_required_text::after { content: ' *'; font-size: 1rem; color: var(--color-accent-red); font-weight: 700; }
+.gfield_required_asterisk { color: var(--color-accent-red); font-weight: 700; }
 
 .kontakt-gf-wrap .gform_wrapper { margin: 0; max-width: none; }
 .kontakt-gf-wrap .gform_wrapper form { position: relative; }

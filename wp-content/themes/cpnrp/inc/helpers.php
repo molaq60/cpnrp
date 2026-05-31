@@ -3,6 +3,18 @@
  * Helper functions.
  */
 
+/**
+ * Converts a root-relative path (e.g. "/pro-rodiny/adopce") to a full URL
+ * using home_url(), so subdirectory installs (e.g. /cpnrp) work correctly.
+ * Full URLs (http/https) and empty values are passed through unchanged.
+ */
+function cpnrp_url( string $url ): string {
+	if ( $url !== '' && $url[0] === '/' ) {
+		return home_url( $url );
+	}
+	return $url;
+}
+
 // ── Excerpt ──────────────────────────────────────────────────────────────────
 add_filter( 'excerpt_length', fn() => 25 );
 add_filter( 'excerpt_more',   fn() => '...' );
@@ -89,7 +101,7 @@ function cpnrp_render_megamenu_panels() {
 				<?php
 				// Optional info box — editable via Customizer
 				$defaults = [
-					'pro-rodiny' => 'Teprve se rozhodujete? <a href="/kontakt">Napište nám</a> — rádi odpovíme na všechny otázky bez závazku.',
+					'pro-rodiny' => 'Teprve se rozhodujete? <a href="' . esc_url( home_url( '/kontakt' ) ) . '">Napište nám</a> — rádi odpovíme na všechny otázky bez závazku.',
 				];
 				$info = get_theme_mod( 'cpnrp_megamenu_' . $slug . '_info', $defaults[ $slug ] ?? '' );
 				if ( $info ) :

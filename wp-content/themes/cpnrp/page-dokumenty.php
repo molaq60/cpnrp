@@ -68,13 +68,9 @@ function cpnrp_doc_list( $items, $dl_svg ) {
 	<section class="subpage-section">
 		<div class="container">
 
-			<p class="hub-eyebrow">Formuláře</p>
-			<h2 class="hub-section-title" style="margin-bottom:1.5rem">Formuláře a žádosti</h2>
+			<p class="hub-eyebrow">Dokumenty o organizaci</p>
+			<h2 class="hub-section-title" style="margin-bottom:1.5rem">Dokumenty o organizaci</h2>
 			<?php cpnrp_doc_list( $formulare, $dl_svg ); ?>
-
-			<p class="hub-eyebrow" style="margin-top:3rem">Informační materiály</p>
-			<h2 class="hub-section-title" style="margin-bottom:1.5rem">Příručky a brožury</h2>
-			<?php cpnrp_doc_list( $prirucky, $dl_svg ); ?>
 
 			<!-- CTA row -->
 			<div class="subpage-cta-row">

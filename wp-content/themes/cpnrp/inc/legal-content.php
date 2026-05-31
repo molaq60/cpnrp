@@ -111,7 +111,7 @@ Pplk. Sochora 27, 170 00 Praha 7 | <a href="https://www.uoou.cz" target="_blank"
 
 <h2>Kontakt</h2>
 <p>Dotazy k cookies nebo ochraně osobních údajů zasílejte na <a href="mailto:gdpr@cpnrp.cz">gdpr@cpnrp.cz</a>.<br>
-Podrobnější informace o zpracování osobních údajů najdete v naší <a href="/ochrana-udaju">Ochraně osobních údajů</a>.</p>
+Podrobnější informace o zpracování osobních údajů najdete v naší <a href="' . esc_url( home_url( '/ochrana-udaju' ) ) . '">Ochraně osobních údajů</a>.</p>
 ';
 
 	// ── Insert into pages ─────────────────────────────────────────
