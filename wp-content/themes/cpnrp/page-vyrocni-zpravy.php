@@ -49,8 +49,14 @@ $dl_svg = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-wid
 					$year  = esc_html( $item['year'] ?? '' );
 					$url   = esc_url( $item['url'] ?? '' );
 					$label = esc_html( $item['label'] ?? '' ) ?: 'Výroční zpráva CPNRP ' . $year;
+					$thumb = esc_url( $item['thumb'] ?? '' );
 				?>
 				<li class="download-item">
+					<?php if ( $thumb ) : ?>
+					<div class="download-thumb">
+						<img src="<?php echo $thumb; ?>" alt="<?php echo $label; ?>" loading="lazy">
+					</div>
+					<?php endif; ?>
 					<div class="download-info">
 						<span class="download-badge"><?php echo $year; ?></span>
 						<div>

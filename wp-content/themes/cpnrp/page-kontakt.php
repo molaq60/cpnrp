@@ -426,7 +426,7 @@ $kontakt_hours   = get_theme_mod( 'cpnrp_kontakt_hours',   'Po — Pá: 9:00 —
   border: 1.5px solid var(--color-teal-dark);
   color: var(--color-teal-dark);
   border-radius: var(--radius-btn);
-  font-size: .8rem;
+  font-size: .9rem;
   font-weight: 600;
   font-family: var(--font-sans);
   cursor: pointer;

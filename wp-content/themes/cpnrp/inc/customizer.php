@@ -266,17 +266,11 @@ function cpnrp_customize_register( $wp_customize ) {
 			'type'    => 'textarea',
 		],
 		// Tier 1 (teal)
-		'cpnrp_donate_tier1_amount' => [ 'label' => 'Tier 1 — částka',  'default' => '200 Kč',                          'type' => 'text' ],
-		'cpnrp_donate_tier1_label'  => [ 'label' => 'Tier 1 — popisek', 'default' => '1 hodina doučování',              'type' => 'text' ],
-		'cpnrp_donate_tier1_url'    => [ 'label' => 'Tier 1 — URL',     'default' => '/podporte-nas?amount=200',         'type' => 'url'  ],
+		'cpnrp_donate_tier1_amount' => [ 'label' => 'Tier 1 — částka', 'default' => '200 Kč', 'type' => 'text' ],
 		// Tier 2 (red — zvýrazněný)
-		'cpnrp_donate_tier2_amount' => [ 'label' => 'Tier 2 — částka',  'default' => '400 Kč',                          'type' => 'text' ],
-		'cpnrp_donate_tier2_label'  => [ 'label' => 'Tier 2 — popisek', 'default' => '2 hodiny doučování',              'type' => 'text' ],
-		'cpnrp_donate_tier2_url'    => [ 'label' => 'Tier 2 — URL',     'default' => '/podporte-nas?amount=400',         'type' => 'url'  ],
+		'cpnrp_donate_tier2_amount' => [ 'label' => 'Tier 2 — částka', 'default' => '400 Kč', 'type' => 'text' ],
 		// Tier 3 (gold)
-		'cpnrp_donate_tier3_amount' => [ 'label' => 'Tier 3 — částka',  'default' => '800 Kč',                          'type' => 'text' ],
-		'cpnrp_donate_tier3_label'  => [ 'label' => 'Tier 3 — popisek', 'default' => '1 hodina terapeutického poradenství', 'type' => 'text' ],
-		'cpnrp_donate_tier3_url'    => [ 'label' => 'Tier 3 — URL',     'default' => '/podporte-nas?amount=800',         'type' => 'url'  ],
+		'cpnrp_donate_tier3_amount' => [ 'label' => 'Tier 3 — částka', 'default' => '800 Kč', 'type' => 'text' ],
 		// CTA karta (pravá strana)
 		'cpnrp_donate_card_heading' => [ 'label' => 'Karta — nadpis',              'default' => 'Darujte s láskou',                                    'type' => 'text'     ],
 		'cpnrp_donate_card_desc'    => [ 'label' => 'Karta — popis',               'default' => 'Vyberte si způsob, jakým chcete podpořit náhradní rodiny.', 'type' => 'textarea' ],

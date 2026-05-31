@@ -60,7 +60,7 @@
    â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 
 .donor-bar {
-  background: var(--color-bg-soft);
+  background: var(--color-teal-dark);
   /* grid trick: animates height cleanly without border artefacts */
   display: grid;
   grid-template-rows: 1fr;
@@ -69,25 +69,31 @@
 }
 
 .donor-bar-inner {
-  min-height: 0;              /* required for 0fr collapse */
+  min-height: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 16px;
   padding: 8px 0;
-  border-bottom: 1px solid var(--color-border);  /* border collapses with content */
+  border-bottom: 1px solid rgba(255,255,255,.1);
 }
 
 .donor-bar-text {
   font-size: 0.875rem;
   font-weight: 500;
-  color: var(--color-text-muted);
+  color: var(--color-white);
   margin: 0;
   display: none; /* shown on sm+ */
 }
 
 @media (min-width: 640px) {
   .donor-bar-text { display: block; }
+}
+
+.donor-bar .btn--outline:hover {
+  background: #f0f4f6;
+  border-color: rgba(26,96,128,.3);
+  color: var(--color-teal-dark) !important;
 }
 
 .donor-bar-actions {
@@ -239,7 +245,7 @@
   padding: 10px 0;
   color: var(--color-text) !important;
   font-weight: 600 !important;
-  font-size: 0.9375rem;
+  font-size: 1.0625rem;
   font-family: var(--font-sans);
   text-decoration: none;
   white-space: nowrap;
@@ -392,8 +398,9 @@ a.megamenu-title:hover { color: var(--color-teal); }
   align-items: center;
   gap: 8px;
   padding: 7px 10px;
-  color: var(--color-text-muted);
+  color: var(--color-text);
   font-size: 0.9375rem;
+  font-weight: 500;
   text-decoration: none;
   border-radius: var(--radius-sm);
   transition: all 300ms var(--ease-expo);
@@ -1303,17 +1310,14 @@ a.megamenu-title:hover { color: var(--color-teal); }
 }
 
 .donate-tier {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
   border-radius: var(--radius-lg);
-  padding: 28px 16px;
+  padding: 22px 14px 18px;
   text-align: center;
-  text-decoration: none;
-  transition: transform 300ms var(--ease-expo), box-shadow 300ms var(--ease-expo), background 300ms var(--ease-expo);
-}
-
-.donate-tier:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-card);
+  transition: background 300ms var(--ease-expo);
 }
 
 .donate-tier--teal {
@@ -1331,7 +1335,7 @@ a.megamenu-title:hover { color: var(--color-teal); }
 .donate-tier--red:hover {
   background: rgba(192, 57, 43, 0.12);
 }
-.donate-tier--red .donate-tier-amount { color: var(--color-accent-red); }
+.donate-tier--red .donate-tier-amount { color: #c0392b; }
 .donate-tier--red .donate-tier-cta    { color: var(--color-accent-red); }
 
 .donate-tier--gold {
@@ -1340,15 +1344,22 @@ a.megamenu-title:hover { color: var(--color-teal); }
 .donate-tier--gold:hover {
   background: rgba(244, 188, 45, 0.16);
 }
-.donate-tier--gold .donate-tier-amount { color: var(--color-accent-gold); }
+.donate-tier--gold .donate-tier-amount { color: #8a6200; }
 .donate-tier--gold .donate-tier-cta    { color: var(--color-accent-gold); }
 
 .donate-tier-amount {
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-size: 1.625rem;
+  font-weight: 800;
   font-family: var(--font-display);
   margin: 0;
   line-height: 1;
+}
+
+.donate-tier-divider {
+  width: 100%;
+  border: none;
+  border-top: 1px solid rgba(0, 0, 0, .08);
+  margin: 0;
 }
 
 .donate-tier-label {
@@ -1370,6 +1381,125 @@ a.megamenu-title:hover { color: var(--color-teal); }
 }
 
 .donate-tier:hover .donate-tier-cta { opacity: 1; }
+
+/* QR kódy pod tiery */
+.donate-qr-row {
+  display: flex;
+  gap: 16px;
+  margin-top: 20px;
+}
+.donate-qr-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.donate-qr-btn {
+  position: relative;
+  display: block;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: zoom-in;
+  border-radius: 10px;
+  transition: transform 200ms var(--ease-expo);
+}
+.donate-qr-btn:hover { transform: scale(1.04); }
+.donate-qr-btn:focus-visible { outline: 2px solid var(--color-teal-dark); outline-offset: 3px; }
+.donate-qr-btn::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 10px;
+  background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'/%3E%3Cline x1='11' y1='8' x2='11' y2='14'/%3E%3Cline x1='8' y1='11' x2='14' y2='11'/%3E%3C/svg%3E") center / 28px no-repeat,
+    rgba(0, 0, 0, .38);
+  opacity: 0;
+  transition: opacity 180ms ease;
+  pointer-events: none;
+}
+.donate-qr-btn:hover::after { opacity: 1; }
+
+.donate-qr-img {
+  display: block;
+  width: 110px;
+  height: 110px;
+  border-radius: 10px;
+  background: #fff;
+  padding: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.08);
+}
+
+/* QR Lightbox */
+.qr-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 9000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 250ms ease, visibility 250ms ease;
+}
+.qr-lightbox.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.qr-lightbox-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, .65);
+  backdrop-filter: blur(4px);
+}
+
+.qr-lightbox-inner {
+  position: relative;
+  background: #fff;
+  border-radius: var(--radius-xl);
+  padding: 28px;
+  box-shadow: 0 24px 64px rgba(0,0,0,.3);
+  transform: scale(0.88);
+  transition: transform 250ms var(--ease-expo);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+.qr-lightbox.is-open .qr-lightbox-inner { transform: scale(1); }
+
+.qr-lightbox-img {
+  width: 320px;
+  height: 320px;
+  border-radius: 8px;
+  display: block;
+}
+
+.qr-lightbox-close {
+  position: absolute;
+  top: -48px;
+  right: 0;
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(4px);
+  border: none;
+  font-size: 1.75rem;
+  line-height: 1;
+  cursor: pointer;
+  color: #fff;
+  padding: 4px 12px 6px;
+  border-radius: 8px;
+  transition: background 150ms ease;
+}
+.qr-lightbox-close:hover { background: rgba(255, 255, 255, 0.32); }
+.donate-qr-label {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--color-text-muted);
+}
 
 /* Right side â€” CTA card */
 .donate-card {
@@ -3573,7 +3703,7 @@ body.offcanvas-open .offcanvas {
 }
 
 .kontakt-person-name {
-  font-size: 0.9375rem;
+  font-size: 1.0625rem;
   font-weight: 700;
   color: var(--color-text);
   margin: 0 0 4px;
@@ -3582,6 +3712,7 @@ body.offcanvas-open .offcanvas {
 
 .kontakt-person-role {
   font-size: 0.8125rem;
+  font-weight: 700;
   color: var(--color-text-muted);
   line-height: 1.4;
   margin: 0 0 12px;
@@ -3591,7 +3722,7 @@ body.offcanvas-open .offcanvas {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  font-size: 0.8125rem;
+  font-size: 0.9375rem;
   font-weight: 500;
   color: var(--color-teal-dark);
   text-decoration: none;
@@ -3600,8 +3731,8 @@ body.offcanvas-open .offcanvas {
 }
 
 .kontakt-person-phone svg {
-  width: 12px;
-  height: 12px;
+  width: 14px;
+  height: 14px;
   flex-shrink: 0;
 }
 
@@ -3611,7 +3742,7 @@ body.offcanvas-open .offcanvas {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  font-size: 0.8125rem;
+  font-size: 0.9375rem;
   font-weight: 500;
   color: var(--color-teal-dark);
   text-decoration: none;
@@ -3620,8 +3751,8 @@ body.offcanvas-open .offcanvas {
 }
 
 .kontakt-person-email svg {
-  width: 12px;
-  height: 12px;
+  width: 14px;
+  height: 14px;
   flex-shrink: 0;
 }
 
@@ -6467,7 +6598,7 @@ body.offcanvas-open .offcanvas {
 }
 .slovo-reditelky-text p:first-child::first-letter {
   font-weight: 900;
-  color: var(--color-teal);
+  color: var(--color-text);
   margin-right: .12em;
   /* raised cap: letter rises above text so text aligns at its bottom */
   -webkit-initial-letter: 2 1;
@@ -6505,6 +6636,21 @@ body.offcanvas-open .offcanvas {
   gap: 1.25rem;
   padding: 1.125rem 0;
   border-bottom: 1px solid var(--color-border);
+}
+.download-thumb {
+  flex-shrink: 0;
+  width: 52px;
+  height: 68px;
+  border-radius: 4px;
+  overflow: hidden;
+  background: var(--color-bg-light);
+  box-shadow: 0 2px 6px rgba(0,0,0,.12);
+}
+.download-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 .download-info {
   display: flex;
