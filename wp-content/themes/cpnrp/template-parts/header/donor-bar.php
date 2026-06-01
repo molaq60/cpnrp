@@ -18,15 +18,11 @@ $btn2_url = get_theme_mod( 'cpnrp_donor_btn2_url',  home_url( '/podporte-nas' ) 
 
 			<div class="donor-bar-actions">
 				<a href="<?php echo esc_url( $btn1_url ); ?>" class="btn btn--gold">
-					<svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-						<polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
-					</svg>
+					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/medaile.png' ); ?>" alt="" aria-hidden="true" class="btn-icon" width="18" height="18">
 					<?php echo esc_html( $btn1_txt ); ?>
 				</a>
-				<a href="<?php echo esc_url( $btn2_url ); ?>" class="btn btn--outline">
-					<svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-						<path d="M12 2L15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2z"/>
-					</svg>
+				<a href="<?php echo esc_url( $btn2_url ); ?>" class="btn btn--outline" target="_blank" rel="noopener noreferrer">
+					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/maska.png' ); ?>" alt="" aria-hidden="true" class="btn-icon" width="18" height="18">
 					<?php echo esc_html( $btn2_txt ); ?>
 				</a>
 			</div>

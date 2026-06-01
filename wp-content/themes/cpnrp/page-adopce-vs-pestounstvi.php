@@ -106,7 +106,7 @@ $questions = get_post_meta( $page_id, '_avp_questions', true ) ?: [
 				<div class="avp-quiz-wrap">
 					<div class="avp-quiz-header">
 						<p class="avp-quiz-label">5 otázek · 1 minuta</p>
-						<h2 class="avp-quiz-title">Která forma vám sedí?</h2>
+						<h2 class="avp-quiz-title">Která forma náhradní rodinné péče je vám bližší?</h2>
 						<p class="avp-quiz-sub">U každé otázky vyberte odpověď, která je vám blíž. Doporučení uvidíte hned po páté otázce.</p>
 					</div>
 
