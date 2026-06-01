@@ -186,7 +186,7 @@ $questions = get_post_meta( $page_id, '_avp_questions', true ) ?: [
 				</a>
 				<?php endif; ?>
 				<a href="<?php echo esc_url( home_url( '/kontakt' ) ); ?>" class="btn-subpage-outline">
-					<?php esc_html_e( 'Mám zájem o konzultaci', 'cpnrp' ); ?>
+					<?php esc_html_e( 'Kontaktujte nás', 'cpnrp' ); ?>
 				</a>
 			</div>
 		</div>
