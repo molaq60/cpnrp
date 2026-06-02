@@ -15,7 +15,7 @@
 						<img src="<?php echo esc_url( $logo_url ); ?>" alt="<?php bloginfo( 'name' ); ?>" class="footer-logo">
 					</div>
 					<p class="footer-about-text">
-						Centrum pro náhradní rodinnou péči pomáhá náhradním rodinám již více než 15 let. Jsme tu pro pěstouny, adoptivní rodiče i zájemce.
+						Centrum pro náhradní rodinnou péči pomáhá náhradním rodinám již více než 20 let. Jsme tu pro pěstouny, adoptivní rodiče i zájemce.
 					</p>
 					<div class="footer-social">
 						<a href="https://www.facebook.com/centrum.nrp" class="footer-social-link" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
@@ -85,9 +85,13 @@
 						</li>
 					</ul>
 					<div class="footer-cta">
-						<a href="<?php echo esc_url( home_url( '/podporte-nas' ) ); ?>" class="btn btn--red">
+						<?php
+						$cta_text = get_theme_mod( 'cpnrp_cta_text', __( 'Podpořte nás', 'cpnrp' ) );
+						$cta_url  = get_theme_mod( 'cpnrp_cta_url',  home_url( '/podporte-nas' ) );
+						?>
+						<a href="<?php echo esc_url( $cta_url ); ?>" class="btn btn--red" target="_blank" rel="noopener noreferrer">
 							<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/heart-benefice.png' ); ?>" alt="" aria-hidden="true">
-							Podpořte nás
+							<?php echo esc_html( $cta_text ); ?>
 						</a>
 					</div>
 				</div>

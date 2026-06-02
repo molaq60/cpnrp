@@ -446,10 +446,10 @@ $kontakt_hours   = get_theme_mod( 'cpnrp_kontakt_hours',   'Po — Pá: 9:00 —
   background: rgba(10,25,40,.28);
   backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);
   display: flex; align-items: center; justify-content: center; padding: 16px;
-  opacity: 0; pointer-events: none;
-  transition: opacity 220ms ease;
+  opacity: 0; visibility: hidden; pointer-events: none;
+  transition: opacity 220ms ease, visibility 220ms ease;
 }
-.person-modal-overlay.is-open { opacity: 1; pointer-events: auto; }
+.person-modal-overlay.is-open { opacity: 1; visibility: visible; pointer-events: auto; }
 
 /* ── Modal card ─────────────────────────────────────────────────── */
 .person-modal {

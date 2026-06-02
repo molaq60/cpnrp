@@ -127,6 +127,7 @@ get_header();
 .ev-arrow { flex-shrink: 0; color: var(--color-text-muted); transition: transform 220ms var(--ease-expo), color 160ms ease; }
 .ev-card:hover .ev-arrow { transform: translateX(5px); color: var(--color-teal-dark); }
 .ev-list { display: flex; flex-direction: column; gap: 12px; }
+.ev-card[hidden] { display: none; }
 .ev-empty { text-align: center; padding: 72px 24px; color: var(--color-text-muted); }
 .ev-empty svg { color: var(--color-border); margin-bottom: 16px; }
 .ev-empty h2  { font-size: 1.2rem; font-weight: 700; color: var(--color-text); margin: 0 0 6px; }
@@ -363,6 +364,8 @@ button.galerie-year-pill { border: none; cursor: pointer; font-family: var(--fon
 			<h2><?php esc_html_e( 'Žádné akce', 'cpnrp' ); ?></h2>
 			<p><?php esc_html_e( 'V tomto měsíci nemáme žádné naplánované akce.', 'cpnrp' ); ?></p>
 		</div>
+
+		<nav id="ev-pagination" class="pribehy-pagination" style="margin-top:32px" aria-label="Stránkování akcí"></nav>
 		<?php else : ?>
 		<div class="ev-empty">
 			<svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
@@ -472,24 +475,86 @@ viewBtns.forEach(function(b){
 	b.addEventListener('click', function(){ applyView(b.dataset.view); });
 });
 
-/* ── Month filter (list view) ───────────────────────────────────── */
-var monthBtns = document.querySelectorAll('.ev-month-bar .galerie-year-pill');
-var evCards   = document.querySelectorAll('#ev-list .ev-card');
-var listEmpty = document.getElementById('ev-list-empty');
+/* ── Month filter + pagination (list view) ──────────────────────── */
+var monthBtns   = document.querySelectorAll('.ev-month-bar .galerie-year-pill');
+var evCards     = Array.from(document.querySelectorAll('#ev-list .ev-card'));
+var listEmpty   = document.getElementById('ev-list-empty');
+var evPaginator = document.getElementById('ev-pagination');
+var PER_PAGE    = 10;
+var curMonth    = 'all';
+var curPage     = 1;
+
+function getFiltered() {
+	return evCards.filter(function(c) {
+		return curMonth === 'all' || c.dataset.month === curMonth;
+	});
+}
+
+function renderList() {
+	var filtered   = getFiltered();
+	var totalPages = Math.max(1, Math.ceil(filtered.length / PER_PAGE));
+	if (curPage > totalPages) curPage = totalPages;
+	var start = (curPage - 1) * PER_PAGE;
+	var end   = start + PER_PAGE;
+
+	evCards.forEach(function(c) { c.hidden = true; });
+	filtered.slice(start, end).forEach(function(c) { c.hidden = false; });
+	if (listEmpty) listEmpty.hidden = filtered.length > 0;
+
+	renderPaginator(totalPages);
+}
+
+function renderPaginator(totalPages) {
+	if (!evPaginator) return;
+	if (totalPages <= 1) { evPaginator.innerHTML = ''; return; }
+
+	var html = '<div class="nav-links">';
+
+	if (curPage > 1) {
+		html += '<button type="button" class="page-numbers" data-page="' + (curPage - 1) + '">&larr; Předchozí</button>';
+	}
+
+	var from = Math.max(1, curPage - 2);
+	var to   = Math.min(totalPages, curPage + 2);
+	if (from > 1) html += '<span class="page-numbers dots">&hellip;</span>';
+	for (var i = from; i <= to; i++) {
+		if (i === curPage) {
+			html += '<span class="page-numbers current">' + i + '</span>';
+		} else {
+			html += '<button type="button" class="page-numbers" data-page="' + i + '">' + i + '</button>';
+		}
+	}
+	if (to < totalPages) html += '<span class="page-numbers dots">&hellip;</span>';
+
+	if (curPage < totalPages) {
+		html += '<button type="button" class="page-numbers" data-page="' + (curPage + 1) + '">Další &rarr;</button>';
+	}
+
+	html += '</div>';
+	evPaginator.innerHTML = html;
+
+	evPaginator.querySelectorAll('button[data-page]').forEach(function(btn) {
+		btn.addEventListener('click', function() {
+			curPage = parseInt(btn.dataset.page, 10);
+			renderList();
+			var panel = document.querySelector('[data-panel="list"]');
+			if (panel) panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+		});
+	});
+}
 
 function filterMonth(key) {
-	monthBtns.forEach(function(b){ b.classList.toggle('is-active', b.dataset.month === key); });
-	var vis = 0;
-	evCards.forEach(function(c){
-		var show = key === 'all' || c.dataset.month === key;
-		c.hidden = !show;
-		if (show) vis++;
-	});
-	if (listEmpty) listEmpty.hidden = vis > 0;
+	curMonth = key;
+	curPage  = 1;
+	monthBtns.forEach(function(b) { b.classList.toggle('is-active', b.dataset.month === key); });
+	renderList();
 }
-monthBtns.forEach(function(b){
-	b.addEventListener('click', function(){ filterMonth(b.dataset.month); });
+
+monthBtns.forEach(function(b) {
+	b.addEventListener('click', function() { filterMonth(b.dataset.month); });
 });
+
+renderList();
 
 /* ── Calendar ───────────────────────────────────────────────────── */
 

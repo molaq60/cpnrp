@@ -807,10 +807,21 @@ a.megamenu-title:hover { color: var(--color-teal); }
   background-attachment: fixed;
 }
 
-/* Mobile: fixed attachment nefunguje na iOS/Android â†’ reset na scroll */
 @media (max-width: 1023px) {
   .home-news {
     background-attachment: scroll;
+    background-size:
+      80px auto, 45px auto, 65px auto, 38px auto,
+      90px auto, 50px auto, 72px auto, 42px auto,
+      95px auto, 48px auto, 60px auto, 40px auto;
+  }
+}
+@media (max-width: 600px) {
+  .home-news {
+    background-size:
+      55px auto, 32px auto, 48px auto, 28px auto,
+      60px auto, 36px auto, 52px auto, 30px auto,
+      58px auto, 34px auto, 44px auto, 29px auto;
   }
 }
 
@@ -2417,6 +2428,15 @@ body.offcanvas-open .offcanvas {
   border-color: var(--color-teal-dark);
   color: var(--color-white);
 }
+.pribehy-pagination button.page-numbers {
+  cursor: pointer;
+  background: none;
+  font-family: var(--font-sans);
+}
+.pribehy-pagination .page-numbers.dots {
+  border-color: transparent;
+  pointer-events: none;
+}
 
 .pribehy-empty {
   text-align: center;
@@ -2697,18 +2717,12 @@ body.offcanvas-open .offcanvas {
   position: relative;
   background-color: var(--color-bg-soft);
   background-image:
-    url('/wp-content/themes/cpnrp/assets/images/logo-pattern.png'),
-    url('/wp-content/themes/cpnrp/assets/images/logo-pattern.png'),
-    url('/wp-content/themes/cpnrp/assets/images/logo-pattern.png'),
-    url('/wp-content/themes/cpnrp/assets/images/logo-pattern.png'),
-    url('/wp-content/themes/cpnrp/assets/images/logo-pattern.png'),
-    url('/wp-content/themes/cpnrp/assets/images/logo-pattern.png'),
-    url('/wp-content/themes/cpnrp/assets/images/logo-pattern.png'),
-    url('/wp-content/themes/cpnrp/assets/images/logo-pattern.png'),
-    url('/wp-content/themes/cpnrp/assets/images/logo-pattern.png'),
-    url('/wp-content/themes/cpnrp/assets/images/logo-pattern.png'),
-    url('/wp-content/themes/cpnrp/assets/images/logo-pattern.png'),
-    url('/wp-content/themes/cpnrp/assets/images/logo-pattern.png');
+    url('../images/logo-pattern.png'), url('../images/logo-pattern.png'),
+    url('../images/logo-pattern.png'), url('../images/logo-pattern.png'),
+    url('../images/logo-pattern.png'), url('../images/logo-pattern.png'),
+    url('../images/logo-pattern.png'), url('../images/logo-pattern.png'),
+    url('../images/logo-pattern.png'), url('../images/logo-pattern.png'),
+    url('../images/logo-pattern.png'), url('../images/logo-pattern.png');
   background-size:
     180px auto, 90px auto, 130px auto, 70px auto,
     200px auto, 110px auto, 160px auto, 80px auto,
@@ -2719,6 +2733,24 @@ body.offcanvas-open .offcanvas {
     85% 55%, 25% 70%, 55% 78%, 80% 88%;
   background-repeat: no-repeat;
   background-attachment: fixed;
+}
+
+@media (max-width: 1023px) {
+  .bg-logo-pattern {
+    background-attachment: scroll;
+    background-size:
+      80px auto, 45px auto, 65px auto, 38px auto,
+      90px auto, 50px auto, 72px auto, 42px auto,
+      95px auto, 48px auto, 60px auto, 40px auto;
+  }
+}
+@media (max-width: 600px) {
+  .bg-logo-pattern {
+    background-size:
+      55px auto, 32px auto, 48px auto, 28px auto,
+      60px auto, 36px auto, 52px auto, 30px auto,
+      58px auto, 34px auto, 44px auto, 29px auto;
+  }
 }
 
 /* â”€â”€ Section heading (matches SectionHeading.astro) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
@@ -3444,6 +3476,18 @@ body.offcanvas-open .offcanvas {
 @media (max-width: 1023px) {
   .kontakt-form-section {
     background-attachment: scroll;
+    background-size:
+      80px auto, 45px auto, 65px auto, 38px auto,
+      90px auto, 50px auto, 72px auto, 42px auto,
+      95px auto, 48px auto, 60px auto, 40px auto;
+  }
+}
+@media (max-width: 600px) {
+  .kontakt-form-section {
+    background-size:
+      55px auto, 32px auto, 48px auto, 28px auto,
+      60px auto, 36px auto, 52px auto, 30px auto,
+      58px auto, 34px auto, 44px auto, 29px auto;
   }
 }
 
@@ -4349,7 +4393,21 @@ body.offcanvas-open .offcanvas {
   padding: 36px 0 44px;
 }
 @media (max-width: 1023px) {
-  .events-cal-widget-section { background-attachment: scroll; }
+  .events-cal-widget-section {
+    background-attachment: scroll;
+    background-size:
+      80px auto, 45px auto, 65px auto, 38px auto,
+      90px auto, 50px auto, 72px auto, 42px auto,
+      95px auto, 48px auto, 60px auto, 40px auto;
+  }
+}
+@media (max-width: 600px) {
+  .events-cal-widget-section {
+    background-size:
+      55px auto, 32px auto, 48px auto, 28px auto,
+      60px auto, 36px auto, 52px auto, 30px auto,
+      58px auto, 34px auto, 44px auto, 29px auto;
+  }
 }
 
 .events-cal-widget {
@@ -5990,7 +6048,41 @@ body.offcanvas-open .offcanvas {
 /* ── Archive grid ──────────────────────────────────────────────── */
 .gallery-archive-section {
   padding: 48px 0 80px;
-  background: var(--color-bg-soft);
+  background-color: var(--color-bg-soft);
+  background-image:
+    url('../images/logo-pattern.png'), url('../images/logo-pattern.png'),
+    url('../images/logo-pattern.png'), url('../images/logo-pattern.png'),
+    url('../images/logo-pattern.png'), url('../images/logo-pattern.png'),
+    url('../images/logo-pattern.png'), url('../images/logo-pattern.png'),
+    url('../images/logo-pattern.png'), url('../images/logo-pattern.png'),
+    url('../images/logo-pattern.png'), url('../images/logo-pattern.png');
+  background-size:
+    180px auto, 90px auto, 130px auto, 70px auto,
+    200px auto, 110px auto, 160px auto, 80px auto,
+    220px auto, 95px auto, 140px auto, 75px auto;
+  background-position:
+    5% 8%,   22% 18%, 45% 10%, 68% 22%,
+    90% 15%, 12% 40%, 38% 48%, 60% 38%,
+    85% 55%, 25% 70%, 55% 78%, 80% 88%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+@media (max-width: 1023px) {
+  .gallery-archive-section {
+    background-attachment: scroll;
+    background-size:
+      80px auto, 45px auto, 65px auto, 38px auto,
+      90px auto, 50px auto, 72px auto, 42px auto,
+      95px auto, 48px auto, 60px auto, 40px auto;
+  }
+}
+@media (max-width: 600px) {
+  .gallery-archive-section {
+    background-size:
+      55px auto, 32px auto, 48px auto, 28px auto,
+      60px auto, 36px auto, 52px auto, 30px auto,
+      58px auto, 34px auto, 44px auto, 29px auto;
+  }
 }
 
 /* ── Year filter ───────────────────────────────────────────────── */
@@ -6101,7 +6193,41 @@ body.offcanvas-open .offcanvas {
 /* ── Single — photo grid ───────────────────────────────────────── */
 .gallery-photos-section {
   padding: 52px 0 80px;
-  background: var(--color-bg-soft);
+  background-color: var(--color-bg-soft);
+  background-image:
+    url('../images/logo-pattern.png'), url('../images/logo-pattern.png'),
+    url('../images/logo-pattern.png'), url('../images/logo-pattern.png'),
+    url('../images/logo-pattern.png'), url('../images/logo-pattern.png'),
+    url('../images/logo-pattern.png'), url('../images/logo-pattern.png'),
+    url('../images/logo-pattern.png'), url('../images/logo-pattern.png'),
+    url('../images/logo-pattern.png'), url('../images/logo-pattern.png');
+  background-size:
+    180px auto, 90px auto, 130px auto, 70px auto,
+    200px auto, 110px auto, 160px auto, 80px auto,
+    220px auto, 95px auto, 140px auto, 75px auto;
+  background-position:
+    5% 8%,   22% 18%, 45% 10%, 68% 22%,
+    90% 15%, 12% 40%, 38% 48%, 60% 38%,
+    85% 55%, 25% 70%, 55% 78%, 80% 88%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+@media (max-width: 1023px) {
+  .gallery-photos-section {
+    background-attachment: scroll;
+    background-size:
+      80px auto, 45px auto, 65px auto, 38px auto,
+      90px auto, 50px auto, 72px auto, 42px auto,
+      95px auto, 48px auto, 60px auto, 40px auto;
+  }
+}
+@media (max-width: 600px) {
+  .gallery-photos-section {
+    background-size:
+      55px auto, 32px auto, 48px auto, 28px auto,
+      60px auto, 36px auto, 52px auto, 30px auto,
+      58px auto, 34px auto, 44px auto, 29px auto;
+  }
 }
 
 .gallery-photos-grid {
@@ -7423,7 +7549,41 @@ body.offcanvas-open .offcanvas {
 
 .galerie-section {
   padding: 44px 0 80px;
-  background: var(--color-bg-soft);
+  background-color: var(--color-bg-soft);
+  background-image:
+    url('../images/logo-pattern.png'), url('../images/logo-pattern.png'),
+    url('../images/logo-pattern.png'), url('../images/logo-pattern.png'),
+    url('../images/logo-pattern.png'), url('../images/logo-pattern.png'),
+    url('../images/logo-pattern.png'), url('../images/logo-pattern.png'),
+    url('../images/logo-pattern.png'), url('../images/logo-pattern.png'),
+    url('../images/logo-pattern.png'), url('../images/logo-pattern.png');
+  background-size:
+    180px auto, 90px auto, 130px auto, 70px auto,
+    200px auto, 110px auto, 160px auto, 80px auto,
+    220px auto, 95px auto, 140px auto, 75px auto;
+  background-position:
+    5% 8%,   22% 18%, 45% 10%, 68% 22%,
+    90% 15%, 12% 40%, 38% 48%, 60% 38%,
+    85% 55%, 25% 70%, 55% 78%, 80% 88%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+@media (max-width: 1023px) {
+  .galerie-section {
+    background-attachment: scroll;
+    background-size:
+      80px auto, 45px auto, 65px auto, 38px auto,
+      90px auto, 50px auto, 72px auto, 42px auto,
+      95px auto, 48px auto, 60px auto, 40px auto;
+  }
+}
+@media (max-width: 600px) {
+  .galerie-section {
+    background-size:
+      55px auto, 32px auto, 48px auto, 28px auto,
+      60px auto, 36px auto, 52px auto, 30px auto,
+      58px auto, 34px auto, 44px auto, 29px auto;
+  }
 }
 
 /* ── Year pill bar ─────────────────────────────────────────────── */

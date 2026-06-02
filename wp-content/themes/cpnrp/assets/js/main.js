@@ -29,10 +29,12 @@
 		}
 
 		function hideLoader() {
-			loader.classList.remove( 'is-active' );
-			loader.classList.add( 'is-hidden' );
+			var el = document.getElementById( 'page-loader' ) || loader;
+			if ( !el ) return;
+			el.classList.remove( 'is-active' );
+			el.classList.add( 'is-hidden' );
 			setTimeout( function() {
-				if ( loader.parentNode ) loader.parentNode.removeChild( loader );
+				if ( el.parentNode ) el.parentNode.removeChild( el );
 			}, 400 );
 		}
 
@@ -44,6 +46,11 @@
 			window.addEventListener( 'load', hideLoader );
 			setTimeout( hideLoader, 8000 ); // safety fallback
 		}
+
+		// bfcache restore (browser back/forward) — loader may still be active
+		window.addEventListener( 'pageshow', function( e ) {
+			if ( e.persisted ) hideLoader();
+		} );
 
 		// Navigation: show on link click — syncs with browser tab spinner
 		document.addEventListener( 'click', function( e ) {
