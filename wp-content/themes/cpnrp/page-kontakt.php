@@ -275,7 +275,7 @@ $kontakt_hours   = get_theme_mod( 'cpnrp_kontakt_hours',   'Po — Pá: 9:00 —
 		$bp_p2_url = $bp_p2 ? wp_get_attachment_image_url( $bp_p2, 'large' ) : '';
 	?>
 	<div class="person-modal-overlay" id="person-modal-<?php echo esc_attr( $bp->ID ); ?>"
-	     role="dialog" aria-modal="true"
+	     role="dialog" aria-modal="true" style="display:none"
 	     aria-labelledby="person-modal-title-<?php echo esc_attr( $bp->ID ); ?>">
 		<div class="person-modal">
 
@@ -601,7 +601,10 @@ $kontakt_hours   = get_theme_mod( 'cpnrp_kontakt_hours',   'Po — Pá: 9:00 —
 		if (!overlay) return;
 		if (activeModal) closePersonModal(activeModal, false);
 		activeModal = overlay;
-		overlay.classList.add('is-open');
+		overlay.style.display = 'flex';
+		requestAnimationFrame(function() {
+			overlay.classList.add('is-open');
+		});
 		document.body.style.overflow = 'hidden';
 		var closeBtn = overlay.querySelector('.person-modal-close');
 		if (closeBtn) setTimeout(function(){ closeBtn.focus(); }, 60);
@@ -612,6 +615,11 @@ $kontakt_hours   = get_theme_mod( 'cpnrp_kontakt_hours',   'Po — Pá: 9:00 —
 		overlay.classList.remove('is-open');
 		document.body.style.overflow = '';
 		activeModal = null;
+		setTimeout(function() {
+			if (!overlay.classList.contains('is-open')) {
+				overlay.style.display = 'none';
+			}
+		}, 230);
 	}
 
 	// Open on card button click
