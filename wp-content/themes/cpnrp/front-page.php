@@ -28,9 +28,8 @@ get_header();
 	}
 
 	$pro_rodiny  = get_page_by_path( 'pro-rodiny' );
-	$podporte    = get_page_by_path( 'podporte-nas' );
 	$url_rodiny  = $pro_rodiny ? get_permalink( $pro_rodiny ) : home_url( '/pro-rodiny' );
-	$url_podpora = $podporte   ? get_permalink( $podporte )   : home_url( '/podporte-nas' );
+	$url_podpora = get_theme_mod( 'cpnrp_cta_url', home_url( '/podporte-nas' ) );
 	?>
 
 	<section class="hero">
@@ -56,7 +55,7 @@ get_header();
 								<line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
 							</svg>
 						</a>
-						<a href="<?php echo esc_url( $url_podpora ); ?>" class="btn-hero btn-hero--red">
+						<a href="<?php echo esc_url( $url_podpora ); ?>" class="btn-hero btn-hero--red" target="_blank" rel="noopener noreferrer">
 							<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/heart-benefice.png' ); ?>"
 								alt="" aria-hidden="true">
 							Podpořit organizaci
