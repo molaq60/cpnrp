@@ -48,7 +48,7 @@
 					<h3 class="footer-col-heading">O organizaci</h3>
 					<ul class="footer-col-menu">
 						<li><a href="<?php echo esc_url( home_url( '/o-nas' ) ); ?>">Kdo jsme &amp; poslání</a></li>
-						<li><a href="<?php echo esc_url( home_url( '/o-nas/tym' ) ); ?>">Náš tým</a></li>
+						<li><a href="<?php echo esc_url( home_url( '/kontakt' ) ); ?>">Náš tým</a></li>
 						<li><a href="<?php echo esc_url( home_url( '/o-nas/vyrocni-zpravy' ) ); ?>">Výroční zprávy</a></li>
 						<li><a href="<?php echo esc_url( home_url( '/o-nas/dokumenty' ) ); ?>">Dokumenty ke stažení</a></li>
 						<li><a href="<?php echo esc_url( home_url( '/o-nas/partneri' ) ); ?>">S kým spolupracujeme</a></li>

@@ -95,7 +95,7 @@ function cpnrp_qr_url( string $iban, int $amount, int $size = 140 ): string {
 					Podpořte nás
 				</a>
 <div class="donate-account">
-					nebo převodem na účet: <strong><?php echo esc_html( $account ); ?></strong>
+					nebo převodem na sbírkový účet CPNRP: <strong><?php echo esc_html( $account ); ?></strong>
 				</div>
 			</div>
 

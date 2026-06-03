@@ -112,7 +112,7 @@ $kontakt_hours   = get_theme_mod( 'cpnrp_kontakt_hours',   'Po — Pá: 9:00 —
 			<!-- Contact info row -->
 			<dl class="kontakt-info-row">
 				<div class="kontakt-info-item">
-					<dt><?php esc_html_e( 'Adresa', 'cpnrp' ); ?></dt>
+					<dt><?php esc_html_e( 'Sídlo organizace', 'cpnrp' ); ?></dt>
 					<dd><?php echo nl2br( esc_html( str_replace( ',', ",\n", $kontakt_address ) ) ); ?></dd>
 				</div>
 				<div class="kontakt-info-item">

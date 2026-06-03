@@ -14,7 +14,7 @@ $cs_m = [ '', 'led', 'úno', 'bře', 'dub', 'kvě', 'čvn', 'čvc', 'srp', 'zá�
 
 if ( ! function_exists( '_ev_color' ) ) {
 	function _ev_color( string $c ): string {
-		return in_array( $c, [ 'gold', 'red', 'teal', 'light' ], true ) ? $c : 'teal';
+		return in_array( $c, [ 'gold', 'red', 'teal', 'light', 'green' ], true ) ? $c : 'teal';
 	}
 }
 
@@ -119,6 +119,7 @@ get_header();
 .ev-badge--red   { background: var(--color-accent-red);  color: #fff; }
 .ev-badge--teal  { background: var(--color-teal-dark);   color: #fff; }
 .ev-badge--light { background: var(--color-teal-light);  color: #fff; }
+.ev-badge--green { background: #1a6b3c; color: #fff; }
 .ev-content { flex: 1; min-width: 0; }
 .ev-title { font-size: 1rem; font-weight: 700; color: var(--color-teal-dark); margin: 0 0 5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; transition: color 150ms ease; }
 .ev-card:hover .ev-title { color: var(--color-teal); }
@@ -166,6 +167,7 @@ button.events-cal-chip {
 .events-cal-chip--red   { background: var(--color-accent-red)  !important; color: #fff !important; }
 .events-cal-chip--teal  { background: var(--color-teal-dark)   !important; color: #fff !important; }
 .events-cal-chip--light { background: var(--color-teal-light)  !important; color: #fff !important; }
+.events-cal-chip--green { background: #1a6b3c !important; color: #fff !important; }
 
 /* ── View toggle buttons ────────────────────────────────────────── */
 button.events-view-btn {
