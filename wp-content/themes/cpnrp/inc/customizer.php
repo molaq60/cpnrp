@@ -276,7 +276,8 @@ function cpnrp_customize_register( $wp_customize ) {
 		'cpnrp_donate_card_desc'    => [ 'label' => 'Karta — popis',               'default' => 'Vyberte si způsob, jakým chcete podpořit náhradní rodiny.', 'type' => 'textarea' ],
 		'cpnrp_donate_btn1_url'     => [ 'label' => 'Karta — URL tlačítka "Podpořte nás"',  'default' => '/podporte-nas',          'type' => 'url'      ],
 		'cpnrp_donate_btn2_url'     => [ 'label' => 'Karta — URL tlačítka "Pravidelný dar"', 'default' => '/podporte-nas#pravidelny-dar', 'type' => 'url' ],
-		'cpnrp_donate_account'      => [ 'label' => 'Číslo účtu',                  'default' => '35–9706800297/0100',                                  'type' => 'text'     ],
+		'cpnrp_donate_account'      => [ 'label' => 'Číslo účtu (zobrazený text)',  'default' => '35–9706800297/0100',                                  'type' => 'text'     ],
+		'cpnrp_donate_iban'         => [ 'label' => 'IBAN pro QR kódy',             'default' => 'CZ4801000000359706800297',                             'type' => 'text'     ],
 	];
 
 	foreach ( $donate_settings as $id => $cfg ) {
@@ -449,6 +450,23 @@ function cpnrp_customize_register( $wp_customize ) {
 	$wp_customize->add_control( 'cpnrp_megamenu_pro-rodiny_info', [
 		'label'   => __( 'Info box — "Pro rodiny"', 'cpnrp' ),
 		'section' => 'cpnrp_megamenu',
+		'type'    => 'textarea',
+	] );
+	// ── Patička — text o organizaci ─────────────────────────────────────────
+	$wp_customize->add_section( 'cpnrp_footer_info', [
+		'title'    => __( 'Patička — informace o organizaci', 'cpnrp' ),
+		'panel'    => 'cpnrp_panel',
+		'priority' => 200,
+	] );
+
+	$wp_customize->add_setting( 'cpnrp_footer_about_text', [
+		'default'           => "Centrum pro NRP, o.p.s.\nIČO: 26999234\nSídlo: Teplická 1672/3, 412 01 Litoměřice\nbežný účet: 35 - 9706800297/0100\nsbírkový účet: 107 - 5420340207/0100",
+		'sanitize_callback' => 'sanitize_textarea_field',
+		'transport'         => 'refresh',
+	] );
+	$wp_customize->add_control( 'cpnrp_footer_about_text', [
+		'label'   => __( 'Text v patičce (pod logem)', 'cpnrp' ),
+		'section' => 'cpnrp_footer_info',
 		'type'    => 'textarea',
 	] );
 }

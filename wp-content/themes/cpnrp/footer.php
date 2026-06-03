@@ -15,7 +15,7 @@
 						<img src="<?php echo esc_url( $logo_url ); ?>" alt="<?php bloginfo( 'name' ); ?>" class="footer-logo">
 					</div>
 					<p class="footer-about-text">
-						Centrum pro náhradní rodinnou péči pomáhá náhradním rodinám již více než 20 let. Jsme tu pro pěstouny, adoptivní rodiče i zájemce.
+						<?php echo nl2br( esc_html( get_theme_mod( 'cpnrp_footer_about_text', "Centrum pro NRP, o.p.s.\nIČO: 26999234\nSídlo: Teplická 1672/3, 412 01 Litoměřice\nběžný účet: 35 - 9706800297/0100\nsbírkový účet: 107 - 5420340207/0100" ) ) ); ?>
 					</p>
 					<div class="footer-social">
 						<a href="https://www.facebook.com/centrumpronrp" class="footer-social-link" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
