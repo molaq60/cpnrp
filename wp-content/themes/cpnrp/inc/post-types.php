@@ -232,6 +232,7 @@ function cpnrp_contact_fields_render( $post ) {
 	$role  = get_post_meta( $post->ID, '_contact_role', true );
 	$phone = get_post_meta( $post->ID, '_contact_phone', true );
 	$email = get_post_meta( $post->ID, '_contact_email', true );
+	$order = get_post_meta( $post->ID, '_contact_order', true );
 	?>
 	<table class="form-table" style="margin-top:0">
 		<tr>
@@ -245,6 +246,13 @@ function cpnrp_contact_fields_render( $post ) {
 		<tr>
 			<th scope="row"><label for="cpnrp_contact_email"><?php esc_html_e( 'E-mail', 'cpnrp' ); ?></label></th>
 			<td><input type="email" id="cpnrp_contact_email" name="cpnrp_contact_email" value="<?php echo esc_attr( $email ); ?>" placeholder="jmeno@cpnrp.cz" style="width:100%" /></td>
+		</tr>
+		<tr>
+			<th scope="row"><label for="cpnrp_contact_order"><?php esc_html_e( 'Pořadí ve skupině', 'cpnrp' ); ?></label></th>
+			<td>
+				<input type="number" id="cpnrp_contact_order" name="cpnrp_contact_order" value="<?php echo esc_attr( $order ); ?>" min="0" step="1" style="width:80px" />
+				<p class="description"><?php esc_html_e( 'Nižší číslo = dříve. Prázdné = na konec.', 'cpnrp' ); ?></p>
+			</td>
 		</tr>
 	</table>
 	<?php
@@ -262,6 +270,7 @@ function cpnrp_contact_fields_save( $post_id ) {
 	update_post_meta( $post_id, '_contact_role',  sanitize_text_field( $_POST['cpnrp_contact_role']  ?? '' ) );
 	update_post_meta( $post_id, '_contact_phone', sanitize_text_field( $_POST['cpnrp_contact_phone'] ?? '' ) );
 	update_post_meta( $post_id, '_contact_email', sanitize_email( $_POST['cpnrp_contact_email'] ?? '' ) );
+	update_post_meta( $post_id, '_contact_order', isset( $_POST['cpnrp_contact_order'] ) ? (int) $_POST['cpnrp_contact_order'] : 0 );
 }
 add_action( 'save_post_contact_person', 'cpnrp_contact_fields_save' );
 

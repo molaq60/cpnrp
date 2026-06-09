@@ -55,7 +55,7 @@ get_header();
 								<line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
 							</svg>
 						</a>
-						<a href="<?php echo esc_url( $url_podpora ); ?>" class="btn-hero btn-hero--red" target="_blank" rel="noopener noreferrer">
+						<a href="#podporte-nas-cta" class="btn-hero btn-hero--red">
 							<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/heart-benefice.png' ); ?>"
 								alt="" aria-hidden="true">
 							Podpořit organizaci
