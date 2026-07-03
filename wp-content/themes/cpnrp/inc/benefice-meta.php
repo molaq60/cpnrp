@@ -187,12 +187,32 @@ function cpnrp_ben_meta_box_cb( $post ) {
 			<?php
 			$row( 'Nadpis sekce', '_ben_gallery_title', 'text', 'Z proběhlé benefice' );
 			$textarea( 'Text (předání výtěžku, poděkování…)', '_ben_gallery_text', 5 );
-			$textarea( 'Fotografie — URL obrázků', '_ben_gallery_imgs', 6, "https://www.cpnrp.cz/wp-content/uploads/foto1.jpg\nhttps://www.cpnrp.cz/wp-content/uploads/foto2.jpg" );
 			?>
 		</table>
-		<p class="description" style="margin-left:8px;margin-top:6px;">
-			Jeden řádek = jeden obrázek. URL vykopírujte z <strong>Média → Knihovna médií</strong> (klik na obrázek → Zkopírovat URL souboru).
-		</p>
+		<div style="margin:14px 0 6px;font-weight:600;font-size:13px;">Fotografie</div>
+		<div id="ben-gallery-list" style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:10px;">
+			<?php
+			$_gi_json = get_post_meta( $post->ID, '_ben_gallery_imgs', true );
+			$_gi_list = [];
+			if ( $_gi_json ) {
+				$_gi_dec = json_decode( $_gi_json, true );
+				if ( is_array( $_gi_dec ) ) $_gi_list = array_values( array_filter( $_gi_dec ) );
+			}
+			foreach ( $_gi_list as $_gi_url ) :
+				$_gi_url = esc_url( $_gi_url );
+			?>
+			<div class="ben-gallery-item" style="position:relative;border:1px solid #ddd;border-radius:4px;overflow:hidden;background:#f9f9f9;width:120px;">
+				<img src="<?php echo $_gi_url; ?>" class="ben-gallery-img-preview" style="width:120px;height:80px;object-fit:cover;display:block;">
+				<input type="hidden" class="ben-gallery-img-url" value="<?php echo $_gi_url; ?>">
+				<div style="padding:4px;display:flex;gap:4px;justify-content:center;">
+					<button type="button" class="button button-small ben-gallery-change">Změnit</button>
+					<button type="button" class="button button-small ben-gallery-remove" style="color:#a00;">✕</button>
+				</div>
+			</div>
+			<?php endforeach; ?>
+		</div>
+		<button type="button" class="button button-secondary" id="ben-add-gallery-photo">+ Přidat foto</button>
+		<input type="hidden" name="ben_gallery_imgs" id="ben-gallery-imgs-json" value="<?php echo esc_attr( $_gi_json ?: '[]' ); ?>">
 	</div>
 
 	<!-- ── Partneři ── -->
@@ -337,6 +357,53 @@ function cpnrp_ben_meta_box_cb( $post ) {
 			});
 			$('#ben-sponsors-json').val(JSON.stringify(list));
 		});
+
+		// ── Gallery images ─────────────────────────────────────────────────────
+		function benGalleryItemHtml(url) {
+			return '<div class="ben-gallery-item" style="position:relative;border:1px solid #ddd;border-radius:4px;overflow:hidden;background:#f9f9f9;width:120px;">' +
+				'<img src="' + url + '" class="ben-gallery-img-preview" style="width:120px;height:80px;object-fit:cover;display:block;">' +
+				'<input type="hidden" class="ben-gallery-img-url" value="' + url + '">' +
+				'<div style="padding:4px;display:flex;gap:4px;justify-content:center;">' +
+					'<button type="button" class="button button-small ben-gallery-change">Změnit</button>' +
+					'<button type="button" class="button button-small ben-gallery-remove" style="color:#a00;">✕</button>' +
+				'</div>' +
+			'</div>';
+		}
+
+		$('#ben-add-gallery-photo').on('click', function () {
+			var frame = wp.media({ title: 'Vybrat fotografie', multiple: true, library: { type: 'image' } });
+			frame.on('select', function () {
+				frame.state().get('selection').each(function (att) {
+					$('#ben-gallery-list').append(benGalleryItemHtml(att.toJSON().url));
+				});
+			});
+			frame.open();
+		});
+
+		$(document).on('click', '.ben-gallery-change', function (e) {
+			e.preventDefault();
+			var $item = $(this).closest('.ben-gallery-item');
+			var frame = wp.media({ title: 'Změnit fotografii', multiple: false, library: { type: 'image' } });
+			frame.on('select', function () {
+				var url = frame.state().get('selection').first().toJSON().url;
+				$item.find('.ben-gallery-img-url').val(url);
+				$item.find('.ben-gallery-img-preview').attr('src', url);
+			});
+			frame.open();
+		});
+
+		$(document).on('click', '.ben-gallery-remove', function () {
+			$(this).closest('.ben-gallery-item').remove();
+		});
+
+		$('form#post').on('submit', function () {
+			var giList = [];
+			$('.ben-gallery-img-url').each(function () {
+				var url = $(this).val().trim();
+				if (url) giList.push(url);
+			});
+			$('#ben-gallery-imgs-json').val(JSON.stringify(giList));
+		});
 	}(jQuery));
 	</script>
 	<?php
@@ -375,7 +442,6 @@ add_action( 'save_post', function ( $post_id ) {
 		'_ben_plakat_2'      => 'esc_url_raw',
 		'_ben_gallery_title' => 'sanitize_text_field',
 		'_ben_gallery_text'  => 'sanitize_textarea_field',
-		'_ben_gallery_imgs'  => 'sanitize_textarea_field',
 		'_ben_contact_name'  => 'sanitize_text_field',
 		'_ben_contact_role'  => 'sanitize_text_field',
 		'_ben_contact_email' => 'sanitize_email',
@@ -386,6 +452,15 @@ add_action( 'save_post', function ( $post_id ) {
 		$post_key = ltrim( $meta_key, '_' );
 		if ( isset( $_POST[ $post_key ] ) ) {
 			update_post_meta( $post_id, $meta_key, $sanitizer( $_POST[ $post_key ] ) );
+		}
+	}
+
+	// Gallery images — saved as JSON array of URLs
+	if ( isset( $_POST['ben_gallery_imgs'] ) ) {
+		$decoded = json_decode( stripslashes( $_POST['ben_gallery_imgs'] ), true );
+		if ( is_array( $decoded ) ) {
+			$clean = array_values( array_filter( array_map( 'esc_url_raw', $decoded ) ) );
+			update_post_meta( $post_id, '_ben_gallery_imgs', json_encode( $clean, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES ) );
 		}
 	}
 

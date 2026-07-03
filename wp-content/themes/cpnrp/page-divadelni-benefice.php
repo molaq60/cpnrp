@@ -53,7 +53,14 @@ $plakat_2 = ben_meta( '_ben_plakat_2' );
 // Gallery
 $gallery_title = ben_meta( '_ben_gallery_title' );
 $gallery_text  = ben_meta( '_ben_gallery_text' );
-$gallery_imgs  = array_filter( array_map( 'trim', explode( "\n", ben_meta( '_ben_gallery_imgs' ) ) ) );
+$_gi_raw       = ben_meta( '_ben_gallery_imgs' );
+$gallery_imgs  = [];
+if ( $_gi_raw ) {
+	$_gi_dec = json_decode( $_gi_raw, true );
+	if ( is_array( $_gi_dec ) ) {
+		$gallery_imgs = array_values( array_filter( array_map( 'trim', $_gi_dec ) ) );
+	}
+}
 
 // Sponsors
 $sponsors_raw = ben_meta( '_ben_sponsors' );
