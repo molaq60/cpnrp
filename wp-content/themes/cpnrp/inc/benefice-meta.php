@@ -198,13 +198,40 @@ function cpnrp_ben_meta_box_cb( $post ) {
 	<!-- ── Partneři ── -->
 	<div class="ben-section">
 		<h4>Partneři / sponzoři</h4>
-		<p class="description" style="margin-bottom:12px;">
-			Každý řádek: <code>Název partnera|soubor-loga.jpg</code><br>
-			Soubory logotypů umístěte do <code>/wp-content/themes/cpnrp/assets/images/partners/</code>.
-		</p>
-		<table class="form-table">
-			<?php $textarea( 'Partneři (jeden řádek = jeden partner)', '_ben_sponsors', 8, "Město Litoměřice|mesto-litomerice.jpg\nHolcim|holcim.jpg" ); ?>
-		</table>
+		<div id="ben-sponsors-list" style="margin-bottom:10px;">
+			<?php
+			$_sp_json  = get_post_meta( $post->ID, '_ben_sponsors', true );
+			$_sp_list  = [];
+			if ( $_sp_json ) {
+				$_decoded = json_decode( $_sp_json, true );
+				if ( is_array( $_decoded ) ) $_sp_list = $_decoded;
+			}
+			foreach ( $_sp_list as $_sp ) :
+				$_sp_img  = esc_url( $_sp['img']  ?? '' );
+				$_sp_name = esc_attr( $_sp['name'] ?? '' );
+				$_sp_url  = esc_url( $_sp['url']  ?? '' );
+			?>
+			<div class="ben-sponsor-row" style="display:flex;align-items:center;gap:12px;margin-bottom:10px;padding:10px;background:#f9f9f9;border:1px solid #ddd;border-radius:4px;">
+				<div style="flex-shrink:0;">
+					<img src="<?php echo $_sp_img; ?>" class="ben-sponsor-preview" style="max-width:80px;max-height:50px;display:<?php echo $_sp_img ? 'block' : 'none'; ?>;">
+				</div>
+				<div style="flex:1;display:flex;flex-direction:column;gap:6px;">
+					<input type="hidden" class="ben-sponsor-img" value="<?php echo $_sp_img; ?>">
+					<div style="display:flex;gap:8px;align-items:center;">
+						<button type="button" class="button ben-sponsor-pick"><?php echo $_sp_img ? 'Změnit logo' : 'Vybrat logo'; ?></button>
+						<?php if ( $_sp_img ) : ?><a href="#" class="ben-sponsor-remove-img" style="font-size:12px;color:#a00;">✕ Odebrat logo</a><?php endif; ?>
+					</div>
+					<input type="text" class="ben-sponsor-name large-text" placeholder="Název partnera" value="<?php echo $_sp_name; ?>">
+					<input type="url"  class="ben-sponsor-url  large-text" placeholder="https://… (web partnera)" value="<?php echo $_sp_url; ?>">
+				</div>
+				<div style="flex-shrink:0;">
+					<button type="button" class="button ben-sponsor-delete" style="color:#a00;">Odebrat</button>
+				</div>
+			</div>
+			<?php endforeach; ?>
+		</div>
+		<button type="button" class="button button-secondary" id="ben-add-sponsor">+ Přidat partnera</button>
+		<input type="hidden" name="ben_sponsors" id="ben-sponsors-json" value="<?php echo esc_attr( $_sp_json ?: '[]' ); ?>">
 	</div>
 
 	<!-- ── Kontakt ── -->
@@ -248,6 +275,68 @@ function cpnrp_ben_meta_box_cb( $post ) {
 			$(this).siblings('.ben-pick-img').text('Vybrat obrázek');
 			$(this).remove();
 		});
+
+		// ── Sponsors ──────────────────────────────────────────────────────────
+		function benSponsorRowHtml() {
+			return '<div class="ben-sponsor-row" style="display:flex;align-items:center;gap:12px;margin-bottom:10px;padding:10px;background:#f9f9f9;border:1px solid #ddd;border-radius:4px;">' +
+				'<div style="flex-shrink:0;"><img src="" class="ben-sponsor-preview" style="max-width:80px;max-height:50px;display:none;"></div>' +
+				'<div style="flex:1;display:flex;flex-direction:column;gap:6px;">' +
+					'<input type="hidden" class="ben-sponsor-img" value="">' +
+					'<div style="display:flex;gap:8px;align-items:center;"><button type="button" class="button ben-sponsor-pick">Vybrat logo</button></div>' +
+					'<input type="text" class="ben-sponsor-name large-text" placeholder="Název partnera" value="">' +
+					'<input type="url"  class="ben-sponsor-url  large-text" placeholder="https://… (web partnera)" value="">' +
+				'</div>' +
+				'<div style="flex-shrink:0;"><button type="button" class="button ben-sponsor-delete" style="color:#a00;">Odebrat</button></div>' +
+			'</div>';
+		}
+
+		$('#ben-add-sponsor').on('click', function () {
+			$('#ben-sponsors-list').append(benSponsorRowHtml());
+		});
+
+		$(document).on('click', '.ben-sponsor-delete', function () {
+			$(this).closest('.ben-sponsor-row').remove();
+		});
+
+		$(document).on('click', '.ben-sponsor-pick', function (e) {
+			e.preventDefault();
+			var $row  = $(this).closest('.ben-sponsor-row');
+			var $btn  = $(this);
+			var frame = wp.media({ title: 'Vybrat logo partnera', multiple: false, library: { type: 'image' } });
+			frame.on('select', function () {
+				var att = frame.state().get('selection').first().toJSON();
+				$row.find('.ben-sponsor-img').val(att.url);
+				$row.find('.ben-sponsor-preview').attr('src', att.url).show();
+				$btn.text('Změnit logo');
+				if (!$row.find('.ben-sponsor-remove-img').length) {
+					$btn.after('<a href="#" class="ben-sponsor-remove-img" style="font-size:12px;color:#a00;margin-left:6px;">✕ Odebrat logo</a>');
+				}
+			});
+			frame.open();
+		});
+
+		$(document).on('click', '.ben-sponsor-remove-img', function (e) {
+			e.preventDefault();
+			var $row = $(this).closest('.ben-sponsor-row');
+			$row.find('.ben-sponsor-img').val('');
+			$row.find('.ben-sponsor-preview').attr('src', '').hide();
+			$row.find('.ben-sponsor-pick').text('Vybrat logo');
+			$(this).remove();
+		});
+
+		$('form#post').on('submit', function () {
+			var list = [];
+			$('.ben-sponsor-row').each(function () {
+				var img = $(this).find('.ben-sponsor-img').val().trim();
+				if (!img) return;
+				list.push({
+					img:  img,
+					name: $(this).find('.ben-sponsor-name').val().trim(),
+					url:  $(this).find('.ben-sponsor-url').val().trim()
+				});
+			});
+			$('#ben-sponsors-json').val(JSON.stringify(list));
+		});
 	}(jQuery));
 	</script>
 	<?php
@@ -287,7 +376,6 @@ add_action( 'save_post', function ( $post_id ) {
 		'_ben_gallery_title' => 'sanitize_text_field',
 		'_ben_gallery_text'  => 'sanitize_textarea_field',
 		'_ben_gallery_imgs'  => 'sanitize_textarea_field',
-		'_ben_sponsors'      => 'sanitize_textarea_field',
 		'_ben_contact_name'  => 'sanitize_text_field',
 		'_ben_contact_role'  => 'sanitize_text_field',
 		'_ben_contact_email' => 'sanitize_email',
@@ -298,6 +386,22 @@ add_action( 'save_post', function ( $post_id ) {
 		$post_key = ltrim( $meta_key, '_' );
 		if ( isset( $_POST[ $post_key ] ) ) {
 			update_post_meta( $post_id, $meta_key, $sanitizer( $_POST[ $post_key ] ) );
+		}
+	}
+
+	// Sponsors — saved as JSON from the repeatable UI
+	if ( isset( $_POST['ben_sponsors'] ) ) {
+		$decoded = json_decode( stripslashes( $_POST['ben_sponsors'] ), true );
+		if ( is_array( $decoded ) ) {
+			$clean = array_values( array_filter( array_map( function ( $s ) {
+				if ( empty( $s['img'] ) ) return null;
+				return [
+					'img'  => esc_url_raw( $s['img'] ),
+					'name' => sanitize_text_field( $s['name'] ?? '' ),
+					'url'  => esc_url_raw( $s['url'] ?? '' ),
+				];
+			}, $decoded ) ) );
+			update_post_meta( $post_id, '_ben_sponsors', json_encode( $clean, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES ) );
 		}
 	}
 } );

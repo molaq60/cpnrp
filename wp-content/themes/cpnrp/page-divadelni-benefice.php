@@ -56,13 +56,14 @@ $gallery_text  = ben_meta( '_ben_gallery_text' );
 $gallery_imgs  = array_filter( array_map( 'trim', explode( "\n", ben_meta( '_ben_gallery_imgs' ) ) ) );
 
 // Sponsors
-$sponsors_raw     = ben_meta( '_ben_sponsors' );
-$partners_img_url = get_template_directory_uri() . '/assets/images/partners/';
-$sponsors         = [];
-foreach ( array_filter( array_map( 'trim', explode( "\n", $sponsors_raw ) ) ) as $line ) {
-	$parts = explode( '|', $line, 2 );
-	if ( count( $parts ) === 2 ) {
-		$sponsors[] = [ 'name' => trim( $parts[0] ), 'file' => trim( $parts[1] ) ];
+$sponsors_raw = ben_meta( '_ben_sponsors' );
+$sponsors     = [];
+if ( $sponsors_raw ) {
+	$_sp_decoded = json_decode( $sponsors_raw, true );
+	if ( is_array( $_sp_decoded ) ) {
+		$sponsors = array_values( array_filter( $_sp_decoded, function ( $s ) {
+			return ! empty( $s['img'] );
+		} ) );
 	}
 }
 
@@ -401,11 +402,13 @@ $hero_bg   = has_post_thumbnail( $id )
 			<div class="beh-sponsors-grid">
 				<?php foreach ( $sponsors as $s ) : ?>
 				<div class="beh-sponsor-item">
-					<img
-						src="<?php echo esc_url( $partners_img_url . $s['file'] ); ?>"
-						alt="<?php echo esc_attr( $s['name'] ); ?>"
-						loading="lazy"
-					>
+					<?php if ( ! empty( $s['url'] ) ) : ?>
+					<a href="<?php echo esc_url( $s['url'] ); ?>" target="_blank" rel="noopener noreferrer" title="<?php echo esc_attr( $s['name'] ?? '' ); ?>">
+					<?php endif; ?>
+					<img src="<?php echo esc_url( $s['img'] ); ?>" alt="<?php echo esc_attr( $s['name'] ?? '' ); ?>" loading="lazy">
+					<?php if ( ! empty( $s['url'] ) ) : ?>
+					</a>
+					<?php endif; ?>
 				</div>
 				<?php endforeach; ?>
 			</div>
