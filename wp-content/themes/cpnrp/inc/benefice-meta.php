@@ -1,0 +1,303 @@
+<?php
+/**
+ * Divadelní benefice — meta boxes for the page template.
+ */
+
+// ── Register meta box — pouze na stránce Divadelní benefice ─────────
+add_action( 'add_meta_boxes', function () {
+	global $post;
+	if ( ! $post ) return;
+
+	$tpl  = get_post_meta( $post->ID, '_wp_page_template', true );
+	$slug = $post->post_name;
+
+	if ( $tpl !== 'page-divadelni-benefice.php' && $slug !== 'divadelni-benefice' ) return;
+
+	add_meta_box(
+		'cpnrp_ben_settings',
+		__( 'Divadelní benefice — nastavení', 'cpnrp' ),
+		'cpnrp_ben_meta_box_cb',
+		'page',
+		'normal',
+		'high'
+	);
+} );
+
+// ── Meta box HTML ─────────────────────────────────────────────────────
+function cpnrp_ben_meta_box_cb( $post ) {
+	wp_nonce_field( 'cpnrp_ben_save', 'cpnrp_ben_nonce' );
+	wp_enqueue_media();
+
+	// Load all stored meta
+	$keys = [
+		'_ben_edition', '_ben_lead', '_ben_termin', '_ben_pro_koho', '_ben_vytezek', '_ben_web_url',
+		'_ben_stat1_num', '_ben_stat1_label', '_ben_stat1_note',
+		'_ben_stat2_num', '_ben_stat2_label', '_ben_stat2_note',
+		'_ben_stat3_num', '_ben_stat3_label', '_ben_stat3_note',
+		'_ben_venue1', '_ben_venue2', '_ben_venue3', '_ben_venue4', '_ben_venue5', '_ben_venue6',
+		'_ben_plakat_1', '_ben_plakat_2',
+		'_ben_gallery_title', '_ben_gallery_text', '_ben_gallery_imgs',
+		'_ben_sponsors',
+		'_ben_contact_name', '_ben_contact_role', '_ben_contact_email', '_ben_contact_phone',
+	];
+	$m = [];
+	foreach ( $keys as $k ) {
+		$m[ $k ] = get_post_meta( $post->ID, $k, true );
+	}
+
+	// Defaults
+	$defaults = [
+		'_ben_edition'      => '7. ročník · 2026',
+		'_ben_lead'         => 'Charitativní divadelní akce, jejíž výtěžek putuje na podporu dětí v náhradní rodinné péči. Přijďte si užít kulturu a zároveň pomoci.',
+		'_ben_termin'       => 'Listopad 2026',
+		'_ben_pro_koho'     => 'Rodiny · Přátelé divadla · Veřejnost',
+		'_ben_vytezek'      => 'Podpora dětí v náhradní péči — CPNRP',
+		'_ben_web_url'      => 'https://www.divadelni-benefice.cz',
+		'_ben_stat1_num'    => '7',      '_ben_stat1_label' => 'úspěšných ročníků',    '_ben_stat1_note' => '2019 – 2025',
+		'_ben_stat2_num'    => '4',      '_ben_stat2_label' => 'města v roce 2026',     '_ben_stat2_note' => 'Litoměřice · Ústí · Lovosice · Roudnice',
+		'_ben_stat3_num'    => '100 %',  '_ben_stat3_label' => 'výtěžku jde na děti',   '_ben_stat3_note' => 'přímo na podporu náhradních rodin',
+		'_ben_venue1'       => 'Litoměřice',
+		'_ben_venue2'       => 'Ústí nad Labem',
+		'_ben_venue3'       => 'Lovosice',
+		'_ben_venue4'       => 'Roudnice nad Labem',
+	];
+	foreach ( $defaults as $k => $v ) {
+		if ( $m[ $k ] === '' || $m[ $k ] === false ) $m[ $k ] = $v;
+	}
+
+	// ── Helpers ───────────────────────────────────────────────────────
+	$row = function( $label, $key, $type = 'text', $placeholder = '' ) use ( $m ) {
+		$id  = esc_attr( ltrim( $key, '_' ) );
+		$val = esc_attr( $m[ $key ] );
+		echo "<tr><th><label for=\"{$id}\">{$label}</label></th>";
+		echo "<td><input type=\"{$type}\" id=\"{$id}\" name=\"{$id}\" value=\"{$val}\" placeholder=\"" . esc_attr( $placeholder ) . "\"></td></tr>";
+	};
+
+	$textarea = function( $label, $key, $rows = 3, $placeholder = '' ) use ( $m ) {
+		$id  = esc_attr( ltrim( $key, '_' ) );
+		$val = esc_textarea( $m[ $key ] );
+		echo "<tr><th><label for=\"{$id}\">{$label}</label></th>";
+		echo "<td><textarea id=\"{$id}\" name=\"{$id}\" rows=\"{$rows}\" placeholder=\"" . esc_attr( $placeholder ) . "\">{$val}</textarea></td></tr>";
+	};
+
+	$image_picker = function( $label, $key ) use ( $m ) {
+		$id  = ltrim( $key, '_' );
+		$val = esc_url( $m[ $key ] ?? '' );
+		?>
+		<tr>
+			<th style="vertical-align:top;padding-top:12px;"><label><?php echo esc_html( $label ); ?></label></th>
+			<td>
+				<div style="display:flex;align-items:flex-start;gap:12px;flex-wrap:wrap;">
+					<img id="<?php echo esc_attr( $id ); ?>_preview"
+					     src="<?php echo $val; ?>"
+					     style="max-width:100px;max-height:120px;border-radius:4px;border:1px solid #ddd;<?php echo $val ? '' : 'display:none;'; ?>">
+					<div style="display:flex;flex-direction:column;gap:6px;padding-top:4px;">
+						<input type="hidden"
+						       id="<?php echo esc_attr( $id ); ?>"
+						       name="<?php echo esc_attr( $id ); ?>"
+						       value="<?php echo $val; ?>">
+						<button type="button" class="button ben-pick-img" data-target="<?php echo esc_attr( $id ); ?>">
+							<?php echo $val ? esc_html__( 'Změnit obrázek', 'cpnrp' ) : esc_html__( 'Vybrat obrázek', 'cpnrp' ); ?>
+						</button>
+						<?php if ( $val ) : ?>
+						<a href="#" class="ben-remove-img" data-target="<?php echo esc_attr( $id ); ?>" style="font-size:12px;color:#a00;">
+							✕ <?php esc_html_e( 'Odebrat', 'cpnrp' ); ?>
+						</a>
+						<?php endif; ?>
+					</div>
+				</div>
+			</td>
+		</tr>
+		<?php
+	};
+	?>
+
+	<style>
+		#cpnrp_ben_settings table.form-table th { width: 210px; vertical-align: top; padding-top: 10px; }
+		#cpnrp_ben_settings input[type=text],
+		#cpnrp_ben_settings input[type=url],
+		#cpnrp_ben_settings input[type=email],
+		#cpnrp_ben_settings textarea { width: 100%; max-width: 620px; }
+		#cpnrp_ben_settings .ben-section { margin-top: 24px; padding-top: 20px; border-top: 1px solid #ddd; }
+		#cpnrp_ben_settings .ben-section h4 { margin: 0 0 12px; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; color: #8a6200; }
+		#cpnrp_ben_settings p.description { color: #666; font-style: italic; margin-top: 5px; font-size: 12px; }
+	</style>
+
+	<!-- ── Hero sekce ── -->
+	<div class="ben-section" style="margin-top:0;padding-top:0;border-top:none;">
+		<h4>Hero sekce</h4>
+		<p class="description" style="margin-bottom:12px;">Fotografie na pozadí = <strong>Náhledový obrázek stránky</strong> (nastavte v pravém sloupci). Maska / divadelní motiv se zobrazí automaticky.</p>
+		<table class="form-table">
+			<?php
+			$row( 'Ročník / rok (badge)', '_ben_edition', 'text', '7. ročník · 2026' );
+			$textarea( 'Perex (lead text)', '_ben_lead', 3 );
+			$row( 'Termín konání', '_ben_termin', 'text', 'Listopad 2026' );
+			$row( 'Pro koho', '_ben_pro_koho', 'text', 'Rodiny · Přátelé divadla · Veřejnost' );
+			$row( 'Výtěžek pro', '_ben_vytezek', 'text', 'Podpora dětí v náhradní péči — CPNRP' );
+			$row( 'URL webu benefice', '_ben_web_url', 'url', 'https://www.divadelni-benefice.cz' );
+			?>
+		</table>
+	</div>
+
+	<!-- ── Počítadlo ── -->
+	<div class="ben-section">
+		<h4>Počítadlo — 3 čísla</h4>
+		<table class="form-table">
+			<?php
+			for ( $i = 1; $i <= 3; $i++ ) {
+				$row( "Číslo {$i}", "_ben_stat{$i}_num" );
+				$row( "Popis {$i}", "_ben_stat{$i}_label" );
+				$row( "Poznámka {$i}", "_ben_stat{$i}_note" );
+				if ( $i < 3 ) echo '<tr><td colspan="2"><hr style="margin:4px 0;border:none;border-top:1px solid #eee"></td></tr>';
+			}
+			?>
+		</table>
+	</div>
+
+	<!-- ── Místa konání ── -->
+	<div class="ben-section">
+		<h4>Místa konání (až 6 měst)</h4>
+		<p class="description" style="margin-bottom:12px;">Nevyplněná pole se na stránce nezobrazí. Zapište název divadla a/nebo města.</p>
+		<table class="form-table">
+			<?php
+			$venue_ph = [ 1 => 'Litoměřice', 2 => 'Ústí nad Labem', 3 => 'Lovosice', 4 => 'Roudnice nad Labem', 5 => '', 6 => '' ];
+			for ( $i = 1; $i <= 6; $i++ ) {
+				$row( "Místo {$i}", "_ben_venue{$i}", 'text', $venue_ph[ $i ] );
+			}
+			?>
+		</table>
+	</div>
+
+	<!-- ── Plakáty ── -->
+	<div class="ben-section">
+		<h4>Plakáty — přední a zadní strana</h4>
+		<p class="description" style="margin-bottom:12px;">Nahrajte plakáty přes <strong>Média → Nahrát</strong>, pak klikněte „Vybrat obrázek".</p>
+		<table class="form-table">
+			<?php
+			$image_picker( 'Plakát — strana 1', '_ben_plakat_1' );
+			$image_picker( 'Plakát — strana 2', '_ben_plakat_2' );
+			?>
+		</table>
+	</div>
+
+	<!-- ── Galerie & výtěžek ── -->
+	<div class="ben-section">
+		<h4>Fotogalerie &amp; výtěžek <small style="font-weight:400;text-transform:none;letter-spacing:0;">(sekce se zobrazí jen když je vyplněno)</small></h4>
+		<table class="form-table">
+			<?php
+			$row( 'Nadpis sekce', '_ben_gallery_title', 'text', 'Z proběhlé benefice' );
+			$textarea( 'Text (předání výtěžku, poděkování…)', '_ben_gallery_text', 5 );
+			$textarea( 'Fotografie — URL obrázků', '_ben_gallery_imgs', 6, "https://www.cpnrp.cz/wp-content/uploads/foto1.jpg\nhttps://www.cpnrp.cz/wp-content/uploads/foto2.jpg" );
+			?>
+		</table>
+		<p class="description" style="margin-left:8px;margin-top:6px;">
+			Jeden řádek = jeden obrázek. URL vykopírujte z <strong>Média → Knihovna médií</strong> (klik na obrázek → Zkopírovat URL souboru).
+		</p>
+	</div>
+
+	<!-- ── Partneři ── -->
+	<div class="ben-section">
+		<h4>Partneři / sponzoři</h4>
+		<p class="description" style="margin-bottom:12px;">
+			Každý řádek: <code>Název partnera|soubor-loga.jpg</code><br>
+			Soubory logotypů umístěte do <code>/wp-content/themes/cpnrp/assets/images/partners/</code>.
+		</p>
+		<table class="form-table">
+			<?php $textarea( 'Partneři (jeden řádek = jeden partner)', '_ben_sponsors', 8, "Město Litoměřice|mesto-litomerice.jpg\nHolcim|holcim.jpg" ); ?>
+		</table>
+	</div>
+
+	<!-- ── Kontakt ── -->
+	<div class="ben-section">
+		<h4>Kontakt na organizátora <small style="font-weight:400;text-transform:none;letter-spacing:0;">(sekce se zobrazí jen když je vyplněno)</small></h4>
+		<table class="form-table">
+			<?php
+			$row( 'Jméno', '_ben_contact_name', 'text' );
+			$row( 'Funkce / role', '_ben_contact_role', 'text' );
+			$row( 'E-mail', '_ben_contact_email', 'email', 'info@cpnrp.cz' );
+			$row( 'Telefon', '_ben_contact_phone', 'text', '+420 XXX XXX XXX' );
+			?>
+		</table>
+	</div>
+
+	<script>
+	(function ($) {
+		$(document).on('click', '.ben-pick-img', function (e) {
+			e.preventDefault();
+			var btn    = $(this);
+			var target = btn.data('target');
+			var frame  = wp.media({ title: 'Vybrat obrázek', multiple: false, library: { type: 'image' } });
+			frame.on('select', function () {
+				var att = frame.state().get('selection').first().toJSON();
+				$('#' + target).val(att.url);
+				var $preview = $('#' + target + '_preview');
+				$preview.attr('src', att.url).show();
+				btn.text('Změnit obrázek');
+				if (!btn.siblings('.ben-remove-img').length) {
+					btn.after('<a href="#" class="ben-remove-img" data-target="' + target + '" style="font-size:12px;color:#a00;">✕ Odebrat</a>');
+				}
+			});
+			frame.open();
+		});
+
+		$(document).on('click', '.ben-remove-img', function (e) {
+			e.preventDefault();
+			var target = $(this).data('target');
+			$('#' + target).val('');
+			$('#' + target + '_preview').attr('src', '').hide();
+			$(this).siblings('.ben-pick-img').text('Vybrat obrázek');
+			$(this).remove();
+		});
+	}(jQuery));
+	</script>
+	<?php
+}
+
+// ── Save ──────────────────────────────────────────────────────────────
+add_action( 'save_post', function ( $post_id ) {
+	if ( ! isset( $_POST['cpnrp_ben_nonce'] ) ) return;
+	if ( ! wp_verify_nonce( $_POST['cpnrp_ben_nonce'], 'cpnrp_ben_save' ) ) return;
+	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) return;
+	if ( ! current_user_can( 'edit_post', $post_id ) ) return;
+
+	$fields = [
+		'_ben_edition'       => 'sanitize_text_field',
+		'_ben_lead'          => 'sanitize_textarea_field',
+		'_ben_termin'        => 'sanitize_text_field',
+		'_ben_pro_koho'      => 'sanitize_text_field',
+		'_ben_vytezek'       => 'sanitize_text_field',
+		'_ben_web_url'       => 'esc_url_raw',
+		'_ben_stat1_num'     => 'sanitize_text_field',
+		'_ben_stat1_label'   => 'sanitize_text_field',
+		'_ben_stat1_note'    => 'sanitize_text_field',
+		'_ben_stat2_num'     => 'sanitize_text_field',
+		'_ben_stat2_label'   => 'sanitize_text_field',
+		'_ben_stat2_note'    => 'sanitize_text_field',
+		'_ben_stat3_num'     => 'sanitize_text_field',
+		'_ben_stat3_label'   => 'sanitize_text_field',
+		'_ben_stat3_note'    => 'sanitize_text_field',
+		'_ben_venue1'        => 'sanitize_text_field',
+		'_ben_venue2'        => 'sanitize_text_field',
+		'_ben_venue3'        => 'sanitize_text_field',
+		'_ben_venue4'        => 'sanitize_text_field',
+		'_ben_venue5'        => 'sanitize_text_field',
+		'_ben_venue6'        => 'sanitize_text_field',
+		'_ben_plakat_1'      => 'esc_url_raw',
+		'_ben_plakat_2'      => 'esc_url_raw',
+		'_ben_gallery_title' => 'sanitize_text_field',
+		'_ben_gallery_text'  => 'sanitize_textarea_field',
+		'_ben_gallery_imgs'  => 'sanitize_textarea_field',
+		'_ben_sponsors'      => 'sanitize_textarea_field',
+		'_ben_contact_name'  => 'sanitize_text_field',
+		'_ben_contact_role'  => 'sanitize_text_field',
+		'_ben_contact_email' => 'sanitize_email',
+		'_ben_contact_phone' => 'sanitize_text_field',
+	];
+
+	foreach ( $fields as $meta_key => $sanitizer ) {
+		$post_key = ltrim( $meta_key, '_' );
+		if ( isset( $_POST[ $post_key ] ) ) {
+			update_post_meta( $post_id, $meta_key, $sanitizer( $_POST[ $post_key ] ) );
+		}
+	}
+} );

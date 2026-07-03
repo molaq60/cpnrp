@@ -70,25 +70,41 @@ foreach ( $pill_months as $key => $_ ) {
 }
 
 // ── Build JS events map keyed by YYYYMMDD ─────────────────────────
+// Multi-day events are added to every day in their span.
 $ev_js_map = [];
 foreach ( $list_events as $ev ) {
 	if ( ! $ev['start'] ) continue;
-	$ts  = strtotime( $ev['start'] );
-	$key = date( 'Ymd', $ts );
-	$ev_js_map[ $key ][] = [
-		'title'   => $ev['title'],
-		'url'     => $ev['url'],
-		'day'     => (int) date( 'j', $ts ),
-		'month'   => $cs_m[ (int) date( 'n', $ts ) ],
-		'color'   => _ev_color( $ev['color'] ),
-		'time'    => $ev['all_day'] === 'yes'
+	$ts_start   = strtotime( $ev['start'] );
+	$ts_end_raw = $ev['end'] ? strtotime( $ev['end'] ) : $ts_start;
+	$day_start  = mktime( 0, 0, 0, (int) date( 'n', $ts_start ),   (int) date( 'j', $ts_start ),   (int) date( 'Y', $ts_start ) );
+	$day_end    = mktime( 0, 0, 0, (int) date( 'n', $ts_end_raw ), (int) date( 'j', $ts_end_raw ), (int) date( 'Y', $ts_end_raw ) );
+	$is_multi   = $day_end > $day_start;
+
+	$entry = [
+		'title'    => $ev['title'],
+		'url'      => $ev['url'],
+		'day'      => (int) date( 'j', $ts_start ),
+		'month'    => $cs_m[ (int) date( 'n', $ts_start ) ],
+		'color'    => _ev_color( $ev['color'] ),
+		'time'     => $ev['all_day'] === 'yes'
 			? 'Celodenní akce'
-			: date_i18n( 'j. F Y · G:i', $ts ),
-		'venue'   => $ev['venue'],
-		'address' => $ev['address'],
-		'excerpt' => $ev['excerpt'],
-		'ext_url' => $ev['ext_url'],
+			: date_i18n( 'j. F Y · G:i', $ts_start ),
+		'end_time' => $is_multi
+			? ( $ev['all_day'] === 'yes'
+				? date_i18n( 'j. F Y', $ts_end_raw )
+				: date_i18n( 'j. F Y · G:i', $ts_end_raw ) )
+			: '',
+		'venue'    => $ev['venue'],
+		'address'  => $ev['address'],
+		'excerpt'  => $ev['excerpt'],
+		'ext_url'  => $ev['ext_url'],
 	];
+
+	$day_cur = $day_start;
+	while ( $day_cur <= $day_end ) {
+		$ev_js_map[ date( 'Ymd', $day_cur ) ][] = $entry;
+		$day_cur = strtotime( '+1 day', $day_cur );
+	}
 }
 
 get_header();
@@ -607,10 +623,13 @@ function buildCalendar() {
 	var grid = document.getElementById('ev-cal-grid');
 	if (grid) grid.innerHTML = html;
 
-	// Month list
+	// Month list — deduplicate multi-day events that appear on multiple days
 	var monthEvs = [];
+	var seenUrls = {};
 	for (var d = 1; d <= daysInMonth; d++) {
-		(evMap[ ymd(y, m, d) ] || []).forEach(function(ev){ monthEvs.push(ev); });
+		(evMap[ ymd(y, m, d) ] || []).forEach(function(ev) {
+			if (!seenUrls[ev.url]) { seenUrls[ev.url] = true; monthEvs.push(ev); }
+		});
 	}
 	var listEl = document.getElementById('ev-cal-list');
 	if (!listEl) return;
@@ -666,7 +685,11 @@ function openModal(ev) {
 	descEl.hidden = !ev.excerpt;
 
 	var rows = '';
-	if (ev.time)    rows += '<div class="ev-modal-row">' + IC.clock + '<div><strong>Datum a čas</strong><span>' + esc(ev.time) + '</span></div></div>';
+	if (ev.time) {
+		var timeStr = esc(ev.time);
+		if (ev.end_time) timeStr += ' – ' + esc(ev.end_time);
+		rows += '<div class="ev-modal-row">' + IC.clock + '<div><strong>Datum a čas</strong><span>' + timeStr + '</span></div></div>';
+	}
 	if (ev.venue)   rows += '<div class="ev-modal-row">' + IC.pin   + '<div><strong>Místo</strong><span>' + esc(ev.venue) + (ev.address ? '<br><span style="font-size:.8rem;color:var(--color-text-muted)">' + esc(ev.address) + '</span>' : '') + '</span></div></div>';
 	if (ev.ext_url) rows += '<div class="ev-modal-row">' + IC.link  + '<div><strong>Registrace</strong><a href="' + esc(ev.ext_url) + '" target="_blank" rel="noopener" style="color:var(--color-teal)">Přihlásit se na akci</a></div></div>';
 	infoEl.innerHTML = rows;

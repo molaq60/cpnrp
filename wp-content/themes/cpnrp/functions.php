@@ -19,6 +19,7 @@ $cpnrp_includes = [
 	'inc/o-nas-meta.php',        // O nás templates — meta boxes
 	'inc/o-nas-content.php',     // O nás — one-time content + template setup
 	'inc/beh-meta.php',          // Běh pro rodinu — meta boxes
+	'inc/benefice-meta.php',     // Divadelní benefice — meta boxes
 	'inc/pro-odborniky-meta.php',  // Pro odborníky — meta boxes
 	'inc/vyrocni-zpravy-meta.php', // Výroční zprávy — meta box s PDF uploadem
 	'inc/dokumenty-meta.php',      // Dokumenty ke stažení — meta box s PDF uploadem

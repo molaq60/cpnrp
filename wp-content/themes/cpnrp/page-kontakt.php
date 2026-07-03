@@ -7,13 +7,17 @@
 get_header();
 
 // ── Team groups (sorted) ────────────────────────────────────────
+// Pořadí se řídí polem "Pořadí" u každé skupiny (Kontakty → Skupiny
+// v administraci). Nižší číslo = dříve; skupiny bez čísla / se stejným
+// číslem se seřadí abecedně.
 $team_groups = get_terms( [ 'taxonomy' => 'contact_group', 'hide_empty' => true ] );
-$group_order = [ 'Vedení', 'Vzdělávání & programy', 'Doprovázení', 'Odborné poradenství' ];
 if ( ! is_wp_error( $team_groups ) && $team_groups ) {
-	usort( $team_groups, function( $a, $b ) use ( $group_order ) {
-		$ai = array_search( $a->name, $group_order );
-		$bi = array_search( $b->name, $group_order );
-		return ( $ai === false ? 99 : $ai ) <=> ( $bi === false ? 99 : $bi );
+	usort( $team_groups, function( $a, $b ) {
+		$ao = get_term_meta( $a->term_id, '_group_order', true );
+		$bo = get_term_meta( $b->term_id, '_group_order', true );
+		$ao = ( $ao === '' ? 999 : (int) $ao );
+		$bo = ( $bo === '' ? 999 : (int) $bo );
+		return $ao === $bo ? strcasecmp( $a->name, $b->name ) : $ao <=> $bo;
 	} );
 }
 
@@ -177,12 +181,12 @@ $kontakt_hours   = get_theme_mod( 'cpnrp_kontakt_hours',   'Po — Pá: 9:00 —
 
 						<div class="kontakt-person-grid">
 							<?php
-							$persons = new WP_Query( [
+							$persons = get_posts( [
 								'post_type'      => 'contact_person',
 								'post_status'    => 'publish',
 								'posts_per_page' => -1,
-								'orderby'        => 'meta_value_num',
-								'meta_key'       => '_contact_order',
+								'orderby'        => 'title',
+								'suppress_filters' => false,
 								'order'          => 'ASC',
 								'tax_query'      => [ [
 									'taxonomy' => 'contact_group',
@@ -190,8 +194,18 @@ $kontakt_hours   = get_theme_mod( 'cpnrp_kontakt_hours',   'Po — Pá: 9:00 —
 									'terms'    => $group->term_id,
 								] ],
 							] );
-							while ( $persons->have_posts() ) :
-								$persons->the_post();
+							// Řazení podle pole "Pořadí ve skupině" (_contact_order):
+							// kdo má číslo jde dřív, lidé bez čísla na konec (abecedně).
+							usort( $persons, function ( $a, $b ) {
+								$ao = get_post_meta( $a->ID, '_contact_order', true );
+								$bo = get_post_meta( $b->ID, '_contact_order', true );
+								$ao = ( $ao === '' ? 9999 : (int) $ao );
+								$bo = ( $bo === '' ? 9999 : (int) $bo );
+								return $ao === $bo ? 0 : $ao <=> $bo;
+							} );
+							foreach ( $persons as $person ) :
+								$GLOBALS['post'] = $person;
+								setup_postdata( $person );
 								$pid   = get_the_ID();
 								$role  = get_post_meta( $pid, '_contact_role',  true );
 								$phone = get_post_meta( $pid, '_contact_phone', true );
@@ -244,7 +258,7 @@ $kontakt_hours   = get_theme_mod( 'cpnrp_kontakt_hours',   'Po — Pá: 9:00 —
 									</button>
 								<?php endif; ?>
 							</div>
-							<?php endwhile; wp_reset_postdata(); ?>
+							<?php endforeach; wp_reset_postdata(); ?>
 						</div>
 					</div>
 

@@ -274,6 +274,77 @@ function cpnrp_contact_fields_save( $post_id ) {
 }
 add_action( 'save_post_contact_person', 'cpnrp_contact_fields_save' );
 
+// ── Pořadí skupin (term meta) ───────────────────────────────────
+// Umožní v administraci (Kontakty → Skupiny) nastavit pořadí, v jakém
+// se skupiny zobrazí na stránce Kontakty. Nižší číslo = dříve.
+
+// Pole na obrazovce "Přidat novou skupinu"
+add_action( 'contact_group_add_form_fields', function (): void {
+	?>
+	<div class="form-field">
+		<label for="cpnrp_group_order"><?php esc_html_e( 'Pořadí', 'cpnrp' ); ?></label>
+		<input type="number" id="cpnrp_group_order" name="cpnrp_group_order" value="0" min="0" step="1" />
+		<p class="description"><?php esc_html_e( 'Nižší číslo = dříve. Určuje pořadí skupin na stránce Kontakty. Prázdné / stejné číslo = seřadí se abecedně.', 'cpnrp' ); ?></p>
+	</div>
+	<?php
+} );
+
+// Pole na obrazovce "Upravit skupinu"
+add_action( 'contact_group_edit_form_fields', function ( WP_Term $term ): void {
+	$order = get_term_meta( $term->term_id, '_group_order', true );
+	?>
+	<tr class="form-field">
+		<th scope="row"><label for="cpnrp_group_order"><?php esc_html_e( 'Pořadí', 'cpnrp' ); ?></label></th>
+		<td>
+			<input type="number" id="cpnrp_group_order" name="cpnrp_group_order" value="<?php echo esc_attr( $order !== '' ? $order : 0 ); ?>" min="0" step="1" />
+			<p class="description"><?php esc_html_e( 'Nižší číslo = dříve. Určuje pořadí skupin na stránce Kontakty. Prázdné / stejné číslo = seřadí se abecedně.', 'cpnrp' ); ?></p>
+		</td>
+	</tr>
+	<?php
+} );
+
+// Uložení při vytvoření i úpravě skupiny
+function cpnrp_save_group_order( int $term_id ): void {
+	if ( ! current_user_can( 'manage_categories' ) ) return;
+	if ( isset( $_POST['cpnrp_group_order'] ) ) {
+		update_term_meta( $term_id, '_group_order', (int) $_POST['cpnrp_group_order'] );
+	}
+}
+add_action( 'created_contact_group', 'cpnrp_save_group_order' );
+add_action( 'edited_contact_group',  'cpnrp_save_group_order' );
+
+// Sloupec "Pořadí" v přehledu skupin
+add_filter( 'manage_edit-contact_group_columns', function ( array $cols ): array {
+	$cols['cpnrp_order'] = __( 'Pořadí', 'cpnrp' );
+	return $cols;
+} );
+add_filter( 'manage_contact_group_custom_column', function ( string $out, string $col, int $term_id ): string {
+	if ( $col === 'cpnrp_order' ) {
+		$out = esc_html( (string) (int) get_term_meta( $term_id, '_group_order', true ) );
+	}
+	return $out;
+}, 10, 3 );
+
+// Jednorázově: nastaví pořadí stávajícím skupinám podle původního
+// (natvrdo psaného) pořadí, aby se po nasazení nic vizuálně nezměnilo.
+// Klient pak už jen přepisuje čísla v administraci.
+add_action( 'admin_init', function (): void {
+	if ( get_transient( 'cpnrp_group_order_seeded_v1' ) ) return;
+	$defaults = [
+		'Vedení'                => 10,
+		'Vzdělávání & programy' => 20,
+		'Doprovázení'           => 30,
+		'Odborné poradenství'   => 40,
+	];
+	foreach ( $defaults as $name => $order ) {
+		$term = get_term_by( 'name', $name, 'contact_group' );
+		if ( $term && get_term_meta( $term->term_id, '_group_order', true ) === '' ) {
+			update_term_meta( $term->term_id, '_group_order', $order );
+		}
+	}
+	set_transient( 'cpnrp_group_order_seeded_v1', true, YEAR_IN_SECONDS );
+} );
+
 // ── One-time import of all 25 team members ─────────────────────
 
 function cpnrp_import_contact_persons() {
