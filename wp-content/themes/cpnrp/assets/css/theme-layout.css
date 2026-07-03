@@ -3148,13 +3148,18 @@ body.offcanvas-open .offcanvas {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: var(--color-accent-red);
+  background: var(--color-teal-dark);
   color: var(--color-white);
   border-radius: var(--radius-sm);
   padding: 6px 4px;
   text-align: center;
   gap: 1px;
 }
+.events-month-list-date--teal  { background: var(--color-teal-dark);   color: #fff; }
+.events-month-list-date--light { background: var(--color-teal-light);  color: #fff; }
+.events-month-list-date--red   { background: var(--color-accent-red);  color: #fff; }
+.events-month-list-date--gold  { background: var(--color-accent-gold); color: var(--color-text); }
+.events-month-list-date--green { background: #1a6b3c; color: #fff; }
 
 .events-month-list-date strong { font-size: 1.25rem; line-height: 1; font-weight: 800; }
 .events-month-list-date small  { font-size: 0.625rem; text-transform: uppercase; letter-spacing: 0.04em; }

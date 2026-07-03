@@ -96,7 +96,7 @@ foreach ( $list_events as $ev ) {
 			: '',
 		'venue'    => $ev['venue'],
 		'address'  => $ev['address'],
-		'excerpt'  => $ev['excerpt'],
+		'excerpt'  => html_entity_decode( wp_strip_all_tags( $ev['excerpt'] ), ENT_QUOTES | ENT_HTML5, 'UTF-8' ),
 		'ext_url'  => $ev['ext_url'],
 	];
 
@@ -640,7 +640,7 @@ function buildCalendar() {
 	var lh = '<div class="events-month-list"><h2 class="events-month-list-heading">Akce — ' + esc(monthLabel(y, m)) + '</h2>';
 	monthEvs.forEach(function(ev) {
 		lh += '<button type="button" class="events-month-list-item" style="width:100%;text-align:left;background:none;border:none;cursor:pointer;font-family:var(--font-sans);" data-ev="' + esc(JSON.stringify(ev)) + '">';
-		lh += '<span class="events-month-list-date"><strong>' + ev.day + '</strong><small>' + esc(ev.month) + '</small></span>';
+		lh += '<span class="events-month-list-date events-month-list-date--' + (ev.color || 'teal') + '"><strong>' + ev.day + '</strong><small>' + esc(ev.month) + '</small></span>';
 		lh += '<span class="events-month-list-info"><span class="events-month-list-title">' + esc(ev.title) + '</span>';
 		if (ev.venue) lh += '<span class="events-month-list-venue">' + esc(ev.venue) + '</span>';
 		lh += '</span></button>';
