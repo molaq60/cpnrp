@@ -40,6 +40,7 @@ function cpnrp_beh_meta_box_cb( $post ) {
 		'_beh_info3_title', '_beh_info3_text',
 		'_beh_info4_title', '_beh_info4_text',
 		'_beh_sponsors',
+		'_beh_plakat',
 		'_beh_cta_title', '_beh_cta_text',
 	];
 	foreach ( $keys as $k ) {
@@ -177,6 +178,29 @@ function cpnrp_beh_meta_box_cb( $post ) {
 		</table>
 	</div>
 
+	<!-- ── Plakát ── -->
+	<div class="beh-section">
+		<h4>Plakát akce</h4>
+		<p class="description" style="margin-bottom:12px;">Plakát se zobrazí na stránce pod praktickými informacemi. Pokud není nahrán, sekce se nezobrazí.</p>
+		<?php
+		$_plakat_url = esc_url( $m['_beh_plakat'] );
+		?>
+		<div style="display:flex;align-items:flex-start;gap:16px;flex-wrap:wrap;">
+			<?php if ( $_plakat_url ) : ?>
+			<img id="beh_plakat_preview" src="<?php echo $_plakat_url; ?>" style="max-width:180px;max-height:260px;border:1px solid #ddd;border-radius:4px;display:block;">
+			<?php else : ?>
+			<img id="beh_plakat_preview" src="" style="max-width:180px;max-height:260px;border:1px solid #ddd;border-radius:4px;display:none;">
+			<?php endif; ?>
+			<div style="display:flex;flex-direction:column;gap:8px;padding-top:4px;">
+				<input type="hidden" id="beh_plakat" name="beh_plakat" value="<?php echo $_plakat_url; ?>">
+				<button type="button" class="button" id="beh-pick-plakat"><?php echo $_plakat_url ? 'Změnit plakát' : 'Nahrát / vybrat plakát'; ?></button>
+				<?php if ( $_plakat_url ) : ?>
+				<a href="#" id="beh-remove-plakat" style="font-size:12px;color:#a00;">✕ Odebrat plakát</a>
+				<?php endif; ?>
+			</div>
+		</div>
+	</div>
+
 	<!-- ── Final CTA ── -->
 	<div class="beh-section">
 		<h4>Závěrečná CTA sekce</h4>
@@ -188,6 +212,32 @@ function cpnrp_beh_meta_box_cb( $post ) {
 		</table>
 	</div>
 
+	<script>
+	(function ($) {
+		$('#beh-pick-plakat').on('click', function (e) {
+			e.preventDefault();
+			var frame = wp.media({ title: 'Vybrat plakát', multiple: false, library: { type: 'image' } });
+			frame.on('select', function () {
+				var att = frame.state().get('selection').first().toJSON();
+				$('#beh_plakat').val(att.url);
+				$('#beh_plakat_preview').attr('src', att.url).show();
+				$('#beh-pick-plakat').text('Změnit plakát');
+				if (!$('#beh-remove-plakat').length) {
+					$('#beh-pick-plakat').after('<a href="#" id="beh-remove-plakat" style="font-size:12px;color:#a00;margin-top:4px;">✕ Odebrat plakát</a>');
+				}
+			});
+			frame.open();
+		});
+
+		$(document).on('click', '#beh-remove-plakat', function (e) {
+			e.preventDefault();
+			$('#beh_plakat').val('');
+			$('#beh_plakat_preview').attr('src', '').hide();
+			$('#beh-pick-plakat').text('Nahrát / vybrat plakát');
+			$(this).remove();
+		});
+	}(jQuery));
+	</script>
 	<?php
 }
 
@@ -225,6 +275,7 @@ add_action( 'save_post', function ( $post_id ) {
 		'_beh_info4_title'    => 'sanitize_text_field',
 		'_beh_info4_text'     => 'sanitize_textarea_field',
 		'_beh_sponsors'       => 'sanitize_textarea_field',
+		'_beh_plakat'         => 'esc_url_raw',
 		'_beh_cta_title'      => 'sanitize_text_field',
 		'_beh_cta_text'       => 'sanitize_textarea_field',
 	];

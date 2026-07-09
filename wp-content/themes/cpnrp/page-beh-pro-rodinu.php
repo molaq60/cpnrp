@@ -65,6 +65,8 @@ foreach ( array_filter( array_map( 'trim', explode( "\n", $sponsors_raw ) ) ) as
 	}
 }
 
+$plakat_url = beh_meta( '_beh_plakat' );
+
 // ── Hero background ───────────────────────────────────────────────
 $hero_bg = has_post_thumbnail( $id )
 	? get_the_post_thumbnail_url( $id, 'full' )
@@ -308,6 +310,41 @@ $hero_bg = has_post_thumbnail( $id )
 			</div>
 		</div>
 	</section>
+
+	<!-- ── PLAKÁT ───────────────────────────────────────────────── -->
+	<?php if ( $plakat_url ) : ?>
+	<section class="beh-plakat-section">
+		<div class="container">
+			<div class="beh-plakat-inner">
+				<div class="section-heading animate-fade-up">
+					<h2 class="section-title">Plakát akce</h2>
+					<div class="section-title-bar"></div>
+				</div>
+				<div class="beh-plakat-wrap">
+					<img src="<?php echo esc_url( $plakat_url ); ?>" alt="Plakát — Běh pro rodinu" loading="lazy" class="beh-plakat-img">
+					<a href="<?php echo esc_url( $plakat_url ); ?>" download class="beh-plakat-download" target="_blank" rel="noopener">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+						Stáhnout plakát
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<style>
+	.beh-plakat-section { padding: 72px 0; background: var(--color-gray-light, #f5f5f5); }
+	.beh-plakat-inner   { display: flex; flex-direction: column; align-items: center; gap: 32px; }
+	.beh-plakat-wrap    { display: flex; flex-direction: column; align-items: center; gap: 20px; }
+	.beh-plakat-img     { max-width: min(420px, 100%); width: 100%; border-radius: 8px; box-shadow: 0 8px 32px rgba(0,0,0,.15); display: block; }
+	.beh-plakat-download {
+		display: inline-flex; align-items: center; gap: 8px;
+		padding: 10px 24px; border-radius: 6px;
+		background: var(--color-teal-dark, #1A6080); color: #fff;
+		font-weight: 600; font-size: .95rem; text-decoration: none;
+		transition: background .2s;
+	}
+	.beh-plakat-download:hover { background: var(--color-teal-light, #2a88b0); color: #fff; }
+	</style>
+	<?php endif; ?>
 
 	<!-- ── PARTNEŘI AKCE ─────────────────────────────────────────── -->
 	<?php if ( $sponsors ) : ?>
