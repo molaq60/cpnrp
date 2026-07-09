@@ -229,22 +229,24 @@ $kontakt_hours   = get_theme_mod( 'cpnrp_kontakt_hours',   'Po — Pá: 9:00 —
 								<?php if ( $role ) : ?>
 									<p class="kontakt-person-role"><?php echo esc_html( $role ); ?></p>
 								<?php endif; ?>
-								<?php if ( $phone ) : ?>
+								<div class="kontakt-person-contacts">
+									<?php if ( $phone ) : ?>
 									<a href="tel:<?php echo esc_attr( preg_replace( '/\s+/', '', $phone ) ); ?>" class="kontakt-person-phone">
 										<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
 											<path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
 										</svg>
 										<?php echo esc_html( $phone ); ?>
 									</a>
-								<?php endif; ?>
-								<?php if ( $email ) : ?>
+									<?php endif; ?>
+									<?php if ( $email ) : ?>
 									<a href="mailto:<?php echo esc_attr( $email ); ?>" class="kontakt-person-email">
 										<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
 											<rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 7L2 7"/>
 										</svg>
 										<?php echo esc_html( $email ); ?>
 									</a>
-								<?php endif; ?>
+									<?php endif; ?>
+								</div>
 								<?php if ( $has_popup ) : ?>
 									<button type="button" class="kontakt-person-bio-btn"
 									        data-person="<?php echo esc_attr( $pid ); ?>"

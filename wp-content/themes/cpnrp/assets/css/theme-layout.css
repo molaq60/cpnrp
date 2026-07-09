@@ -3784,6 +3784,14 @@ body.offcanvas-open .offcanvas {
   margin: 0 0 12px;
 }
 
+.kontakt-person-contacts {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
 .kontakt-person-phone {
   display: inline-flex;
   align-items: center;
@@ -3792,7 +3800,6 @@ body.offcanvas-open .offcanvas {
   font-weight: 500;
   color: var(--color-teal-dark);
   text-decoration: none;
-  margin-top: auto;
   transition: color 200ms ease;
 }
 
@@ -3812,7 +3819,6 @@ body.offcanvas-open .offcanvas {
   font-weight: 500;
   color: var(--color-teal-dark);
   text-decoration: none;
-  margin-top: 4px;
   transition: color 200ms ease;
 }
 
