@@ -236,8 +236,6 @@ $kontakt_hours   = get_theme_mod( 'cpnrp_kontakt_hours',   'Po — Pá: 9:00 —
 										</svg>
 										<?php echo esc_html( $phone ); ?>
 									</a>
-								<?php else : ?>
-									<p class="kontakt-person-no-phone"><?php esc_html_e( 'Kontakt přes vedoucí služeb', 'cpnrp' ); ?></p>
 								<?php endif; ?>
 								<?php if ( $email ) : ?>
 									<a href="mailto:<?php echo esc_attr( $email ); ?>" class="kontakt-person-email">
