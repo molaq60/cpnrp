@@ -74,6 +74,9 @@ if ( $sponsors_raw ) {
 	}
 }
 
+// Organizers
+$organizers = ben_meta( '_ben_organizers' );
+
 // Contact
 $contact_name  = ben_meta( '_ben_contact_name' );
 $contact_role  = ben_meta( '_ben_contact_role' );
@@ -228,7 +231,7 @@ $hero_bg   = has_post_thumbnail( $id )
 .ben-contact-icon { flex-shrink: 0; color: var(--color-text-muted); }
 
 /* ── Web CTA ─────────────────────────────────────────────────────── */
-.ben-web-cta { padding: 88px 0; background: #101820; color: #fff; text-align: center; }
+.ben-web-cta { padding: 88px 0; background: #1E0A2E; color: #fff; text-align: center; }
 .ben-web-cta-inner { max-width: 640px; margin: 0 auto; }
 .ben-web-cta-label {
   font-size: 0.6875rem; font-weight: 700; letter-spacing: 0.18em;
@@ -238,9 +241,43 @@ $hero_bg   = has_post_thumbnail( $id )
   font-size: clamp(1.125rem, 2.5vw, 1.375rem);
   line-height: 1.6; color: rgba(255,255,255,0.85); margin: 0 0 36px;
 }
+
+/* ── Pořadatelé ──────────────────────────────────────────────────── */
+.ben-organizers-section { padding: 80px 0; background: var(--color-bg-soft); }
+.ben-organizers-text {
+  max-width: 720px;
+  margin: 32px auto 0;
+  font-size: 1rem;
+  line-height: 1.9;
+  color: var(--color-text);
+  text-align: center;
+  white-space: pre-line;
+}
+
+/* ── Benefice color overrides (divadelní téma — fialová místo černé) */
+.ben-page .beh-hero-overlay {
+  background: linear-gradient(
+    to right,
+    rgba(30, 10, 46, 0.90) 0%,
+    rgba(30, 10, 46, 0.65) 55%,
+    rgba(30, 10, 46, 0.30) 100%
+  );
+}
+.ben-page .beh-edition-badge {
+  border-color: rgba(180, 120, 200, 0.4);
+  background: rgba(100, 30, 140, 0.10);
+  color: #C8A0DC;
+}
+.ben-page .beh-edition-dot { background: #9B55C0; }
+.ben-page .beh-stat--red .beh-stat-num { color: #9B2051; }
+.ben-page .ben-venue-icon {
+  background: rgba(120, 30, 80, 0.12);
+  color: #9B2051;
+}
+.ben-page .ben-venue-card:hover { border-color: rgba(155, 32, 81, 0.45); }
 </style>
 
-<main id="main-content" role="main">
+<main id="main-content" class="ben-page" role="main">
 
 	<!-- ── HERO ─────────────────────────────────────────────────── -->
 	<section class="beh-hero ben-hero-wrap">
@@ -419,6 +456,19 @@ $hero_bg   = has_post_thumbnail( $id )
 				</div>
 				<?php endforeach; ?>
 			</div>
+		</div>
+	</section>
+	<?php endif; ?>
+
+	<!-- ── POŘADATELÉ ──────────────────────────────────────────── -->
+	<?php if ( $organizers ) : ?>
+	<section class="ben-organizers-section">
+		<div class="container">
+			<div class="section-heading animate-fade-up">
+				<h2 class="section-title"><?php esc_html_e( 'Pořadatelé', 'cpnrp' ); ?></h2>
+				<div class="section-title-bar"></div>
+			</div>
+			<div class="ben-organizers-text"><?php echo nl2br( esc_html( $organizers ) ); ?></div>
 		</div>
 	</section>
 	<?php endif; ?>

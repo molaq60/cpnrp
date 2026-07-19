@@ -254,6 +254,14 @@ function cpnrp_ben_meta_box_cb( $post ) {
 		<input type="hidden" name="ben_sponsors" id="ben-sponsors-json" value="<?php echo esc_attr( $_sp_json ?: '[]' ); ?>">
 	</div>
 
+	<!-- ── Pořadatelé ── -->
+	<div class="ben-section">
+		<h4>Pořadatelé <small style="font-weight:400;text-transform:none;letter-spacing:0;">(sekce se zobrazí jen když je vyplněno)</small></h4>
+		<table class="form-table">
+			<?php $textarea( 'Text — kdo se podílí na pořádání', '_ben_organizers', 5, "CPNRP, o.p.s.\nDivadlo na Mostě, Litoměřice" ); ?>
+		</table>
+	</div>
+
 	<!-- ── Kontakt ── -->
 	<div class="ben-section">
 		<h4>Kontakt na organizátora <small style="font-weight:400;text-transform:none;letter-spacing:0;">(sekce se zobrazí jen když je vyplněno)</small></h4>
@@ -442,6 +450,7 @@ add_action( 'save_post', function ( $post_id ) {
 		'_ben_plakat_2'      => 'esc_url_raw',
 		'_ben_gallery_title' => 'sanitize_text_field',
 		'_ben_gallery_text'  => 'sanitize_textarea_field',
+		'_ben_organizers'    => 'sanitize_textarea_field',
 		'_ben_contact_name'  => 'sanitize_text_field',
 		'_ben_contact_role'  => 'sanitize_text_field',
 		'_ben_contact_email' => 'sanitize_email',
